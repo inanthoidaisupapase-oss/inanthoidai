@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Tuỳ biến thương hiệu IN ẤN THỜI ĐẠI.
+   File này nạp SAU main.css. Không sửa main.css — mọi thay đổi màu/font ở đây.
+   ========================================================================== */
+
+:root {
+  /* ---------------------------------------------------------------
+     MÀU CHỦ ĐẠO — hiện đang giữ nguyên màu xanh của template Printop.
+     Để đổi theo logo In Ấn Thời Đại: chuyển mã HEX của logo sang HSL
+     rồi điền 3 giá trị dưới đây. Toàn bộ site đổi theo, không cần
+     sửa chỗ nào khác.
+     Ví dụ đỏ #C8102E  ->  --main-h: 350; --main-s: 85%; --main-l: 42%;
+     --------------------------------------------------------------- */
+  /* --main-h: 151; */
+  /* --main-s: 61%; */
+  /* --main-l: 46%; */
+}
+
+/* Font: bổ sung "Be Vietnam Pro" làm lớp dự phòng ngay sau font chính.
+   Gabarito / Plus Jakarta Sans phủ dấu tiếng Việt ở hầu hết ký tự; nếu có
+   ký tự nào thiếu, trình duyệt rơi xuống Be Vietnam Pro thay vì font hệ thống. */
+:root {
+  --heading-font: "Plus Jakarta Sans", "Be Vietnam Pro", system-ui, sans-serif;
+  --body-font: "Gabarito", "Be Vietnam Pro", system-ui, sans-serif;
+}
+
+/* Tiếng Việt dài hơn tiếng Anh: nới line-height cho tiêu đề lớn để không bị
+   cắt dấu (ơ, ư, ế) ở các heading dùng font-size rất lớn của template. */
+.banner-title,
+h1, h2, h3 {
+  line-height: 1.25;
+}
+
+/* Giá tiền VND không xuống dòng giữa số và ký hiệu */
+.price-vnd {
+  white-space: nowrap;
+}

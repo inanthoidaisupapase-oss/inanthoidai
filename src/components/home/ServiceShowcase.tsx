@@ -1,0 +1,280 @@
+'use client';
+import Link from 'next/link';
+
+export default function ServiceShowcase() {
+  return (
+    <>
+              
+      <section className="service-new py-120 overflow-hidden">
+          <div className="container">
+              <div className="d-flex align-items-center justify-content-between flex-lg-nowrap flex-wrap tw-gap-6 tw-mb-15">
+                  <div className="max-w-650-px">
+                      <div className="bg-white rounded-pill border border-neutral-100 tw-py-105 tw-px-4 d-inline-flex align-items-center tw-gap-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                          <div className="d-flex align-items-center tw-gap-205">
+                              <span className="text-primary-new d-sm-flex d-none tw-text-xl">
+                                  <i className="ph-fill ph-check-circle"></i>
+                              </span>
+                              <span className="text-primary-new tw-text-lg text-sm-res-14-px fw-semibold text-center">Our
+                                  Services</span>
+                          </div>
+                          <span className="border-end border-neutral-300 tw-h-5 tw-w-px"></span>
+                          <span className="text-neutral-500 tw-text-lg text-sm-res-14-px fw-normal text-center">Creative Printing
+                              Solutions</span>
+                      </div>
+                      <h2 className="fw-bold tw-mt-4 h1"> <span className="text-reveal d-inline">High-Quality Services With
+                              Fast </span> <span className="text-gradient-main text-decoration-underline">Delivery</span>
+                      </h2>
+                  </div>
+                  <div className="max-w-400-px d-flex flex-column tw-gap-8">
+                      <p className="text-neutral-500 text-lg-end">We offer a wide range of professional printing services designed
+                          to
+                          meet the needs of businesses and individuals maximum impact.</p>
+                      <div className=" d-flex justify-content-lg-end">
+                          <div className="custom-fade-animation" data-delay=".7" data-fade-from="bottom" data-ease="bounce">
+                              <Link href="/lien-he" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 tw-ps-2 tw-pe-6 tw-py-3 py-sm-2">
+                                  <span className="btn-icon-animation d-flex align-items-center justify-content-center z-1 tw-w-9 tw-h-9 bg-white rounded-circle">
+                                      <i className="ph-bold ph-arrow-right text-gradient-main"></i>
+                                  </span>
+                                  <span className="btn-text">See All Services</span>
+                              </Link>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div className="position-relative overflow-hidden">
+              <div className="container">
+                  <div className="row gy-5">
+      
+                      <div className="col-xl-6">
+                          
+                          <div className="swiper service-new-slider animated-slider-wrapper">
+                              <div className="swiper-wrapper">
+                                  <div className="swiper-slide">
+                                      <div className="service-new-item">
+                                          <div className="overflow-hidden tw-pb-605">
+                                              <div className="position-relative">
+                                                  <div className="overflow-hidden tw-rounded-xl bg-neutral-50">
+                                                      <img src="/assets/images/thumbs/service-big-image1.png" alt="Image" className="tw-rounded-xl overflow-hidden position-relative active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-05 h-100 w-100 object-fit-cover" />
+                                                  </div>
+                                                  <div className="position-absolute start-50 translate-middle-x bottom-0 tw--mt-45-px">
+                                                      <div className="d-inline-flex bg-white tw-p-5 rounded-circle active-slider-animate-updown tw-duration-600 transition-delay-07 rounded-left-right-shape ">
+                                                          <Link href="/dich-vu/in-offset" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-14 tw-h-14 d-flex justify-content-center align-items-center tw-text-2xl text-white">
+                                                              <i className="ph-bold ph-arrow-up-right z-1"></i>
+                                                          </Link>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div className="d-flex flex-sm-row flex-column align-items-lg-center justify-content-between tw-gap-6 tw-mt-2 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-1">
+                                              <h2 className="tw-text-2xl fw-medium max-w-330-px">
+                                                  <Link href="/dich-vu/in-offset" className="hover-common-underline hover-text-heading">Custom T-Shirt
+                                                      Printing and Apparel Design</Link>
+                                              </h2>
+                                              <p className="text-neutral-500 text-sm-end max-w-330-px tw-leading-155">High-quality
+                                                  custom t-shirt printing with vibrant colors and durable materials.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="swiper-slide">
+                                      <div className="service-new-item">
+                                          <div className="overflow-hidden tw-pb-605">
+                                              <div className="position-relative">
+                                                  <div className="overflow-hidden tw-rounded-xl bg-neutral-50">
+                                                      <img src="/assets/images/thumbs/service-big-image2.png" alt="Image" className="tw-rounded-xl overflow-hidden position-relative active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-05 h-100 w-100 object-fit-cover" />
+                                                  </div>
+                                                  <div className="position-absolute start-50 translate-middle-x bottom-0 tw--mt-45-px">
+                                                      <div className="d-inline-flex bg-white tw-p-5 rounded-circle active-slider-animate-updown tw-duration-600 transition-delay-07 rounded-left-right-shape ">
+                                                          <Link href="/dich-vu/in-offset" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-14 tw-h-14 d-flex justify-content-center align-items-center tw-text-2xl text-white">
+                                                              <i className="ph-bold ph-arrow-up-right z-1"></i>
+                                                          </Link>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div className="d-flex flex-sm-row flex-column align-items-lg-center justify-content-between tw-gap-6 tw-mt-2 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-1">
+                                              <h2 className="tw-text-2xl fw-medium max-w-330-px">
+                                                  <Link href="/dich-vu/in-offset" className="hover-common-underline hover-text-heading">Poster and Wall Art
+                                                      Printing Solutions</Link>
+                                              </h2>
+                                              <p className="text-neutral-500 text-sm-end max-w-330-px tw-leading-155">Create
+                                                  eye-catching posters and wall art with sharp details and premium finishes.
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="swiper-slide">
+                                      <div className="service-new-item">
+                                          <div className="overflow-hidden tw-pb-605">
+                                              <div className="position-relative">
+                                                  <div className="overflow-hidden tw-rounded-xl bg-neutral-50">
+                                                      <img src="/assets/images/thumbs/service-big-image3.png" alt="Image" className="tw-rounded-xl overflow-hidden position-relative active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-05 h-100 w-100 object-fit-cover" />
+                                                  </div>
+                                                  <div className="position-absolute start-50 translate-middle-x bottom-0 tw--mt-45-px">
+                                                      <div className="d-inline-flex bg-white tw-p-5 rounded-circle active-slider-animate-updown tw-duration-600 transition-delay-07 rounded-left-right-shape ">
+                                                          <Link href="/dich-vu/in-offset" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-14 tw-h-14 d-flex justify-content-center align-items-center tw-text-2xl text-white">
+                                                              <i className="ph-bold ph-arrow-up-right z-1"></i>
+                                                          </Link>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div className="d-flex flex-sm-row flex-column align-items-lg-center justify-content-between tw-gap-6 tw-mt-2 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-1">
+                                              <h2 className="tw-text-2xl fw-medium max-w-330-px">
+                                                  <Link href="/dich-vu/in-offset" className="hover-common-underline hover-text-heading">Custom Cap and Hat
+                                                      Printing Services</Link>
+                                              </h2>
+                                              <p className="text-neutral-500 text-sm-end max-w-330-px tw-leading-155">Design
+                                                  personalized caps and hats with clean, long-lasting prints ideal for
+                                                  branding.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="swiper-slide">
+                                      <div className="service-new-item">
+                                          <div className="overflow-hidden tw-pb-605">
+                                              <div className="position-relative">
+                                                  <div className="overflow-hidden tw-rounded-xl bg-neutral-50">
+                                                      <img src="/assets/images/thumbs/service-big-image4.png" alt="Image" className="tw-rounded-xl overflow-hidden position-relative active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-05 h-100 w-100 object-fit-cover" />
+                                                  </div>
+                                                  <div className="position-absolute start-50 translate-middle-x bottom-0 tw--mt-45-px">
+                                                      <div className="d-inline-flex bg-white tw-p-5 rounded-circle active-slider-animate-updown tw-duration-600 transition-delay-07 rounded-left-right-shape ">
+                                                          <Link href="/dich-vu/in-offset" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-14 tw-h-14 d-flex justify-content-center align-items-center tw-text-2xl text-white">
+                                                              <i className="ph-bold ph-arrow-up-right z-1"></i>
+                                                          </Link>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div className="d-flex flex-sm-row flex-column align-items-lg-center justify-content-between tw-gap-6 tw-mt-2 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-1">
+                                              <h2 className="tw-text-2xl fw-medium max-w-330-px">
+                                                  <Link href="/dich-vu/in-offset" className="hover-common-underline hover-text-heading">Product Box Packaging
+                                                      and Printing Solutions</Link>
+                                              </h2>
+                                              <p className="text-neutral-500 text-sm-end max-w-330-px tw-leading-155">Enhance your
+                                                  product presentation with custom printed boxes that combine durability.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="swiper-slide">
+                                      <div className="service-new-item">
+                                          <div className="overflow-hidden tw-pb-605">
+                                              <div className="position-relative">
+                                                  <div className="overflow-hidden tw-rounded-xl bg-neutral-50">
+                                                      <img src="/assets/images/thumbs/service-big-image5.png" alt="Image" className="tw-rounded-xl overflow-hidden position-relative active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-05 h-100 w-100 object-fit-cover" />
+                                                  </div>
+                                                  <div className="position-absolute start-50 translate-middle-x bottom-0 tw--mt-45-px">
+                                                      <div className="d-inline-flex bg-white tw-p-5 rounded-circle active-slider-animate-updown tw-duration-600 transition-delay-07 rounded-left-right-shape ">
+                                                          <Link href="/dich-vu/in-offset" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-14 tw-h-14 d-flex justify-content-center align-items-center tw-text-2xl text-white">
+                                                              <i className="ph-bold ph-arrow-up-right z-1"></i>
+                                                          </Link>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div className="d-flex flex-sm-row flex-column align-items-lg-center justify-content-between tw-gap-6 tw-mt-2 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-1">
+                                              <h2 className="tw-text-2xl fw-medium max-w-330-px">
+                                                  <Link href="/dich-vu/in-offset" className="hover-common-underline hover-text-heading">Hoodie and Sweatshirt
+                                                      Custom Printing Services</Link>
+                                              </h2>
+                                              <p className="text-neutral-500 text-sm-end max-w-330-px tw-leading-155">Premium hoodie
+                                                  and sweatshirt printing with comfortable fabrics and bold designs.</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div className="swiper-slide">
+                                      <div className="service-new-item">
+                                          <div className="overflow-hidden tw-pb-605">
+                                              <div className="position-relative">
+                                                  <div className="overflow-hidden tw-rounded-xl bg-neutral-50">
+                                                      <img src="/assets/images/thumbs/service-big-image6.png" alt="Image" className="tw-rounded-xl overflow-hidden position-relative active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-05 h-100 w-100 object-fit-cover" />
+                                                  </div>
+                                                  <div className="position-absolute start-50 translate-middle-x bottom-0 tw--mt-45-px">
+                                                      <div className="d-inline-flex bg-white tw-p-5 rounded-circle active-slider-animate-updown tw-duration-600 transition-delay-07 rounded-left-right-shape ">
+                                                          <Link href="/dich-vu/in-offset" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-14 tw-h-14 d-flex justify-content-center align-items-center tw-text-2xl text-white">
+                                                              <i className="ph-bold ph-arrow-up-right z-1"></i>
+                                                          </Link>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div className="d-flex flex-sm-row flex-column align-items-lg-center justify-content-between tw-gap-6 tw-mt-2 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-1">
+                                              <h2 className="tw-text-2xl fw-medium max-w-330-px">
+                                                  <Link href="/dich-vu/in-offset" className="hover-common-underline hover-text-heading">Bottle & Label
+                                                      Printing Design Services</Link>
+                                              </h2>
+                                              <p className="text-neutral-500 text-sm-end max-w-330-px tw-leading-155">Professional
+                                                  bottle and label printing with high-quality finishes, ideal for beverages.
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                      </div>
+      
+                      <div className="col-xl-6">
+                          <div className="d-flex align-items-center tw-gap-6">
+                              <div className="d-flex align-items-center tw-gap-4">
+                                  <button type="button" className="btn bg-main-600 gradient-outline-bg-white hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white service-new-btn-prev">
+                                      <i className="ph-bold ph-caret-left z-1 text-gradient-main tw-duration-300"></i>
+                                  </button>
+                                  <button type="button" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white service-new-btn-next">
+                                      <i className="ph-bold ph-caret-right z-1"></i>
+                                  </button>
+                              </div>
+                              <span className="">
+                                  <img src="/assets/images/icons/long-arrow-right.png" alt="Icon" />
+                              </span>
+                          </div>
+      
+                          
+                          <div className="service-small-image-wrapper d-xl-block d-none">
+                              <div className="swiper service-new-small-slider overflow-visible">
+                                  <div className="swiper-wrapper">
+                                      <div className="swiper-slide overflow-hidden">
+                                          <div className="service-small-image-item tw-rounded-xl overflow-hidden border border-white">
+                                              <img src="/assets/images/thumbs/service-small-image1.png" alt="Image" />
+                                          </div>
+                                      </div>
+                                      <div className="swiper-slide overflow-hidden">
+                                          <div className="service-small-image-item tw-rounded-xl overflow-hidden border border-white">
+                                              <img src="/assets/images/thumbs/service-small-image2.png" alt="Image" />
+                                          </div>
+                                      </div>
+                                      <div className="swiper-slide overflow-hidden">
+                                          <div className="service-small-image-item tw-rounded-xl overflow-hidden border border-white">
+                                              <img src="/assets/images/thumbs/service-small-image3.png" alt="Image" />
+                                          </div>
+                                      </div>
+                                      <div className="swiper-slide overflow-hidden">
+                                          <div className="service-small-image-item tw-rounded-xl overflow-hidden border border-white">
+                                              <img src="/assets/images/thumbs/service-small-image4.png" alt="Image" />
+                                          </div>
+                                      </div>
+                                      <div className="swiper-slide overflow-hidden">
+                                          <div className="service-small-image-item tw-rounded-xl overflow-hidden border border-white">
+                                              <img src="/assets/images/thumbs/service-small-image5.png" alt="Image" />
+                                          </div>
+                                      </div>
+                                      <div className="swiper-slide overflow-hidden">
+                                          <div className="service-small-image-item tw-rounded-xl overflow-hidden border border-white">
+                                              <img src="/assets/images/thumbs/service-small-image6.png" alt="Image" />
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          
+      
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+              
+    </>
+  );
+}

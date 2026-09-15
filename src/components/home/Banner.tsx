@@ -1,0 +1,120 @@
+'use client';
+import Link from 'next/link';
+
+export default function Banner() {
+  return (
+    <>
+              
+      <section className="banner-new section-bg-gradient pt-80-px scroll-scale-item-wrapper position-relative overflow-hidden z-1 section-animation-onload">
+          <div className="">
+              <div className="text-center max-w-1050-px mx-auto tw-px-6">
+                  <div className="bg-white rounded-pill common-shadow-two tw-py-2 tw-px-4 d-inline-flex align-items-center tw-gap-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                      <div className="d-flex align-items-center tw-gap-205">
+                          <span className="text-primary-new d-sm-flex d-none tw-text-xl">
+                              <i className="ph-fill ph-check-circle"></i>
+                          </span>
+                          <span className="text-primary-new tw-text-lg text-sm-res-14-px fw-semibold text-capitalize">Print Beyond
+                              Limits</span>
+                      </div>
+                      <span className="border-end border-neutral-300 tw-h-7 tw-w-px"></span>
+                      <span className="text-neutral-500 tw-text-lg text-sm-res-14-px fw-normal text-capitalize">Trusted by 50K+
+                          Clients</span>
+                  </div>
+                  <h1 className="tw-mt-4 banner-title fw-bold splitTextStyleOne">
+                      Find
+                      <span className="typed-text-wrapper text-start">
+                          <span className="typed-text text-gradient-main text-decoration-underline"></span>
+                      </span>
+                      Printing
+                      <span className="custom-fade-animation max-width-img" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
+                          <img src="/assets/images/shapes/user-img.png" alt="User Image" className="move-on-cursor-hover" data-value="1" />
+                      </span>
+                      For Your Brand
+                      <span className="custom-fade-animation d-lg-inline-flex d-none" data-delay=".7" data-fade-from="bottom" data-ease="bounce">
+                          <img src="/assets/images/shapes/rounded-element.png" alt="User Image" className="move-on-cursor-hover" data-value="1" />
+                      </span>
+                  </h1>
+      
+                  <p className="tw-text-xl tw-mt-6 max-w-650-px mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">The smartest platform to discover authentic influencers,
+                      launch viral
+                      campaigns, and scale your brand's.</p>
+                  <div className="tw-mt-10 d-inline-flex tw-gap-6 button-responsive-class">
+                      <div className="custom-fade-animation" data-delay=".8" data-fade-from="bottom" data-ease="bounce">
+                          <Link href="/lien-he" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 tw-ps-2 tw-pe-6 tw-py-3 py-sm-2">
+                              <span className="btn-icon-animation d-sm-flex d-none align-items-center justify-content-center z-1 tw-w-9 tw-h-9 bg-white rounded-circle">
+                                  <i className="ph-bold ph-arrow-right text-gradient-main"></i>
+                              </span>
+                              <span className="btn-text">Get Started </span>
+                          </Link>
+                      </div>
+                      <div className="custom-fade-animation" data-delay=".9" data-fade-from="bottom" data-ease="bounce">
+                          <Link href="/san-pham" className="btn bg-transparent border border-primary-new text-main-two-600 hover-bg-animation hover-bg-animation-main-two-600 tw-ps-2 tw-pe-6 tw-py-3 py-sm-2 hover-icon-white hover-animate-text-white">
+                              <span className="btn-icon-animation d-sm-flex d-none align-items-center justify-content-center z-1 tw-w-9 tw-h-9 bg-main-600 rounded-circle">
+                                  <i className="ph-bold ph-arrow-right text-white"></i>
+                              </span>
+                              <span className="btn-text text-gradient-main">
+                                  Get In Touch
+                              </span>
+                          </Link>
+                      </div>
+                  </div>
+                  <div className="tw-mt-8 d-inline-flex tw-gap-8 flex-wrap align-items-center">
+                      <div className="d-flex align-items-center tw-gap-205 animation-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                          <span className="text-primary-new d-flex tw-text-xl animate__heartBeat">
+                              <i className="ph-bold ph-check-circle"></i>
+                          </span>
+                          <span className="tw-text-xl text-neutral-700">10K+ Prints Delivered</span>
+                      </div>
+                      <div className="d-flex align-items-center tw-gap-205 animation-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                          <span className="text-primary-new d-flex tw-text-xl animate__heartBeat">
+                              <i className="ph-bold ph-check-circle"></i>
+                          </span>
+                          <span className="tw-text-xl text-neutral-700">24-48 Hour Fast Delivery</span>
+                      </div>
+                      <div className="d-flex align-items-center tw-gap-205 animation-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                          <span className="text-primary-new d-flex tw-text-xl animate__heartBeat">
+                              <i className="ph-bold ph-check-circle"></i>
+                          </span>
+                          <span className="tw-text-xl text-neutral-700">99% Client Satisfaction</span>
+                      </div>
+                  </div>
+              </div>
+              <h2 className="text-220-px text-uppercase text-stroke d-lg-inline-block d-none writing-mode-lr position-absolute top-0 end-0 tw-me-13 tw-duration-300 tw-mb-12 z-0">
+                  • Printop
+              </h2>
+      
+              <div className="d-xxl-block d-none">
+                  <div className="position-absolute z-n1 banner-element-1">
+                      <img src="/assets/images/shapes/banner-element-img1.png" alt="Element Shape" className="animation-rotate-scale" />
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-2">
+                      <img src="/assets/images/shapes/banner-element-img2.png" alt="Element Shape" className="animated-upDown" />
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-3">
+                      <img src="/assets/images/shapes/banner-element-img3.png" alt="Element Shape" className="animate__wobble__two" />
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-4">
+                      <img src="/assets/images/shapes/banner-element-img4.png" alt="Element Shape" className="animation-rotate-right" />
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-5">
+                      <img src="/assets/images/shapes/banner-element-img5.png" alt="Element Shape" className="animation-scalation" />
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-6">
+                      <img src="/assets/images/shapes/banner-element-img6.png" alt="Element Shape" className="animated-upDown" />
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-7">
+                      <img src="/assets/images/shapes/banner-element-img7.png" alt="Element Shape" className="animation-rotate-right" />
+                  </div>
+              </div>
+      
+              <div className="pt-80-px tw-px-4">
+                  <img src="/assets/images/thumbs/banner-all-img.png" alt="Image" className="w-100 h-100 scroll-scale-item" />
+              </div>
+      
+          </div>
+      </section>
+      
+      
+    </>
+  );
+}
