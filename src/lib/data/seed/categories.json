@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "hop-giay",
+    "name": "Hộp giày",
+    "description": "Hộp giày carton trắng và nâu, carton 3 lớp sóng E, nắp gập tiết kiệm. Dùng cho giày nam, giày nữ, sneaker và các mặt hàng thời trang cần hộp cứng cáp nhưng gấp gọn được để giảm chi phí lưu kho.",
+    "imageUrl": "/assets/images/thumbs/home-img1.png",
+    "sortOrder": 1
+  },
+  {
+    "slug": "hop-nap-gai",
+    "name": "Hộp nắp gài",
+    "description": "Hộp nắp gài carton 3 lớp sóng E, nắp gài tiêu chuẩn hoặc nắp gập kiểu thời trang, có mẫu khoét lỗ xách tay. Phù hợp đóng gói mỹ phẩm, phụ kiện, quà tặng và hàng thương mại điện tử.",
+    "imageUrl": "/assets/images/thumbs/home-img2.png",
+    "sortOrder": 2
+  },
+  {
+    "slug": "thung-cod",
+    "name": "Thùng COD",
+    "description": "Thùng carton ship hàng COD, carton 3 lớp sóng B chịu lực, in Flexo 1 màu. Dùng cho mỹ phẩm, phụ kiện thời trang, trang sức và hàng gửi chuyển phát.",
+    "imageUrl": "/assets/images/thumbs/home-img3.png",
+    "sortOrder": 3
+  }
+]
