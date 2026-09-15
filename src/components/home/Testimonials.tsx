@@ -1,363 +1,48 @@
-'use client';
 import Link from 'next/link';
+import TestimonialsSlider, { type Testimonial } from '@/components/shared/TestimonialsSlider';
+import testimonials from '@/lib/data/seed/testimonials.json';
 
 export default function Testimonials() {
   return (
-    <>
-              
-      <section className="testimonials-new py-120">
-          <div className="container">
-              <div className="d-flex align-items-center justify-content-between flex-lg-nowrap flex-wrap tw-gap-6 tw-mb-15">
-                  <div className="max-w-650-px">
-                      <div className="bg-white rounded-pill border border-neutral-100 tw-py-105 tw-px-4 d-inline-flex align-items-center tw-gap-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                          <div className="d-flex align-items-center tw-gap-205">
-                              <span className="text-primary-new d-sm-flex d-none tw-text-xl">
-                                  <i className="ph-fill ph-check-circle"></i>
-                              </span>
-                              <span className="text-primary-new tw-text-lg text-sm-res-14-px fw-semibold text-center">Testimonial</span>
-                          </div>
-                          <span className="border-end border-neutral-300 tw-h-5 tw-w-px"></span>
-                          <span className="text-neutral-500 tw-text-lg text-sm-res-14-px fw-normal text-center">What Our Clients
-                              Say</span>
-                      </div>
-                      <h2 className="fw-bold tw-mt-4 h1"> <span className="text-reveal d-inline">High-Quality Services With
-                              Fast </span> <span className="text-gradient-main text-decoration-underline">Delivery</span>
-                      </h2>
-                  </div>
-                  <div className="max-w-400-px d-flex flex-column tw-gap-8">
-                      <p className="text-neutral-500 text-lg-end">We take pride in delivering high-quality printing solutions that
-                          exceed expectations.</p>
-                      <div className=" d-flex justify-content-lg-end">
-                          <div className="custom-fade-animation" data-delay=".7" data-fade-from="bottom" data-ease="bounce">
-                              <Link href="/lien-he" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 tw-ps-2 tw-pe-6 tw-py-3 py-sm-2">
-                                  <span className="btn-icon-animation d-flex align-items-center justify-content-center z-1 tw-w-9 tw-h-9 bg-white rounded-circle">
-                                      <i className="ph-bold ph-arrow-right text-gradient-main"></i>
-                                  </span>
-                                  <span className="btn-text">Get In Touch</span>
-                              </Link>
-                          </div>
-                      </div>
-                  </div>
+    <section className="testimonials-new py-120">
+      <div className="container">
+        <div className="d-flex align-items-center justify-content-between flex-lg-nowrap flex-wrap tw-gap-6 tw-mb-15">
+          <div className="max-w-650-px">
+            <div className="bg-white rounded-pill border border-neutral-100 tw-py-105 tw-px-4 d-inline-flex align-items-center tw-gap-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+              <div className="d-flex align-items-center tw-gap-205">
+                <span className="text-primary-new d-sm-flex d-none tw-text-xl">
+                  <i className="ph-fill ph-check-circle"></i>
+                </span>
+                <span className="text-primary-new tw-text-lg text-sm-res-14-px fw-semibold text-center">Đánh giá</span>
               </div>
-      
-              <div className="background-img bg-img tw-rounded-3xl overflow-hidden" data-background-image="/assets/images/bg/testimonials-new-bg.png">
-      
-                  <div className="swiper testimonials-new-slider animated-slider-wrapper">
-                      <div className="swiper-wrapper">
-      
-                          <div className="swiper-slide tw-p-6">
-                              <div className="testimonials-new-item">
-                                  <div className="row gy-4">
-                                      <div className="col-lg-6">
-                                          <div className="position-relative d-flex justify-content-center h-100">
-                                              <div className="h-100 w-100">
-                                                  <div className="active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-1 h-100">
-                                                      <div className="testimonials-new-img d-flex justify-content-center h-100 w-100">
-                                                          <img src="/assets/images/thumbs/testimonials-new-img1.png" alt="Image" className="h-100 object-fit-cover" />
-                                                      </div>
-                                                  </div>
-                                                  <div className="d-flex align-items-center justify-content-between tw-gap-4 position-absolute bottom-0 start-0 w-100 tw-mb-4 tw-px-4 z-1 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-105">
-                                                      <div className="">
-                                                          <h2 className="text-white h3 shadow-text">Jeluas Cartarn</h2>
-                                                          <span className="tw-mt-3 text-white">CEO at Global Graphics
-                                                              Innovations</span>
-                                                      </div>
-                                                      <div className="tw-w-16 tw-h-16 bg-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0">
-                                                          <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg" className="tw-w-12 tw-h-12 bg-primary-new text-white rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button position-relative flex-shrink-0">
-                                                              <i className="ph-fill ph-play"></i>
-                                                          </a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-      
-                                              <div className="">
-                                                  <div className="position-absolute testimonials-new-shape1">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape1.png" alt="Shape" className="animation-scalation" />
-                                                  </div>
-                                                  <div className="position-absolute testimonials-new-shape2">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape2.png" alt="Shape" className="animation-scalation" />
-                                                  </div>
-                                                  <div className="position-absolute d-sm-block d-none testimonials-new-shape3">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape3.png" alt="Shape" className="animation-rotate-right" />
-                                                  </div>
-                                                  <div className="position-absolute d-sm-block d-none testimonials-new-shape4">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape4.png" alt="Shape" className="animation-rotate-right" />
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-      
-                                      <div className="col-lg-6">
-                                          <div className="bg-white tw-rounded-3xl tw-p-40-px position-relative h-100 active-slider-animate-little-updown tw-duration-700 transition-delay-05">
-                                              <ul className="d-flex align-items-center tw-gap-1">
-                                                  <li className="d-flex text-warning tw-text-xl tw-duration-300">
-                                                      <i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl tw-duration-300">
-                                                      <i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl tw-duration-300">
-                                                      <i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl tw-duration-300">
-                                                      <i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl tw-duration-300">
-                                                      <i className="ph-fill ph-star-half"></i>
-                                                  </li>
-                                              </ul>
-                                              <h2 className="tw-mt-3 h4">Premium Quality & Fast Service</h2>
-                                              <p className="tw-text-lg text-neutral-600 tw-mt-5 max-w-500-px tw-leading-155">“I've
-                                                  worked with
-                                                  several printing companies before, but Printop truly stands out. The quality
-                                                  of
-                                                  the prints
-                                                  is exceptional, the colors are vibrant.”</p>
-                                              <ul className="d-flex flex-column tw-gap-2 tw-mt-705">
-                                                  <li className="d-flex align-items-center tw-gap-205">
-                                                      <span className="d-flex tw-text-xl text-primary-new">
-                                                          <i className="ph-fill ph-check-circle"></i>
-                                                      </span>
-                                                      <span className="tw-text-base text-neutral-600">Verified Business Client
-                                                          Review</span>
-                                                  </li>
-                                                  <li className="d-flex align-items-center tw-gap-205">
-                                                      <span className="d-flex tw-text-xl text-primary-new">
-                                                          <i className="ph-fill ph-check-circle"></i>
-                                                      </span>
-                                                      <span className="tw-text-base text-neutral-600">Fast Delivery Great
-                                                          Experience</span>
-                                                  </li>
-                                                  <li className="d-flex align-items-center tw-gap-205">
-                                                      <span className="d-flex tw-text-xl text-primary-new">
-                                                          <i className="ph-fill ph-check-circle"></i>
-                                                      </span>
-                                                      <span className="tw-text-base text-neutral-600">Premium Quality Printing
-                                                          Service</span>
-                                                  </li>
-                                              </ul>
-                                              <span className="tw-h-px w-100 bg-neutral-100 d-block tw-mt-10 tw-mb-6"></span>
-                                              <span className="quate-new-icon position-absolute tw-end-0 bottom-0 tw-me-12 tw-mb-13 opacity-25">
-                                                  <img src="/assets/images/icons/quate-new-icon.png" alt="Quote" />
-                                              </span>
-                                              <div className="d-flex align-items-center tw-gap-4">
-                                                  <button type="button" className="btn bg-main-600 gradient-outline-bg-white hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white testimonials-new-btn-prev">
-                                                      <i className="ph-bold ph-caret-left z-1 text-gradient-main tw-duration-300"></i>
-                                                  </button>
-                                                  <button type="button" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white testimonials-new-btn-next">
-                                                      <i className="ph-bold ph-caret-right z-1"></i>
-                                                  </button>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div className="swiper-slide tw-p-6">
-                              <div className="testimonials-new-item">
-                                  <div className="row gy-4">
-                                      <div className="col-lg-6">
-                                          <div className="position-relative d-flex justify-content-center h-100">
-                                              <div className="h-100 w-100">
-                                                  <div className="active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-1 h-100">
-                                                      <div className="testimonials-new-img d-flex justify-content-center h-100 w-100">
-                                                          <img src="/assets/images/thumbs/testimonials-new-img2.png" alt="Image" className="h-100 object-fit-cover w-100" />
-                                                      </div>
-                                                  </div>
-                                                  <div className="d-flex align-items-center justify-content-between tw-gap-4 position-absolute bottom-0 start-0 w-100 tw-mb-4 tw-px-4 z-1 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-105">
-                                                      <div>
-                                                          <h2 className="text-white h3 shadow-text">Anika Islam</h2>
-                                                          <span className="tw-mt-3 text-white">UI/UX Designer</span>
-                                                      </div>
-                                                      <div className="tw-w-16 tw-h-16 bg-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0">
-                                                          <a href="https://www.youtube.com/watch?v=ysz5S6PUM-U" className="tw-w-12 tw-h-12 bg-primary-new text-white rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button position-relative flex-shrink-0">
-                                                              <i className="ph-fill ph-play"></i>
-                                                          </a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-      
-                                              <div>
-                                                  <div className="position-absolute testimonials-new-shape1">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape1.png" alt="image" className="animation-scalation" />
-                                                  </div>
-                                                  <div className="position-absolute testimonials-new-shape2">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape2.png" alt="image" className="animation-scalation" />
-                                                  </div>
-                                                  <div className="position-absolute d-sm-block d-none testimonials-new-shape3">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape3.png" alt="image" className="animation-rotate-right" />
-                                                  </div>
-                                                  <div className="position-absolute d-sm-block d-none testimonials-new-shape4">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape4.png" alt="image" className="animation-rotate-right" />
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-      
-                                      <div className="col-lg-6">
-                                          <div className="bg-white tw-rounded-3xl tw-p-40-px position-relative h-100 active-slider-animate-little-updown tw-duration-700 transition-delay-05">
-                                              <ul className="d-flex align-items-center tw-gap-1">
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                              </ul>
-      
-                                              <h2 className="tw-mt-3 h4">Premium Design & Print Solutions</h2>
-                                              <p className="tw-text-lg text-neutral-600 tw-mt-5 max-w-500-px tw-leading-155">
-                                                  “Their creative designs and flawless printing helped us elevate our brand
-                                                  image. The results were beyond expectations.”
-                                              </p>
-      
-                                              <ul className="d-flex flex-column tw-gap-2 tw-mt-705">
-                                                  <li className="d-flex align-items-center tw-gap-205">
-                                                      <span className="d-flex tw-text-xl text-primary-new"><i className="ph-fill ph-check-circle"></i></span>
-                                                      <span className="tw-text-base text-neutral-600">Creative Design
-                                                          Expertise</span>
-                                                  </li>
-                                                  <li className="d-flex align-items-center tw-gap-205">
-                                                      <span className="d-flex tw-text-xl text-primary-new"><i className="ph-fill ph-check-circle"></i></span>
-                                                      <span className="tw-text-base text-neutral-600">Consistent Print
-                                                          Accuracy</span>
-                                                  </li>
-                                                  <li className="d-flex align-items-center tw-gap-205">
-                                                      <span className="d-flex tw-text-xl text-primary-new"><i className="ph-fill ph-check-circle"></i></span>
-                                                      <span className="tw-text-base text-neutral-600">Trusted by
-                                                          Professionals</span>
-                                                  </li>
-                                              </ul>
-      
-                                              <span className="tw-h-px w-100 bg-neutral-100 d-block tw-mt-10 tw-mb-6"></span>
-      
-                                              <span className="quate-new-icon position-absolute tw-end-0 bottom-0 tw-me-12 tw-mb-13 opacity-25">
-                                                  <img src="/assets/images/icons/quate-new-icon.png" alt="Quote" />
-                                              </span>
-                                              <div className="d-flex align-items-center tw-gap-4">
-                                                  <button type="button" className="btn bg-main-600 gradient-outline-bg-white hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white testimonials-new-btn-prev">
-                                                      <i className="ph-bold ph-caret-left z-1 text-gradient-main tw-duration-300"></i>
-                                                  </button>
-                                                  <button type="button" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white testimonials-new-btn-next">
-                                                      <i className="ph-bold ph-caret-right z-1"></i>
-                                                  </button>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-      
-                          <div className="swiper-slide tw-p-6">
-                              <div className="testimonials-new-item">
-                                  <div className="row gy-4">
-                                      <div className="col-lg-6">
-                                          <div className="position-relative d-flex justify-content-center h-100">
-                                              <div className="h-100 w-100">
-                                                  <div className="active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-1 h-100">
-                                                      <div className="testimonials-new-img d-flex justify-content-center h-100 w-100">
-                                                          <img src="/assets/images/thumbs/testimonials-new-img3.png" alt="Image" className="h-100 object-fit-cover w-100" />
-                                                      </div>
-                                                  </div>
-                                                  <div className="d-flex align-items-center justify-content-between tw-gap-4 position-absolute bottom-0 start-0 w-100 tw-mb-4 tw-px-4 z-1 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-105">
-                                                      <div>
-                                                          <h2 className="text-white h3 shadow-text">Robert Fox</h2>
-                                                          <span className="tw-mt-3 text-white">ICT Teacher</span>
-                                                      </div>
-                                                      <div className="tw-w-16 tw-h-16 bg-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0">
-                                                          <a href="https://www.youtube.com/watch?v=ysz5S6PUM-U" className="tw-w-12 tw-h-12 bg-primary-new text-white rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button position-relative flex-shrink-0">
-                                                              <i className="ph-fill ph-play"></i>
-                                                          </a>
-                                                      </div>
-                                                  </div>
-                                              </div>
-      
-                                              <div>
-                                                  <div className="position-absolute testimonials-new-shape1">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape1.png" alt="image" className="animation-scalation" />
-                                                  </div>
-                                                  <div className="position-absolute testimonials-new-shape2">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape2.png" alt="image" className="animation-scalation" />
-                                                  </div>
-                                                  <div className="position-absolute d-sm-block d-none testimonials-new-shape3">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape3.png" alt="image" className="animation-rotate-right" />
-                                                  </div>
-                                                  <div className="position-absolute d-sm-block d-none testimonials-new-shape4">
-                                                      <img src="/assets/images/shapes/testimonials-new-shape4.png" alt="image" className="animation-rotate-right" />
-                                                  </div>
-                                              </div>
-                                          </div>
-                                      </div>
-      
-                                      <div className="col-lg-6">
-                                          <div className="bg-white tw-rounded-3xl tw-p-40-px position-relative h-100 active-slider-animate-little-updown tw-duration-700 transition-delay-05">
-                                              <ul className="d-flex align-items-center tw-gap-1">
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                                  <li className="d-flex text-warning tw-text-xl"><i className="ph-fill ph-star"></i>
-                                                  </li>
-                                              </ul>
-      
-                                              <h2 className="tw-mt-3 h4">Fast & Reliable Printing Service</h2>
-                                              <p className="tw-text-lg text-neutral-600 tw-mt-5 max-w-500-px tw-leading-155">
-                                                  “We were impressed by their speed and precision. Every order was delivered
-                                                  on time without compromising quality.”
-                                              </p>
-      
-                                              <ul className="d-flex flex-column tw-gap-2 tw-mt-705">
-                                                  <li className="d-flex align-items-center tw-gap-205">
-                                                      <span className="d-flex tw-text-xl text-primary-new"><i className="ph-fill ph-check-circle"></i></span>
-                                                      <span className="tw-text-base text-neutral-600">Quick Turnaround Time</span>
-                                                  </li>
-                                                  <li className="d-flex align-items-center tw-gap-205">
-                                                      <span className="d-flex tw-text-xl text-primary-new"><i className="ph-fill ph-check-circle"></i></span>
-                                                      <span className="tw-text-base text-neutral-600">Dependable Service
-                                                          Quality</span>
-                                                  </li>
-                                                  <li className="d-flex align-items-center tw-gap-205">
-                                                      <span className="d-flex tw-text-xl text-primary-new"><i className="ph-fill ph-check-circle"></i></span>
-                                                      <span className="tw-text-base text-neutral-600">Customer Satisfaction
-                                                          Focused</span>
-                                                  </li>
-                                              </ul>
-      
-                                              <span className="tw-h-px w-100 bg-neutral-100 d-block tw-mt-10 tw-mb-6"></span>
-      
-                                              <span className="quate-new-icon position-absolute tw-end-0 bottom-0 tw-me-12 tw-mb-13 opacity-25">
-                                                  <img src="/assets/images/icons/quate-new-icon.png" alt="Quote" />
-                                              </span>
-                                              <div className="d-flex align-items-center tw-gap-4">
-                                                  <button type="button" className="btn bg-main-600 gradient-outline-bg-white hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white testimonials-new-btn-prev">
-                                                      <i className="ph-bold ph-caret-left z-1 text-gradient-main tw-duration-300"></i>
-                                                  </button>
-                                                  <button type="button" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white testimonials-new-btn-next">
-                                                      <i className="ph-bold ph-caret-right z-1"></i>
-                                                  </button>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-      
-                      </div>
-                  </div>
-              </div>
-      
+              <span className="border-end border-neutral-300 tw-h-5 tw-w-px"></span>
+              <span className="text-neutral-500 tw-text-lg text-sm-res-14-px fw-normal text-center">Khách hàng nói gì</span>
+            </div>
+            <h2 className="fw-bold tw-mt-4 h1"> <span className="text-reveal d-inline">Chất lượng ổn định, tiến độ </span>{' '}
+              <span className="text-gradient-main text-decoration-underline">đúng hẹn</span>
+            </h2>
           </div>
-      </section>
-      
-              
-    </>
+          <div className="max-w-400-px d-flex flex-column tw-gap-8">
+            <p className="text-neutral-500 text-lg-end">
+              Phần lớn khách hàng đến với Thời Đại qua giới thiệu và quay lại cho các đơn hàng sau.
+            </p>
+            <div className=" d-flex justify-content-lg-end">
+              <div className="custom-fade-animation" data-delay=".7" data-fade-from="bottom" data-ease="bounce">
+                <Link href="/lien-he" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 tw-ps-2 tw-pe-6 tw-py-3 py-sm-2">
+                  <span className="btn-icon-animation d-flex align-items-center justify-content-center z-1 tw-w-9 tw-h-9 bg-white rounded-circle">
+                    <i className="ph-bold ph-arrow-right text-gradient-main"></i>
+                  </span>
+                  <span className="btn-text">Liên hệ tư vấn</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="background-img bg-img tw-rounded-3xl overflow-hidden" data-background-image="/assets/images/bg/testimonials-new-bg.png">
+          <TestimonialsSlider items={testimonials as Testimonial[]} />
+        </div>
+      </div>
+    </section>
   );
 }

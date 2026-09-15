@@ -196,6 +196,28 @@ function mobileSubmenu(): Cleanup {
   return () => document.removeEventListener('click', onClick);
 }
 
+
+/**
+ * main.js: Typed.js cho .typed-text — giữ nguyên tham số gốc
+ * (typeSpeed 60, backSpeed 40, backDelay 1500, startDelay 500, loop, ẩn con trỏ).
+ * Chỉ thay nội dung chuỗi sang tiếng Việt.
+ */
+function typedText(): Cleanup {
+  const el = document.querySelector('.typed-text');
+  const Typed = (window as unknown as { Typed?: new (sel: string, o: Record<string, unknown>) => { destroy: () => void } }).Typed;
+  if (!el || !Typed) return () => {};
+  const instance = new Typed('.typed-text', {
+    strings: ['sáng tạo', 'bền đẹp', 'đúng hẹn'],
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 1500,
+    startDelay: 500,
+    loop: true,
+    showCursor: false,
+  });
+  return () => instance.destroy();
+}
+
 /** Chạy toàn bộ hành vi template cho trang hiện tại. Trả về hàm dọn dẹp. */
 export function initTemplateBehaviors(): Cleanup {
   const cleanups = [
@@ -209,6 +231,7 @@ export function initTemplateBehaviors(): Cleanup {
     stickyHeader(),
     blurBottomShadow(),
     counters(),
+    typedText(),
   ];
   return () => cleanups.forEach((fn) => fn());
 }

@@ -15,17 +15,16 @@ export default function BrandSlider() {
                                   <span className="text-primary-new d-sm-flex d-none tw-text-xl">
                                       <i className="ph-fill ph-check-circle"></i>
                                   </span>
-                                  <span className="text-primary-new tw-text-lg text-sm-res-14-px fw-semibold text-center">Brands</span>
+                                  <span className="text-primary-new tw-text-lg text-sm-res-14-px fw-semibold text-center">Đối tác</span>
                               </div>
                               <span className="border-end border-neutral-300 tw-h-5 tw-w-px"></span>
-                              <span className="text-neutral-500 tw-text-lg text-sm-res-14-px fw-normal text-center">Trusted
-                                  Partners</span>
+                              <span className="text-neutral-500 tw-text-lg text-sm-res-14-px fw-normal text-center">Khách hàng doanh nghiệp</span>
                           </div>
                       </div>
                   </div>
                   <div className="col-lg-8">
                       <div className="tw-pb-15 sm-style-none border-start border-neutral-100 tw-ps-15">
-                          <h2 className="text-reveal fw-semibold tw-mt-4 h1">We Proudly Collaborate With Trusted Brands & Partners
+                          <h2 className="text-reveal fw-semibold tw-mt-4 h1">Hơn 300 doanh nghiệp đã tin tưởng đặt bao bì tại Thời Đại
                           </h2>
                       </div>
                   </div>
@@ -36,14 +35,13 @@ export default function BrandSlider() {
                       <div className="col-lg-4">
                           <div className="tw-pt-15">
                               <div className="max-w-380-px d-flex flex-column tw-gap-8">
-                                  <p className="text-neutral-500">We are proud to collaborate with a diverse range of trusted
-                                      brands and partners who share our commitment to quality and innovation.</p>
+                                  <p className="text-neutral-500">Khách hàng của chúng tôi trải rộng từ thời trang, mỹ phẩm, thực phẩm tới thương mại điện tử — mỗi ngành một yêu cầu bao bì khác nhau.</p>
                                   <div className="custom-fade-animation" data-delay=".7" data-fade-from="bottom" data-ease="bounce">
                                       <Link href="/lien-he" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 tw-ps-2 tw-pe-6 tw-py-3 py-sm-2">
                                           <span className="btn-icon-animation d-flex align-items-center justify-content-center z-1 tw-w-9 tw-h-9 bg-white rounded-circle">
                                               <i className="ph-bold ph-arrow-right text-gradient-main"></i>
                                           </span>
-                                          <span className="btn-text">View All Clients</span>
+                                          <span className="btn-text">Liên hệ tư vấn</span>
                                       </Link>
                                   </div>
                               </div>

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Thanh Rô",
+    "role": "Khách hàng",
+    "heading": "Designer đưa ra ý tưởng đúng nhu cầu",
+    "quote": "Rất hài lòng với những ý tưởng của designer dành cho sản phẩm.",
+    "image": "/assets/images/thumbs/testimonials-new-img1.png"
+  },
+  {
+    "name": "Minh Thư",
+    "role": "Khách hàng",
+    "heading": "Tư vấn nhiệt tình từ đầu đến cuối",
+    "quote": "Bộ phận tư vấn rất nhiệt tình, vui vẻ giải quyết những yêu cầu.",
+    "image": "/assets/images/thumbs/testimonials-new-img2.png"
+  },
+  {
+    "name": "Pha Nin",
+    "role": "Khách hàng",
+    "heading": "Chất giấy cứng, bề mặt đẹp",
+    "quote": "Hộp giày chất lượng giấy rất cứng, chắc chắn, bề mặt giấy đẹp.",
+    "image": "/assets/images/thumbs/testimonials-new-img3.png"
+  },
+  {
+    "name": "Thị Hiền",
+    "role": "Khách hàng",
+    "heading": "Nhân viên thân thiện, thoải mái",
+    "quote": "Nhân viên tiếp nhận khách hàng rất thân thiện, thoải mái.",
+    "image": "/assets/images/thumbs/testimonials-new-img1.png"
+  }
+]

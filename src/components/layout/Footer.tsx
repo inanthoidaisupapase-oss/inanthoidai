@@ -7,7 +7,7 @@ export default function Footer() {
               
       <footer className="footer-new position-relative z-1 mt-auto">
           <img src="/assets/images/bg/gradient-bg.png" alt="" className="position-absolute start-0 top-0 w-100 h-100 object-fit-cover z-n1" />
-          <img src="/assets/images/shapes/testimonials-new-shape1.png" className="position-absolute tw-end-0 bottom-0 z-n1 d-md-block d-none tw-mb-12 tw-me-11 animation-rotate z-0" alt="Image" />
+          <img src="/assets/images/shapes/testimonials-new-shape1.png" className="position-absolute tw-end-0 bottom-0 z-n1 d-md-block d-none tw-mb-12 tw-me-11 animation-rotate z-0" alt="" />
       
           <div className="position-absolute tw-start-0 bottom-0 z-n1 d-md-block d-none tw-mb-16 tw-pb-14 tw-ms-15 tw-ps-6 animation-rotate-right z-0">
               <img src="/assets/images/shapes/banner-element-img7.png" alt="" className="animation-rotate-right" />
@@ -157,7 +157,7 @@ export default function Footer() {
           <div className="container">
               <div className="border-top border-white-16 tw-py-8 custom-fade-animation position-relative" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
                   <div className="position-absolute d-xl-block d-none start-50 translate-middle-x top-0 tw--mt-40-px z-1">
-                      <img src="/assets/images/shapes/testimonials-new-shape3.png" className="animation-rotate-right" alt="Image" />
+                      <img src="/assets/images/shapes/testimonials-new-shape3.png" className="animation-rotate-right" alt="" />
                   </div>
                   <div className="">
                       <div className="d-flex align-items-center justify-content-between tw-gap-4 flex-wrap">
