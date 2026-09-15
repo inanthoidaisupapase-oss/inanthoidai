@@ -131,7 +131,4 @@ export function normalize(text: string): string {
     .replace(/đ/g, 'd');
 }
 
-export function formatDateVi(iso: string): string {
-  const d = new Date(iso);
-  return `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
-}
+export { formatDateVi, formatVnd } from '../format';
