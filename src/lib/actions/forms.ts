@@ -72,12 +72,14 @@ export async function submitContact(_prev: FormState, formData: FormData): Promi
 
   const fullName = str(formData, 'full_name');
   const email = str(formData, 'email');
+  const phone = str(formData, 'phone');
   const subject = str(formData, 'subject');
   const message = str(formData, 'message');
 
   const fieldErrors: Record<string, string> = {};
   if (fullName.length < 2) fieldErrors.full_name = 'Vui lòng nhập họ tên';
   if (!isEmail(email)) fieldErrors.email = 'Email chưa đúng định dạng';
+  if (phone && !isPhone(phone)) fieldErrors.phone = 'Số điện thoại chưa đúng (10 số, bắt đầu bằng 0)';
   if (message.length < 10) fieldErrors.message = 'Nội dung cần ít nhất 10 ký tự';
   if (Object.keys(fieldErrors).length) {
     return { ok: false, message: 'Vui lòng kiểm tra lại thông tin.', fieldErrors };
@@ -86,18 +88,18 @@ export async function submitContact(_prev: FormState, formData: FormData): Promi
   const sb = serverSupabase();
   if (sb) {
     const { error } = await sb.from('contact_messages').insert({
-      full_name: fullName, email, subject: subject || null, message,
+      full_name: fullName, email, phone: phone || null, subject: subject || null, message,
     });
     if (error) {
       console.error('[form] Lưu contact_messages thất bại:', error.message);
       return { ok: false, message: 'Hệ thống đang bận. Vui lòng gọi ' + site.hotline + ' để được hỗ trợ ngay.' };
     }
   } else {
-    console.info('[form] Chưa cấu hình Supabase — liên hệ mới:', { fullName, email, subject, message });
+    console.info('[form] Chưa cấu hình Supabase — liên hệ mới:', { fullName, email, phone, subject, message });
   }
 
   await sendNotification(`[Website] Liên hệ mới từ ${fullName}`, [
-    `Họ tên: ${fullName}`, `Email: ${email}`, `Tiêu đề: ${subject || '(không có)'}`, '', message,
+    `Họ tên: ${fullName}`, `Email: ${email}`, `Điện thoại: ${phone || '(không có)'}`, `Loại nhu cầu: ${subject || '(không có)'}`, '', message,
   ]);
 
   return { ok: true, message: 'Đã gửi. Chúng tôi sẽ phản hồi trong giờ làm việc.' };
@@ -174,4 +176,39 @@ export async function submitQuote(_prev: FormState, formData: FormData): Promise
   ]);
 
   return { ok: true, message: 'Đã nhận yêu cầu. Chúng tôi sẽ báo giá trong ngày làm việc.' };
+}
+
+/* --------------------------- Đăng ký nhận bản tin --------------------------- */
+
+// "source" chỉ để thống kê nơi đăng ký (Footer / sidebar Tin tức) — không quan
+// trọng tới mức phải chặn giá trị lạ, nhưng vẫn không tin thẳng chuỗi client gửi lên.
+const NEWSLETTER_SOURCES = ['footer', 'blog-sidebar'];
+
+export async function submitNewsletter(_prev: FormState, formData: FormData): Promise<FormState> {
+  if (str(formData, 'website')) return { ok: true, message: 'Đã đăng ký. Cảm ơn bạn!' };
+  if (await rateLimited()) {
+    return { ok: false, message: 'Bạn đã gửi quá nhiều lần. Vui lòng thử lại sau ít phút.' };
+  }
+
+  const email = str(formData, 'email');
+  const sourceRaw = str(formData, 'source');
+  const source = NEWSLETTER_SOURCES.includes(sourceRaw) ? sourceRaw : 'khac';
+
+  if (!isEmail(email)) {
+    return { ok: false, message: 'Email chưa đúng định dạng.', fieldErrors: { email: 'Email chưa đúng định dạng' } };
+  }
+
+  const sb = serverSupabase();
+  if (sb) {
+    const { error } = await sb.from('newsletter_subscribers').insert({ email, source });
+    // Email trùng (cột unique) không phải lỗi với người dùng — coi như đã đăng ký từ trước.
+    if (error && error.code !== '23505') {
+      console.error('[form] Lưu newsletter_subscribers thất bại:', error.message);
+      return { ok: false, message: 'Hệ thống đang bận. Vui lòng thử lại sau.' };
+    }
+  } else {
+    console.info('[form] Chưa cấu hình Supabase — đăng ký bản tin mới:', { email, source });
+  }
+
+  return { ok: true, message: 'Đã đăng ký. Cảm ơn bạn!' };
 }

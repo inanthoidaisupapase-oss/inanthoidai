@@ -33,6 +33,8 @@ const purpose = {
   'thumbs/banner-all-img.png': 'Ảnh lớn trang chủ: bộ sản phẩm tiêu biểu (hộp giày, hộp nắp gài, thùng COD) chụp cùng bối cảnh',
   'thumbs/top-categories-new-main-img.png': 'Ảnh xưởng sản xuất hoặc kho thành phẩm — khối lớn ở mục Sản phẩm trang chủ',
   'thumbs/about-new-img1.png': 'Ảnh xưởng sản xuất hoặc tập thể công ty — trang Giới thiệu',
+  'thumbs/meta-img.png': 'Avatar nhỏ đại diện tác giả trong hàng meta (ảnh + tên + ngày) của bài viết — có thể thay bằng ảnh đội ngũ thật hoặc giữ icon trung tính',
+  'thumbs/graphics-img.png': 'Ảnh đội ngũ thiết kế đang dựng mẫu hoặc bản vẽ kỹ thuật dao bế — trang Dịch vụ',
 };
 
 const rows = new Map();

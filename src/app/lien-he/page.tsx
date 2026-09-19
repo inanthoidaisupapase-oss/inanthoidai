@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/shared/Breadcrumb';
 import ContactForm from '@/components/shared/ContactForm';
+import GallerySlider from '@/components/shared/GallerySlider';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -8,99 +9,108 @@ export const metadata: Metadata = {
   description: `Liên hệ In Ấn Thời Đại — ${site.office}. Hotline ${site.hotline}, email ${site.email}.`,
 };
 
+// TODO ảnh: ảnh thật nhà xưởng/thành phẩm — xem docs/IMAGE-GUIDE.md.
+// Tạm dùng lại placeholder gốc của template (instagram-post-imgN.png), giống gioi-thieu/page.tsx.
+const galleryImages = [1, 2, 3, 4, 5, 6].map((n) => `/assets/images/thumbs/instagram-post-img${n}.png`);
+
+// Bản đồ nhúng không cần API key (kỹ thuật "?q=<địa chỉ>&output=embed" của Google Maps).
+// Không dùng được tham số "pb=" chính xác như bản gốc contact.html vì đó là chuỗi riêng
+// sinh ra khi bấm Chia sẻ > Nhúng bản đồ trên giao diện Google Maps — cần thao tác trình
+// duyệt thủ công, môi trường build ở đây không truy cập được. "?q=" vẫn ghim đúng vị trí
+// theo địa chỉ chữ, chỉ khác cách Google hiển thị khung viền khi nhúng.
+const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(site.office)}&output=embed`;
+
 export default function ContactPage() {
   return (
     <>
       <Breadcrumb title="Liên hệ" />
 
-      <section className="py-120">
+      <section className="contact-section pt-120">
         <div className="container">
-          <div className="row gy-5">
-            <div className="col-lg-5">
-              <h2 className="h2 tw-mb-6">Thông tin liên hệ</h2>
+          <div className="section-heading tw-mb-10 text-center">
+            <span className="subtitle border border-main-600 rounded-pill tw-px-5 tw-py-105 text-main-600 d-inline-flex align-items-center tw-gap-105 text-uppercase tw-leading-none bg-white">
+              <i className="ph-fill ph-caret-double-right"></i>
+              LIÊN HỆ
+            </span>
+            <h2 className="text-reveal fw-semibold tw-mt-4">Liên hệ để được hỗ trợ</h2>
+          </div>
 
-              <div className="d-flex flex-column tw-gap-6">
-                <div className="d-flex align-items-start tw-gap-4">
-                  <span className="tw-w-12 tw-h-12 bg-main-600 text-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0 tw-text-xl">
-                    <i className="ph-fill ph-buildings"></i>
-                  </span>
-                  <div>
-                    <h3 className="h6 tw-mb-1">Văn phòng giao dịch</h3>
-                    <p className="text-neutral-500 mb-0">{site.office}</p>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-start tw-gap-4">
-                  <span className="tw-w-12 tw-h-12 bg-main-600 text-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0 tw-text-xl">
-                    <i className="ph-fill ph-factory"></i>
-                  </span>
-                  <div>
-                    <h3 className="h6 tw-mb-1">Xưởng sản xuất</h3>
-                    <p className="text-neutral-500 mb-0">{site.factory}</p>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-start tw-gap-4">
-                  <span className="tw-w-12 tw-h-12 bg-main-600 text-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0 tw-text-xl">
-                    <i className="ph-fill ph-phone-call"></i>
-                  </span>
-                  <div>
-                    <h3 className="h6 tw-mb-1">Điện thoại</h3>
-                    <p className="text-neutral-500 mb-0">
-                      Hotline: <a href={`tel:${site.hotlineTel}`} className="text-main-600 hover-common-underline">{site.hotline}</a><br />
-                      Văn phòng: <a href={`tel:${site.officePhoneTel}`} className="text-main-600 hover-common-underline">{site.officePhone}</a><br />
-                      Zalo đặt hàng: <a href={`https://zalo.me/${site.zalo.replace(/\s/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-main-600 hover-common-underline">{site.zalo}</a> (Ms. Tuyền)
-                    </p>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-start tw-gap-4">
-                  <span className="tw-w-12 tw-h-12 bg-main-600 text-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0 tw-text-xl">
-                    <i className="ph-fill ph-envelope-open"></i>
-                  </span>
-                  <div>
-                    <h3 className="h6 tw-mb-1">Email</h3>
-                    <p className="text-neutral-500 mb-0">
-                      <a href={`mailto:${site.email}`} className="text-main-600 hover-common-underline">{site.email}</a><br />
-                      <a href={`mailto:${site.email2}`} className="text-main-600 hover-common-underline">{site.email2}</a>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-start tw-gap-4">
-                  <span className="tw-w-12 tw-h-12 bg-main-600 text-white rounded-circle d-flex justify-content-center align-items-center flex-shrink-0 tw-text-xl">
-                    <i className="ph-fill ph-clock"></i>
-                  </span>
-                  <div>
-                    <h3 className="h6 tw-mb-1">Giờ làm việc</h3>
-                    <p className="text-neutral-500 mb-0">{site.workingHours}</p>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-center tw-gap-4">
-                  <a href={site.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-                    className="tw-w-11 tw-h-11 bg-neutral-100 text-heading rounded-circle d-flex justify-content-center align-items-center tw-text-xl hover-bg-main-600 hover-text-white">
-                    <i className="ph-fill ph-facebook-logo"></i>
-                  </a>
-                  <a href={site.social.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube"
-                    className="tw-w-11 tw-h-11 bg-neutral-100 text-heading rounded-circle d-flex justify-content-center align-items-center tw-text-xl hover-bg-main-600 hover-text-white">
-                    <i className="ph-fill ph-youtube-logo"></i>
-                  </a>
-                  <a href={site.social.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok"
-                    className="tw-w-11 tw-h-11 bg-neutral-100 text-heading rounded-circle d-flex justify-content-center align-items-center tw-text-xl hover-bg-main-600 hover-text-white">
-                    <i className="ph-fill ph-tiktok-logo"></i>
-                  </a>
+          <div className="row gy-4">
+            <div className="col-xl-4 col-md-6">
+              <div className="h-100 border border-neutral-100 hover-border-neutral-600 tw-duration-300 tw-px-40-px tw-py-11 tw-rounded-20-px d-flex align-items-center tw-gap-5 group group-item animation-item">
+                <span className="tw-w-16 tw-h-16 bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center group-hover-bg-main-two-600 tw-duration-300 flex-shrink-0">
+                  <img src="/assets/images/icons/icon-phone-msg.png" alt="Điện thoại"
+                    className="group-hover-item-text-invert-white tw-duration-300 animate__heartBeat" />
+                </span>
+                <div className="">
+                  <span className="text-body-11 tw-text-base">Gọi ngay</span>
+                  <h2 className="tw-text-xl tw-mt-2">
+                    <a href={`tel:${site.hotlineTel}`} className="text-heading hover-text-main-600">{site.hotline}</a>
+                  </h2>
                 </div>
               </div>
             </div>
-
-            <div className="col-lg-7">
-              <div className="bg-neutral-50 tw-rounded-2xl tw-p-8">
-                <h2 className="h2 tw-mb-6">Gửi tin nhắn cho chúng tôi</h2>
-                <ContactForm />
+            <div className="col-xl-4 col-md-6">
+              <div className="h-100 border border-neutral-100 hover-border-neutral-600 tw-duration-300 tw-px-40-px tw-py-11 tw-rounded-20-px d-flex align-items-center tw-gap-5 group group-item animation-item">
+                <span className="tw-w-16 tw-h-16 bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center group-hover-bg-main-two-600 tw-duration-300 flex-shrink-0">
+                  <img src="/assets/images/icons/icon-location-circle.png" alt="Địa chỉ"
+                    className="group-hover-item-text-invert-white tw-duration-300 animate__heartBeat" />
+                </span>
+                <div className="">
+                  <span className="text-body-11 tw-text-base">Văn phòng giao dịch</span>
+                  <h2 className="tw-text-xl tw-mt-2">{site.office}</h2>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-4 col-md-6">
+              <div className="h-100 border border-neutral-100 hover-border-neutral-600 tw-duration-300 tw-px-40-px tw-py-11 tw-rounded-20-px d-flex align-items-center tw-gap-5 group group-item animation-item">
+                <span className="tw-w-16 tw-h-16 bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center group-hover-bg-main-two-600 tw-duration-300 flex-shrink-0">
+                  <img src="/assets/images/icons/icon-envelope-ad.png" alt="Email"
+                    className="group-hover-item-text-invert-white tw-duration-300 animate__heartBeat" />
+                </span>
+                <div className="">
+                  <span className="text-body-11 tw-text-base">Gửi email</span>
+                  <h2 className="tw-text-xl tw-mt-2">
+                    <a href={`mailto:${site.email}`} className="text-heading hover-text-main-600">{site.email}</a>
+                  </h2>
+                </div>
               </div>
             </div>
           </div>
+
+          <div className="tw-mt-6">
+            <div className="row gy-4">
+              <div className="col-lg-6">
+                <ContactForm
+                  className="bg-white border border-neutral-100 tw-py-10 tw-px-40-px tw-rounded-xl form-submit h-100"
+                  heading="Gửi yêu cầu tư vấn"
+                  submitLabel="Gửi yêu cầu"
+                />
+              </div>
+              <div className="col-lg-6">
+                <div className="google-map tw-rounded-xl overflow-hidden h-100">
+                  <iframe
+                    src={mapEmbedUrl}
+                    title={`Bản đồ ${site.office}`}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-100 h-100"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="instagram-post pt-120 pb-120 px-md-0 px-3">
+        <div className="position-relative lg-pt-100-px">
+          <h2 className="animated-title text-hover-animation-scale text-heading tw-leading-none text-uppercase text-center text-160-px position-absolute top-0 start-50 translate-middle-x d-lg-block d-none min-w-max">
+            <span className="text-reveal">HÌNH ẢNH THỰC TẾ</span>
+          </h2>
+
+          <GallerySlider images={galleryImages} />
         </div>
       </section>
     </>

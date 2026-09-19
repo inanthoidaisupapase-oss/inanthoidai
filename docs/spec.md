@@ -51,7 +51,8 @@ Trang chủ lấy từ `index.html`.
 - `posts` — id, slug, title, excerpt, content, category, cover_image_url, published_at, author
 - `services` — id, slug, name, summary, description, icon, image_url, sort_order
 - `quote_requests` — id, full_name, phone, email, company, note, items (jsonb), created_at
-- `contact_messages` — id, full_name, email, subject, message, created_at
+- `contact_messages` — id, full_name, email, phone, subject, message, created_at
+- `newsletter_subscribers` — id, email (unique), source, created_at
 
 ## Thông tin doanh nghiệp (dùng xuyên suốt, nguồn: inanthoidai.vn)
 - Tên: Công Ty TNHH Công Nghiệp Thời Đại — thương hiệu: IN ẤN THỜI ĐẠI

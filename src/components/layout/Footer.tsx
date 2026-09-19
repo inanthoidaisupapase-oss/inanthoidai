@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { site } from '@/lib/site';
+import NewsletterForm from '@/components/shared/NewsletterForm';
 
 export default function Footer() {
   return (
@@ -28,16 +29,7 @@ export default function Footer() {
                               </div>
                           </div>
                           <div className="col-xl-5">
-                              <form action="/lien-he" className="position-relative">
-                                  <input type="text" className="border border-white-16 tw-py-405 tw-ps-6 tw-pe-100-px bg-white-08 rounded-pill tw-placeholder-text-neutral-300 text-white focus-border-neutral-100 w-100" placeholder="Địa chỉ email của bạn" />
-                                  <button type="submit" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 tw-ps-6 tw-pe-405 tw-py-3 flex-shrink-0 position-absolute tw-end-0 top-50 translate-middle-y tw-me-4">
-                                      <span className="btn-icon d-flex z-1">
-                                          <span className="btn-icon-animation">
-                                              <i className="ph-bold ph-paper-plane-tilt"></i>
-                                          </span>
-                                      </span>
-                                  </button>
-                              </form>
+                              <NewsletterForm source="footer" variant="footer" />
                           </div>
                       </div>
                   </div>
@@ -50,7 +42,7 @@ export default function Footer() {
                               
                               <div className="logo">
                                   <Link href="/" className="link">
-                                      <img src="/assets/images/logo/logo-new-white.png" alt={site.name} className="max-w-200-px" />
+                                      <img src="/assets/images/logo/logo-new.png" alt={site.name} className="max-w-200-px" />
                                   </Link>
                               </div>
                               

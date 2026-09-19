@@ -8,3 +8,8 @@ export function formatDateVi(iso: string): string {
   const d = new Date(iso);
   return `${String(d.getDate()).padStart(2, '0')}/${String(d.getMonth() + 1).padStart(2, '0')}/${d.getFullYear()}`;
 }
+
+/** Tên chuyên mục -> hashtag: "Hoạt động - Sự kiện" -> "#Hoạt_động_Sự_kiện" */
+export function toHashtag(category: string): string {
+  return '#' + category.trim().replace(/\s*-\s*/g, '_').replace(/\s+/g, '_');
+}

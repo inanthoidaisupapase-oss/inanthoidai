@@ -382,6 +382,11 @@ if ($(".split-reveal").length) {
 function tp_scrollBg($wrap) {
   $wrap = $wrap || jQuery("body");
   $wrap.find(".text-reveal").each(function () {
+    // App Router gọi lại tp_scrollBg() ở mỗi lần route đổi (xem TemplateRuntime.tsx);
+    // guard này tránh SplitText tách lại chữ đã tách (double-split) nếu hàm bị gọi
+    // 2 lần cho cùng 1 phần tử còn gắn trong DOM.
+    if (this.dataset.tpSplit === "true") return;
+    this.dataset.tpSplit = "true";
     var $el = jQuery(this);
     var tpSplit = new SplitText($el[0], { type: "words, chars" });
     jQuery(tpSplit.words).children().first().addClass("tp-first-char");
@@ -583,7 +588,15 @@ gsap.matchMedia().add("(min-width: 1200px)", () => {
 // **************************** Section to title zoom and item upper js End ****************************
 
 //**************************** clip animation image js Start ****************************
-document.addEventListener("DOMContentLoaded", () => {
+// Tách thành hàm đặt tên (thay vì listener "DOMContentLoaded" ẩn danh) vì cùng
+// một lý do đã ghi ở tp_scrollBg() phía trên: sự kiện DOMContentLoaded đã bắn
+// xong trước khi vendor.bundle.js kịp tải (Script strategy="afterInteractive"),
+// nên listener ẩn danh không bao giờ tự chạy — ảnh trong mọi ".clip-animation"
+// (about-home-demand, about-new, choose-us-new, contact-section, instagram
+// post...) kẹt ở opacity:0 vĩnh viễn vì không có mask nào được tạo ra. Gọi tay
+// từ TemplateRuntime.tsx (window.tp_clipAnimation?.()) mỗi lần đổi route,
+// giống hệt cách tp_scrollBg() đã được gọi tay.
+function tp_clipAnimation() {
   const initialClipPaths = [
     "polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)",
     "polygon(33.33% 0%, 33.33% 0%, 33.33% 0%, 33.33% 0%)",
@@ -671,6 +684,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+}
+window.addEventListener("DOMContentLoaded", function () {
+  tp_clipAnimation();
 });
 //**************************** clip animation image js End ****************************
 

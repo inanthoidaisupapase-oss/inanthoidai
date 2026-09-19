@@ -1,5 +1,40 @@
-'use client';
 import Link from 'next/link';
+
+// TODO: thay bằng logo thật của khách hàng doanh nghiệp (xem docs/IMAGE-GUIDE.md).
+// Template Printop gốc chỉ có 6 ảnh placeholder brand-new-img1..6.png, nên tạm
+// lặp lại (cycle) cho đủ 20 logo (2 hàng x 10) — không tự sinh ảnh mới.
+const partnerLogos = [
+  '/assets/images/thumbs/brand-new-img1.png',
+  '/assets/images/thumbs/brand-new-img2.png',
+  '/assets/images/thumbs/brand-new-img3.png',
+  '/assets/images/thumbs/brand-new-img4.png',
+  '/assets/images/thumbs/brand-new-img5.png',
+  '/assets/images/thumbs/brand-new-img6.png',
+];
+
+const topRowLogos = Array.from({ length: 10 }, (_, i) => partnerLogos[i % partnerLogos.length]);
+const bottomRowLogos = Array.from({ length: 10 }, (_, i) => partnerLogos[(i + 3) % partnerLogos.length]);
+
+function MarqueeRow({ logos, direction }: { logos: string[]; direction: 'left' | 'right' }) {
+  return (
+    <div className={`marquee_${direction} overflow-hidden brand-new-marquee-row`}>
+      <div className={`js-marquee-wrapper brand-new-marquee-track brand-new-marquee-track--${direction}`}>
+        {[0, 1].map((copy) => (
+          <div className="js-marquee" key={copy} aria-hidden={copy === 1}>
+            {logos.map((src, i) => (
+              <div
+                className="brand-new-marquee-item animation-item d-flex justify-content-center align-items-center"
+                key={`${copy}-${i}`}
+              >
+                <img src={src} alt="Logo khách hàng doanh nghiệp" className="animate__wobble" />
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function BrandSlider() {
   return (
@@ -49,25 +84,9 @@ export default function BrandSlider() {
                       </div>
                       <div className="col-lg-8 ">
                           <div className="border-start border-neutral-100 ps-sm-0">
-                              <div className="brand-new-item-wrapper">
-                                  <div className="brand-new-item tw-px-4 d-flex justify-content-center align-items-center animation-item custom-fade-animation" data-delay=".5" data-fade-from="bottom" data-ease="bounce">
-                                      <img src="/assets/images/thumbs/brand-new-img1.png" alt="Logo Image" className="animate__wobble" />
-                                  </div>
-                                  <div className="brand-new-item tw-px-4 d-flex justify-content-center align-items-center animation-item custom-fade-animation" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
-                                      <img src="/assets/images/thumbs/brand-new-img2.png" alt="Logo Image" className="animate__wobble" />
-                                  </div>
-                                  <div className="brand-new-item tw-px-4 d-flex justify-content-center align-items-center animation-item custom-fade-animation" data-delay=".7" data-fade-from="bottom" data-ease="bounce">
-                                      <img src="/assets/images/thumbs/brand-new-img3.png" alt="Logo Image" className="animate__wobble" />
-                                  </div>
-                                  <div className="brand-new-item tw-px-4 d-flex justify-content-center align-items-center animation-item custom-fade-animation" data-delay=".8" data-fade-from="bottom" data-ease="bounce">
-                                      <img src="/assets/images/thumbs/brand-new-img4.png" alt="Logo Image" className="animate__wobble" />
-                                  </div>
-                                  <div className="brand-new-item tw-px-4 d-flex justify-content-center align-items-center animation-item custom-fade-animation" data-delay=".9" data-fade-from="bottom" data-ease="bounce">
-                                      <img src="/assets/images/thumbs/brand-new-img5.png" alt="Logo Image" className="animate__wobble" />
-                                  </div>
-                                  <div className="brand-new-item tw-px-4 d-flex justify-content-center align-items-center animation-item custom-fade-animation" data-delay=".99" data-fade-from="bottom" data-ease="bounce">
-                                      <img src="/assets/images/thumbs/brand-new-img6.png" alt="Logo Image" className="animate__wobble" />
-                                  </div>
+                              <div className="marquee custom-fade-animation" data-delay=".5" data-fade-from="bottom" data-ease="bounce">
+                                  <MarqueeRow logos={topRowLogos} direction="left" />
+                                  <MarqueeRow logos={bottomRowLogos} direction="right" />
                               </div>
                           </div>
                       </div>

@@ -84,11 +84,24 @@ create table if not exists public.contact_messages (
   id         uuid primary key default gen_random_uuid(),
   full_name  text not null,
   email      text not null,
+  phone      text,
   subject    text,
   message    text not null,
   created_at timestamptz not null default now()
 );
+-- Bảng đã tồn tại từ trước (chạy file này lần 2 trở đi) thì thêm cột phone bổ sung.
+alter table public.contact_messages add column if not exists phone text;
 create index if not exists contact_messages_created_idx on public.contact_messages (created_at desc);
+
+-- --------------------------- Đăng ký bản tin ---------------------------------
+-- source: nơi đăng ký ("footer" hoặc "blog-sidebar") — phục vụ thống kê, không bắt buộc đúng giá trị ở DB.
+create table if not exists public.newsletter_subscribers (
+  id         uuid primary key default gen_random_uuid(),
+  email      text not null unique,
+  source     text,
+  created_at timestamptz not null default now()
+);
+create index if not exists newsletter_subscribers_created_idx on public.newsletter_subscribers (created_at desc);
 
 -- =============================================================================
 -- Row Level Security
@@ -101,8 +114,9 @@ alter table public.categories       enable row level security;
 alter table public.products         enable row level security;
 alter table public.services         enable row level security;
 alter table public.posts            enable row level security;
-alter table public.quote_requests   enable row level security;
-alter table public.contact_messages enable row level security;
+alter table public.quote_requests       enable row level security;
+alter table public.contact_messages     enable row level security;
+alter table public.newsletter_subscribers enable row level security;
 
 drop policy if exists "doc cong khai categories" on public.categories;
 create policy "doc cong khai categories" on public.categories for select using (true);
@@ -121,3 +135,6 @@ create policy "ai cung gui duoc bao gia" on public.quote_requests for insert wit
 
 drop policy if exists "ai cung gui duoc lien he" on public.contact_messages;
 create policy "ai cung gui duoc lien he" on public.contact_messages for insert with check (true);
+
+drop policy if exists "ai cung dang ky duoc ban tin" on public.newsletter_subscribers;
+create policy "ai cung dang ky duoc ban tin" on public.newsletter_subscribers for insert with check (true);

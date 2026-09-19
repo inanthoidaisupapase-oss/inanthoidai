@@ -5,15 +5,16 @@
 
 :root {
   /* ---------------------------------------------------------------
-     MÀU CHỦ ĐẠO — hiện đang giữ nguyên màu xanh của template Printop.
-     Để đổi theo logo In Ấn Thời Đại: chuyển mã HEX của logo sang HSL
-     rồi điền 3 giá trị dưới đây. Toàn bộ site đổi theo, không cần
-     sửa chỗ nào khác.
-     Ví dụ đỏ #C8102E  ->  --main-h: 350; --main-s: 85%; --main-l: 42%;
+     MÀU CHỦ ĐẠO — đỏ thương hiệu #ed1c24 (logo In Ấn Thời Đại).
+     HSL quy đổi từ #ed1c24, verify round-trip khớp lại đúng #ed1c24.
      --------------------------------------------------------------- */
-  /* --main-h: 151; */
-  /* --main-s: 61%; */
-  /* --main-l: 46%; */
+  --main-h: 358;
+  --main-s: 85%;
+  --main-l: 52%;
+
+  /* --primary-new: badge, icon check Hero, khung đếm giỏ hàng, viền nút
+     "Xem sản phẩm" — trước là tím (249 96% 67%), gộp về cùng đỏ thương hiệu. */
+  --primary-new: 358 85% 52%;
 }
 
 /* Font: bổ sung "Be Vietnam Pro" làm lớp dự phòng ngay sau font chính.
@@ -31,7 +32,192 @@ h1, h2, h3 {
   line-height: 1.25;
 }
 
+/* Hero: khung chữ hiệu ứng gõ (Typed.js, main.css:6939 .typed-text-wrapper)
+   được đo cho từ tiếng Anh gốc ("Creative"/"Trending"/"Modern"). Cụm tiếng
+   Việt dài nhất "đúng hẹn" đo bằng canvas rộng hơn khung gốc 9-19px tại mọi
+   breakpoint (170/230/340px), khiến chữ tự xuống dòng bên trong khung rồi
+   trồi lên trên baseline (do main.css:1044 span{display:inline-block}) —
+   giữ nguyên 3 mốc breakpoint gốc, chỉ nới rộng đủ chứa 1 dòng + đệm an toàn.
+
+   Banner.tsx sau đó thêm text-uppercase cho .banner-title (kéo theo
+   .typed-text-wrapper vì nằm lồng bên trong h1) — chữ hoa có bề ngang lớn
+   hơn chữ thường đo ở trên (canvas: "ĐÚNG HẸN" 211/274/421px so với
+   "đúng hẹn" trước đó), nên khung 200/260/380px lại tràn, tái diễn đúng bug
+   cũ. Đo lại cho cả 3 chuỗi ở dạng HOA (SÁNG TẠO/BỀN ĐẸP/ĐÚNG HẸN), lấy
+   chuỗi rộng nhất mỗi breakpoint rồi nới thêm đệm an toàn tương đương lần
+   trước (~20-30px). */
+.typed-text-wrapper {
+  width: 235px;
+}
+
+@media (min-width: 425px) {
+  .typed-text-wrapper {
+    width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .typed-text-wrapper {
+    width: 450px;
+  }
+}
+
 /* Giá tiền VND không xuống dòng giữa số và ký hiệu */
 .price-vnd {
   white-space: nowrap;
+}
+
+/* Mục nav đang active (Trang chủ, Liên hệ, Giới thiệu, Tin tức...) giờ tự
+   động ăn theo --main-600 = đỏ thương hiệu ở trên, không cần override riêng
+   nữa (rule gốc main.css:6249 dùng background-color: var(--main-600)). */
+
+/* Gradient thương hiệu: nút "Tìm kiếm"/"Yêu cầu báo giá"/"Xem sản phẩm",
+   icon mũi tên, hiệu ứng hover-fill — main.css định nghĩa --gradient-main
+   hồng/tím/xanh dương tại đúng selector này (".font-size-style-new:root"),
+   kích hoạt toàn site vì layout.tsx gắn sẵn class đó lên <html>. Override
+   cùng selector để thắng cascade, giữ nguyên góc 90deg, chỉ đổi 2 điểm dừng. */
+.font-size-style-new:root {
+  --gradient-main: linear-gradient(90deg, #ed1c24 0%, #0ea5e9 100%);
+}
+
+/* Nền phủ thương hiệu sau Hero/About/TopCategories/GetStarted/Giới thiệu —
+   main.css hardcode rgba(115,92,252,...) trùng hue --primary-new cũ (tím),
+   đổi sang rgba đỏ tương ứng, giữ nguyên góc + alpha từng điểm dừng. */
+.section-bg-gradient {
+  background: linear-gradient(360deg, rgba(237, 28, 36, 0) 0%, rgba(237, 28, 36, 0.08) 25%, rgba(237, 28, 36, 0.16) 50%, rgba(237, 28, 36, 0.08) 75%, rgba(237, 28, 36, 0) 100%);
+}
+
+.section-bg-gradient-two {
+  background: linear-gradient(360deg, rgba(237, 28, 36, 0.04) 0%, rgba(237, 28, 36, 0.12) 25%, rgba(237, 28, 36, 0.2) 50%, rgba(237, 28, 36, 0.12) 75%, rgba(237, 28, 36, 0.04) 100%);
+}
+
+/* Bootstrap mặc định tô viền/glow xanh dương (#86b7fe / rgba(13,110,253,..))
+   khi focus vào ô tìm kiếm và select danh mục ở header — không sửa
+   bootstrap.min.css theo quy ước, override ở đây thay bằng đỏ thương hiệu. */
+.form-control:focus,
+.form-select:focus {
+  border-color: #ed1c24;
+  box-shadow: 0 0 0 0.25rem rgba(237, 28, 36, 0.25);
+}
+
+/* Countdown ưu đãi (Discount.tsx) — hiệu ứng thu hút không có sẵn trong
+   template gốc (template chỉ hiển thị số tĩnh): pulse nhẹ mỗi khi số giây
+   đổi, và đổi nền ô số sang vàng nhạt khi còn dưới 1 giờ. */
+@keyframes deal-countdown-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.deal-countdown__box {
+  animation: deal-countdown-pulse 0.3s ease;
+}
+
+.deal-countdown__box.is-urgent {
+  background-color: #fff3cd;
+}
+
+/* Popup video (VideoPopup.tsx) render qua createPortal vào document.body nên
+   z-index gốc của plugin (.mfp-bg 1042 / .mfp-wrap 1043) đã đủ nằm trên nội
+   dung trang bình thường — nhưng site có vài lớp trang trí z-index cực cao
+   của template (con trỏ tuỳ biến #magic-cursor: 9999999, preloader: 99999,
+   nút scroll-to-top: 10000). Đẩy popup lên trên tất cả để chắc chắn không
+   bị che, đúng yêu cầu z-index cao nhất trang. */
+.mfp-bg {
+  z-index: 100000000;
+}
+
+.mfp-wrap {
+  z-index: 100000001;
+}
+
+/* Marquee logo doanh nghiệp (BrandSlider.tsx) — Printop gốc chỉ có ví dụ
+   marquee 1 hàng (.marquee_left, index-2/3/4.html) chạy bằng plugin
+   assets/js/jquery.marquee.min.js, không có mẫu 2 hàng ngược chiều. Tái dùng
+   đúng khung DOM mà plugin đó dựng khi duplicated:true — .marquee /
+   .js-marquee-wrapper / .js-marquee đã có sẵn ở main.css:5802-5817 — nhưng
+   chạy bằng CSS animation thuần thay vì gọi lại jQuery, đúng chủ trương thay
+   plugin jQuery bằng giải pháp React của dự án. */
+.brand-new-marquee-row {
+  overflow: hidden;
+}
+
+.brand-new-marquee-track {
+  animation: brand-marquee-left 34s linear infinite;
+}
+
+.brand-new-marquee-track--right {
+  animation-name: brand-marquee-right;
+  animation-duration: 38s;
+}
+
+.brand-new-marquee-row:hover .brand-new-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes brand-marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes brand-marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-new-marquee-track {
+    animation: none;
+  }
+}
+
+/* Kích thước ô logo trong marquee: viewport chỉ cần lọt vừa 3 ô cùng lúc.
+   Mốc 992px dùng chiều cao 120px trùng đúng .brand-new-item gốc
+   (main.css:7346) để khớp tỉ lệ khi bản grid cũ từng hiển thị ở breakpoint đó;
+   mobile/tablet thu nhỏ theo tỉ lệ để vẫn giữ đủ 3 logo trong khung hẹp. */
+.brand-new-marquee-item {
+  flex-shrink: 0;
+  width: 90px;
+  height: 80px;
+}
+
+.brand-new-marquee-item img {
+  max-width: 100%;
+  max-height: 32px;
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: 575.98px) {
+  .brand-new-marquee-row .js-marquee-wrapper,
+  .brand-new-marquee-row .js-marquee {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 576px) {
+  .brand-new-marquee-item {
+    width: 130px;
+    height: 100px;
+  }
+
+  .brand-new-marquee-row .js-marquee-wrapper,
+  .brand-new-marquee-row .js-marquee {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .brand-new-marquee-item {
+    width: 230px;
+    height: 120px;
+  }
 }

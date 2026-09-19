@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import VideoPopup from '@/components/shared/VideoPopup';
 
 export default function About() {
   return (
@@ -60,9 +61,9 @@ export default function About() {
                                   </Link>
                               </div>
                               <div className="custom-fade-animation d-flex align-items-center tw-gap-3" data-delay=".8" data-fade-from="bottom" data-ease="bounce">
-                                  <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg" className="tw-w-12 tw-h-12 bg-primary-new text-white rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button">
+                                  <VideoPopup url="https://youtu.be/uP_lsZ47y5k?si=UPriKyxEhofT0u19" className="tw-w-12 tw-h-12 bg-primary-new text-white rounded-circle d-flex align-items-center justify-content-center tw-text-2xl hover-scale-2 play-button">
                                       <i className="ph-fill ph-play"></i>
-                                  </a>
+                                  </VideoPopup>
                                   <span className="text-heading fw-bold">Xem video giới thiệu </span>
                               </div>
                           </div>

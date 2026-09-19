@@ -244,7 +244,7 @@ export default function Header() {
                           );
                         }
                         return (
-                          <li key={item.href} className={`nav-menu__item has-submenu${active ? ' activePage' : ''}`}>
+                          <li key={item.href} className={`nav-menu__item has-submenu position-relative${active ? ' activePage' : ''}`}>
                             <a href="#" onClick={(e) => e.preventDefault()} className="nav-menu__link text-heading tw-py-2 fw-medium w-100 tw-pe-5">
                               {item.label}
                             </a>

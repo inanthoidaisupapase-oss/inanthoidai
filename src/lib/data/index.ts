@@ -131,4 +131,4 @@ export function normalize(text: string): string {
     .replace(/đ/g, 'd');
 }
 
-export { formatDateVi, formatVnd } from '../format';
+export { formatDateVi, formatVnd, toHashtag } from '../format';

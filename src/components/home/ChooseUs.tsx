@@ -33,10 +33,6 @@ export default function ChooseUs() {
                                   <img src="/assets/images/thumbs/choose-us-new-img.png" alt="" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                                   <img src="/assets/images/thumbs/choose-us-new-img.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                               </div>
-      
-                              <a href="https://www.youtube.com/watch?v=MFLVmAE4cqg" className="play-button tw-w-14 tw-h-14 d-inline-flex justify-content-center align-items-center bg-white rounded-circle  rounded-circle position-absolute tw-start-50 tw--translate-middle top-50 z-1 hover-bg-main-two-600 hover-text-white text-primary-new tw-text-2xl">
-                                  <i className="ph-fill ph-play"></i>
-                              </a>
                           </div>
                       </div>
                       <div className="col-xl-1 d-xl-block d-none"></div>

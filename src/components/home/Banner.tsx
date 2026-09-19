@@ -18,16 +18,16 @@ export default function Banner() {
                       <span className="border-end border-neutral-300 tw-h-7 tw-w-px"></span>
                       <span className="text-neutral-500 tw-text-lg text-sm-res-14-px fw-normal text-capitalize">Hơn 300 khách hàng tin tưởng</span>
                   </div>
-                  <h1 className="tw-mt-4 banner-title fw-bold splitTextStyleOne">
-                      Bao bì giấy
+                  <h1 className="tw-mt-4 banner-title fw-bold splitTextStyleOne text-uppercase">
+                      Bao bì giấy{' '}
                       <span className="typed-text-wrapper text-start">
                           <span className="typed-text text-gradient-main text-decoration-underline"></span>
-                      </span>
-                      chuẩn xưởng
+                      </span>{' '}
+                      chuẩn xưởng{' '}
                       <span className="custom-fade-animation max-width-img" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
                           <img src="/assets/images/shapes/user-img.png" alt="" className="move-on-cursor-hover" data-value="1" />
-                      </span>
-                      cho thương hiệu Việt
+                      </span>{' '}
+                      cho thương hiệu Việt{' '}
                       <span className="custom-fade-animation d-lg-inline-flex d-none" data-delay=".7" data-fade-from="bottom" data-ease="bounce">
                           <img src="/assets/images/shapes/rounded-element.png" alt="" className="move-on-cursor-hover" data-value="1" />
                       </span>
