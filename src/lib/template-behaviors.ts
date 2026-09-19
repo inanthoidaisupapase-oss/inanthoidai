@@ -121,6 +121,45 @@ function stickyHeader(): Cleanup {
   return () => window.removeEventListener('scroll', onScroll);
 }
 
+/**
+ * Cả 3 hàng header (top-header-new, middle-header, .header/nav) nằm ngoài #smooth-wrapper
+ * (xem layout.tsx) nên không còn chiếm chỗ trong luồng của #smooth-content như trước. Bù
+ * lại bằng padding-top đúng bằng TỔNG chiều cao thực đo của cả 3 hàng, để section đầu trang
+ * không bị header đè lên. Theo dõi bằng ResizeObserver (thay vì tính 1 lần) vì chiều cao đổi
+ * theo breakpoint và theo trạng thái .fixed-header của hàng nav.
+ *
+ * Trang nào có section đầu tiên tự mang margin-top riêng của main.css gốc (vd .breadcrumb
+ * margin-top: 142/160px — file gốc, không được sửa) thì KHÔNG được cộng thẳng padding-top =
+ * total lên trên margin đó: padding chặn margin-collapse, ra khoảng trắng thừa = total +
+ * margin thay vì max(total, margin) như bản HTML tĩnh gốc (không có JS bù) tự nhiên đạt được.
+ * Trừ trước margin-top của phần tử con đầu tiên (clamp về 0) để padding-top + margin-top con
+ * luôn cộng lại đúng bằng max(total, margin) — tái tạo đúng hiệu ứng margin-collapse gốc mà
+ * không cần đổi paddingTop thành marginTop (marginTop không tính vào offsetHeight, đổi qua có
+ * thể làm GSAP ScrollSmoother đo sai chiều cao spacer/scroll).
+ */
+function headerOffset(): Cleanup {
+  const rows = ['.top-header-new', '.middle-header', '.header']
+    .map((sel) => document.querySelector<HTMLElement>(sel))
+    .filter((el): el is HTMLElement => el !== null);
+  const content = document.getElementById('smooth-content');
+  if (!rows.length || !content) return () => {};
+  const apply = () => {
+    const total = rows.reduce((sum, el) => sum + el.offsetHeight, 0);
+    const firstChild = content.firstElementChild as HTMLElement | null;
+    const firstChildMarginTop = firstChild ? parseFloat(getComputedStyle(firstChild).marginTop) || 0 : 0;
+    content.style.paddingTop = `${Math.max(0, total - firstChildMarginTop)}px`;
+  };
+  apply();
+  const ro = new ResizeObserver(apply);
+  rows.forEach((el) => ro.observe(el));
+  window.addEventListener('resize', apply);
+  return () => {
+    ro.disconnect();
+    window.removeEventListener('resize', apply);
+    content.style.paddingTop = '';
+  };
+}
+
 /** main.js: .blur-bottom-shadow ẩn đi khi cuộn chạm đáy trang */
 function blurBottomShadow(): Cleanup {
   const onScroll = () => {
@@ -229,6 +268,7 @@ export function initTemplateBehaviors(): Cleanup {
     sidebarToggle(),
     mobileSubmenu(),
     stickyHeader(),
+    headerOffset(),
     blurBottomShadow(),
     counters(),
     typedText(),

@@ -5,6 +5,8 @@ import Breadcrumb from '@/components/shared/Breadcrumb';
 import ProductCard from '@/components/shared/ProductCard';
 import ProductGallery from '@/components/shared/ProductGallery';
 import AddToCart from '@/components/shared/AddToCart';
+import ProductTabs from '@/components/shared/ProductTabs';
+import ProductIndustries from '@/components/shared/ProductIndustries';
 import { getCategory, getProduct, getProducts, getRelatedProducts } from '@/lib/data';
 import { formatVnd } from '@/lib/format';
 import { site } from '@/lib/site';
@@ -45,7 +47,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         ]}
       />
 
-      <section className="py-120">
+      <section className="shop-details-new py-120">
         <div className="container">
           <div className="row gy-5">
             <div className="col-lg-6">
@@ -61,29 +63,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
               <AddToCart product={product} />
 
-              <div className="tw-mt-10 border-top border-neutral-100 tw-pt-8">
-                <h3 className="h4 tw-mb-5">Thông số kỹ thuật</h3>
-                <div className="table-responsive">
-                  <table className="table">
-                    <tbody>
-                      {Object.entries(product.specs).map(([key, value]) => (
-                        <tr key={key}>
-                          <th className="fw-medium text-neutral-600" style={{ width: '45%' }}>{key}</th>
-                          <td className="text-heading">{value}</td>
-                        </tr>
-                      ))}
-                      {product.sku && (
-                        <tr>
-                          <th className="fw-medium text-neutral-600">Mã sản phẩm</th>
-                          <td className="text-heading">{product.sku}</td>
-                        </tr>
-                      )}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div className="tw-mt-8 bg-neutral-50 tw-rounded-xl tw-p-6">
+              <div className="tw-mt-8 bg-white border border-neutral-100 tw-rounded-xl tw-p-6">
                 <p className="text-neutral-600 tw-mb-2">
                   <strong>Đặt số lượng lớn?</strong> Liên hệ Zalo{' '}
                   <a href={`https://zalo.me/${site.zalo.replace(/\s/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-main-600 hover-common-underline">
@@ -98,9 +78,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             </div>
           </div>
 
-          <div className="tw-mt-20">
-            <h3 className="h3 tw-mb-6">Mô tả sản phẩm</h3>
-            <div className="text-neutral-600 tw-text-lg tw-leading-155 product-description" dangerouslySetInnerHTML={{ __html: product.description }} />
+          <div className="tw-mt-15">
+            <ProductTabs product={product} />
           </div>
 
           {related.length > 0 && (
@@ -122,6 +101,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           )}
         </div>
       </section>
+
+      <ProductIndustries />
     </>
   );
 }

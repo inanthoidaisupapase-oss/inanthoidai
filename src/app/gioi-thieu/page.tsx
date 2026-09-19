@@ -5,6 +5,7 @@ import ContactForm from '@/components/shared/ContactForm';
 import BrandLogoSlider from '@/components/shared/BrandLogoSlider';
 import TestimonialsCards from '@/components/shared/TestimonialsCards';
 import GallerySlider from '@/components/shared/GallerySlider';
+import WorkingProcess from '@/components/shared/WorkingProcess';
 import type { Testimonial } from '@/components/shared/TestimonialsSlider';
 import { site } from '@/lib/site';
 import { getServices } from '@/lib/data';
@@ -45,35 +46,6 @@ const values = [
   'Lấy con người là nguồn sức mạnh phát triển',
   'Lấy khách hàng làm trung tâm hoạt động',
   'Trở thành công ty thiết kế và in ấn hàng đầu được tin tưởng',
-];
-
-// Quy trình đặt hàng thực tế — cùng nội dung 3 bước đã dùng ở GetStarted.tsx (trang chủ),
-// giữ nhất quán thông điệp giữa các trang.
-const processSteps = [
-  {
-    icon: 'working-process-icon1.png',
-    step: 'Bước 01',
-    title: 'Gửi yêu cầu hoặc file thiết kế',
-    text: 'Gửi kích thước, số lượng và mục đích sử dụng. Đã có file thiết kế hay mới chỉ có ý tưởng đều được — đội thiết kế dựng mẫu miễn phí cho đơn in tại xưởng.',
-    href: '/dich-vu/thiet-ke-bao-bi',
-    arrow: 'arrow-curve-img1.png',
-  },
-  {
-    icon: 'working-process-icon2.png',
-    step: 'Bước 02',
-    title: 'Duyệt mẫu và chốt báo giá',
-    text: 'Chúng tôi gửi bản dựng kèm quy cách: chất liệu, sóng carton, kỹ thuật in và gia công. Duyệt test proof trên đúng chất liệu trước khi chạy sản lượng.',
-    href: '/bang-gia',
-    arrow: 'arrow-curve-img2.png',
-  },
-  {
-    icon: 'working-process-icon3.png',
-    step: 'Bước 03',
-    title: 'Sản xuất tại xưởng và giao hàng',
-    text: 'In, bế, cán màng và gấp dán đều làm tại xưởng nên kiểm soát được tiến độ. Giao hàng toàn quốc, nhận hàng kiểm tra rồi thanh toán.',
-    href: '/dich-vu/gia-cong-sau-in',
-    arrow: null,
-  },
 ];
 
 // 4 thế mạnh thực tế — dùng icon choose-us-icon1..4.png (bộ icon riêng của about.html,
@@ -387,43 +359,7 @@ export default async function AboutPage() {
       </section>
 
       {/* ================= Working Process: quy trình đặt hàng ================= */}
-      <section className="working-process py-120">
-        <div className="container">
-          <div className="section-heading tw-mb-10 text-center">
-            <span className="subtitle border border-main-600 rounded-pill tw-px-5 tw-py-105 text-main-600 d-inline-flex align-items-center tw-gap-105 text-uppercase tw-leading-none bg-white">
-              <i className="ph-fill ph-caret-double-right"></i>
-              Quy trình
-            </span>
-            <h2 className="text-reveal fw-semibold tw-mt-4">Quy trình đặt in tại Thời Đại</h2>
-          </div>
-
-          <div className="row gy-4">
-            {processSteps.map((step) => (
-              <div className="col-lg-4 col-sm-6" key={step.step}>
-                <div className="working-process text-center group group-item position-relative animation-item h-100 d-flex flex-column">
-                  {step.arrow && (
-                    <div className="position-absolute tw-start-75-percent top-0 tw-mt-10 min-w-max d-xl-block d-none">
-                      <img src={`/assets/images/shapes/${step.arrow}`} alt="" className="left-right-animation" />
-                    </div>
-                  )}
-                  <div className="tw-w-116-px tw-h-116-px mx-auto">
-                    <span className="tw-w-116-px tw-h-116-px bg-neutral-50 d-flex justify-content-center align-items-center rounded-circle tw-duration-300 group-hover-bg-main-two-600">
-                      <img src={`/assets/images/icons/${step.icon}`} alt="" className="group-hover-item-text-invert-white tw-duration-300 animate__heartBeat" />
-                    </span>
-                    <span className="bg-main-600 rounded-pill tw-px-4 tw-py-1 text-white tw-text-sm fw-medium translate-y--8-px">{step.step}</span>
-                  </div>
-                  <h2 className="h4 tw-mt-5 tw-mb-6 tw-pt-8">{step.title}</h2>
-                  <p className="text-body max-w-380-px mx-auto">{step.text}</p>
-                  <Link href={step.href} className="text-heading fw-semibold d-inline-flex align-items-center tw-gap-3 hover-text-heading tw-mt-10 hover-common-underline mt-auto">
-                    Xem thêm
-                    <span className="btn-down-arrow"><i className="ph-bold ph-arrow-down-right"></i></span>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WorkingProcess />
 
       {/* ================= Product Range: sản phẩm nổi bật ================= */}
       <section className="product-range py-120 bg-main-two-600 position-relative overflow-hidden">

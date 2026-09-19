@@ -25,7 +25,7 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/bg/breadcrumb-gradient-bg.png` | 1920 × 241 px | components/shared/Breadcrumb.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/bg/gradient-bg.png` | 1920 × 708 px | components/layout/Footer.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/bg/testimonials-new-bg.png` | 1296 × 509 px | components/home/Testimonials.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
-| `/assets/images/icons/ (ghép động)` | — | app/gioi-thieu/page.tsx<br>components/home/GetStarted.tsx | Icon của template — giữ nguyên được |
+| `/assets/images/icons/ (ghép động)` | — | app/cau-hoi-thuong-gap/page.tsx<br>app/dich-vu/[slug]/page.tsx<br>app/gioi-thieu/page.tsx<br>components/home/GetStarted.tsx<br>components/shared/WorkingProcess.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/big-arrow-left-right.png` | 162 × 15 px | components/home/BlogSection.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/choose-us-icon2.png` | 66 × 66 px | app/gioi-thieu/page.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/choose-us-icon3.png` | 66 × 58 px | app/gioi-thieu/page.tsx | Icon của template — giữ nguyên được |
@@ -35,15 +35,16 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/icons/cta-new-icon1.png` | 80 × 62 px | components/home/Cta.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/cta-new-icon2.png` | 80 × 80 px | components/home/Cta.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/icon-envelope-ad.png` | 29 × 25 px | app/lien-he/page.tsx | Icon của template — giữ nguyên được |
+| `/assets/images/icons/icon-envelope.png` | 19 × 16 px | app/cau-hoi-thuong-gap/page.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/icon-location-circle.png` | 32 × 32 px | app/lien-he/page.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/icon-phone-msg.png` | 30 × 30 px | app/lien-he/page.tsx | Icon của template — giữ nguyên được |
-| `/assets/images/icons/icon-phone.png` | 21 × 21 px | components/layout/Header.tsx | Icon của template — giữ nguyên được |
+| `/assets/images/icons/icon-phone.png` | 21 × 21 px | app/cau-hoi-thuong-gap/page.tsx<br>components/layout/Header.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/long-arrow-right.png` | 161 × 15 px | components/shared/ServiceSlider.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/quate-new-icon.png` | 192 × 142 px | components/shared/TestimonialsSlider.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/logo/favicon.png` | 64 × 64 px | app/layout.tsx<br>components/shared/BlogSidebar.tsx | Favicon — biểu tượng rút gọn của logo |
 | `/assets/images/logo/logo-new.png` | 179 × 44 px | components/layout/Footer.tsx<br>components/layout/Header.tsx | Logo In Ấn Thời Đại (bản màu, nền sáng) — dùng ở header |
 | `/assets/images/logo/logo.png` | 159 × 39 px | components/layout/MobileMenu.tsx | Logo In Ấn Thời Đại — dùng ở menu mobile |
-| `/assets/images/shapes/ (ghép động)` | — | app/gioi-thieu/page.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
+| `/assets/images/shapes/ (ghép động)` | — | components/shared/WorkingProcess.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/badge.png` | 376 × 84 px | components/home/About.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/banner-element-img1.png` | 31 × 33 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/banner-element-img2.png` | 167 × 137 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
@@ -91,7 +92,7 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/thumbs/choose-us-new-img.png` | 636 × 360 px | components/home/ChooseUs.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/choose-us-small-img1.png` | 227 × 98 px | components/home/ChooseUs.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/choose-us-small-img2.png` | 229 × 122 px | components/home/ChooseUs.tsx | Ảnh thật tương ứng |
-| `/assets/images/thumbs/contact-section-img.png` | 517 × 638 px | app/gioi-thieu/page.tsx | Ảnh thật tương ứng |
+| `/assets/images/thumbs/contact-section-img.png` | 517 × 638 px | app/cau-hoi-thuong-gap/page.tsx<br>app/gioi-thieu/page.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/cta-new-img1.png` | 838 × 1273 px | components/home/Cta.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/cta-new-img2.png` | 541 × 686 px | components/home/Cta.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/graphics-img.png` | 723 × 659 px | app/dich-vu/page.tsx | Ảnh đội ngũ thiết kế đang dựng mẫu hoặc bản vẽ kỹ thuật dao bế — trang Dịch vụ |
@@ -109,6 +110,8 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/thumbs/service-big-image2.png` | 636 × 400 px | lib/data/seed/services.json | Ảnh minh hoạ công đoạn sản xuất tương ứng (in offset, in flexo, thiết kế, gia công) |
 | `/assets/images/thumbs/service-big-image3.png` | 636 × 400 px | lib/data/seed/services.json | Ảnh minh hoạ công đoạn sản xuất tương ứng (in offset, in flexo, thiết kế, gia công) |
 | `/assets/images/thumbs/service-big-image4.png` | 636 × 400 px | lib/data/seed/services.json | Ảnh minh hoạ công đoạn sản xuất tương ứng (in offset, in flexo, thiết kế, gia công) |
+| `/assets/images/thumbs/service-details-img2.png` | 536 × 355 px | lib/service-details.ts | Ảnh minh hoạ công đoạn sản xuất tương ứng (in offset, in flexo, thiết kế, gia công) |
+| `/assets/images/thumbs/service-details-img3.png` | 536 × 355 px | lib/service-details.ts | Ảnh minh hoạ công đoạn sản xuất tương ứng (in offset, in flexo, thiết kế, gia công) |
 | `/assets/images/thumbs/service-small-image${i + 1}.png` | — | components/shared/ServiceSlider.tsx | Ảnh minh hoạ công đoạn sản xuất tương ứng (in offset, in flexo, thiết kế, gia công) |
 | `/assets/images/thumbs/shop-details-thumb1.png` | 653 × 698 px | lib/data/seed/products.json | Ảnh sản phẩm thật (hộp giấy) — xem lưu ý về ảnh sản phẩm ở trên |
 | `/assets/images/thumbs/shop-details-thumb2.png` | 654 × 699 px | lib/data/seed/products.json | Ảnh sản phẩm thật (hộp giấy) — xem lưu ý về ảnh sản phẩm ở trên |
@@ -125,7 +128,7 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/thumbs/shop-img7.png` | 312 × 379 px | components/shared/SubscribeSlider.tsx<br>lib/data/seed/products.json | Ảnh sản phẩm thật (hộp giấy) — xem lưu ý về ảnh sản phẩm ở trên |
 | `/assets/images/thumbs/shop-img8.png` | 312 × 379 px | lib/data/seed/products.json | Ảnh sản phẩm thật (hộp giấy) — xem lưu ý về ảnh sản phẩm ở trên |
 | `/assets/images/thumbs/shop-img9.png` | 312 × 379 px | lib/data/seed/products.json | Ảnh sản phẩm thật (hộp giấy) — xem lưu ý về ảnh sản phẩm ở trên |
-| `/assets/images/thumbs/shop-product-img${n}.png` | — | app/dich-vu/page.tsx | Ảnh sản phẩm thật (hộp giấy) — xem lưu ý về ảnh sản phẩm ở trên |
+| `/assets/images/thumbs/shop-product-img${n}.png` | — | app/dich-vu/[slug]/page.tsx<br>app/dich-vu/page.tsx | Ảnh sản phẩm thật (hộp giấy) — xem lưu ý về ảnh sản phẩm ở trên |
 | `/assets/images/thumbs/testimonials-new-img1.png` | 535 × 497 px | lib/data/seed/testimonials.json | Ảnh sản phẩm đã giao cho khách, dùng kèm lời đánh giá |
 | `/assets/images/thumbs/testimonials-new-img2.png` | 475 × 475 px | lib/data/seed/testimonials.json | Ảnh sản phẩm đã giao cho khách, dùng kèm lời đánh giá |
 | `/assets/images/thumbs/testimonials-new-img3.png` | 475 × 475 px | lib/data/seed/testimonials.json | Ảnh sản phẩm đã giao cho khách, dùng kèm lời đánh giá |

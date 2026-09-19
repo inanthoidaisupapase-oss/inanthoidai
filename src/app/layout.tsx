@@ -10,6 +10,7 @@ import '@/styles/brand.css';
 
 import { site } from '@/lib/site';
 import Header from '@/components/layout/Header';
+import HeaderNav from '@/components/layout/HeaderNav';
 import MobileMenu from '@/components/layout/MobileMenu';
 import Footer from '@/components/layout/Footer';
 import Preloader from '@/components/layout/Preloader';
@@ -76,10 +77,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <MobileMenu />
 
-          {/* ScrollSmoother của template bọc toàn bộ phần cuộn được: header, nội dung, footer */}
+          {/*
+            Cả Header (top-header-new + middle-header) và HeaderNav (class .header, toggle
+            .fixed-header khi scroll) đặt NGOÀI #smooth-wrapper, THEO ĐÚNG THỨ TỰ HIỂN THỊ:
+            Header trước, HeaderNav sau — xem comment chi tiết trong HeaderNav.tsx. Lý do
+            phải đặt ngoài: custom-gsap.js áp transform lên #smooth-content để giả lập cuộn
+            mượt, mà transform trên ancestor phá vỡ containing block của position:
+            fixed/sticky (CSS spec) — HeaderNav lồng bên trong sẽ kẹt theo nội dung thay vì
+            dính lên viewport. Thứ tự Header rồi mới đến HeaderNav (không gộp chung 1 wrapper)
+            quan trọng: HeaderNav cần <body> (ancestor cao bằng cả trang) làm containing
+            block cho sticky — nếu bọc chung 1 div ngắn với Header (~220px) thì div đó cuộn
+            khỏi viewport trước khi tới ngưỡng scrollY >= 260, kéo HeaderNav biến mất theo
+            thay vì dính được. headerOffset() trong template-behaviors.ts bù padding-top cho
+            #smooth-content bằng tổng chiều cao Header + HeaderNav đo được.
+          */}
+          <Header />
+          <HeaderNav />
+
           <div id="smooth-wrapper">
             <div id="smooth-content">
-              <Header />
               {children}
               <Footer />
             </div>

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/shared/Breadcrumb';
+import ContactForm from '@/components/shared/ContactForm';
+import FaqAccordion from '@/components/shared/FaqAccordion';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -43,34 +45,181 @@ const faqs = [
   },
 ];
 
+// Khối "Contact section" (form liên hệ + grid 4 card Choose Us) tái sử dụng đúng cấu trúc
+// đã port ở gioi-thieu/page.tsx — không phải component dùng chung toàn site (mỗi trang tự
+// có bản của mình theo đúng quy ước hiện tại của dự án), nên copy nguyên khối ở đây, chỉ đổi
+// 1 href (mục "Giao hàng đúng tiến độ") từ /cau-hoi-thuong-gap sang /bao-gia để tránh link
+// trỏ về chính trang đang đứng.
+const strengths = [
+  {
+    icon: 'choose-us-icon1.png',
+    title: 'In offset và in Flexo tại xưởng',
+    text: 'Chủ động khuôn in, mực và máy móc tại xưởng nên kiểm soát được màu sắc và tiến độ sản xuất.',
+    href: '/dich-vu',
+  },
+  {
+    icon: 'choose-us-icon2.png',
+    title: 'Giá xưởng, không qua trung gian',
+    text: 'Sản xuất trực tiếp, không qua đơn vị trung gian nên giữ được mức giá tốt cho khách hàng.',
+    href: '/bang-gia',
+  },
+  {
+    icon: 'choose-us-icon3.png',
+    title: 'Giao hàng đúng tiến độ',
+    text: 'Quy trình khép kín từ in tới gia công giúp kiểm soát thời gian, giao hàng toàn quốc đúng hẹn.',
+    href: '/bao-gia',
+  },
+  {
+    icon: 'choose-us-icon4.png',
+    title: 'Hỗ trợ thiết kế miễn phí',
+    text: 'Đội thiết kế dựng mẫu miễn phí, tính sẵn dao bế và biên dán cho đơn in tại xưởng.',
+    href: '/dich-vu/thiet-ke-bao-bi',
+  },
+];
+
 export default function FaqPage() {
   return (
     <>
       <Breadcrumb title="Câu hỏi thường gặp" />
+
+      {/* ============================ FAQ section — accordion + sidebar hỗ trợ ============================ */}
       <section className="py-120">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="d-flex flex-column tw-gap-5">
-                {faqs.map((item) => (
-                  <details className="bg-neutral-50 tw-rounded-2xl tw-p-7 border border-neutral-100" key={item.q}>
-                    <summary className="h5 mb-0 cursor-pointer">{item.q}</summary>
-                    <p className="text-neutral-600 tw-mt-4 tw-text-lg tw-leading-155 mb-0">{item.a}</p>
-                  </details>
-                ))}
+          <div className="row gy-4">
+            <div className="col-lg-8">
+              <div className="">
+                <div className="section-heading tw-mb-10">
+                  <span className="subtitle border border-main-600 rounded-pill tw-px-5 tw-py-105 text-main-600 d-inline-flex align-items-center tw-gap-105 text-uppercase tw-leading-none">
+                    <i className="ph-fill ph-caret-double-right"></i>
+                    CÂU HỎI THƯỜNG GẶP
+                  </span>
+                  <h2 className="text-reveal fw-semibold tw-mt-4">Giải đáp thắc mắc thường gặp</h2>
+                </div>
+                <FaqAccordion items={faqs} />
               </div>
-
-              <div className="bg-main-600 tw-rounded-2xl tw-p-10 text-center tw-mt-15">
-                <h2 className="h3 text-white tw-mb-4">Câu hỏi của bạn chưa có ở đây?</h2>
-                <p className="text-white opacity-75 tw-mb-8">Gọi {site.hotline} hoặc gửi câu hỏi, chúng tôi trả lời trong giờ làm việc.</p>
-                <Link href="/lien-he" className="btn bg-white text-heading hover-bg-animation hover-bg-animation-white">
-                  <span className="btn-text">Liên hệ với chúng tôi</span>
-                </Link>
+            </div>
+            <div className="col-lg-4">
+              <div className="h-100">
+                <div className="tw-rounded-20-px overflow-hidden bg-neutral-100">
+                  <div className="tw-py-12 tw-px-40-px">
+                    <h2 className="tw-text-xl tw-mb-8">Cần hỗ trợ thêm?</h2>
+                    <div className="d-flex align-items-center tw-gap-52-px flex-wrap">
+                      <div className="d-flex align-items-center tw-gap-3 animation-item">
+                        <span className="tw-w-12 tw-h-12 border border-white d-lg-flex d-none justify-content-center align-items-center text-main-600 rounded-circle flex-shrink-0 flex-grow-1 bg-white">
+                          <img src="/assets/images/icons/icon-phone.png" alt="" className="animate__heartBeat" />
+                        </span>
+                        <div className="flex-grow-1">
+                          <span className="text-neutral-600 tw-text-sm d-block">Gọi ngay</span>
+                          <a href={`tel:${site.hotlineTel}`}
+                            className="text-heading tw-text-base tw-sm-text-sm hover-text-main-600 fw-semibold">{site.hotline}</a>
+                        </div>
+                      </div>
+                      <div className="d-flex align-items-center tw-gap-3 animation-item">
+                        <span className="tw-w-12 tw-h-12 border border-white d-lg-flex d-none justify-content-center align-items-center text-main-600 rounded-circle flex-shrink-0 flex-grow-1 bg-white">
+                          <img src="/assets/images/icons/icon-envelope.png" alt="" className="animate__heartBeat" />
+                        </span>
+                        <div className="flex-grow-1">
+                          <span className="text-neutral-600 tw-text-sm d-block">Gửi email</span>
+                          <a href={`mailto:${site.email}`}
+                            className="text-heading tw-text-base tw-sm-text-sm hover-text-main-600 fw-semibold">{site.email}</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <Link href="/lien-he"
+                    className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-two-600 rounded-0 tw-py-605 d-flex tw-text-xl">
+                    <span className="btn-text">Liên hệ ngay </span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/* ============================ FAQ section end ============================ */}
+
+      {/* ========================== Contact Section — form liên hệ + Choose Us (khối đã port ở gioi-thieu/page.tsx) ========================== */}
+      {/* pb-120: faq.html gốc không cần padding riêng vì có section "Instagram post pt-120" nối
+          tiếp ngay sau tạo khoảng cách trước footer — trang này không dùng section đó (ngoài
+          phạm vi yêu cầu), nên thêm pb-120 để giữ đúng nhịp khoảng cách 120px trước footer như
+          các trang khác trong site. */}
+      <section className="contact-section pb-120">
+        <div className="container">
+          <div className="tw-rounded-36-px section-bg">
+            <div className="bg-navy-black tw-p-5 tw-rounded-36-px">
+              <div className="row gy-4 flex-wrap-reverse">
+                <div className="col-lg-5">
+                  <div className="position-relative d-block h-100">
+                    <div className="clip-animation image-double-animation overflow-hidden position-relative d-block tw-rounded-lg tw-rounded-36-px h-100">
+                      {/* TODO ảnh: ảnh văn phòng/xưởng Thời Đại — xem docs/IMAGE-GUIDE.md */}
+                      <img src="/assets/images/thumbs/contact-section-img.png" alt="Văn phòng In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img src="/assets/images/thumbs/contact-section-img.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-7 align-self-center">
+                  <div className="px-xl-5 px-lg-4 py-xl-0 py-4">
+                    <div className="section-heading tw-mb-10">
+                      <span className="subtitle border border-main-600 rounded-pill tw-px-5 tw-py-105 text-main-600 d-inline-flex align-items-center tw-gap-105 text-uppercase tw-leading-none">
+                        <i className="ph-fill ph-caret-double-right"></i>
+                        Liên hệ
+                      </span>
+                      <h2 className="text-reveal fw-semibold tw-mt-4 text-white">Gửi yêu cầu báo giá cho Thời Đại</h2>
+                    </div>
+                    <ContactForm />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-120">
+              <div className="section-heading tw-mb-10 tw-ps-80-px">
+                <span className="subtitle border border-main-600 rounded-pill tw-px-5 tw-py-105 text-main-600 d-inline-flex align-items-center tw-gap-105 text-uppercase tw-leading-none">
+                  <i className="ph-fill ph-caret-double-right"></i>
+                  Điểm mạnh
+                </span>
+                <h2 className="text-reveal fw-semibold tw-mt-4">Vì sao khách hàng chọn Thời Đại</h2>
+              </div>
+            </div>
+            <div className="tw-mt-13 tw-px-44-px">
+              <div className="row card-animation-wrapper contact-features-wrapper">
+                {strengths.map((s) => (
+                  <div className="col-xl-3 col-sm-6 card-animation" key={s.title}>
+                    <div className="tw-pt-9 tw-px-36-px tw-pb-14 hover-bg-white tw-duration-200 tw-rounded-top-20-px group group-item hover-shadow-one h-100 animation-item section-bg d-flex flex-column">
+                      <div className="max-w-230-px d-flex flex-column h-100">
+                        <span className="d-flex">
+                          <img src={`/assets/images/icons/${s.icon}`} alt="" className="text-invert-black group-hover-item-text-invert-main-600 tw-duration-200 animate__bounce" />
+                        </span>
+                        <div className="tw-mt-12 d-flex flex-column flex-grow-1">
+                          <h2 className="tw-text-xl tw-leading-155 text-capitalize">{s.title}</h2>
+                          <p className="tw-mt-6 text-body-3">{s.text}</p>
+                          <Link href={s.href} className="text-heading fw-semibold d-inline-flex align-items-center tw-gap-3 hover-text-heading tw-mt-10 hover-common-underline mt-auto">
+                            Xem dịch vụ
+                            <span className="btn-down-arrow"><i className="ph-bold ph-arrow-down-right"></i></span>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="scale-littlebit-onscroll max-w-810-px border border-neutral-100 md-rounded-pill tw-rounded-lg md-ps-10 tw-ps-6 tw-py-205 tw-pe-3 d-flex align-items-md-center justify-content-between tw-gap-3 flex-md-row flex-column tw-mt-15 mx-auto">
+            <p className="text-body max-w-400-px">Cần báo giá nhanh? Gọi hotline hoặc để lại yêu cầu, Thời Đại phản hồi trong ngày làm việc.</p>
+            <div className="custom-fade-animation" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
+              <a href={`tel:${site.hotlineTel}`} className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-two-600">
+                <span className="btn-text">Liên hệ ngay </span>
+                <span className="btn-icon-animation d-flex">
+                  <i className="ph-bold ph-arrow-down-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ========================== Contact Section end ========================== */}
     </>
   );
 }
