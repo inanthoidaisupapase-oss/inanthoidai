@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { mainNav } from '@/lib/site';
-import { headerCategories, megaMenuCards } from '@/lib/nav-data';
+import { headerCategories } from '@/lib/nav-data';
 
 /**
  * Thanh nav (class .header, toggle .fixed-header khi scrollTop >= 260 — xem
@@ -63,9 +63,11 @@ export default function HeaderNav() {
                       <div className="d-flex align-items-center tw-gap-2">
                         <span className="fw-medium">{c.name}</span>
                       </div>
-                      <span className="d-flex">
-                        <i className="ph ph-caret-right"></i>
-                      </span>
+                      {c.slug !== 'tat-ca-san-pham' && (
+                        <span className="d-flex">
+                          <i className="ph ph-caret-right"></i>
+                        </span>
+                      )}
                     </Link>
                   ))}
                 </div>
@@ -83,49 +85,6 @@ export default function HeaderNav() {
                           <Link href={item.href} className="nav-menu__link text-heading tw-py-3 fw-medium w-100">
                             {item.label}
                           </Link>
-                        </li>
-                      );
-                    }
-                    if (item.label === 'Sản phẩm') {
-                      return (
-                        <li key={item.href} className={`nav-menu__item has-submenu${active ? ' activePage' : ''}`}>
-                          <a href="#" onClick={(e) => e.preventDefault()} className="nav-menu__link text-heading tw-py-2 fw-medium w-100 tw-pe-5">
-                            {item.label}
-                          </a>
-                          <div className="mega-menu tw-p-6 tw-rounded-lg scroll-sm nav-submenu position-absolute start-0 top-100 tw-w-max bg-white tw-rounded-md tw-duration-200 tw-z-99">
-                            <div className="row g-4 row-cols-1 row-cols-lg-3 row-cols-xl-4">
-                              {megaMenuCards.map((card) => (
-                                <div className="col" key={card.href}>
-                                  <div className="mega-menu-item group-item">
-                                    <div className="position-relative border border-neutral-100 tw-rounded-lg overflow-hidden">
-                                      <Link href={card.href} className="d-block">
-                                        {/* TODO ảnh: xem docs/IMAGE-GUIDE.md */}
-                                        <img src={card.image} alt={card.name} className="tw-h-320-px w-100 object-fit-cover object-top" />
-                                      </Link>
-                                      <div className="d-lg-flex d-none">
-                                        <div className="mega-menu-item__overlay position-absolute top-0 tw-start-0 w-100 h-100 d-flex justify-content-center align-items-center tw-invisible opacity-0 group-hover-item-visible group-hover-item-opacity-1 tw-scale-08 group-hover-item-scale-1 tw-rounded-lg pointer-event-none"></div>
-                                        <div className="mega-menu-item__buttons position-absolute top-0 tw-start-0 w-100 h-100 d-flex justify-content-center align-items-center flex-column tw-gap-4 tw-invisible opacity-0 group-hover-item-visible group-hover-item-opacity-1">
-                                          <div className="custom-fade-animation" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
-                                            <Link href={card.href} className="btn bg-main-600 hover-bg-animation hover-bg-animation-white hover-text-heading">
-                                              <span className="btn-text">Xem sản phẩm</span>
-                                              <span className="btn-icon-animation d-flex">
-                                                <i className="ph-bold ph-arrow-down-right"></i>
-                                              </span>
-                                            </Link>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="tw-mt-4 text-center">
-                                      <Link href={card.href} className="text-heading hover-text-heading hover-common-underline fw-semibold tw-text-lg text-capitalize line-clamp-1">
-                                        {card.name}
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
                         </li>
                       );
                     }

@@ -22,6 +22,16 @@ const CATEGORY_ICONS: Record<string, string> = {
   'hop-giay': 'ph-fill ph-sneaker',
   'hop-nap-gai': 'ph-fill ph-package',
   'thung-cod': 'ph-fill ph-truck',
+  'tui-xach-giay': 'ph-fill ph-shopping-bag',
+  'hop-qua-tang': 'ph-fill ph-gift',
+  'tem-nhan-decal': 'ph-fill ph-tag',
+  'catalogue-brochure': 'ph-fill ph-book-open',
+  'danh-thiep': 'ph-fill ph-identification-card',
+  'to-roi-poster': 'ph-fill ph-newspaper',
+  'lich-tet': 'ph-fill ph-calendar',
+  'bao-li-xi': 'ph-fill ph-envelope-open',
+  'an-pham-van-phong': 'ph-fill ph-briefcase',
+  'thung-carton': 'ph-fill ph-archive',
 };
 const DEFAULT_CATEGORY_ICON = 'ph-fill ph-cube';
 

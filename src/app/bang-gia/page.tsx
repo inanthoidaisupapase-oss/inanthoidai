@@ -34,6 +34,9 @@ export default async function PricingPage() {
           </p>
 
           {categories.map((category) => {
+            // Lịch Tết đã có bảng giá riêng bằng dữ liệu thật (calendarPrices) ở dưới —
+            // bỏ qua ở đây để không hiển thị 2 bảng "Lịch Tết" trùng nhau.
+            if (category.slug === 'lich-tet') return null;
             const list = products.filter((p) => p.categorySlug === category.slug);
             if (list.length === 0) return null;
             return (
@@ -57,7 +60,7 @@ export default async function PricingPage() {
                               {p.name}
                             </Link>
                           </td>
-                          <td className="text-neutral-600">{p.specs['Kích thước (D x R x C)']}</td>
+                          <td className="text-neutral-600">{p.specs['Kích thước (D x R x C)'] ?? '—'}</td>
                           <td className="text-end fw-semibold price-vnd">{formatVnd(p.priceMin)}</td>
                           <td className="text-end fw-semibold price-vnd">{formatVnd(p.priceMax)}</td>
                         </tr>

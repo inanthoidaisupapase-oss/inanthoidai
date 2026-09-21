@@ -67,6 +67,28 @@ h1, h2, h3 {
   white-space: nowrap;
 }
 
+/* Nút "Yêu cầu báo giá" trên card sản phẩm (ProductCard.tsx, dùng ở
+   /san-pham và mục "sản phẩm liên quan" của /san-pham/[slug]) bị cắt chữ
+   thành "Yêu cầu báo g". Nguyên nhân: public/assets/js/custom-gsap.js:694-710
+   tách .btn-text thành từng ký tự riêng (span.btn-anim__letter, x2 khối, cho
+   hiệu ứng lật chữ khi hover), rồi main.css:319 giới hạn .btn-text cao đúng
+   20px + overflow:hidden để chỉ lộ 1 khối/1 dòng. Bản gốc Printop dùng chữ
+   Anh ngắn ("Add To Cart") nên luôn vừa 1 dòng; chữ Việt dài hơn ("Yêu cầu
+   báo giá") khiến các span ký tự tự xuống dòng giữa card hẹp (col-sm-6 cạnh
+   sidebar ở breakpoint lg), dòng 2 trở đi bị overflow:hidden cắt mất.
+
+   nowrap buộc khối chữ giữ nguyên 1 hàng; nút .btn (inline-flex, tự co giãn
+   theo nội dung, không có width cố định) tự nới rộng theo — đã đo bằng
+   Chrome headless thật tại 320–1440px, nút luôn nằm gọn trong card, không
+   tràn. Scope riêng .product-card-quote-btn (thêm ở ProductCard.tsx) thay vì
+   sửa thẳng .btn .btn-text dùng chung toàn site: các nút .btn-text khác
+   (banner, CTA, testimonials...) có chuỗi dài tương tự cũng đang bị lỗi này
+   nhưng nowrap sẽ đẩy chúng tràn ra ngoài section overflow:hidden ở mobile —
+   ngoài phạm vi task này, cần xử lý riêng khi được yêu cầu. */
+.product-card-quote-btn .btn-text {
+  white-space: nowrap;
+}
+
 /* Mục nav đang active (Trang chủ, Liên hệ, Giới thiệu, Tin tức...) giờ tự
    động ăn theo --main-600 = đỏ thương hiệu ở trên, không cần override riêng
    nữa (rule gốc main.css:6249 dùng background-color: var(--main-600)). */
@@ -96,6 +118,26 @@ h1, h2, h3 {
    này hover ra đỏ thương hiệu thay vì gradient. */
 .home-style-gradient .header-search-btn.hover-bg-animation::before {
   background: var(--main-600);
+}
+
+/* Hàng logo/ô tìm kiếm (middle-header, Header.tsx) dùng class section-bg —
+   bị .home-style-gradient .section-bg (main.css:6823) ghi đè thành lớp phủ
+   tím gần như trong suốt (#735CFC0D, alpha ~5%), khác với dự định lúc thiết
+   kế: hàng nav bên dưới (.header) đã đặc trắng nhờ bg-white nên không lộ,
+   nhưng hàng này thì không — mọi lúc nội dung trang cuộn qua phía sau nó đều
+   lộ xuyên qua, rõ nhất khi cuộn ngược lên và ảnh/chữ hero hiện ra sau lưng.
+   Không phải lỗi hiện/ẩn theo hướng cuộn (main.css không có cơ chế đó, xem
+   template-behaviors.ts: stickyHeader() chỉ toggle .fixed-header theo
+   scrollY >= 260) — nền trong suốt này tồn tại ở MỌI vị trí cuộn, chỉ là ít
+   bị chú ý lúc đầu trang vì nền trang phía sau đang trắng.
+   Ghi đè cùng selector, thêm .middle-header để thắng specificity (3 lớp >
+   2 lớp .home-style-gradient .section-bg) — CHỈ scope riêng hàng header này,
+   không đụng .section-bg dùng chung cho CTA/FAQ/testimonials/giới thiệu (các
+   section đó vẫn cần lớp phủ nhạt nguyên bản). Đổi nền đặc màu trắng giống
+   hàng nav (.header dùng bg-white) để nhất quán, đúng yêu cầu thay vì tự
+   chọn màu mới. */
+.home-style-gradient .middle-header.section-bg {
+  background: #fff;
 }
 
 /* Nền phủ thương hiệu sau Hero/About/TopCategories/GetStarted/Giới thiệu —
@@ -237,5 +279,192 @@ h1, h2, h3 {
   .brand-new-marquee-item {
     width: 230px;
     height: 120px;
+  }
+}
+
+/* ==========================================================================
+   Trang Đội ngũ (app/doi-ngu/page.tsx) — 4 khối "Bộ phận" giờ bấm được để mở
+   panel nhân sự (components/shared/TeamDepartments.tsx). Các rule dưới đây chỉ
+   thêm cơ chế click/animate mà bản <div> tĩnh cũ không cần — không đụng
+   padding/bo góc/nền của khối, những thuộc tính đó vẫn do đúng utility class
+   Printop đã dùng từ trước quyết định (tw-p-8, tw-rounded-2xl, bg-neutral-50,
+   border border-neutral-100), giữ nguyên hệt bản cũ khi panel đang đóng.
+   ========================================================================== */
+
+/* <button> mất text-align mặc định (center) so với <div> cũ — trả lại canh
+   trái để icon/tiêu đề/mô tả xếp giống hệt bản cũ. */
+.team-department-block {
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.team-department-block:focus-visible {
+  outline: 2px solid var(--main-600);
+  outline-offset: 3px;
+}
+
+.team-department-block:not(.team-department-block--active):hover {
+  border-color: var(--neutral-300);
+  transform: translateY(-2px); /* khớp .hover--translate-y-05, main.css:5252 */
+}
+
+/* Cách A (giữ nguyên vị trí 4 khối trên hàng ngang) — an toàn ở mọi breakpoint kể cả khi
+   4 khối co lại 2 cột ở tablet hoặc 1 cột ở mobile (main.css: .row>* mặc định width:100%,
+   .col-sm-6/.col-lg-3 mới đổi thành 2/4 cột), chỉ phóng to nhẹ + đổi viền/bóng đổ sang đỏ
+   thương hiệu cho khối đang mở, cùng ngôn ngữ với .nav-menu__item.activePage (main.css:6249
+   — nền đỏ khi đang ở đúng trang đó). Không đảo nền toàn khối sang đỏ như nav-menu vì bên
+   trong khối đã có icon nền đỏ (bg-main-600) + chữ mô tả xám (text-neutral-500): đảo màu sẽ
+   làm icon "biến mất" vào nền và chữ xám mất tương phản. translateY(-4px) khớp
+   .hover--translate-y-1 (main.css:5256), scale(1.02) khớp .hover-scale-102:hover
+   (main.css:5027) — tái dùng đúng giá trị hover sẵn có của template thay vì tự chọn số mới.
+   Box-shadow tái dùng đúng giá trị của .common-shadow-one/.hover-shadow-one (main.css:5158)
+   cho nhất quán thay vì tự bịa màu bóng đổ mới. */
+.team-department-block--active {
+  border-color: var(--main-600) !important;
+  box-shadow: 9px 10px 87.1px 0px #41071b14;
+  transform: translateY(-4px) scale(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-department-block,
+  .team-department-block:not(.team-department-block--active):hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Panel nhân sự dùng chung cho cả hàng — animate height bằng JS (TeamDepartments.tsx),
+   kỹ thuật giống AccordionPanel trong FaqAccordion.tsx (khớp bootstrap.min.css
+   .collapsing{transition:height .35s ease}, không sửa file đó), nhưng không dùng markup
+   .accordion-collapse của Bootstrap vì đây là 1 panel full-width dưới cả hàng 4 khối chứ
+   không phải accordion-item riêng từng khối — giữ cùng thời lượng 350ms cho nhất quán. */
+.team-department-panel {
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-department-panel {
+    transition: none;
+  }
+}
+
+/* Carousel nhân viên bên trong panel (TeamMemberCarousel.tsx) — cấu trúc/tỉ lệ/hiệu ứng hover
+   lấy nguyên từ CSS thật của mẫu layout-15.html (Slider-Layouts/layout-15, khác Printop —
+   .../assest/css/style.css), chỉ đổi bảng màu sang theme sáng + đỏ thương hiệu thay vì copy
+   nguyên overlay tối/trắng-đen của mẫu, đúng yêu cầu. Giá trị nào không có sẵn utility
+   tw-* khớp chính xác (30px/15px/gradient overlay) thì giữ số cứng để không lệch mẫu gốc;
+   giá trị nào đã có utility khớp đúng (300px, bo góc 6px, margin 20px, font 24/16px...) thì
+   dùng thẳng utility đó trong TeamMemberCarousel.tsx thay vì lặp lại ở đây — xem className
+   trên từng phần tử: tw-w-300-px, tw-rounded-md, tw-mb-5, tw-text-2xl, tw-text-base. */
+.team-carousel {
+  width: 100%;
+  padding: 30px 0; /* style.css .swiper — không có size scale 30px sẵn nên giữ số cứng */
+}
+
+/* style.css .swiper-slide{width:300px;height:467px} cố định cả 2 chiều vì ảnh thật của mẫu
+   có sẵn đúng tỉ lệ đó — ảnh nhân sự của site chưa có (xem docs/IMAGE-GUIDE.md), dùng
+   aspect-ratio cho khung ảnh thay vì ép cứng 467px để không vỡ layout nếu tên/chức danh dài
+   xuống 2 dòng; vẫn giữ đúng width 300px (tw-w-300-px, số quyết định khoảng cách/độ xoay của
+   hiệu ứng coverflow — main.css: coverflow chỉ tính theo width, không phụ thuộc height). */
+.team-carousel-slide {
+  height: auto;
+}
+
+.team-carousel-media {
+  aspect-ratio: 600 / 756; /* tỉ lệ ảnh nhân sự đã chốt ở lần làm trước, xem IMAGE-GUIDE.md */
+}
+
+.team-carousel-photo {
+  filter: grayscale(100%); /* style.css: không khai báo transition cho filter này — giữ đúng
+  hiệu ứng đổi tức thời của mẫu, không tự thêm mượt mà mẫu không có */
+}
+
+.team-carousel-member:hover .team-carousel-photo {
+  filter: grayscale(0%);
+}
+
+/* style.css .social — nền gradient tối giữ nguyên (không phải màu thương hiệu, chỉ là lớp phủ
+   tăng tương phản cho icon trắng phía trên, đúng kỹ thuật universal của mẫu, không đổi). */
+.team-carousel-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 40px 0; /* style.css .social{padding:40px} — chỉ cần trên/dưới vì overlay đã rộng
+  100% (w-100 ở TeamMemberCarousel.tsx), khai báo cùng các thuộc tính position/gradient khác
+  của rule này nên giữ số cứng thay vì tách riêng ra utility class */
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.12, 0, 0.39, 0);
+  background-image: linear-gradient(to top, rgba(32, 35, 41, 0.8) 0%, transparent 100%);
+}
+
+.team-carousel-member:hover .team-carousel-overlay {
+  opacity: 1;
+}
+
+.team-carousel-social {
+  font-size: 18px;
+  gap: 15px;
+}
+
+.team-carousel-social a {
+  transition: all 0.8s ease;
+  transform: translateY(25px);
+  opacity: 0;
+}
+
+.team-carousel-member:hover .team-carousel-social a:nth-child(1) {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-carousel-member:hover .team-carousel-social a:nth-child(2) {
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-carousel-member:hover .team-carousel-social a:nth-child(3) {
+  transition: all 0.6s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-carousel-social a i {
+  transition: all 0.35s ease-in-out;
+}
+
+/* style.css .social-icon a:hover i — trắng/đen ở mẫu, đổi sang đỏ thương hiệu/trắng
+   (Bước 2.3), giữ đúng kích thước vòng tròn 30px của mẫu. */
+.team-carousel-social a:hover i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-600);
+  color: #fff;
+  border-radius: 50%;
+}
+
+/* Thiết bị cảm ứng không có :hover nên overlay/social/ảnh màu kẹt vĩnh viễn ở trạng thái ẩn —
+   hiện luôn thay vì bắt tap riêng, tránh xung đột với thao tác vuốt của Swiper (yêu cầu Bước 3.4). */
+@media (hover: none) {
+  .team-carousel-overlay,
+  .team-carousel-social a {
+    opacity: 1;
+    transform: none;
+  }
+
+  .team-carousel-photo {
+    filter: grayscale(0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-carousel-overlay,
+  .team-carousel-social a,
+  .team-carousel-social a i {
+    transition: none;
   }
 }

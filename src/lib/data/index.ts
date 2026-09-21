@@ -7,7 +7,10 @@ import servicesSeed from './seed/services.json';
 
 const seed = {
   categories: categoriesSeed as Category[],
-  products: productsSeed as Product[],
+  // Mỗi sản phẩm có bộ khoá "specs" khác nhau (hộp giấy vs. túi giấy, tem nhãn...) nên
+  // TS suy ra kiểu literal không đồng nhất cho mảng JSON — ép qua unknown trước khi cast
+  // sang Product (specs: Record<string, string> vẫn đúng ở runtime, chỉ khác ở type literal).
+  products: productsSeed as unknown as Product[],
   posts: postsSeed as Post[],
   services: servicesSeed as Service[],
 };

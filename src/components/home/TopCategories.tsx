@@ -1,18 +1,26 @@
 import Link from 'next/link';
 import { getCategories, getProducts } from '@/lib/data';
 
-/** 6 nhóm sản phẩm hiển thị ở trang chủ: 3 danh mục thật có sẵn hàng + 3 nhóm in theo yêu cầu */
+/**
+ * 6 nhóm sản phẩm hiển thị ở trang chủ: 3 danh mục thật có sẵn hàng + 3 nhóm in theo yêu cầu.
+ * Cố định 6 vì chỉ có 6 ảnh placeholder top-categories-new-img1..6.png của template — categories.json
+ * đã có 12 danh mục (9 danh mục sau chưa có sản phẩm/ảnh thật) nên KHÔNG map trực tiếp toàn bộ
+ * getCategories() vào đây, chỉ lấy đúng 3 danh mục đang có hàng thật.
+ */
 const extraGroups = [
-  { name: 'Túi xách giấy', href: '/dich-vu/thiet-ke-bao-bi', note: 'In theo yêu cầu', image: 'top-categories-new-img4.png' },
-  { name: 'Tem, nhãn, decal', href: '/dich-vu/in-flexo', note: 'In theo yêu cầu', image: 'top-categories-new-img5.png' },
-  { name: 'Catalogue & brochure', href: '/dich-vu/in-offset', note: 'In theo yêu cầu', image: 'top-categories-new-img6.png' },
+  { name: 'Túi xách giấy', href: '/san-pham?danh-muc=tui-xach-giay', note: 'In theo yêu cầu', image: 'top-categories-new-img4.png' },
+  { name: 'Tem, nhãn, decal', href: '/san-pham?danh-muc=tem-nhan-decal', note: 'In theo yêu cầu', image: 'top-categories-new-img5.png' },
+  { name: 'Catalogue & brochure', href: '/san-pham?danh-muc=catalogue-brochure', note: 'In theo yêu cầu', image: 'top-categories-new-img6.png' },
 ];
 
 export default async function TopCategories() {
   const [categories, products] = await Promise.all([getCategories(), getProducts()]);
+  const categoriesWithStock = categories
+    .filter((c) => products.some((p) => p.categorySlug === c.slug))
+    .slice(0, 3);
 
   const cards = [
-    ...categories.map((c, i) => ({
+    ...categoriesWithStock.map((c, i) => ({
       name: c.name,
       href: `/san-pham?danh-muc=${c.slug}`,
       note: `${products.filter((p) => p.categorySlug === c.slug).length} sản phẩm có sẵn`,

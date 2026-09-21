@@ -17,6 +17,23 @@ Quy tắc: 1 phiên = 1-2 task. Port giao diện và nối dữ liệu là **hai
 
 ## (1) Nối dữ liệu
 - [x] Kiểu dữ liệu + seed JSON từ nội dung crawl (12 sản phẩm, 3 danh mục, 4 dịch vụ, 22 bài viết)
+- [x] Bổ sung 9 danh mục còn lại trong mega menu "Danh mục sản phẩm" vào categories.json để có
+      trang `/san-pham?danh-muc=...` thật
+- [x] Thêm 44 sản phẩm mẫu cho 9 danh mục trên (5/danh mục, riêng Lịch Tết 4 — trùng đúng 4 loại
+      lịch thật đã có trong bảng giá) để không danh mục nào trống khi lọc ở trang `/san-pham`.
+      **GIÁ TẠM — CẦN CẬP NHẬT**: `priceMin`/`priceMax`/`priceTiers` của 44 sản phẩm này là giá
+      ước lượng theo mặt bằng chung ngành in ấn/bao bì VN, CHƯA phải giá thật — cần rà lại trước
+      khi lên production. Cách lọc ra 44 sản phẩm này để sửa: tất cả có `"sku": null` và
+      `categorySlug` thuộc 9 slug mới (tui-xach-giay, hop-qua-tang, tem-nhan-decal,
+      catalogue-brochure, danh-thiep, to-roi-poster, lich-tet, an-pham-van-phong, thung-carton) —
+      xem danh sách đầy đủ kèm giá trong lịch sử chat lúc thêm (2026-09-21).
+- [x] Thêm danh mục "Bao lì xì" (slug `bao-li-xi`, đặt sau "Lịch Tết" — cùng nhóm sản phẩm mùa Tết)
+      vào mega menu header và khối "Chọn danh mục" trang `/san-pham`, kèm 5 sản phẩm mẫu để danh
+      mục không trống khi lọc. **GIÁ TẠM — CẦN CẬP NHẬT**: cùng quy tắc như trên, 5 sản phẩm này
+      có `"sku": null` và `categorySlug` = `bao-li-xi` (bao-li-xi-in-logo-doanh-nghiep,
+      bao-li-xi-giay-my-thuat-ep-kim, set-bao-li-xi-tet-theo-bo, bao-li-xi-giay-kraft-in-logo,
+      bao-li-xi-nhu-vang-linh-vat-tet) — giá ước lượng theo mặt bằng chung, chưa phải giá thật
+      (2026-09-21).
 - [x] `src/lib/data/*` với fallback: có env Supabase thì đọc DB, không thì đọc seed
 - [x] Migration SQL + RLS + script seed
 - [x] Nối trang sản phẩm / chi tiết sản phẩm / tin tức / chi tiết tin

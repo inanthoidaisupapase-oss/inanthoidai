@@ -71,6 +71,13 @@ function categoryDropdown(): Cleanup {
     dropdown.classList.toggle('active');
   };
   const onDropdown = (e: Event) => {
+    // main.js gốc luôn giữ dropdown mở khi click bên trong (stopPropagation).
+    // Khác với template tĩnh (click link = full page reload), item trong dropdown
+    // giờ là <Link> điều hướng client-side, DOM header không unmount — nếu vẫn giữ
+    // "active" thì dropdown xổ ra đè lên trang mới. Click vào link thật thì bỏ qua,
+    // để sự kiện nổi lên onBody đóng dropdown; click vùng khác trong dropdown thì
+    // giữ nguyên hành vi gốc.
+    if ((e.target as HTMLElement).closest('a[href]')) return;
     e.stopPropagation();
     button.classList.add('active');
     dropdown.classList.add('active');

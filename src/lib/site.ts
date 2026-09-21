@@ -31,16 +31,6 @@ export const mainNav: NavItem[] = [
   { label: 'Trang chủ', href: '/' },
   { label: 'Giới thiệu', href: '/gioi-thieu' },
   {
-    label: 'Sản phẩm',
-    href: '/san-pham',
-    children: [
-      { label: 'Tất cả sản phẩm', href: '/san-pham' },
-      { label: 'Hộp giày', href: '/san-pham?danh-muc=hop-giay' },
-      { label: 'Hộp nắp gài', href: '/san-pham?danh-muc=hop-nap-gai' },
-      { label: 'Thùng COD', href: '/san-pham?danh-muc=thung-cod' },
-    ],
-  },
-  {
     label: 'Dịch vụ',
     href: '/dich-vu',
     children: [
@@ -56,9 +46,7 @@ export const mainNav: NavItem[] = [
     label: 'Khác',
     href: '/bang-gia',
     children: [
-      { label: 'Bảng giá', href: '/bang-gia' },
       { label: 'Đội ngũ', href: '/doi-ngu' },
-      { label: 'Câu hỏi thường gặp', href: '/cau-hoi-thuong-gap' },
       { label: 'Giỏ hàng', href: '/gio-hang' },
       { label: 'Yêu cầu báo giá', href: '/bao-gia' },
     ],

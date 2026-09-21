@@ -19,5 +19,75 @@
     "description": "Thùng carton ship hàng COD, carton 3 lớp sóng B chịu lực, in Flexo 1 màu. Dùng cho mỹ phẩm, phụ kiện thời trang, trang sức và hàng gửi chuyển phát.",
     "imageUrl": "/assets/images/thumbs/home-img3.png",
     "sortOrder": 3
+  },
+  {
+    "slug": "tui-xach-giay",
+    "name": "Túi xách giấy",
+    "description": "Túi giấy kraft và giấy couche cán màng, quai xoắn giấy hoặc quai dẹt, in theo yêu cầu. Dùng làm túi đựng hàng thời trang, mỹ phẩm, quà tặng và túi mua sắm bán lẻ.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 4
+  },
+  {
+    "slug": "hop-qua-tang",
+    "name": "Hộp quà tặng cao cấp",
+    "description": "Hộp quà tặng nắp rời hoặc nắp từ tính, giấy mỹ thuật hoặc bồi carton, gia công ép kim và phủ UV theo yêu cầu. Dùng làm hộp quà Tết, quà doanh nghiệp và quà tặng sự kiện.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 5
+  },
+  {
+    "slug": "tem-nhan-decal",
+    "name": "Tem, nhãn, decal",
+    "description": "Tem nhãn decal giấy, decal nhựa trong và decal kim loại, cắt bế theo khuôn hoặc theo cuộn. Dùng làm tem nhãn sản phẩm, tem bảo hành và tem niêm phong.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 6
+  },
+  {
+    "slug": "catalogue-brochure",
+    "name": "Catalogue & brochure",
+    "description": "Catalogue và brochure in offset nhiều trang, gia công đóng ghim hoặc keo gáy. Dùng làm catalogue giới thiệu sản phẩm, brochure công ty và profile doanh nghiệp.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 7
+  },
+  {
+    "slug": "danh-thiep",
+    "name": "Danh thiếp (name card)",
+    "description": "Danh thiếp giấy Bristol hoặc Ivory định lượng dày, cán màng bóng/mờ hoặc ép kim theo yêu cầu. Dùng làm danh thiếp cá nhân và name card doanh nghiệp.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 8
+  },
+  {
+    "slug": "to-roi-poster",
+    "name": "Tờ rơi & poster",
+    "description": "Tờ rơi và poster in offset nhiều khổ giấy, cán màng hoặc phủ UV theo yêu cầu. Dùng làm tờ rơi quảng cáo, poster sự kiện và ấn phẩm truyền thông.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 9
+  },
+  {
+    "slug": "lich-tet",
+    "name": "Lịch Tết",
+    "description": "Lịch Tết các loại: lịch bloc, lịch treo tường, lịch để bàn và lịch sổ tay, in offset theo yêu cầu. Dùng làm quà tặng Tết cho khách hàng và đối tác.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 10
+  },
+  {
+    "slug": "bao-li-xi",
+    "name": "Bao lì xì",
+    "description": "Bao lì xì in logo doanh nghiệp, giấy mỹ thuật ép kim hoặc phủ nhũ vàng, đóng set theo bộ, in offset theo yêu cầu. Dùng làm quà tặng Tết cho nhân viên, khách hàng và đối tác.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 11
+  },
+  {
+    "slug": "an-pham-van-phong",
+    "name": "Ấn phẩm văn phòng",
+    "description": "Ấn phẩm văn phòng: giấy tiêu đề, phong bì, bìa kẹp hồ sơ và sổ tay công ty, in offset theo bộ nhận diện thương hiệu. Dùng cho hoạt động văn phòng và giao dịch hàng ngày.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 12
+  },
+  {
+    "slug": "thung-carton",
+    "name": "Thùng carton",
+    "description": "Thùng carton 3 lớp hoặc 5 lớp sóng B/C chịu tải, dùng đóng gói vận chuyển hàng hoá số lượng lớn, xuất khẩu và lưu kho — khác thùng COD chuyên ship lẻ.",
+    "imageUrl": "/assets/images/thumbs/product-range-img.png",
+    "sortOrder": 13
   }
 ]

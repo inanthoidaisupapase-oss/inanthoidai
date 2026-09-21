@@ -586,5 +586,2210 @@
       "/assets/images/thumbs/shop-details-thumb3.png"
     ],
     "isFeatured": true
+  },
+  {
+    "slug": "tui-giay-kraft-quai-xoan-in-logo",
+    "name": "Túi giấy kraft quai xoắn in logo",
+    "sku": null,
+    "categorySlug": "tui-xach-giay",
+    "priceMin": 450000,
+    "priceMax": 2250000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 450000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 2250000
+      }
+    ],
+    "shortDescription": "Túi giấy kraft, quai xoắn giấy, in logo theo yêu cầu. Dùng đựng hàng thời trang, quà tặng và túi mua sắm bán lẻ.",
+    "description": "<p>Túi giấy kraft quai xoắn in logo là túi giấy đựng hàng do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, dùng chất liệu giấy kraft bền dai, quai xoắn giấy chắc chắn, phù hợp làm túi mua sắm bán lẻ, túi đựng quà tặng hoặc túi thương hiệu cho cửa hàng.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy kraft",
+      "Kiểu quai": "Quai xoắn giấy",
+      "Kỹ thuật in": "In offset hoặc Flexo theo yêu cầu",
+      "Màu sắc": "Theo yêu cầu thiết kế"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img1.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "tui-giay-trang-can-mang-bong",
+    "name": "Túi giấy trắng cán màng bóng",
+    "sku": null,
+    "categorySlug": "tui-xach-giay",
+    "priceMin": 520000,
+    "priceMax": 2600000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 520000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 2600000
+      }
+    ],
+    "shortDescription": "Túi giấy couche trắng, cán màng bóng, quai dẹt. Phù hợp làm túi đựng mỹ phẩm và quà tặng cao cấp.",
+    "description": "<p>Túi giấy trắng cán màng bóng là túi giấy couche cao cấp do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, bề mặt cán màng bóng tăng độ bền và thẩm mỹ, phù hợp làm túi đựng mỹ phẩm, quà tặng và các mặt hàng cần hình ảnh sang trọng.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy couche cán màng bóng",
+      "Kiểu quai": "Quai dẹt",
+      "Kỹ thuật in": "In offset",
+      "Màu sắc": "Theo yêu cầu thiết kế"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img2.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "tui-giay-couche-quai-det-in-offset",
+    "name": "Túi giấy couche quai dẹt in offset",
+    "sku": null,
+    "categorySlug": "tui-xach-giay",
+    "priceMin": 480000,
+    "priceMax": 2450000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 480000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 2450000
+      }
+    ],
+    "shortDescription": "Túi giấy couche, in offset nhiều màu, quai dẹt. Dùng làm túi thương hiệu cho shop thời trang, mỹ phẩm.",
+    "description": "<p>Túi giấy couche quai dẹt in offset do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in offset nhiều màu sắc nét, quai dẹt chắc chắn, phù hợp làm túi thương hiệu cho shop thời trang, mỹ phẩm và cửa hàng bán lẻ.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy couche",
+      "Kiểu quai": "Quai dẹt",
+      "Kỹ thuật in": "In offset",
+      "Màu sắc": "Theo yêu cầu thiết kế"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img3.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "tui-giay-kraft-nau-quai-giay-tu-nhien",
+    "name": "Túi giấy kraft nâu quai giấy tự nhiên",
+    "sku": null,
+    "categorySlug": "tui-xach-giay",
+    "priceMin": 380000,
+    "priceMax": 1900000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 380000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 1900000
+      }
+    ],
+    "shortDescription": "Túi giấy kraft nâu tự nhiên, quai giấy, phong cách mộc mạc. Phù hợp đóng gói thực phẩm, quà handmade.",
+    "description": "<p>Túi giấy kraft nâu quai giấy tự nhiên do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, giữ nguyên màu giấy kraft tự nhiên, phong cách mộc mạc, phù hợp đóng gói thực phẩm, quà tặng handmade và các mặt hàng thân thiện môi trường.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy kraft nâu",
+      "Kiểu quai": "Quai giấy",
+      "Kỹ thuật in": "In Flexo 1 màu theo yêu cầu",
+      "Màu sắc": "Nâu tự nhiên"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img4.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "tui-giay-can-mang-mo-co-ruy-bang",
+    "name": "Túi giấy cán màng mờ có ruy băng",
+    "sku": null,
+    "categorySlug": "tui-xach-giay",
+    "priceMin": 650000,
+    "priceMax": 3150000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 650000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 3150000
+      }
+    ],
+    "shortDescription": "Túi giấy cán màng mờ, quai ruy băng vải. Dùng làm túi quà tặng cao cấp, túi đựng mỹ phẩm.",
+    "description": "<p>Túi giấy cán màng mờ có ruy băng do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, bề mặt cán màng mờ sang trọng, quai ruy băng vải, phù hợp làm túi quà tặng cao cấp và túi đựng mỹ phẩm thương hiệu.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy couche cán màng mờ",
+      "Kiểu quai": "Quai ruy băng vải",
+      "Kỹ thuật in": "In offset",
+      "Màu sắc": "Theo yêu cầu thiết kế"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img5.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "hop-qua-nap-roi-giay-my-thuat",
+    "name": "Hộp quà nắp rời giấy mỹ thuật",
+    "sku": null,
+    "categorySlug": "hop-qua-tang",
+    "priceMin": 1650000,
+    "priceMax": 8100000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1650000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 8100000
+      }
+    ],
+    "shortDescription": "Hộp quà nắp rời, bọc giấy mỹ thuật, kiểu dáng cổ điển. Dùng làm hộp quà Tết, quà doanh nghiệp.",
+    "description": "<p>Hộp quà nắp rời giấy mỹ thuật do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, bọc giấy mỹ thuật, kiểu dáng nắp rời cổ điển, phù hợp làm hộp quà Tết, quà tặng doanh nghiệp và quà tặng sự kiện.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy mỹ thuật bồi carton",
+      "Kiểu hộp": "Nắp rời",
+      "Gia công": "Theo yêu cầu thiết kế",
+      "Màu sắc": "Theo yêu cầu thiết kế"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img6.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "hop-qua-nap-tu-tinh-ep-kim-logo",
+    "name": "Hộp quà nắp từ tính ép kim logo",
+    "sku": null,
+    "categorySlug": "hop-qua-tang",
+    "priceMin": 2950000,
+    "priceMax": 14500000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 2950000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 14500000
+      }
+    ],
+    "shortDescription": "Hộp quà nắp từ tính, ép kim logo nổi bật. Phù hợp làm quà tặng doanh nghiệp cao cấp.",
+    "description": "<p>Hộp quà nắp từ tính ép kim logo do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, cơ chế đóng mở bằng nam châm, ép kim logo nổi bật, phù hợp làm quà tặng doanh nghiệp cao cấp và quà biếu đối tác.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Duplex bồi carton",
+      "Kiểu hộp": "Nắp từ tính",
+      "Gia công": "Ép kim logo theo yêu cầu",
+      "Màu sắc": "Theo yêu cầu thiết kế"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img7.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "hop-qua-tet-hoa-tiet-truyen-thong",
+    "name": "Hộp quà Tết hoạ tiết truyền thống",
+    "sku": null,
+    "categorySlug": "hop-qua-tang",
+    "priceMin": 1850000,
+    "priceMax": 9200000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1850000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 9200000
+      }
+    ],
+    "shortDescription": "Hộp quà Tết in hoạ tiết truyền thống, tông màu đỏ – vàng ánh kim. Dùng làm quà biếu Tết.",
+    "description": "<p>Hộp quà Tết hoạ tiết truyền thống do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in hoạ tiết mai đào, tông màu đỏ – vàng ánh kim đặc trưng ngày Tết, phù hợp làm quà biếu Tết cho khách hàng và đối tác.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy mỹ thuật bồi carton",
+      "Kiểu hộp": "Nắp rời hoặc nắp gài",
+      "Gia công": "Ép kim, phủ UV định hình theo yêu cầu",
+      "Màu sắc": "Đỏ, vàng ánh kim theo mẫu Tết"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img8.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "hop-qua-day-khay-nhua-dinh-hinh",
+    "name": "Hộp quà tặng đáy khay nhựa định hình",
+    "sku": null,
+    "categorySlug": "hop-qua-tang",
+    "priceMin": 2350000,
+    "priceMax": 11600000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 2350000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 11600000
+      }
+    ],
+    "shortDescription": "Hộp quà có khay nhựa định hình bên trong, cố định sản phẩm chắc chắn. Dùng cho quà tặng nhiều món.",
+    "description": "<p>Hộp quà tặng đáy khay nhựa định hình do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, khay nhựa bên trong được định hình theo sản phẩm, giữ cố định chắc chắn khi vận chuyển, phù hợp cho set quà tặng nhiều món.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy bồi carton, khay nhựa định hình",
+      "Kiểu hộp": "Nắp rời",
+      "Gia công": "Theo yêu cầu thiết kế",
+      "Màu sắc": "Theo yêu cầu thiết kế"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img9.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "hop-qua-dang-ong-tron-cao-cap",
+    "name": "Hộp quà dạng ống tròn cao cấp",
+    "sku": null,
+    "categorySlug": "hop-qua-tang",
+    "priceMin": 2100000,
+    "priceMax": 10300000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 2100000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 10300000
+      }
+    ],
+    "shortDescription": "Hộp quà dạng ống tròn, kiểu dáng khác biệt. Phù hợp đựng rượu, trà, đặc sản quà biếu.",
+    "description": "<p>Hộp quà dạng ống tròn cao cấp do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, kiểu dáng ống tròn khác biệt so với hộp vuông thông thường, phù hợp đựng rượu, trà, đặc sản làm quà biếu.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy mỹ thuật bồi carton",
+      "Kiểu hộp": "Dạng ống tròn, nắp đậy rời",
+      "Gia công": "Theo yêu cầu thiết kế",
+      "Màu sắc": "Theo yêu cầu thiết kế"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img10.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "tem-nhan-decal-giay-in-offset",
+    "name": "Tem nhãn decal giấy in offset",
+    "sku": null,
+    "categorySlug": "tem-nhan-decal",
+    "priceMin": 180000,
+    "priceMax": 850000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 180000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 850000
+      }
+    ],
+    "shortDescription": "Decal giấy in offset nhiều màu, phổ biến cho tem nhãn sản phẩm. Dùng cho bánh kẹo, mứt Tết, hàng tiêu dùng.",
+    "description": "<p>Tem nhãn decal giấy in offset do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in offset đa dạng màu sắc và thông tin sản phẩm, là lựa chọn phổ biến nhất cho tem nhãn bánh kẹo, mứt Tết và hàng tiêu dùng.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Decal giấy",
+      "Kỹ thuật in": "In offset",
+      "Hình thức": "Cuộn hoặc tờ rời theo yêu cầu",
+      "Ứng dụng": "Tem nhãn sản phẩm tiêu dùng"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img11.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "decal-nhua-trong-suot-cat-be",
+    "name": "Decal nhựa trong suốt cắt bế",
+    "sku": null,
+    "categorySlug": "tem-nhan-decal",
+    "priceMin": 320000,
+    "priceMax": 1550000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 320000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 1550000
+      }
+    ],
+    "shortDescription": "Decal nhựa trong suốt, cắt bế theo khuôn. Phù hợp cho sản phẩm cần thể hiện sự sang trọng như rượu, trà.",
+    "description": "<p>Decal nhựa trong suốt cắt bế do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, chất liệu nhựa trong suốt, cắt bế đúng theo khuôn thiết kế, phù hợp cho sản phẩm cần thể hiện sự sang trọng như rượu, trà, bánh mứt cao cấp.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Decal nhựa trong suốt",
+      "Kỹ thuật in": "In offset hoặc kỹ thuật số",
+      "Hình thức": "Cắt bế theo khuôn",
+      "Ứng dụng": "Sản phẩm cao cấp: rượu, trà, mỹ phẩm"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img12.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "tem-nhan-decal-kim-loai-anh-vang",
+    "name": "Tem nhãn decal kim loại ánh vàng",
+    "sku": null,
+    "categorySlug": "tem-nhan-decal",
+    "priceMin": 450000,
+    "priceMax": 2150000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 450000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 2150000
+      }
+    ],
+    "shortDescription": "Decal kim loại ánh vàng/bạc, vẻ ngoài lấp lánh sang trọng. Dùng cho trà, cà phê, rượu vang, quà cao cấp.",
+    "description": "<p>Tem nhãn decal kim loại ánh vàng do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, mang vẻ đẹp lấp lánh và sang trọng, thường dùng cho trà, cà phê, rượu vang và các dòng quà tặng cao cấp.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Decal kim loại (vàng, bạc)",
+      "Kỹ thuật in": "In offset",
+      "Hình thức": "Cuộn hoặc tờ rời theo yêu cầu",
+      "Ứng dụng": "Sản phẩm cao cấp: trà, cà phê, rượu vang"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img1.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "decal-chong-nuoc-dan-chai-lo",
+    "name": "Decal chống nước dán chai lọ",
+    "sku": null,
+    "categorySlug": "tem-nhan-decal",
+    "priceMin": 290000,
+    "priceMax": 1400000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 290000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 1400000
+      }
+    ],
+    "shortDescription": "Decal chống nước, độ bám dính cao. Phù hợp dán chai lọ mỹ phẩm, thực phẩm cần bảo quản lạnh/ẩm.",
+    "description": "<p>Decal chống nước dán chai lọ do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, chất liệu chống nước, độ bám dính cao, phù hợp dán chai lọ mỹ phẩm, thực phẩm và các sản phẩm cần bảo quản trong môi trường ẩm hoặc lạnh.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Decal chống nước",
+      "Kỹ thuật in": "In offset hoặc kỹ thuật số",
+      "Hình thức": "Cuộn hoặc tờ rời theo yêu cầu",
+      "Ứng dụng": "Chai lọ mỹ phẩm, thực phẩm"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img2.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "tem-bao-hanh-tem-niem-phong-cuon",
+    "name": "Tem bảo hành, tem niêm phong cuộn",
+    "sku": null,
+    "categorySlug": "tem-nhan-decal",
+    "priceMin": 150000,
+    "priceMax": 700000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 150000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 700000
+      }
+    ],
+    "shortDescription": "Tem bảo hành, tem niêm phong dạng cuộn, đánh số theo yêu cầu. Dùng cho hàng điện tử, hàng hoá cần niêm phong.",
+    "description": "<p>Tem bảo hành, tem niêm phong cuộn do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, dạng cuộn tiện cấp phát, có thể đánh số thứ tự theo yêu cầu, dùng cho hàng điện tử và hàng hoá cần niêm phong bảo hành.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Decal giấy hoặc decal vỡ (dễ rách khi bóc)",
+      "Kỹ thuật in": "In offset, đánh số theo yêu cầu",
+      "Hình thức": "Dạng cuộn",
+      "Ứng dụng": "Tem bảo hành, tem niêm phong"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img3.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "catalogue-gioi-thieu-san-pham-dong-ghim",
+    "name": "Catalogue giới thiệu sản phẩm đóng ghim",
+    "sku": null,
+    "categorySlug": "catalogue-brochure",
+    "priceMin": 1450000,
+    "priceMax": 7100000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1450000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 7100000
+      }
+    ],
+    "shortDescription": "Catalogue nhiều trang, in offset, đóng ghim gáy. Dùng giới thiệu danh mục sản phẩm công ty.",
+    "description": "<p>Catalogue giới thiệu sản phẩm đóng ghim do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in offset nhiều trang, gia công đóng ghim gáy gọn gàng, phù hợp giới thiệu danh mục sản phẩm cho khách hàng và đại lý.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Giấy Couche",
+      "Gia công": "Đóng ghim gáy",
+      "Kỹ thuật in": "In offset",
+      "Số trang": "Theo nội dung, liên hệ để được tư vấn"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img4.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "brochure-gap-3-gioi-thieu-dich-vu",
+    "name": "Brochure gấp 3 giới thiệu dịch vụ",
+    "sku": null,
+    "categorySlug": "catalogue-brochure",
+    "priceMin": 850000,
+    "priceMax": 4150000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 850000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 4150000
+      }
+    ],
+    "shortDescription": "Brochure gấp 3, khổ A4, in offset 2 mặt. Dùng giới thiệu dịch vụ, ngành hàng gọn nhẹ.",
+    "description": "<p>Brochure gấp 3 giới thiệu dịch vụ do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, khổ A4 gấp 3, in offset 2 mặt, phù hợp giới thiệu dịch vụ hoặc ngành hàng một cách gọn nhẹ, dễ phát tại sự kiện.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Giấy Couche",
+      "Gia công": "Gấp 3 (gấp rơi)",
+      "Kỹ thuật in": "In offset 2 mặt",
+      "Khổ giấy": "A4"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img5.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "profile-cong-ty-dong-keo-gay",
+    "name": "Profile công ty đóng keo gáy",
+    "sku": null,
+    "categorySlug": "catalogue-brochure",
+    "priceMin": 1950000,
+    "priceMax": 9600000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1950000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 9600000
+      }
+    ],
+    "shortDescription": "Profile công ty nhiều trang, đóng keo gáy chắc chắn. Dùng giới thiệu năng lực doanh nghiệp.",
+    "description": "<p>Profile công ty đóng keo gáy do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in offset nhiều trang, gia công đóng keo gáy chắc chắn, phù hợp làm hồ sơ năng lực giới thiệu doanh nghiệp với đối tác.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Giấy Couche",
+      "Gia công": "Đóng keo gáy",
+      "Kỹ thuật in": "In offset",
+      "Số trang": "Theo nội dung, liên hệ để được tư vấn"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img6.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "catalogue-bia-cung-can-mang-bong",
+    "name": "Catalogue bìa cứng cán màng bóng",
+    "sku": null,
+    "categorySlug": "catalogue-brochure",
+    "priceMin": 2450000,
+    "priceMax": 12000000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 2450000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 12000000
+      }
+    ],
+    "shortDescription": "Catalogue bìa cứng, cán màng bóng sang trọng. Phù hợp làm ấn phẩm giới thiệu cao cấp.",
+    "description": "<p>Catalogue bìa cứng cán màng bóng do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, bìa cứng cán màng bóng tăng độ bền và thẩm mỹ, phù hợp làm ấn phẩm giới thiệu cao cấp cho sự kiện quan trọng.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Bìa cứng cán màng bóng",
+      "Gia công": "Đóng keo gáy hoặc đóng ghim",
+      "Kỹ thuật in": "In offset",
+      "Số trang": "Theo nội dung, liên hệ để được tư vấn"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img7.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "brochure-gap-z-quang-cao-su-kien",
+    "name": "Brochure gấp Z quảng cáo sự kiện",
+    "sku": null,
+    "categorySlug": "catalogue-brochure",
+    "priceMin": 780000,
+    "priceMax": 3800000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 780000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 3800000
+      }
+    ],
+    "shortDescription": "Brochure gấp chữ Z, thiết kế mở rộng liền mạch. Dùng quảng cáo sự kiện, chương trình khuyến mãi.",
+    "description": "<p>Brochure gấp Z quảng cáo sự kiện do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, kiểu gấp chữ Z cho phép trình bày nội dung liền mạch khi mở rộng, phù hợp quảng cáo sự kiện và chương trình khuyến mãi.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Giấy Couche",
+      "Gia công": "Gấp chữ Z",
+      "Kỹ thuật in": "In offset 2 mặt",
+      "Khổ giấy": "A4"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img8.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "danh-thiep-giay-bristol-can-mo",
+    "name": "Danh thiếp giấy Bristol cán mờ",
+    "sku": null,
+    "categorySlug": "danh-thiep",
+    "priceMin": 180000,
+    "priceMax": 850000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 180000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 850000
+      }
+    ],
+    "shortDescription": "Danh thiếp giấy Bristol, cán màng mờ mịn tay. Dùng làm name card cá nhân và doanh nghiệp.",
+    "description": "<p>Danh thiếp giấy Bristol cán mờ do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, chất liệu giấy Bristol dày dặn, cán màng mờ mịn tay, phù hợp làm name card cá nhân và doanh nghiệp.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Bristol",
+      "Gia công": "Cán màng mờ",
+      "Kỹ thuật in": "In offset",
+      "Hình thức": "Vuông góc hoặc bo góc theo yêu cầu"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img9.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "danh-thiep-ep-kim-logo-cao-cap",
+    "name": "Danh thiếp ép kim logo cao cấp",
+    "sku": null,
+    "categorySlug": "danh-thiep",
+    "priceMin": 420000,
+    "priceMax": 2000000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 420000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 2000000
+      }
+    ],
+    "shortDescription": "Danh thiếp ép kim logo, nổi bật sang trọng. Dùng cho quản lý, lãnh đạo doanh nghiệp.",
+    "description": "<p>Danh thiếp ép kim logo cao cấp do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, ép kim logo nổi bật trên nền giấy dày, tạo cảm giác sang trọng, phù hợp cho quản lý và lãnh đạo doanh nghiệp.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Ivory hoặc Bristol",
+      "Gia công": "Ép kim logo",
+      "Kỹ thuật in": "In offset",
+      "Hình thức": "Vuông góc hoặc bo góc theo yêu cầu"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img10.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "danh-thiep-giay-ivory-bo-goc",
+    "name": "Danh thiếp giấy Ivory bo góc",
+    "sku": null,
+    "categorySlug": "danh-thiep",
+    "priceMin": 220000,
+    "priceMax": 1050000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 220000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 1050000
+      }
+    ],
+    "shortDescription": "Danh thiếp giấy Ivory, bo góc mềm mại. Phù hợp phong cách hiện đại, tối giản.",
+    "description": "<p>Danh thiếp giấy Ivory bo góc do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, chất liệu giấy Ivory mịn, bo góc mềm mại, phù hợp phong cách thiết kế hiện đại và tối giản.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Ivory",
+      "Gia công": "Bo góc",
+      "Kỹ thuật in": "In offset",
+      "Hình thức": "Bo góc 4 cạnh"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img11.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "danh-thiep-hai-mat-can-bong",
+    "name": "Danh thiếp hai mặt cán bóng",
+    "sku": null,
+    "categorySlug": "danh-thiep",
+    "priceMin": 190000,
+    "priceMax": 900000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 190000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 900000
+      }
+    ],
+    "shortDescription": "Danh thiếp in hai mặt, cán màng bóng. Dùng phổ biến cho name card doanh nghiệp.",
+    "description": "<p>Danh thiếp hai mặt cán bóng do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in nội dung cả hai mặt, cán màng bóng tăng độ bền, là lựa chọn phổ biến cho name card doanh nghiệp.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Bristol",
+      "Gia công": "Cán màng bóng 2 mặt",
+      "Kỹ thuật in": "In offset 2 mặt",
+      "Hình thức": "Vuông góc"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img12.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "danh-thiep-dap-noi-chu-noi",
+    "name": "Danh thiếp dập nổi chữ nổi",
+    "sku": null,
+    "categorySlug": "danh-thiep",
+    "priceMin": 380000,
+    "priceMax": 1850000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 380000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 1850000
+      }
+    ],
+    "shortDescription": "Danh thiếp dập nổi tên/logo, cảm giác chạm cao cấp. Phù hợp thương hiệu cá nhân cao cấp.",
+    "description": "<p>Danh thiếp dập nổi chữ nổi do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, kỹ thuật dập nổi tên hoặc logo tạo hiệu ứng chạm khác biệt, phù hợp xây dựng thương hiệu cá nhân cao cấp.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Bristol dày",
+      "Gia công": "Dập nổi (ép nổi)",
+      "Kỹ thuật in": "In offset",
+      "Hình thức": "Vuông góc hoặc bo góc theo yêu cầu"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img1.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "to-roi-quang-cao-kho-a5",
+    "name": "Tờ rơi quảng cáo khổ A5",
+    "sku": null,
+    "categorySlug": "to-roi-poster",
+    "priceMin": 180000,
+    "priceMax": 850000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 180000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 850000
+      }
+    ],
+    "shortDescription": "Tờ rơi khổ A5, in offset 2 mặt. Dùng quảng cáo sản phẩm, phát tại sự kiện, cửa hàng.",
+    "description": "<p>Tờ rơi quảng cáo khổ A5 do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in offset 2 mặt, khổ A5 nhỏ gọn, phù hợp quảng cáo sản phẩm và phát tại sự kiện, cửa hàng.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Giấy Couche",
+      "Khổ giấy": "A5",
+      "Kỹ thuật in": "In offset 2 mặt",
+      "Gia công": "Không gia công thêm"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img2.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "to-roi-gap-doi-kho-a4-khuyen-mai",
+    "name": "Tờ rơi gấp đôi khổ A4 giới thiệu khuyến mãi",
+    "sku": null,
+    "categorySlug": "to-roi-poster",
+    "priceMin": 280000,
+    "priceMax": 1350000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 280000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 1350000
+      }
+    ],
+    "shortDescription": "Tờ rơi khổ A4 gấp đôi, nội dung 4 trang. Dùng giới thiệu chương trình khuyến mãi.",
+    "description": "<p>Tờ rơi gấp đôi khổ A4 giới thiệu khuyến mãi do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, khổ A4 gấp đôi thành 4 trang nội dung, phù hợp giới thiệu chương trình khuyến mãi chi tiết hơn tờ rơi thường.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Giấy Couche",
+      "Khổ giấy": "A4 gấp đôi",
+      "Kỹ thuật in": "In offset 2 mặt",
+      "Gia công": "Gấp đôi"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img3.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "poster-su-kien-kho-a2",
+    "name": "Poster sự kiện khổ A2",
+    "sku": null,
+    "categorySlug": "to-roi-poster",
+    "priceMin": 950000,
+    "priceMax": 4600000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 950000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 4600000
+      }
+    ],
+    "shortDescription": "Poster khổ A2, in offset màu sắc nét. Dùng trang trí, quảng bá sự kiện tại điểm bán.",
+    "description": "<p>Poster sự kiện khổ A2 do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in offset màu sắc nét, khổ lớn A2 dễ quan sát, phù hợp trang trí và quảng bá sự kiện tại điểm bán.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Giấy Couche",
+      "Khổ giấy": "A2",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Không gia công thêm"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img4.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "poster-quang-cao-kho-a1-can-mang-bong",
+    "name": "Poster quảng cáo khổ A1 cán màng bóng",
+    "sku": null,
+    "categorySlug": "to-roi-poster",
+    "priceMin": 1450000,
+    "priceMax": 7100000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1450000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 7100000
+      }
+    ],
+    "shortDescription": "Poster khổ A1, cán màng bóng tăng độ bền. Dùng cho standee, trưng bày ngoài trời ngắn hạn.",
+    "description": "<p>Poster quảng cáo khổ A1 cán màng bóng do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, khổ lớn A1, cán màng bóng tăng độ bền và chống ẩm nhẹ, phù hợp gắn standee hoặc trưng bày ngắn hạn.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Giấy Couche cán màng bóng",
+      "Khổ giấy": "A1",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Cán màng bóng"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img5.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "to-roi-gioi-thieu-kho-a4-gap-3",
+    "name": "Tờ rơi giới thiệu khổ A4 gấp 3",
+    "sku": null,
+    "categorySlug": "to-roi-poster",
+    "priceMin": 320000,
+    "priceMax": 1550000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 320000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 1550000
+      }
+    ],
+    "shortDescription": "Tờ rơi khổ A4 gấp 3, bố cục 3 phần nội dung. Dùng giới thiệu sản phẩm, dịch vụ chi tiết.",
+    "description": "<p>Tờ rơi giới thiệu khổ A4 gấp 3 do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, khổ A4 gấp 3 phần, bố cục rõ ràng, phù hợp giới thiệu sản phẩm hoặc dịch vụ cần nhiều nội dung hơn tờ rơi đơn.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu giấy": "Giấy Couche",
+      "Khổ giấy": "A4 gấp 3",
+      "Kỹ thuật in": "In offset 2 mặt",
+      "Gia công": "Gấp 3"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img6.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "lich-bloc-nho-de-ban-tet-2026",
+    "name": "Lịch bloc nhỏ để bàn Tết 2026",
+    "sku": null,
+    "categorySlug": "lich-tet",
+    "priceMin": 1800000,
+    "priceMax": 8500000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1800000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 8500000
+      }
+    ],
+    "shortDescription": "Lịch bloc nhỏ để bàn, 365 tờ, in offset. Quà tặng Tết phổ biến, chi phí thấp.",
+    "description": "<p>Lịch bloc nhỏ để bàn Tết 2026 do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, dạng bloc 365 tờ để bàn, in offset, là món quà Tết phổ biến với chi phí thấp, phù hợp tặng số lượng lớn.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy in offset, đế bloc gỗ hoặc nhựa",
+      "Kiểu lịch": "Lịch bloc để bàn",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Đóng bloc"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img7.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "lich-treo-tuong-tet-2026",
+    "name": "Lịch treo tường Tết 2026",
+    "sku": null,
+    "categorySlug": "lich-tet",
+    "priceMin": 2400000,
+    "priceMax": 11500000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 2400000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 11500000
+      }
+    ],
+    "shortDescription": "Lịch treo tường 7 tờ, in offset màu sắc nét. Quà tặng Tết cho khách hàng, đối tác.",
+    "description": "<p>Lịch treo tường Tết 2026 do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, thiết kế nhiều tờ theo tháng, in offset màu sắc nét, phù hợp làm quà tặng Tết cho khách hàng và đối tác.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Couche, lò xo treo",
+      "Kiểu lịch": "Lịch treo tường",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Đóng lò xo"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img8.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "lich-de-ban-chu-a-tet-2026",
+    "name": "Lịch để bàn chữ A Tết 2026",
+    "sku": null,
+    "categorySlug": "lich-tet",
+    "priceMin": 4000000,
+    "priceMax": 19000000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 4000000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 19000000
+      }
+    ],
+    "shortDescription": "Lịch để bàn dáng chữ A, bìa cứng, in theo bộ nhận diện thương hiệu. Quà tặng Tết cao cấp hơn.",
+    "description": "<p>Lịch để bàn chữ A Tết 2026 do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, dáng đứng chữ A, bìa cứng in theo bộ nhận diện thương hiệu, phù hợp làm quà tặng Tết cao cấp đặt trên bàn làm việc.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Bìa cứng, giấy Couche",
+      "Kiểu lịch": "Lịch để bàn chữ A",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Đóng lò xo hoặc gáy xoắn"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img9.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "lich-so-tay-tet-2026",
+    "name": "Lịch sổ tay Tết 2026",
+    "sku": null,
+    "categorySlug": "lich-tet",
+    "priceMin": 7500000,
+    "priceMax": 36000000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 7500000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 36000000
+      }
+    ],
+    "shortDescription": "Lịch sổ tay bìa da/simili, kết hợp ghi chú. Quà tặng Tết cao cấp cho khách VIP, đối tác.",
+    "description": "<p>Lịch sổ tay Tết 2026 do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, kết hợp lịch và sổ ghi chú trong bìa da hoặc simili, phù hợp làm quà tặng Tết cao cấp cho khách hàng VIP và đối tác quan trọng.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Bìa da/simili, ruột giấy Couche",
+      "Kiểu lịch": "Sổ tay kèm lịch",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Đóng gáy keo hoặc gáy xoắn"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img10.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "bao-li-xi-in-logo-doanh-nghiep",
+    "name": "Bao lì xì in logo doanh nghiệp",
+    "sku": null,
+    "categorySlug": "bao-li-xi",
+    "priceMin": 150000,
+    "priceMax": 700000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 150000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 700000
+      }
+    ],
+    "shortDescription": "Bao lì xì giấy Couche in logo theo yêu cầu, màu sắc tùy chỉnh. Quà tặng Tết phổ biến cho nhân viên, khách hàng.",
+    "description": "<p>Bao lì xì in logo doanh nghiệp do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in offset logo và màu sắc theo bộ nhận diện thương hiệu, là món quà Tết phổ biến với chi phí hợp lý, phù hợp tặng số lượng lớn cho nhân viên và khách hàng.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Couche 250gsm",
+      "Kích thước": "9 x 16 cm (tiêu chuẩn)",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Cán màng bóng"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img11.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "bao-li-xi-giay-my-thuat-ep-kim",
+    "name": "Bao lì xì giấy mỹ thuật ép kim",
+    "sku": null,
+    "categorySlug": "bao-li-xi",
+    "priceMin": 420000,
+    "priceMax": 2000000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 420000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 2000000
+      }
+    ],
+    "shortDescription": "Bao lì xì giấy mỹ thuật ép kim logo hoặc hoa văn nổi bật, sang trọng. Quà Tết cao cấp cho đối tác, khách VIP.",
+    "description": "<p>Bao lì xì giấy mỹ thuật ép kim do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in offset kết hợp ép kim logo hoặc hoa văn nổi bật trên nền giấy mỹ thuật, phù hợp làm quà Tết cao cấp cho đối tác và khách hàng VIP.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy mỹ thuật (Kraft/Metallic)",
+      "Kích thước": "9 x 16 cm",
+      "Kỹ thuật in": "In offset + ép kim",
+      "Gia công": "Ép kim nổi"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img12.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "set-bao-li-xi-tet-theo-bo",
+    "name": "Set bao lì xì Tết theo bộ",
+    "sku": null,
+    "categorySlug": "bao-li-xi",
+    "priceMin": 350000,
+    "priceMax": 1700000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 350000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 1700000
+      }
+    ],
+    "shortDescription": "Bộ bao lì xì nhiều mẫu thiết kế, đóng set kèm hộp giấy mỹ thuật. Quà tặng Tết trọn gói cho doanh nghiệp.",
+    "description": "<p>Set bao lì xì Tết theo bộ do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, gồm nhiều mẫu thiết kế trong cùng bộ nhận diện thương hiệu, đóng gói kèm hộp giấy mỹ thuật, phù hợp làm quà Tết trọn gói cho doanh nghiệp tặng khách hàng và đối tác.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Couche 300gsm, hộp giấy mỹ thuật",
+      "Quy cách": "10 bao/hộp, nhiều mẫu",
+      "Kỹ thuật in": "In offset nhiều màu",
+      "Gia công": "Đóng set kèm hộp"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img1.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "bao-li-xi-giay-kraft-in-logo",
+    "name": "Bao lì xì giấy kraft in logo",
+    "sku": null,
+    "categorySlug": "bao-li-xi",
+    "priceMin": 180000,
+    "priceMax": 850000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 180000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 850000
+      }
+    ],
+    "shortDescription": "Bao lì xì giấy kraft mộc mạc, in logo 1 màu theo yêu cầu. Phong cách tối giản, phù hợp thương hiệu trẻ.",
+    "description": "<p>Bao lì xì giấy kraft in logo do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, chất liệu giấy kraft mộc mạc, in logo 1 màu theo phong cách tối giản, phù hợp với các thương hiệu trẻ, hiện đại muốn tạo dấu ấn riêng dịp Tết.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Kraft",
+      "Kích thước": "8.5 x 15 cm",
+      "Kỹ thuật in": "In Flexo/offset 1 màu",
+      "Gia công": "Bế biên tiêu chuẩn"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img2.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "bao-li-xi-nhu-vang-linh-vat-tet",
+    "name": "Bao lì xì nhũ vàng hình linh vật Tết",
+    "sku": null,
+    "categorySlug": "bao-li-xi",
+    "priceMin": 480000,
+    "priceMax": 2300000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 480000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 2300000
+      }
+    ],
+    "shortDescription": "Bao lì xì phủ nhũ vàng, hoạ tiết linh vật năm mới nổi bật. Quà Tết cao cấp gây ấn tượng với khách hàng.",
+    "description": "<p>Bao lì xì nhũ vàng hình linh vật Tết do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in offset kết hợp phủ nhũ vàng hoạ tiết linh vật năm mới nổi bật, phù hợp làm quà Tết cao cấp gây ấn tượng với khách hàng và đối tác.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Couche cán nhũ vàng",
+      "Kích thước": "9 x 16 cm",
+      "Kỹ thuật in": "In offset + phủ nhũ vàng",
+      "Gia công": "Cán màng + phủ nhũ"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img3.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "giay-tieu-de-letterhead-in-offset",
+    "name": "Giấy tiêu đề (letterhead) in offset",
+    "sku": null,
+    "categorySlug": "an-pham-van-phong",
+    "priceMin": 150000,
+    "priceMax": 720000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 150000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 720000
+      }
+    ],
+    "shortDescription": "Giấy tiêu đề công ty, in logo và thông tin liên hệ. Dùng cho văn bản, hợp đồng, thư từ.",
+    "description": "<p>Giấy tiêu đề (letterhead) in offset do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in logo và thông tin liên hệ công ty theo bộ nhận diện thương hiệu, dùng cho văn bản, hợp đồng và thư từ giao dịch.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Ford hoặc Couche",
+      "Kỹ thuật in": "In offset",
+      "Khổ giấy": "A4",
+      "Hạng mục": "Ấn phẩm văn phòng"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img11.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "phong-bi-thu-cong-ty-in-logo",
+    "name": "Phong bì thư công ty in logo",
+    "sku": null,
+    "categorySlug": "an-pham-van-phong",
+    "priceMin": 200000,
+    "priceMax": 950000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 200000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 950000
+      }
+    ],
+    "shortDescription": "Phong bì thư in logo công ty, nhiều khổ. Dùng gửi văn bản, thư mời, hợp đồng.",
+    "description": "<p>Phong bì thư công ty in logo do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in logo và thông tin liên hệ theo bộ nhận diện thương hiệu, dùng gửi văn bản, thư mời và hợp đồng.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Ford hoặc Couche",
+      "Kỹ thuật in": "In offset",
+      "Khổ giấy": "Theo yêu cầu (A4, A5...)",
+      "Hạng mục": "Ấn phẩm văn phòng"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img12.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "bia-kep-ho-so-in-logo",
+    "name": "Bìa kẹp hồ sơ in logo",
+    "sku": null,
+    "categorySlug": "an-pham-van-phong",
+    "priceMin": 1200000,
+    "priceMax": 5800000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1200000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 5800000
+      }
+    ],
+    "shortDescription": "Bìa kẹp hồ sơ, in logo công ty, có ngăn đựng danh thiếp. Dùng lưu trữ tài liệu, hồ sơ dự án.",
+    "description": "<p>Bìa kẹp hồ sơ in logo do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in logo công ty, có ngăn đựng tài liệu và danh thiếp, phù hợp lưu trữ hồ sơ dự án hoặc tặng kèm bộ hồ sơ năng lực.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Bìa cứng cán màng",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Bế khe cài, dán ngăn đựng",
+      "Hạng mục": "Ấn phẩm văn phòng"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img1.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "so-tay-ghi-chu-bia-cong-ty",
+    "name": "Sổ tay ghi chú in bìa công ty",
+    "sku": null,
+    "categorySlug": "an-pham-van-phong",
+    "priceMin": 1800000,
+    "priceMax": 8700000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1800000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 8700000
+      }
+    ],
+    "shortDescription": "Sổ tay ghi chú, bìa in logo công ty. Dùng làm quà tặng nội bộ, quà sự kiện.",
+    "description": "<p>Sổ tay ghi chú in bìa công ty do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, bìa in logo và bộ nhận diện thương hiệu, ruột giấy trơn hoặc kẻ dòng, phù hợp làm quà tặng nội bộ hoặc quà sự kiện.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Bìa cứng, ruột giấy Ford",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Đóng gáy keo hoặc gáy xoắn",
+      "Hạng mục": "Ấn phẩm văn phòng"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img2.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "tap-ghi-chu-de-ban-in-logo",
+    "name": "Tập ghi chú (notepad) để bàn in logo",
+    "sku": null,
+    "categorySlug": "an-pham-van-phong",
+    "priceMin": 1000000,
+    "priceMax": 4850000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1000000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 4850000
+      }
+    ],
+    "shortDescription": "Tập ghi chú để bàn, in logo công ty ở mỗi tờ. Dùng làm quà tặng văn phòng phẩm.",
+    "description": "<p>Tập ghi chú (notepad) để bàn in logo do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in logo công ty ở mỗi tờ giấy, phù hợp làm quà tặng văn phòng phẩm cho nhân viên hoặc khách hàng.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Giấy Ford",
+      "Kỹ thuật in": "In offset",
+      "Gia công": "Dán gáy (keo dính từng tờ)",
+      "Hạng mục": "Ấn phẩm văn phòng"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img3.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "thung-carton-3-lop-dong-goi-van-chuyen",
+    "name": "Thùng carton 3 lớp đóng gói vận chuyển",
+    "sku": null,
+    "categorySlug": "thung-carton",
+    "priceMin": 1650000,
+    "priceMax": 8000000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1650000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 8000000
+      }
+    ],
+    "shortDescription": "Thùng carton 3 lớp sóng B/C, dùng đóng gói vận chuyển hàng hoá phổ thông, lưu kho.",
+    "description": "<p>Thùng carton 3 lớp đóng gói vận chuyển do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, carton 3 lớp sóng B hoặc C, phù hợp đóng gói vận chuyển hàng hoá phổ thông và lưu kho.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Carton 3 lớp sóng B/C",
+      "Kiểu thùng": "Đáy dán, nắp gài tiêu chuẩn",
+      "Kỹ thuật in": "In Flexo 1 màu theo yêu cầu",
+      "Ứng dụng": "Đóng gói vận chuyển, lưu kho"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img4.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "thung-carton-5-lop-chiu-tai-nang",
+    "name": "Thùng carton 5 lớp chịu tải nặng",
+    "sku": null,
+    "categorySlug": "thung-carton",
+    "priceMin": 2850000,
+    "priceMax": 13900000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 2850000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 13900000
+      }
+    ],
+    "shortDescription": "Thùng carton 5 lớp, chịu lực tốt hơn cho hàng nặng, cồng kềnh hoặc xếp chồng cao.",
+    "description": "<p>Thùng carton 5 lớp chịu tải nặng do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, carton 5 lớp chịu lực tốt hơn 3 lớp, phù hợp đóng gói hàng nặng, cồng kềnh hoặc cần xếp chồng nhiều lớp khi lưu kho.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Carton 5 lớp sóng BC",
+      "Kiểu thùng": "Đáy dán, nắp gài tiêu chuẩn",
+      "Kỹ thuật in": "In Flexo 1 màu theo yêu cầu",
+      "Ứng dụng": "Hàng nặng, cồng kềnh, xếp chồng cao"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img5.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "thung-carton-day-dan-tu-dong",
+    "name": "Thùng carton đáy dán tự động",
+    "sku": null,
+    "categorySlug": "thung-carton",
+    "priceMin": 1950000,
+    "priceMax": 9500000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 1950000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 9500000
+      }
+    ],
+    "shortDescription": "Thùng carton đáy dán sẵn bằng máy, tiết kiệm thời gian đóng gói cho xưởng, kho hàng.",
+    "description": "<p>Thùng carton đáy dán tự động do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, đáy được dán sẵn bằng máy, giúp tiết kiệm thời gian đóng gói cho xưởng sản xuất và kho hàng có sản lượng lớn.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Carton 3 lớp sóng B/C",
+      "Kiểu thùng": "Đáy dán tự động, nắp gài",
+      "Kỹ thuật in": "In Flexo 1 màu theo yêu cầu",
+      "Ứng dụng": "Đóng gói nhanh, sản lượng lớn"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img6.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "thung-carton-xuat-khau-in-flexo-logo",
+    "name": "Thùng carton xuất khẩu in Flexo logo",
+    "sku": null,
+    "categorySlug": "thung-carton",
+    "priceMin": 2450000,
+    "priceMax": 11900000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 2450000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 11900000
+      }
+    ],
+    "shortDescription": "Thùng carton dùng cho hàng xuất khẩu, in Flexo logo và thông tin theo quy cách xuất hàng.",
+    "description": "<p>Thùng carton xuất khẩu in Flexo logo do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, in Flexo logo và các thông tin cần thiết theo quy cách đóng gói hàng xuất khẩu.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Carton 3 lớp hoặc 5 lớp tuỳ tải trọng",
+      "Kiểu thùng": "Đáy dán, nắp gài tiêu chuẩn",
+      "Kỹ thuật in": "In Flexo theo yêu cầu",
+      "Ứng dụng": "Đóng gói hàng xuất khẩu"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img7.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
+  },
+  {
+    "slug": "thung-carton-goi-hang-size-lon-da-nang",
+    "name": "Thùng carton gói hàng size lớn đa năng",
+    "sku": null,
+    "categorySlug": "thung-carton",
+    "priceMin": 2150000,
+    "priceMax": 10400000,
+    "priceTiers": [
+      {
+        "qty": 100,
+        "price": 2150000
+      },
+      {
+        "qty": 200,
+        "price": null
+      },
+      {
+        "qty": 300,
+        "price": null
+      },
+      {
+        "qty": 400,
+        "price": null
+      },
+      {
+        "qty": 500,
+        "price": 10400000
+      }
+    ],
+    "shortDescription": "Thùng carton kích thước lớn, dùng đa năng cho chuyển nhà, gói hàng cồng kềnh, lưu trữ.",
+    "description": "<p>Thùng carton gói hàng size lớn đa năng do Công Ty TNHH Công Nghiệp Thời Đại sản xuất theo yêu cầu, kích thước lớn hơn thùng phổ thông, phù hợp dùng đa năng cho chuyển nhà, gói hàng cồng kềnh và lưu trữ.</p><p>Nhận in logo, nhận diện thương hiệu theo yêu cầu thiết kế. Liên hệ Zalo 0399 466 179 (Ms. Tuyền) hoặc gọi hotline 0938 676 746 để được tư vấn quy cách phù hợp và nhận báo giá chính thức.</p>",
+    "specs": {
+      "Chất liệu": "Carton 3 lớp sóng B/C",
+      "Kiểu thùng": "Đáy dán, nắp gài tiêu chuẩn",
+      "Kỹ thuật in": "In Flexo 1 màu theo yêu cầu",
+      "Ứng dụng": "Chuyển nhà, gói hàng cồng kềnh, lưu trữ"
+    },
+    "images": [
+      "/assets/images/thumbs/shop-img8.png",
+      "/assets/images/thumbs/shop-details-thumb1.png",
+      "/assets/images/thumbs/shop-details-thumb2.png",
+      "/assets/images/thumbs/shop-details-thumb3.png"
+    ],
+    "isFeatured": false
   }
 ]

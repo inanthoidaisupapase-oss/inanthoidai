@@ -10,6 +10,8 @@ import { formatVnd } from '@/lib/format';
  * badge "Nổi bật" thay cho "-24%"/"Pre-Order" (dựa trên field isFeatured thật, không
  * bịa số liệu khuyến mãi), và nút hover "Yêu cầu báo giá" dẫn tới trang chi tiết —
  * nơi có sẵn luồng "Thêm vào yêu cầu báo giá" theo đúng bậc số lượng (xem AddToCart.tsx).
+ * Class "product-card-quote-btn" chỉ để brand.css nhắm đúng nút này (chữ Việt dài hơn
+ * "Add To Cart" gốc bị cắt còn "Yêu cầu báo g" — xem giải thích đầy đủ ở brand.css).
  */
 export default function ProductCard({ product }: { product: Product }) {
   return (
@@ -40,7 +42,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="position-absolute start-50 translate-middle-x bottom-0 z-1 tw-invisible opacity-0 group-hover-item-visible group-hover-item-opacity-1 group-hover-item-mb-6 tw-duration-400 tw-transition-delay-03">
           <Link
             href={`/san-pham/${product.slug}`}
-            className="btn bg-white text-main-two-600 hover-bg-animation hover-bg-animation-main-two-600 tw-ps-2 tw-pe-6 tw-py-3 py-sm-2 hover-icon-white hover-animate-text-white justify-content-between"
+            className="btn bg-white text-main-two-600 hover-bg-animation hover-bg-animation-main-two-600 tw-ps-2 tw-pe-6 tw-py-3 py-sm-2 hover-icon-white hover-animate-text-white justify-content-between product-card-quote-btn"
           >
             <span className="btn-icon-animation d-sm-flex d-none align-items-center justify-content-center z-1 tw-w-9 tw-h-9 bg-main-600 rounded-circle">
               <i className="ph ph-shopping-cart-simple text-white"></i>
