@@ -468,3 +468,75 @@ h1, h2, h3 {
     transition: none;
   }
 }
+
+/* ==========================================================================
+   Widget Zalo + gọi điện nổi (FloatingContact.tsx, layout.tsx) — không có
+   trong template Printop gốc, thêm mới theo yêu cầu. Đặt đối xứng với nút
+   lên đầu trang (.progress-wrap, main.css:6364) đang chiếm góc dưới phải,
+   dùng lại ĐÚNG 2 mốc inset/kích thước của chính rule đó (16px/46px desktop,
+   24px/40px ở <=991px) để 2 nút nổi cân xứng 2 bên thay vì tự chọn số mới.
+   z-index thấp hơn progress-wrap (10000) một bậc vì không tranh cùng góc.
+   ========================================================================== */
+.floating-contact-widget {
+  inset-inline-start: 16px;
+  inset-block-end: 16px;
+  z-index: 9999;
+}
+
+@media screen and (max-width: 991px) {
+  .floating-contact-widget {
+    inset-inline-start: 24px;
+    inset-block-end: 24px;
+  }
+
+  .floating-contact-widget .floating-contact-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* .home-style-gradient .bg-main-600 (main.css:6825) đổi nền thành
+   --gradient-main (hồng/xanh) thay vì đỏ đặc — cùng lỗi/cách sửa như nút
+   "Tìm kiếm" header ở trên, ép lại về var(--main-600) đã dùng chung toàn site
+   thay vì bịa màu mới. */
+.home-style-gradient .floating-contact-btn.bg-main-600 {
+  background: var(--main-600) !important;
+}
+
+.floating-contact-btn {
+  transition: transform 200ms linear;
+}
+
+/* Nền xanh thương hiệu Zalo chính thức (#0068FF) — màu riêng của Zalo, không
+   nằm trong bảng biến --main-h/s/l của site (đỏ), giữ nguyên hex theo đúng
+   bản sắc Zalo thay vì quy về màu chủ đạo Printop. */
+.floating-contact-btn--zalo {
+  background-color: #0068ff;
+}
+
+/* Logo Zalo (zalo-icon.webp) là ảnh vuông có viền trong suốt rộng quanh hình
+   lưỡi liềm — để nguyên kích thước đầy khung 52px sẽ đụng viền vòng tròn,
+   co lại còn ~30px (chừa padding đều 2 bên) cho cân đối như icon phone cạnh nó. */
+.floating-contact-btn-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+
+@media screen and (max-width: 991px) {
+  .floating-contact-btn-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.floating-contact-btn:hover {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-contact-btn {
+    transition: none;
+  }
+}

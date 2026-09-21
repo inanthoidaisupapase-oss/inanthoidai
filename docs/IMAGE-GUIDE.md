@@ -41,6 +41,7 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/icons/icon-phone.png` | 21 × 21 px | app/cau-hoi-thuong-gap/page.tsx<br>components/layout/Header.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/long-arrow-right.png` | 161 × 15 px | components/shared/ServiceSlider.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/quate-new-icon.png` | 192 × 142 px | components/shared/TestimonialsSlider.tsx | Icon của template — giữ nguyên được |
+| `/assets/images/icons/zalo-icon.webp` | 1280 × 1280 px | components/layout/FloatingContact.tsx | Logo Zalo chính thức do người dùng cung cấp — đã thay xong |
 | `/assets/images/logo/favicon.png` | 64 × 64 px | app/layout.tsx<br>components/shared/BlogSidebar.tsx | Favicon — biểu tượng rút gọn của logo |
 | `/assets/images/logo/logo-new.png` | 179 × 44 px | components/layout/Footer.tsx<br>components/layout/Header.tsx | Logo In Ấn Thời Đại (bản màu, nền sáng) — dùng ở header |
 | `/assets/images/logo/logo.png` | 159 × 39 px | components/layout/MobileMenu.tsx | Logo In Ấn Thời Đại — dùng ở menu mobile |

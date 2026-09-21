@@ -15,6 +15,7 @@ import MobileMenu from '@/components/layout/MobileMenu';
 import Footer from '@/components/layout/Footer';
 import Preloader from '@/components/layout/Preloader';
 import ScrollToTop from '@/components/layout/ScrollToTop';
+import FloatingContact from '@/components/layout/FloatingContact';
 import TemplateRuntime from '@/components/layout/TemplateRuntime';
 import { CartProvider } from '@/lib/cart/CartContext';
 
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div id="toast-container" />
 
           <ScrollToTop />
+          <FloatingContact />
 
           <div className="cursor" />
           <span className="dot" />
