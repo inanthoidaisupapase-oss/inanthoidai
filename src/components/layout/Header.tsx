@@ -116,7 +116,7 @@ export default function Header() {
                   placeholder="Tìm hộp giấy, thùng carton, tem nhãn..."
                   aria-label="Từ khoá tìm kiếm"
                 />
-                <button type="submit" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 tw-ps-6 tw-pe-405 tw-py-3 flex-shrink-0">
+                <button type="submit" className="btn bg-main-600 header-search-btn hover-bg-animation hover-bg-animation-main-600 tw-ps-6 tw-pe-405 tw-py-3 flex-shrink-0">
                   <span className="btn-text">Tìm kiếm </span>
                 </button>
               </form>

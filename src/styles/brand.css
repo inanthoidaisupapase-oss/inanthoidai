@@ -80,6 +80,24 @@ h1, h2, h3 {
   --gradient-main: linear-gradient(90deg, #ed1c24 0%, #0ea5e9 100%);
 }
 
+/* Nút "Tìm kiếm" ở header (Header.tsx) — riêng nút này đổi nền sang đen theo
+   yêu cầu, KHÔNG đụng --gradient-main dùng chung với "Yêu cầu báo giá"/"Xem
+   sản phẩm" (xem giải thích .font-size-style-new:root bên dưới). Class
+   header-search-btn gắn thêm chỉ để tăng độ đặc hiệu selector, không thay
+   .bg-main-600 gốc. Cần thắng cả .bg-main-600{!important} (main.css:1199) lẫn
+   .home-style-gradient .bg-main-600 (main.css:6825) nên phải !important. */
+.home-style-gradient .header-search-btn.bg-main-600 {
+  background: #000 !important;
+}
+
+/* Cùng nút Tìm kiếm — hover đổi sang gradient hồng/xanh (main.css:6835
+   .home-style-gradient .hover-bg-animation::before dùng --gradient-main,
+   3 lớp class > 2 lớp nên thắng mà không cần !important), yêu cầu riêng nút
+   này hover ra đỏ thương hiệu thay vì gradient. */
+.home-style-gradient .header-search-btn.hover-bg-animation::before {
+  background: var(--main-600);
+}
+
 /* Nền phủ thương hiệu sau Hero/About/TopCategories/GetStarted/Giới thiệu —
    main.css hardcode rgba(115,92,252,...) trùng hue --primary-new cũ (tím),
    đổi sang rgba đỏ tương ứng, giữ nguyên góc + alpha từng điểm dừng. */
