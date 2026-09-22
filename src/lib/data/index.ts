@@ -1,4 +1,5 @@
 import type { Category, Post, Product, Service } from '@/types/content';
+import { normalize } from '../format';
 import { getSupabase } from './supabase';
 import categoriesSeed from './seed/categories.json';
 import productsSeed from './seed/products.json';
@@ -71,10 +72,10 @@ export async function getProducts(options: {
   let rows = await fromTable<Product>('products', seed.products);
   if (options.categorySlug) rows = rows.filter((p) => p.categorySlug === options.categorySlug);
   if (options.search) {
+    // Chỉ khớp theo TÊN sản phẩm (đúng phạm vi tìm kiếm của ô tìm kiếm header) — không
+    // khớp thêm shortDescription để tránh gợi ý ra sản phẩm không thật sự "tên trùng từ khoá".
     const q = normalize(options.search);
-    rows = rows.filter(
-      (p) => normalize(p.name).includes(q) || normalize(p.shortDescription).includes(q),
-    );
+    rows = rows.filter((p) => normalize(p.name).includes(q));
   }
   if (options.priceFrom !== undefined) rows = rows.filter((p) => p.priceMax >= options.priceFrom!);
   if (options.priceTo !== undefined) rows = rows.filter((p) => p.priceMin <= options.priceTo!);
@@ -158,15 +159,4 @@ export async function getService(slug: string): Promise<Service | null> {
   return (await getServices()).find((s) => s.slug === slug) ?? null;
 }
 
-/* ------------------------------- Tiện ích --------------------------- */
-
-/** Bỏ dấu tiếng Việt để tìm kiếm không phụ thuộc dấu */
-export function normalize(text: string): string {
-  return text
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .replace(/đ/g, 'd');
-}
-
-export { formatDateVi, formatVnd, toHashtag } from '../format';
+export { formatDateVi, formatVnd, normalize, toHashtag } from '../format';

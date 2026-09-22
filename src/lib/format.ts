@@ -22,3 +22,12 @@ export function formatDayMonth(iso: string): { day: string; month: string } {
 export function toHashtag(category: string): string {
   return '#' + category.trim().replace(/\s*-\s*/g, '_').replace(/\s+/g, '_');
 }
+
+/** Bỏ dấu tiếng Việt để tìm kiếm không phụ thuộc dấu. Chạy được cả server lẫn client. */
+export function normalize(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/đ/g, 'd');
+}

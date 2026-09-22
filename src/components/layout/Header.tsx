@@ -1,11 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
 import { site } from '@/lib/site';
-import { headerCategories } from '@/lib/nav-data';
 import { useCart } from '@/lib/cart/CartContext';
+import HeaderSearch from './HeaderSearch';
 
 /**
  * Top-header-new + middle-header. Đặt NGOÀI #smooth-wrapper, đứng TRƯỚC HeaderNav (thanh
@@ -21,15 +19,7 @@ import { useCart } from '@/lib/cart/CartContext';
  * Xem lý giải đầy đủ hơn trong HeaderNav.tsx (cùng vấn đề, đã gặp và sửa ở đó trước).
  */
 export default function Header() {
-  const router = useRouter();
   const { count } = useCart();
-  const [keyword, setKeyword] = useState('');
-
-  const onSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    const q = keyword.trim();
-    router.push(q ? `/san-pham?tim=${encodeURIComponent(q)}` : '/san-pham');
-  };
 
   return (
     <>
@@ -94,32 +84,7 @@ export default function Header() {
                 </Link>
               </div>
 
-              <form onSubmit={onSearch} className="border border-neutral-100 bg-white rounded-pill tw-py-2 tw-px-2 d-md-flex d-none align-items-center tw-gap-4 flex-grow-1">
-                <div className="flex-shrink-0">
-                  <select
-                    aria-label="Danh mục sản phẩm"
-                    className="form-select form-control pb-0 pt-0 bg-transparent border-0 text-neutral-500 bg-blue-600 option-bg-white shadow-none tw-pe-105  tw-ps-4"
-                    defaultValue=""
-                  >
-                    <option value="">Tất cả danh mục</option>
-                    {headerCategories.map((c) => (
-                      <option key={c.slug} value={c.slug}>{c.name}</option>
-                    ))}
-                  </select>
-                </div>
-                <span className="border-end border-neutral-300 tw-h-9 tw-w-px"></span>
-                <input
-                  type="text"
-                  value={keyword}
-                  onChange={(e) => setKeyword(e.target.value)}
-                  className="text-neutral-500 form-control border-0 shadow-none"
-                  placeholder="Tìm hộp giấy, thùng carton, tem nhãn..."
-                  aria-label="Từ khoá tìm kiếm"
-                />
-                <button type="submit" className="btn bg-main-600 header-search-btn hover-bg-animation hover-bg-animation-main-600 tw-ps-6 tw-pe-405 tw-py-3 flex-shrink-0">
-                  <span className="btn-text">Tìm kiếm </span>
-                </button>
-              </form>
+              <HeaderSearch />
 
               <div className="d-xl-flex d-none align-items-center tw-gap-4 animation-item">
                 <span className="tw-w-13 tw-h-13 border border-neutral-100 d-lg-flex d-none justify-content-center align-items-center text-main-600 rounded-circle flex-shrink-0 flex-grow-1 bg-white">

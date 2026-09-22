@@ -6,6 +6,7 @@ import ProductCard from '@/components/shared/ProductCard';
 import ProductSidebar from '@/components/shared/ProductSidebar';
 import ProductSortSelect from '@/components/shared/ProductSortSelect';
 import { getCategories, getPriceBounds, getProducts, sortProducts } from '@/lib/data';
+import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Sản phẩm bao bì giấy',
@@ -64,10 +65,18 @@ export default async function ProductsPage({
   const rangeStart = filtered.length === 0 ? 0 : (currentPage - 1) * PAGE_SIZE + 1;
   const rangeEnd = Math.min(currentPage * PAGE_SIZE, filtered.length);
 
+  // Trang kết quả tìm kiếm: tiêu đề nêu rõ từ khoá + (nếu có) danh mục đang lọc + số sản
+  // phẩm khớp — khác tiêu đề mặc định (tên danh mục hoặc "Sản phẩm") khi không tìm kiếm.
+  const pageTitle = search
+    ? `Kết quả tìm kiếm cho "${search}"${activeCategory ? ` trong "${activeCategory.name}"` : ''} (${filtered.length} sản phẩm)`
+    : activeCategory
+      ? activeCategory.name
+      : 'Sản phẩm';
+
   return (
     <>
       <Breadcrumb
-        title={activeCategory ? activeCategory.name : 'Sản phẩm'}
+        title={pageTitle}
         items={activeCategory ? [{ label: 'Sản phẩm', href: '/san-pham' }] : []}
       />
 
@@ -107,7 +116,11 @@ export default async function ProductsPage({
 
               {products.length === 0 ? (
                 <div className="text-center py-80">
-                  <p className="tw-text-xl text-neutral-600 tw-mb-6">Không tìm thấy sản phẩm phù hợp.</p>
+                  <p className="tw-text-xl text-neutral-600 tw-mb-6">
+                    {search
+                      ? `Không tìm thấy sản phẩm nào cho "${search}". Thử từ khóa khác hoặc liên hệ hotline ${site.hotline} để được tư vấn.`
+                      : 'Không tìm thấy sản phẩm phù hợp.'}
+                  </p>
                   <Link href="/san-pham" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600">
                     <span className="btn-text">Xem tất cả sản phẩm</span>
                   </Link>
