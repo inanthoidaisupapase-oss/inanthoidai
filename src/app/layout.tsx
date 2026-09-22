@@ -25,6 +25,7 @@ import Preloader from '@/components/layout/Preloader';
 import ScrollToTop from '@/components/layout/ScrollToTop';
 import FloatingContact from '@/components/layout/FloatingContact';
 import TemplateRuntime from '@/components/layout/TemplateRuntime';
+import FontStylesheet from '@/components/layout/FontStylesheet';
 import { CartProvider } from '@/lib/cart/CartContext';
 
 export const metadata: Metadata = {
@@ -55,15 +56,13 @@ const GOOGLE_FONTS_HREF =
   'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gabarito:wght@400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap';
 
 // Kỹ thuật loadCSS (Filament Group): nạp CSS font với media="print" (không chặn
-// render màn hình) rồi đổi media="all" khi tải xong qua thuộc tính onload thuần
-// HTML — không dùng next/font/google (build shell không ra được
-// fonts.googleapis.com, xem CLAUDE.md), chỉ đổi CÁCH nạp cùng 1 URL <link> có
-// sẵn để nó không còn chặn render nữa. `display=swap` trong URL đã có sẵn nên
-// chữ hiện ngay bằng font dự phòng, đổi sang webfont khi tải xong, không FOIT.
-const asyncFontStylesheetProps = {
-  media: 'print',
-  onload: "this.media='all'",
-} as unknown as React.LinkHTMLAttributes<HTMLLinkElement>;
+// render màn hình) rồi đổi media="all" khi tải xong — không dùng next/font/google
+// (build shell không ra được fonts.googleapis.com, xem CLAUDE.md), chỉ đổi CÁCH
+// nạp cùng 1 URL <link> có sẵn để nó không còn chặn render nữa. `display=swap`
+// trong URL đã có sẵn nên chữ hiện ngay bằng font dự phòng, đổi sang webfont khi
+// tải xong, không FOIT. Việc đổi media thực hiện qua onLoad trong FontStylesheet
+// (client component) — xem comment trong file đó về lý do không làm trực tiếp
+// ở đây bằng thuộc tính onload thuần HTML.
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -73,7 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="https://unpkg.com" />
         <link rel="preload" as="style" href={GOOGLE_FONTS_HREF} />
-        <link rel="stylesheet" href={GOOGLE_FONTS_HREF} {...asyncFontStylesheetProps} />
+        <FontStylesheet href={GOOGLE_FONTS_HREF} />
         <noscript>
           <link rel="stylesheet" href={GOOGLE_FONTS_HREF} />
         </noscript>
