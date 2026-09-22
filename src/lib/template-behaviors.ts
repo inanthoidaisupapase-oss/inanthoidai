@@ -116,16 +116,38 @@ function sidebarToggle(): Cleanup {
   return () => document.removeEventListener('click', onClick);
 }
 
-/** main.js: header nhận class .fixed-header khi scrollTop >= 260 */
-function stickyHeader(): Cleanup {
-  const onScroll = () => {
-    const header = document.querySelector('.header');
-    if (!header) return;
-    header.classList.toggle('fixed-header', window.scrollY >= 260);
+/**
+ * main.js: header nhận class .fixed-header khi scrollTop >= 260, và
+ * .blur-bottom-shadow ẩn đi khi cuộn chạm đáy trang. Gộp 2 hiệu ứng cuộn này
+ * vào MỘT listener 'scroll' (thay vì 2 listener riêng như trước) và chạy qua
+ * requestAnimationFrame để dồn mọi lần đọc DOM (scrollY, innerHeight,
+ * body.scrollHeight — đọc body.scrollHeight ép reflow) vào tối đa 1 lần mỗi
+ * khung hình, tránh giật khi cuộn nhanh trên máy yếu. Không đổi ngưỡng/điều
+ * kiện hiển thị so với bản gốc, chỉ đổi tần suất tính toán.
+ */
+function scrollEffects(): Cleanup {
+  const header = document.querySelector<HTMLElement>('.header');
+  let rafId = 0;
+  const apply = () => {
+    rafId = 0;
+    if (header) header.classList.toggle('fixed-header', window.scrollY >= 260);
+    const shadow = document.querySelector<HTMLElement>('.blur-bottom-shadow');
+    if (shadow) {
+      const atBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 5;
+      shadow.style.opacity = atBottom ? '0' : '1';
+      shadow.style.visibility = atBottom ? 'hidden' : 'visible';
+    }
   };
-  onScroll();
+  const onScroll = () => {
+    if (rafId) return;
+    rafId = requestAnimationFrame(apply);
+  };
+  apply();
   window.addEventListener('scroll', onScroll, { passive: true });
-  return () => window.removeEventListener('scroll', onScroll);
+  return () => {
+    window.removeEventListener('scroll', onScroll);
+    if (rafId) cancelAnimationFrame(rafId);
+  };
 }
 
 /**
@@ -165,20 +187,6 @@ function headerOffset(): Cleanup {
     window.removeEventListener('resize', apply);
     content.style.paddingTop = '';
   };
-}
-
-/** main.js: .blur-bottom-shadow ẩn đi khi cuộn chạm đáy trang */
-function blurBottomShadow(): Cleanup {
-  const onScroll = () => {
-    const el = document.querySelector<HTMLElement>('.blur-bottom-shadow');
-    if (!el) return;
-    const atBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 5;
-    el.style.opacity = atBottom ? '0' : '1';
-    el.style.visibility = atBottom ? 'hidden' : 'visible';
-  };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-  return () => window.removeEventListener('scroll', onScroll);
 }
 
 /**
@@ -274,9 +282,8 @@ export function initTemplateBehaviors(): Cleanup {
     categoryDropdown(),
     sidebarToggle(),
     mobileSubmenu(),
-    stickyHeader(),
+    scrollEffects(),
     headerOffset(),
-    blurBottomShadow(),
     counters(),
     typedText(),
   ];

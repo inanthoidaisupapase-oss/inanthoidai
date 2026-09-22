@@ -7,7 +7,7 @@ import { headerCategories } from '@/lib/nav-data';
 
 /**
  * Thanh nav (class .header, toggle .fixed-header khi scrollTop >= 260 — xem
- * stickyHeader() trong template-behaviors.ts). Đặt ngoài #smooth-wrapper, KHÔNG lồng
+ * scrollEffects() trong template-behaviors.ts). Đặt ngoài #smooth-wrapper, KHÔNG lồng
  * trong #smooth-content: custom-gsap.js gọi ScrollSmoother.create({ effects: true, ... })
  * áp transform (matrix3d) lên #smooth-content để giả lập cuộn mượt, mà theo CSS spec,
  * ancestor có transform tạo containing block mới cho position: fixed/sticky — header nằm

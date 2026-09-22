@@ -104,7 +104,13 @@ export default function Banner() {
               </div>
       
               <div className="pt-80-px tw-px-4">
-                  <img src="/assets/images/thumbs/banner-all-img.png" alt="Sản phẩm bao bì giấy của In Ấn Thời Đại" className="w-100 h-100 scroll-scale-item" />
+                  {/* width/height = kích thước gốc file (1888×580px) — chỉ cho trình duyệt biết tỉ
+                      lệ khung hình để tính layout sớm hơn, w-100/h-100 vẫn quyết định kích thước
+                      hiển thị thật như cũ, không đổi giao diện. Đây là ảnh LCP của trang chủ —
+                      fetchPriority="high" khiến React/Next.js 19 tự chèn <link rel="preload"> cho
+                      đúng ảnh này vào <head> (đã kiểm chứng trong HTML build ra), không cần viết
+                      tay thẻ preload riêng (thử ban đầu bị trùng preload — đã bỏ). */}
+                  <img src="/assets/images/thumbs/banner-all-img.png" alt="Sản phẩm bao bì giấy của In Ấn Thời Đại" className="w-100 h-100 scroll-scale-item" width={1888} height={580} fetchPriority="high" />
               </div>
       
           </div>

@@ -5,7 +5,11 @@
  *
  * KHÔNG gộp: swiper-bundle (thay bằng swiper/react), counterup (thay bằng
  * requestAnimationFrame trong src/lib/template-behaviors.ts), main.js (thay
- * bằng React + template-behaviors.ts), count-down.js (toàn bộ đã bị comment).
+ * bằng React + template-behaviors.ts), count-down.js (toàn bộ đã bị comment),
+ * magnific-popup.min.js (plugin jQuery .magnificPopup() không còn được gọi ở
+ * đâu — VideoPopup.tsx là component React tự viết, chỉ tái dùng class CSS
+ * mfp-bg/mfp-wrap/... của magnific-popup.css, không cần JS plugin gốc; xoá
+ * khỏi bundle giảm ~40KB JS phải parse/execute trên MỌI trang).
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -17,7 +21,6 @@ const ORDER = [
   'boostrap.bundle.min.js',
   'aos.js',
   'jquery.marquee.min.js',
-  'magnific-popup.min.js',
   'typed.min.js',
   'custom-gsap.js',
 ];

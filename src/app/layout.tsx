@@ -1,6 +1,14 @@
 import type { Metadata } from 'next';
 
-// Thứ tự nạp CSS giữ đúng như index.html của template Printop.
+// Thứ tự nạp CSS giữ đúng như index.html của template Printop. ĐÃ THỬ tách
+// swiper-bundle.min.css/magnific-popup.css ra load riêng theo từng trang dùng
+// Swiper/VideoPopup, nhưng revert: brand.css ghi đè `.mfp-wrap{z-index:...}`
+// dựa vào thứ tự nạp SAU magnific-popup.css (cùng specificity, ai nạp sau
+// thắng) — tách CSS này vào component con sẽ đảo thứ tự trong bundle CSS của
+// Next.js (ancestor layout.tsx nạp trước descendant), phá z-index popup. Rủi
+// ro tương tự áp dụng cho swiper-bundle.css (nhiều rule .swiper-slide cùng
+// specificity giữa main.css/brand.css và swiper-bundle.css). Môi trường build
+// không có trình duyệt để kiểm chứng bằng mắt nên giữ nguyên nạp global.
 import '@/styles/bootstrap.min.css';
 import '@/styles/aos.css';
 import '@/styles/swiper-bundle.min.css';
@@ -42,18 +50,37 @@ export const metadata: Metadata = {
   icons: { icon: '/assets/images/logo/favicon.png' },
 };
 
+// Font của template + Be Vietnam Pro làm lớp dự phòng phủ đủ dấu tiếng Việt.
+const GOOGLE_FONTS_HREF =
+  'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gabarito:wght@400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap';
+
+// Kỹ thuật loadCSS (Filament Group): nạp CSS font với media="print" (không chặn
+// render màn hình) rồi đổi media="all" khi tải xong qua thuộc tính onload thuần
+// HTML — không dùng next/font/google (build shell không ra được
+// fonts.googleapis.com, xem CLAUDE.md), chỉ đổi CÁCH nạp cùng 1 URL <link> có
+// sẵn để nó không còn chặn render nữa. `display=swap` trong URL đã có sẵn nên
+// chữ hiện ngay bằng font dự phòng, đổi sang webfont khi tải xong, không FOIT.
+const asyncFontStylesheetProps = {
+  media: 'print',
+  onload: "this.media='all'",
+} as unknown as React.LinkHTMLAttributes<HTMLLinkElement>;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi" className="home-style-gradient font-size-style-new" data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        {/* Font của template + Be Vietnam Pro làm lớp dự phòng phủ đủ dấu tiếng Việt */}
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gabarito:wght@400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
-        />
-        {/* Phosphor Icons (MIT) — chỉ nạp 3 weight mà template thực sự dùng: regular, bold, fill */}
+        <link rel="preconnect" href="https://unpkg.com" />
+        <link rel="preload" as="style" href={GOOGLE_FONTS_HREF} />
+        <link rel="stylesheet" href={GOOGLE_FONTS_HREF} {...asyncFontStylesheetProps} />
+        <noscript>
+          <link rel="stylesheet" href={GOOGLE_FONTS_HREF} />
+        </noscript>
+        {/* Phosphor Icons (MIT) — chỉ nạp 3 weight mà template thực sự dùng: regular, bold, fill.
+            Icon xuất hiện dày đặc ngay trong header/nav phía trên màn hình đầu tiên nên GIỮ nạp
+            chặn render như cũ (không áp kỹ thuật media=print ở trên) — tránh nháy icon rỗng/tofu
+            lúc mới vào trang, ưu tiên đúng giao diện hơn tốc độ ở phần này. */}
         <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
         <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
         <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />

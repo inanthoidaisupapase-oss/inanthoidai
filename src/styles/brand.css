@@ -127,7 +127,7 @@ h1, h2, h3 {
    nhưng hàng này thì không — mọi lúc nội dung trang cuộn qua phía sau nó đều
    lộ xuyên qua, rõ nhất khi cuộn ngược lên và ảnh/chữ hero hiện ra sau lưng.
    Không phải lỗi hiện/ẩn theo hướng cuộn (main.css không có cơ chế đó, xem
-   template-behaviors.ts: stickyHeader() chỉ toggle .fixed-header theo
+   template-behaviors.ts: scrollEffects() chỉ toggle .fixed-header theo
    scrollY >= 260) — nền trong suốt này tồn tại ở MỌI vị trí cuộn, chỉ là ít
    bị chú ý lúc đầu trang vì nền trang phía sau đang trắng.
    Ghi đè cùng selector, thêm .middle-header để thắng specificity (3 lớp >
