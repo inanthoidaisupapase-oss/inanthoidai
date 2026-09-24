@@ -65,7 +65,7 @@ export default function TestimonialsSlider({ items }: { items: Testimonial[] }) 
                       <img src="/assets/images/shapes/testimonials-new-shape2.png" alt="" className="animation-scalation" />
                     </div>
                     <div className="position-absolute d-sm-block d-none testimonials-new-shape3">
-                      <img src="/assets/images/shapes/testimonials-new-shape3.png" alt="" className="animation-rotate-right" />
+                      <img src="/assets/images/logo/logo-xoay-tron.png" alt="" className="animation-rotate-right" />
                     </div>
                     <div className="position-absolute d-sm-block d-none testimonials-new-shape4">
                       <img src="/assets/images/shapes/testimonials-new-shape4.png" alt="" className="animation-rotate-right" />

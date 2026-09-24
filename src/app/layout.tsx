@@ -66,7 +66,7 @@ const GOOGLE_FONTS_HREF =
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="vi" className="home-style-gradient font-size-style-new" data-scroll-behavior="smooth">
+    <html lang="vi" className="home-style-gradient font-size-style-new" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

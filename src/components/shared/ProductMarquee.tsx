@@ -37,7 +37,7 @@ export default function ProductMarquee({
         <SwiperSlide className="min-w-max" key={`${img.src}-${i}`}>
           <Link href={img.href} className="d-block">
             {/* TODO ảnh: ảnh sản phẩm thật — xem docs/IMAGE-GUIDE.md */}
-            <img src={img.src} alt={img.alt} />
+            <img src={img.src} alt={img.alt} className="get-started-marquee-img" />
           </Link>
         </SwiperSlide>
       ))}

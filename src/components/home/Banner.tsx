@@ -25,7 +25,7 @@ export default function Banner() {
                       </span>{' '}
                       chuẩn xưởng{' '}
                       <span className="custom-fade-animation max-width-img" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
-                          <img src="/assets/images/shapes/user-img.png" alt="" className="move-on-cursor-hover" data-value="1" />
+                          <img src="/assets/images/shapes/products-badge.png" alt="Hộp giấy, túi giấy, thùng carton" className="move-on-cursor-hover" data-value="1" />
                       </span>{' '}
                       cho thương hiệu Việt{' '}
                       <span className="custom-fade-animation d-lg-inline-flex d-none" data-delay=".7" data-fade-from="bottom" data-ease="bounce">
@@ -104,13 +104,13 @@ export default function Banner() {
               </div>
       
               <div className="pt-80-px tw-px-4">
-                  {/* width/height = kích thước gốc file (1888×580px) — chỉ cho trình duyệt biết tỉ
+                  {/* width/height = kích thước gốc file (3776×1160px, gấp đôi khung 1888×580 cho màn retina) — chỉ cho trình duyệt biết tỉ
                       lệ khung hình để tính layout sớm hơn, w-100/h-100 vẫn quyết định kích thước
                       hiển thị thật như cũ, không đổi giao diện. Đây là ảnh LCP của trang chủ —
                       fetchPriority="high" khiến React/Next.js 19 tự chèn <link rel="preload"> cho
                       đúng ảnh này vào <head> (đã kiểm chứng trong HTML build ra), không cần viết
                       tay thẻ preload riêng (thử ban đầu bị trùng preload — đã bỏ). */}
-                  <img src="/assets/images/thumbs/banner-all-img.png" alt="Sản phẩm bao bì giấy của In Ấn Thời Đại" className="w-100 h-100 scroll-scale-item" width={1888} height={580} fetchPriority="high" />
+                  <img src="/assets/images/thumbs/banner-all-products.webp" alt="Sản phẩm bao bì giấy của In Ấn Thời Đại" className="w-100 h-100 scroll-scale-item" width={3776} height={1160} fetchPriority="high" />
               </div>
       
           </div>

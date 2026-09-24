@@ -99,10 +99,11 @@ export default function ServiceSlider({ services }: { services: Service[] }) {
             grabCursor
             direction="vertical"
           >
-            {services.map((service, i) => (
+            {services.map((service) => (
               <SwiperSlide className="overflow-hidden" key={service.slug}>
                 <div className="service-small-image-item tw-rounded-xl overflow-hidden border border-white">
-                  <img src={`/assets/images/thumbs/service-small-image${i + 1}.png`} alt={service.name} />
+                  {/* Ảnh @2x (618×398) — width/height giữ khung hiển thị 309×199 như placeholder của template */}
+                  <img src={`/assets/images/thumbs/service-${service.slug}-small.webp`} alt={service.name} width={309} height={199} />
                 </div>
               </SwiperSlide>
             ))}

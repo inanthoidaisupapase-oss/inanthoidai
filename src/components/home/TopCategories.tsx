@@ -104,9 +104,9 @@ export default async function TopCategories() {
           <div className="col-lg-6">
             <div className="h-100 position-relative">
               <div className="clip-animation overflow-hidden position-relative d-block tw-rounded-2xl h-100 overflow-hidden">
-                {/* TODO ảnh: ảnh xưởng sản xuất hoặc bộ sản phẩm tiêu biểu — xem docs/IMAGE-GUIDE.md */}
-                <img src="/assets/images/thumbs/top-categories-new-main-img.png" alt="Xưởng sản xuất bao bì giấy" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                <img src="/assets/images/thumbs/top-categories-new-main-img.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                {/* Ảnh poster bao bì do người dùng cung cấp — xem docs/IMAGE-GUIDE.md */}
+                <img src="/assets/images/thumbs/top-categories-packaging.webp" alt="In ấn & thiết kế bao bì — In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                <img src="/assets/images/thumbs/top-categories-packaging.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
               </div>
               <div className="position-absolute bottom-0 start-0 z-1 tw-ps-40-px tw-pe-4 tw-pb-48-px">
                 <div className="blur-bg-white rounded-pill tw-py-105 tw-px-4 d-inline-flex align-items-center tw-gap-3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">

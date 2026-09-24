@@ -149,7 +149,7 @@ export default function Footer() {
           <div className="container">
               <div className="border-top border-white-16 tw-py-8 custom-fade-animation position-relative" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
                   <div className="position-absolute d-xl-block d-none start-50 translate-middle-x top-0 tw--mt-40-px z-1">
-                      <img src="/assets/images/shapes/testimonials-new-shape3.png" className="animation-rotate-right" alt="" />
+                      <img src="/assets/images/logo/logo-xoay-tron.png" className="animation-rotate-right" alt="" />
                   </div>
                   <div className="">
                       <div className="d-flex align-items-center justify-content-between tw-gap-4 flex-wrap">

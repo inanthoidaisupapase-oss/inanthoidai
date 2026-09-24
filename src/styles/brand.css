@@ -283,6 +283,34 @@ h1, h2, h3 {
 }
 
 /* ==========================================================================
+   Marquee ảnh sản phẩm ở "Quy trình đặt hàng" (GetStarted.tsx/ProductMarquee.tsx)
+   dùng ảnh sản phẩm thật (shop-img*.png, ~1138×1382px) thay cho ảnh card mockup
+   nhỏ (product-card-img*.png, 415×175px) mà bản gốc Printop dùng cho slider này
+   (../printop/index.html dòng ~1799 trở xuống, main.js getStartedProductSlider*).
+
+   .swiper-slide có sẵn class min-w-max của template (main.css:5410,
+   min-width:max-content). Với ảnh mockup nhỏ 415×175px của bản gốc, max-content
+   luôn nhỏ hơn bề rộng Swiper tự tính (containerWidth/2 - spaceBetween 14, theo
+   đúng slidesPerView:2 trong main.js) nên không va chạm. Ảnh thật lớn hơn nhiều
+   lần khiến max-content (với phần tử thay thế như <img>, CSS tính theo kích
+   thước GỐC của ảnh, %/max-width:100% không tham gia intrinsic sizing) vượt xa
+   bề rộng slide — ép cả slide lẫn ảnh phình to che kín khối, đúng lỗi 1 ảnh
+   khổng lồ thay vì nhiều ảnh nhỏ chạy hàng ngang.
+
+   Ép width/height bằng số cứng (không phải %, để giá trị này được dùng khi
+   tính intrinsic size thay vì kích thước gốc ảnh) + object-fit: cover — cùng
+   kỹ thuật ProductCard.tsx đang áp dụng cho chính các file shop-img này
+   (tw-h-340-px + object-fit-cover). Lấy đúng 312×379px — kích thước đã "chốt"
+   cho các file shop-img trong docs/IMAGE-GUIDE.md — vừa đúng 2 ảnh/hàng trong
+   khung get-started-product-box rộng tối đa 678px (main.css:7236, trừ
+   spaceBetween 14px: 312×2+14=638 ≤ 678). */
+.get-started-marquee-img {
+  width: 312px;
+  height: 379px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
    Trang Đội ngũ (app/doi-ngu/page.tsx) — 4 khối "Bộ phận" giờ bấm được để mở
    panel nhân sự (components/shared/TeamDepartments.tsx). Các rule dưới đây chỉ
    thêm cơ chế click/animate mà bản <div> tĩnh cũ không cần — không đụng
@@ -539,4 +567,42 @@ h1, h2, h3 {
   .floating-contact-btn {
     transition: none;
   }
+}
+
+/* ==========================================================================
+   Chồng ảnh nhỏ bên phải section "Từ bản thiết kế tới thành phẩm một nơi"
+   (ServiceSlider.tsx) — main.css:7208 ẩn hẳn slide CUỐI
+   (.swiper-slide:last-child{visibility:hidden;opacity:0;margin-top:0;
+   margin-inline-start:0}). Template Printop có 6 slide, bản gốc cố ý bỏ slide
+   thứ 6 vì chỉ định nghĩa vị trí lệch cho 5 ô (nth-child 2..5, mỗi ô +76px).
+   Site này render đúng services.length slide (4 dịch vụ) nên slide cuối lại
+   là dịch vụ thật "Gia công sau in" → bị ẩn, ảnh lớn bên trái có 4 bước mà
+   chồng ảnh nhỏ chỉ thấy 3.
+   Trả slide cuối về hiển thị bình thường, khôi phục đúng margin-top -127px
+   (main.css:7181) và vị trí lệch của ô tương ứng (main.css:7189-7206) — lấy
+   nguyên số của template, không tự chọn số mới. Không cố định 4: đủ cho 2..5
+   dịch vụ, tức mọi số ô mà template có định nghĩa vị trí lệch. */
+.service-small-image-wrapper .swiper-slide:last-child {
+  visibility: visible;
+  opacity: 1;
+}
+
+.service-small-image-wrapper .swiper-slide:last-child:not(:first-child) {
+  margin-top: -127px;
+}
+
+.service-small-image-wrapper .swiper-slide:nth-child(2):last-child {
+  margin-inline-start: 76px;
+}
+
+.service-small-image-wrapper .swiper-slide:nth-child(3):last-child {
+  margin-inline-start: 152px;
+}
+
+.service-small-image-wrapper .swiper-slide:nth-child(4):last-child {
+  margin-inline-start: 228px;
+}
+
+.service-small-image-wrapper .swiper-slide:nth-child(5):last-child {
+  margin-inline-start: 304px;
 }
