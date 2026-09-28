@@ -606,3 +606,20 @@ h1, h2, h3 {
 .service-small-image-wrapper .swiper-slide:nth-child(5):last-child {
   margin-inline-start: 304px;
 }
+
+/* ==========================================================================
+   Chữ "Sản xuất trực tiếp tại xưởng..." (TopCategories.tsx) nằm đè lên ảnh
+   poster Tết do người dùng cung cấp — nền ảnh chỗ đó sáng/rối (ngựa vàng, cuộn
+   giấy trắng) nên chữ trắng mất tương phản, khác placeholder gốc của template
+   (ảnh tối sẵn ở khu vực đó nên bản gốc không cần lớp phủ). Tái dùng đúng
+   tông màu/kỹ thuật gradient tối main.css đã có sẵn ở .team-carousel-overlay
+   (rgba(32, 35, 41, 0.8), gradient to top — main.css chú thích "không phải
+   màu thương hiệu, chỉ là lớp phủ tăng tương phản") thay vì tự bịa màu mới;
+   chỉ khác là overlay đó ẩn/hiện theo hover (social icon), còn overlay này
+   luôn hiện vì chữ ở đây luôn hiển thị. */
+.top-categories-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to top, rgba(32, 35, 41, 0.85) 0%, rgba(32, 35, 41, 0.35) 45%, transparent 75%);
+  pointer-events: none;
+}

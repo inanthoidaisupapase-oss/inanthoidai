@@ -79,8 +79,12 @@ export default function Header() {
             <div className="d-flex align-items-center justify-content-md-start justify-content-between tw-gap-8">
               <div className="logo">
                 <Link href="/" className="link">
-                  {/* TODO ảnh: logo In Ấn Thời Đại — xem docs/IMAGE-GUIDE.md */}
-                  <img src="/assets/images/logo/logo-new.png" alt={site.name} className="max-w-200-px" />
+                  <img
+                    src="/assets/images/logo/LOGO%20THOI%20DAI-01.png"
+                    alt={site.name}
+                    className="max-w-200-px"
+                    style={{ width: "200px", height: "auto" }}
+                  />
                 </Link>
               </div>
 

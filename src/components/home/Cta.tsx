@@ -9,8 +9,8 @@ export default function Cta() {
       
               <div className="cta-new-left d-lg-flex d-none">
                   <div className="image-double-animation clip-animation overflow-hidden position-relative d-block h-100">
-                      <img src="/assets/images/thumbs/cta-new-img1.png" alt="" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                      <img src="/assets/images/thumbs/cta-new-img1.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img src="/assets/images/ch%E1%BA%A5t%20l%C6%B0%E1%BB%A3ng/838%20x%201273.png" alt="Công nhân vận hành máy in offset tại xưởng In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img src="/assets/images/ch%E1%BA%A5t%20l%C6%B0%E1%BB%A3ng/838%20x%201273.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                   </div>
               </div>
       
@@ -81,8 +81,8 @@ export default function Cta() {
                       </div>
                       <div className="cta-content-right ">
                           <div className="image-double-animation clip-animation overflow-hidden position-relative d-block h-100">
-                              <img src="/assets/images/thumbs/cta-new-img2.png" alt="" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                              <img src="/assets/images/thumbs/cta-new-img2.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                              <img src="/assets/images/ch%E1%BA%A5t%20l%C6%B0%E1%BB%A3ng/541%20x%20686.png" alt="Hộp giấy, túi giấy in theo yêu cầu đã đóng gói sẵn sàng giao hàng" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                              <img src="/assets/images/ch%E1%BA%A5t%20l%C6%B0%E1%BB%A3ng/541%20x%20686.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                           </div>
                       </div>
                   </div>
