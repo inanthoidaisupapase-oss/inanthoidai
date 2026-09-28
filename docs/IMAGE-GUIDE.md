@@ -51,8 +51,8 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/shapes/ (ghép động)` | — | components/shared/WorkingProcess.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/badge.png` | 376 × 84 px | components/home/About.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/banner-element-img1.png` | 31 × 33 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
-| `/assets/images/shapes/banner-element-img2.png` | 167 × 137 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
-| `/assets/images/shapes/banner-element-img3.png` | 131 × 142 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
+| `/assets/images/shapes/banner-element-img2.png` | 167 × 137 px | components/home/Banner.tsx | Ảnh nổi hero (banner-element-2) — ảnh demo mũ lưỡi trai của template (không phải hoạ tiết vector), có thể thay bằng ảnh sản phẩm thật cùng khung bo góc/bóng đổ, hoặc giữ nguyên nếu không cần |
+| `/assets/images/shapes/banner-element-img3.png` | 131 × 142 px | components/home/Banner.tsx | Ảnh nổi hero (banner-element-3) — ảnh demo icon nhiều màu của template (không phải hoạ tiết vector), có thể thay bằng ảnh sản phẩm thật cùng khung bo góc/bóng đổ, hoặc giữ nguyên nếu không cần |
 | `/assets/images/shapes/banner-element-img4.png` | 94 × 82 px | components/home/Banner.tsx<br>components/home/TopCategories.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/banner-element-img5.png` | 65 × 61 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/banner-element-img6.png` | 89 × 173 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
@@ -102,7 +102,12 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/thumbs/home-img3.png` | 1920 × 2068 px | lib/data/seed/categories.json | Ảnh thật tương ứng |
 | `/assets/images/thumbs/instagram-post-img${n}.png` | — | app/gioi-thieu/page.tsx<br>app/lien-he/page.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/meta-img.png` | 30 × 30 px | app/tin-tuc/[slug]/page.tsx<br>components/shared/PostListItem.tsx | Avatar nhỏ đại diện tác giả trong hàng meta (ảnh + tên + ngày) của bài viết — có thể thay bằng ảnh đội ngũ thật hoặc giữ icon trung tính |
+| `/assets/images/thumbs/product-hopgiay-paper-placeholder.jpg` | 240 × 240 px | components/home/Banner.tsx | Ảnh nổi hero (banner-element-8, khung 116×116px vuông) — hộp giấy, nền trắng/xám nhạt, góc 3/4 |
+| `/assets/images/thumbs/product-hopgiay-shoe-placeholder.jpg` | 240 × 240 px | components/home/Banner.tsx | Ảnh nổi hero (banner-element-10, khung 116×116px vuông) — hộp giày, nền trắng/xám nhạt, góc 3/4 |
 | `/assets/images/thumbs/product-range-img.png` | 1070 × 584 px | app/dich-vu/page.tsx<br>app/gioi-thieu/page.tsx<br>lib/data/seed/categories.json | Ảnh thật tương ứng |
+| `/assets/images/thumbs/product-temnhandecal-placeholder.jpg` | 240 × 240 px | components/home/Banner.tsx | Ảnh nổi hero (banner-element-12, khung 116×116px vuông) — tem nhãn decal, nền trắng/xám nhạt, chụp cận |
+| `/assets/images/thumbs/product-thungcarton-placeholder.jpg` | 240 × 240 px | components/home/Banner.tsx | Ảnh nổi hero (banner-element-11, khung 116×116px vuông) — thùng carton, nền trắng/xám nhạt, góc 3/4 |
+| `/assets/images/thumbs/product-tuixachgiay-placeholder.jpg` | 240 × 240 px | components/home/Banner.tsx | Ảnh nổi hero (banner-element-9, khung 116×116px vuông) — túi xách giấy, nền trắng/xám nhạt, góc 3/4 |
 | `/assets/images/thumbs/promo-banner-img1.png` | 423 × 161 px | app/gioi-thieu/page.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/promo-banner-img2.png` | 289 × 413 px | app/gioi-thieu/page.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/promo-banner-img3.png` | 359 × 249 px | app/gioi-thieu/page.tsx | Ảnh thật tương ứng |

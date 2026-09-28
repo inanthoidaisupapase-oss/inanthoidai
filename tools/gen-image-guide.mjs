@@ -15,6 +15,26 @@ function pngSize(file) {
   return { w: buf.readUInt32BE(16), h: buf.readUInt32BE(20) };
 }
 
+// Đọc kích thước JPEG từ marker SOF (0xC0-0xCF, trừ 0xC4/0xC8/0xCC) — cùng
+// nguyên tắc "đọc từ header, không ước lượng" như pngSize ở trên.
+function jpegSize(file) {
+  const buf = fs.readFileSync(file);
+  if (buf[0] !== 0xff || buf[1] !== 0xd8) return null;
+  let offset = 2;
+  while (offset < buf.length) {
+    if (buf[offset] !== 0xff) { offset++; continue; }
+    const marker = buf[offset + 1];
+    if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
+      const h = buf.readUInt16BE(offset + 5);
+      const w = buf.readUInt16BE(offset + 7);
+      return { w, h };
+    }
+    const segmentLength = buf.readUInt16BE(offset + 2);
+    offset += 2 + segmentLength;
+  }
+  return null;
+}
+
 function walk(dir, acc = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, entry.name);
@@ -31,6 +51,13 @@ const purpose = {
   'logo/logo-new-white.png': 'Logo In Ấn Thời Đại bản trắng — dùng trên nền tối ở footer',
   'logo/favicon.png': 'Favicon — biểu tượng rút gọn của logo',
   'thumbs/banner-all-img.png': 'Ảnh lớn trang chủ: bộ sản phẩm tiêu biểu (hộp giày, hộp nắp gài, thùng COD) chụp cùng bối cảnh',
+  'shapes/banner-element-img2.png': 'Ảnh nổi hero (banner-element-2) — ảnh demo mũ lưỡi trai của template (không phải hoạ tiết vector), có thể thay bằng ảnh sản phẩm thật cùng khung bo góc/bóng đổ, hoặc giữ nguyên nếu không cần',
+  'shapes/banner-element-img3.png': 'Ảnh nổi hero (banner-element-3) — ảnh demo icon nhiều màu của template (không phải hoạ tiết vector), có thể thay bằng ảnh sản phẩm thật cùng khung bo góc/bóng đổ, hoặc giữ nguyên nếu không cần',
+  'thumbs/product-hopgiay-paper-placeholder.jpg': 'Ảnh nổi hero (banner-element-8, khung 116×116px vuông) — hộp giấy, nền trắng/xám nhạt, góc 3/4',
+  'thumbs/product-tuixachgiay-placeholder.jpg': 'Ảnh nổi hero (banner-element-9, khung 116×116px vuông) — túi xách giấy, nền trắng/xám nhạt, góc 3/4',
+  'thumbs/product-hopgiay-shoe-placeholder.jpg': 'Ảnh nổi hero (banner-element-10, khung 116×116px vuông) — hộp giày, nền trắng/xám nhạt, góc 3/4',
+  'thumbs/product-thungcarton-placeholder.jpg': 'Ảnh nổi hero (banner-element-11, khung 116×116px vuông) — thùng carton, nền trắng/xám nhạt, góc 3/4',
+  'thumbs/product-temnhandecal-placeholder.jpg': 'Ảnh nổi hero (banner-element-12, khung 116×116px vuông) — tem nhãn decal, nền trắng/xám nhạt, chụp cận',
   'thumbs/top-categories-new-main-img.png': 'Ảnh xưởng sản xuất hoặc kho thành phẩm — khối lớn ở mục Sản phẩm trang chủ',
   'thumbs/about-new-img1.png': 'Ảnh xưởng sản xuất hoặc tập thể công ty — trang Giới thiệu',
   'thumbs/meta-img.png': 'Avatar nhỏ đại diện tác giả trong hàng meta (ảnh + tên + ngày) của bài viết — có thể thay bằng ảnh đội ngũ thật hoặc giữ icon trung tính',
@@ -85,6 +112,9 @@ for (const [url, files] of [...rows.entries()].sort()) {
   let size = '—';
   if (fs.existsSync(local) && local.endsWith('.png')) {
     const s = pngSize(local);
+    if (s) size = `${s.w} × ${s.h} px`;
+  } else if (fs.existsSync(local) && /\.jpe?g$/.test(local)) {
+    const s = jpegSize(local);
     if (s) size = `${s.w} × ${s.h} px`;
   }
   const key = url.replace('/assets/images/', '');

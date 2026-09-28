@@ -623,3 +623,86 @@ h1, h2, h3 {
   background-image: linear-gradient(to top, rgba(32, 35, 41, 0.85) 0%, rgba(32, 35, 41, 0.35) 45%, transparent 75%);
   pointer-events: none;
 }
+
+/* ==========================================================================
+   Hero (Banner.tsx): 5 ảnh sản phẩm nổi mới — hộp giấy, túi xách giấy, hộp
+   giày, thùng carton, tem nhãn decal (đúng thứ tự liệt kê trong subtext hero).
+
+   "2 ảnh cap/icon nổi có sẵn" mà yêu cầu ban đầu nhắc tới HOÁ RA có thật: đó
+   chính là banner-element-2 (banner-element-img2.png — ảnh mũ lưỡi trai xanh)
+   và banner-element-3 (banner-element-img3.png — ảnh icon nhiều màu). File
+   nằm trong shapes/ nên docs/IMAGE-GUIDE.md tự gắn nhãn chung "hoạ tiết trang
+   trí — giữ nguyên" (heuristic theo tên thư mục trong tools/gen-image-guide.mjs),
+   khiến lúc đọc code ban đầu bị bỏ sót — chỉ lộ ra khi mở ảnh thật bằng mắt lúc
+   verify trên dev server. Cả 2 đều là ảnh PNG tĩnh, KHÔNG có khung/bóng CSS
+   nào bọc quanh — toàn bộ khung "product card" (bo góc, viền, shadow) là vẽ
+   sẵn ngay trong file PNG đó.
+
+   Với 5 ảnh mới: vẫn tái dùng ĐÚNG cơ chế định vị nổi mà cả 7 ảnh banner-
+   element đang dùng (main.css:6955-6988) — div position-absolute + class
+   banner-element-N riêng, bọc trong div.d-xxl-block.d-none (ẩn hẳn <1400px,
+   giống hệt 7 ảnh cũ) + 1 trong 5 animation class có sẵn (animation-rotate-
+   scale/animated-upDown/animate__wobble__two/animation-rotate-right/
+   animation-scalation, main.css:5658-5798), z-n1 để chữ luôn đè lên nếu lỡ
+   chạm mép — đúng vai trò z-n1 vốn có của nhóm này.
+
+   Khác đúng 1 điểm so với cap/icon gốc: 5 ảnh này là ẢNH CHỤP SẢN PHẨM
+   PLACEHOLDER (sẽ ghi đè bằng ảnh thật sau, xem docs/IMAGE-GUIDE.md) — nếu vẽ
+   khung/bóng vào thẳng file ảnh như cap/icon gốc thì mất khung ngay khi người
+   dùng ghi đè file. Bọc bằng CSS card thay vì vẽ vào ảnh — lấy đúng nguyên bộ
+   class ProductCard.tsx đang dùng cho ảnh sản phẩm thật ở /san-pham
+   (tw-rounded-2xl bg-neutral-50 overflow-hidden border border-neutral-100
+   tw-p-3) + common-shadow-two (đã dùng sẵn cho pill "In ấn không giới hạn"
+   ngay trong Banner.tsx) thay vì bịa khung mới — khi thay ảnh thật, khung vẫn
+   giữ nguyên. Kích thước tw-w-116-px / tw-h-116-px là cặp vuông có sẵn duy
+   nhất trong bộ utility tw-w-N-px / tw-h-N-px của template (main.css).
+
+   Toạ độ: KHÔNG đặt ở "nửa dưới hero" như dự tính ban đầu — verify trên dev
+   server phát hiện toàn bộ nửa dưới (từ ngay sau hàng "Hơn 300 khách hàng...")
+   là pin-spacer của ScrollTrigger.create({pin:true}) bọc ảnh banner-all-
+   products.webp (custom-gsap.js, .scroll-scale-item-wrapper/.scroll-scale-
+   item — ảnh phóng to khi cuộn qua). Section cao tới ~2980px ở 1920px màn
+   hình nhưng ~2220px trong số đó là khoảng cuộn dành cho hiệu ứng pin, không
+   phải khoảng trống thật — đặt ảnh tĩnh vào đó sẽ bị cuộn lướt qua lệch khỏi
+   ảnh lớn đang pin. Vì vậy cả 5 ảnh đều đặt trong đúng vùng an toàn mà 7 ảnh
+   banner-element gốc đang dùng: phía trên hàng "Hơn 300 khách hàng doanh
+   nghiệp..." (top ≤ 520px). Toạ độ px cụ thể đo trực tiếp từ dev server ở
+   1920px rồi đối chiếu lại ở 1400px (mốc xxl tối thiểu — ngưỡng ẩn/hiện
+   d-xxl-block/d-none) bằng chromium-cli/puppeteer-core, tránh đè banner-
+   element-1..7, icon "products-badge"/"rounded-element" trong H1, pill
+   "In ấn không giới hạn", 2 nút "Yêu cầu báo giá"/"Xem sản phẩm", nút Zalo-gọi
+   (floating-contact-widget, góc trái dưới) và nút scroll-to-top
+   (.progress-wrap, main.css:6364, góc phải dưới).
+   ========================================================================== */
+.banner-element-8 {
+  top: 340px;
+  inset-inline-end: 40px;
+}
+
+.banner-element-9 {
+  top: 340px;
+  inset-inline-start: 20px;
+}
+
+.banner-element-10 {
+  top: 520px;
+  inset-inline-end: 140px;
+}
+
+.banner-element-11 {
+  top: 20px;
+  inset-inline-start: 280px;
+}
+
+.banner-element-12 {
+  top: 40px;
+  inset-inline-end: 124px;
+}
+
+.banner-product-float {
+  overflow: hidden;
+}
+
+.banner-product-float img {
+  display: block;
+}

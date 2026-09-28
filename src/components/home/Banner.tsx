@@ -101,6 +101,37 @@ export default function Banner() {
                   <div className="position-absolute z-n1 banner-element-7">
                       <img src="/assets/images/shapes/banner-element-img7.png" alt="" className="animation-rotate-right" />
                   </div>
+
+                  {/* 5 ảnh sản phẩm nổi mới — đặt tên cho đúng thứ tự "hộp giấy, túi xách
+                      giấy, hộp giày, thùng carton và tem nhãn decal" trong subtext hero.
+                      Ảnh placeholder rõ ràng (đặt tên product-*-placeholder.jpg), tự thay
+                      bằng ảnh chụp thật sau — xem docs/IMAGE-GUIDE.md. Vị trí/style xem
+                      giải thích ở brand.css (banner-element-8..12). */}
+                  <div className="position-absolute z-n1 banner-element-8">
+                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animation-rotate-scale">
+                          <img src="/assets/images/thumbs/product-hopgiay-paper-placeholder.jpg" alt="Hộp giấy" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      </div>
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-9">
+                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animated-upDown">
+                          <img src="/assets/images/thumbs/product-tuixachgiay-placeholder.jpg" alt="Túi xách giấy" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      </div>
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-10">
+                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animate__wobble__two">
+                          <img src="/assets/images/thumbs/product-hopgiay-shoe-placeholder.jpg" alt="Hộp giày" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      </div>
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-11">
+                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animation-rotate-right">
+                          <img src="/assets/images/thumbs/product-thungcarton-placeholder.jpg" alt="Thùng carton" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      </div>
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-12">
+                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animation-scalation">
+                          <img src="/assets/images/thumbs/product-temnhandecal-placeholder.jpg" alt="Tem nhãn decal" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      </div>
+                  </div>
               </div>
       
               <div className="pt-80-px tw-px-4">
