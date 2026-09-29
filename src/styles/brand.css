@@ -690,7 +690,7 @@ h1, h2, h3 {
 }
 
 .banner-element-11 {
-  top: 20px;
+  top: 32px;
   inset-inline-start: 280px;
 }
 
@@ -699,10 +699,52 @@ h1, h2, h3 {
   inset-inline-end: 124px;
 }
 
+/* banner-element-13/14: 2 ảnh sản phẩm nổi thêm (danh thiếp, hộp quà tặng cao
+   cấp). Đợt đầu đặt theo ước lượng mắt thường và bị sai — "Hộp quà tặng" đè
+   lên chữ H1 ("CHO"), "Danh thiếp" đứng sát "Thùng carton" (banner-element-11).
+   Sửa lại toạ độ theo phản hồi người dùng:
+   - element-13: người dùng chụp ảnh dev server, khoanh đỏ đúng ô trống muốn
+     đặt (dưới banner-element-9 "Túi xách giấy", bên phải banner-element-3 —
+     ảnh icon nhiều màu của template). Toạ độ đo trực tiếp từ ảnh chụp đó
+     (bounding box vùng khoanh đỏ, quy đổi theo tỉ lệ DPR 2x của ảnh chụp),
+     không phải áng chừng.
+   - element-14: dời xuống dưới banner-element-10 ("Hộp giày"), cùng
+     inset-inline-end để thẳng cột với nó — ra khỏi vùng max-w-1050-px của
+     khối H1 (H1 kết thúc quanh x=1425px trên viewport ~1800px, trong khi
+     banner-element-10 ở right:140px tức x≈1544px, đã chứng minh an toàn nên
+     tận dụng lại đúng cột đó thay vì đoán cột mới).
+   Vẫn nên mở dev server đối chiếu lại lần nữa — không có chromium-cli/
+   puppeteer-core trong phiên này nên không tự chụp màn hình kiểm tra được. */
+.banner-element-13 {
+  top: 585px;
+  inset-inline-start: 305px;
+}
+
+/* element-14 (Hộp quà tặng): dời vào ô trống người dùng khoanh đỏ lần 3 — nằm
+   dưới-trái cột "Hộp giày", phía dưới-phải chữ "VIỆT". Đo từ ảnh chụp 2000px
+   (DPR ~1.8 → viewport ~1799px): tâm ô ≈ x1301/y716 CSS px. */
+.banner-element-14 {
+  top: 595px;
+  inset-inline-end: 435px;
+}
+
 .banner-product-float {
-  overflow: hidden;
+  width: 120px;
+  height: 120px;
 }
 
 .banner-product-float img {
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* drop-shadow (không phải box-shadow) vì ảnh là PNG/webp cắt nền: box-shadow
+     sẽ vẽ bóng theo khung vuông, còn drop-shadow bám đúng hình vật thể. */
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.28)) drop-shadow(0 3px 4px rgba(0, 0, 0, 0.18));
+}
+
+/* Thùng carton (element-11) nhỏ hơn các ảnh còn lại — bù top để tâm không lệch. */
+.banner-element-11 .banner-product-float {
+  width: 96px;
+  height: 96px;
 }

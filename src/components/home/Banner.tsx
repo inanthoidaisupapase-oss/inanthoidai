@@ -84,10 +84,14 @@ export default function Banner() {
                       <img src="/assets/images/shapes/banner-element-img1.png" alt="" className="animation-rotate-scale" />
                   </div>
                   <div className="position-absolute z-n1 banner-element-2">
-                      <img src="/assets/images/shapes/banner-element-img2.png" alt="" className="animated-upDown" />
+                      <div className="banner-product-float animated-upDown">
+                          <img src="/assets/images/banner-products/catalogue.webp" alt="Catalogue" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                      </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-3">
-                      <img src="/assets/images/shapes/banner-element-img3.png" alt="" className="animate__wobble__two" />
+                      <div className="banner-product-float animate__wobble__two">
+                          <img src="/assets/images/banner-products/to-gap.webp" alt="Tờ gấp" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                      </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-4">
                       <img src="/assets/images/shapes/banner-element-img4.png" alt="" className="animation-rotate-right" />
@@ -102,34 +106,45 @@ export default function Banner() {
                       <img src="/assets/images/shapes/banner-element-img7.png" alt="" className="animation-rotate-right" />
                   </div>
 
-                  {/* 5 ảnh sản phẩm nổi mới — đặt tên cho đúng thứ tự "hộp giấy, túi xách
-                      giấy, hộp giày, thùng carton và tem nhãn decal" trong subtext hero.
-                      Ảnh placeholder rõ ràng (đặt tên product-*-placeholder.jpg), tự thay
-                      bằng ảnh chụp thật sau — xem docs/IMAGE-GUIDE.md. Vị trí/style xem
-                      giải thích ở brand.css (banner-element-8..12). */}
+                  {/* 9 ảnh sản phẩm nổi (banner-element-2/3 và 8..14) — ảnh render thật đã
+                      cắt nền trong suốt, nguồn ở public/assets/images/ảnh trên banner/,
+                      bản web 360×360 webp ở banner-products/. Không bọc card: ảnh tự có
+                      bóng đổ/khối như mũ + icon gốc của template. Vị trí/kích thước ở
+                      brand.css (.banner-product-float). */}
                   <div className="position-absolute z-n1 banner-element-8">
-                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animation-rotate-scale">
-                          <img src="/assets/images/thumbs/product-hopgiay-paper-placeholder.jpg" alt="Hộp giấy" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      <div className="banner-product-float animation-rotate-scale">
+                          <img src="/assets/images/banner-products/hop-giay.webp" alt="Hộp giấy" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-9">
-                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animated-upDown">
-                          <img src="/assets/images/thumbs/product-tuixachgiay-placeholder.jpg" alt="Túi xách giấy" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      <div className="banner-product-float animated-upDown">
+                          <img src="/assets/images/banner-products/tui-xach-giay.webp" alt="Túi xách giấy" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-10">
-                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animate__wobble__two">
-                          <img src="/assets/images/thumbs/product-hopgiay-shoe-placeholder.jpg" alt="Hộp giày" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      <div className="banner-product-float animate__wobble__two">
+                          <img src="/assets/images/banner-products/hop-giay-shoe.webp" alt="Hộp giày" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-11">
-                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animation-rotate-right">
-                          <img src="/assets/images/thumbs/product-thungcarton-placeholder.jpg" alt="Thùng carton" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      <div className="banner-product-float animation-rotate-right">
+                          <img src="/assets/images/banner-products/thung-carton.webp" alt="Thùng carton" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-12">
-                      <div className="banner-product-float tw-w-116-px tw-h-116-px tw-rounded-2xl bg-neutral-50 border border-neutral-100 common-shadow-two tw-p-3 animation-scalation">
-                          <img src="/assets/images/thumbs/product-temnhandecal-placeholder.jpg" alt="Tem nhãn decal" className="w-100 h-100 object-fit-cover" width={240} height={240} />
+                      <div className="banner-product-float animation-scalation">
+                          <img src="/assets/images/banner-products/tem-nhan-decal.webp" alt="Tem nhãn decal" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                      </div>
+                  </div>
+
+                  <div className="position-absolute z-n1 banner-element-13">
+                      <div className="banner-product-float animation-rotate-scale">
+                          <img src="/assets/images/banner-products/danh-thiep.webp" alt="Danh thiếp" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                      </div>
+                  </div>
+                  <div className="position-absolute z-n1 banner-element-14">
+                      <div className="banner-product-float animate__wobble__two">
+                          <img src="/assets/images/banner-products/hop-qua-tang.webp" alt="Hộp quà tặng" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
               </div>

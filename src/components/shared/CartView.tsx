@@ -29,7 +29,7 @@ export default function CartView() {
   return (
     <>
       <div className="table-responsive">
-        <table className="table align-middle">
+        <table className="table align-middle min-w-max">
           <thead>
             <tr>
               <th>Sản phẩm</th>
@@ -44,8 +44,10 @@ export default function CartView() {
               <tr key={`${item.slug}-${item.packSize}`}>
                 <td>
                   <div className="d-flex align-items-center tw-gap-4">
-                    <img src={item.image} alt="" className="tw-w-20 tw-rounded-lg object-fit-cover" />
-                    <Link href={`/san-pham/${item.slug}`} className="text-heading fw-medium hover-common-underline">
+                    <span className="tw-rounded-lg overflow-hidden tw-w-90-px tw-h-92-px flex-shrink-0 d-block">
+                      <img src={item.image} alt="" className="w-100 h-100 object-fit-cover" />
+                    </span>
+                    <Link href={`/san-pham/${item.slug}`} className="text-heading fw-medium hover-common-underline flex-grow-1">
                       {item.name}
                     </Link>
                   </div>
