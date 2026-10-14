@@ -66,7 +66,9 @@ if ($(".preloader").length) {
     scaleX: 0,
     duration: 0.8,
     ease: "power1.in",
-    delay: 2,
+    // Template gốc: delay 2 (preloader che trang ~3,4s). Rút còn 0,3s theo yêu cầu tối ưu
+    // PageSpeed (Speed Index) — giữ nguyên hiệu ứng khối + trượt lên, chỉ bớt thời gian chờ.
+    delay: 0.3,
     stagger: 0.04,
   }).to(".preloader", {
     yPercent: -100,
