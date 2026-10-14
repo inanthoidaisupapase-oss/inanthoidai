@@ -24,7 +24,13 @@ export const site = {
   },
 } as const;
 
-export type NavItem = { label: string; href: string; children?: { label: string; href: string }[] };
+export type NavItem = {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+  /** Mục có dropdown nhưng bấm vào chính nó vẫn đi tới href (desktop). Mặc định: chỉ mở dropdown. */
+  linkable?: boolean;
+};
 
 /** Menu điều hướng chính — theo cấu trúc của inanthoidai.vn */
 export const mainNav: NavItem[] = [
@@ -33,6 +39,7 @@ export const mainNav: NavItem[] = [
   {
     label: 'Dịch vụ',
     href: '/dich-vu',
+    linkable: true,
     children: [
       { label: 'Tất cả dịch vụ', href: '/dich-vu' },
       { label: 'In offset', href: '/dich-vu/in-offset' },

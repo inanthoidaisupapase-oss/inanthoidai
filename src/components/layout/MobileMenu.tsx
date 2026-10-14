@@ -49,7 +49,9 @@ export default function MobileMenu() {
                   key={item.href}
                   className={`nav-menu__item has-submenu position-relative${active ? ' activePage' : ''}`}
                 >
-                  <a href="#" onClick={(e) => e.preventDefault()} className="nav-menu__link text-heading tw-py-2 fw-medium w-100 tw-pe-5">
+                  {/* Menu mobile: bấm luôn chỉ xổ/đóng submenu (preventDefault), href thật chỉ để
+                      link có đích rõ ràng cho trình đọc màn hình */}
+                  <a href={item.linkable ? item.href : '#'} onClick={(e) => e.preventDefault()} className="nav-menu__link text-heading tw-py-2 fw-medium w-100 tw-pe-5">
                     {item.label}
                   </a>
                   <ul className="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-hidden tw-p-2 tw-duration-200 tw-z-99">

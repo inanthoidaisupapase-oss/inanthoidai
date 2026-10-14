@@ -90,9 +90,17 @@ export default function HeaderNav() {
                     }
                     return (
                       <li key={item.href} className={`nav-menu__item has-submenu position-relative${active ? ' activePage' : ''}`}>
-                        <a href="#" onClick={(e) => e.preventDefault()} className="nav-menu__link text-heading tw-py-2 fw-medium w-100 tw-pe-5">
-                          {item.label}
-                        </a>
+                        {/* "Dịch vụ" (linkable) trỏ thật tới /dich-vu: hover vẫn xổ dropdown bằng CSS,
+                            bấm thì vào trang — tránh link href="#" trùng chữ với link footer. */}
+                        {item.linkable ? (
+                          <Link href={item.href} className="nav-menu__link text-heading tw-py-2 fw-medium w-100 tw-pe-5">
+                            {item.label}
+                          </Link>
+                        ) : (
+                          <a href="#" onClick={(e) => e.preventDefault()} className="nav-menu__link text-heading tw-py-2 fw-medium w-100 tw-pe-5">
+                            {item.label}
+                          </a>
+                        )}
                         <ul className="nav-submenu scroll-sm position-absolute start-0 top-100 tw-w-max bg-white tw-rounded-md overflow-hidden tw-p-2 tw-duration-200 tw-z-99">
                           {item.children.map((child) => (
                             <li className="nav-submenu__item" key={child.href}>
