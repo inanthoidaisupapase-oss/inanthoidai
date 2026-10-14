@@ -34,8 +34,8 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/bg/breadcrumb-gradient-bg.png` | 1920 × 241 px | components/shared/Breadcrumb.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/bg/gradient-bg.png` | 1920 × 708 px | components/layout/Footer.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/bg/testimonials-new-bg.png` | 1296 × 509 px | components/home/Testimonials.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
-| `/assets/images/ch%E1%BA%A5t%20l%C6%B0%E1%BB%A3ng/541%20x%20686.png` | — | components/home/Cta.tsx | Ảnh thật tương ứng |
-| `/assets/images/ch%E1%BA%A5t%20l%C6%B0%E1%BB%A3ng/838%20x%201273.png` | — | components/home/Cta.tsx | Ảnh thật tương ứng |
+| `/assets/images/chat-luong/541x686.png` | — | components/home/Cta.tsx | Ảnh thật tương ứng |
+| `/assets/images/chat-luong/838x1273.png` | — | components/home/Cta.tsx | Ảnh thật tương ứng |
 | `/assets/images/icons/ (ghép động)` | — | app/cau-hoi-thuong-gap/page.tsx<br>app/dich-vu/[slug]/page.tsx<br>app/gioi-thieu/page.tsx<br>components/home/GetStarted.tsx<br>components/shared/WorkingProcess.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/big-arrow-left-right.png` | 162 × 15 px | components/home/BlogSection.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/choose-us-icon2.png` | 66 × 66 px | app/gioi-thieu/page.tsx | Icon của template — giữ nguyên được |
