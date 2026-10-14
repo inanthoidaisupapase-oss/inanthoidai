@@ -165,27 +165,50 @@ function scrollEffects(): Cleanup {
  * luôn cộng lại đúng bằng max(total, margin) — tái tạo đúng hiệu ứng margin-collapse gốc mà
  * không cần đổi paddingTop thành marginTop (marginTop không tính vào offsetHeight, đổi qua có
  * thể làm GSAP ScrollSmoother đo sai chiều cao spacer/scroll).
+ *
+ * CHỈ bù padding khi ScrollSmoother đã bật (#smooth-wrapper thành position: fixed). Trước đó
+ * (vendor.bundle.js chưa tải xong) wrapper còn static, header vẫn chiếm chỗ trong luồng —
+ * thêm padding lúc này đẩy cả trang xuống thêm ~200px rồi giật ngược lên khi smoother bật:
+ * Lighthouse đo CLS 0,188 chỉ từ cú nhảy này. MutationObserver theo dõi style của wrapper
+ * nên padding được đặt NGAY trong cùng frame smoother đổi wrapper sang fixed.
+ * Ở trạng thái static, margin-top của phần tử con đầu (breadcrumb) collapse ra ngoài và cộng
+ * thẳng dưới header (total + margin) — bù bằng margin-top âm min(total, margin) cho
+ * #smooth-content (margin âm collapse cùng margin con) để vị trí khớp max(total, margin) như
+ * khi smoother đã bật, không nhảy lúc chuyển trạng thái. brand.css đặt sẵn đúng margin âm
+ * này cho trang có breadcrumb ngay từ HTML server (trước khi JS chạy).
  */
 function headerOffset(): Cleanup {
   const rows = ['.top-header-new', '.middle-header', '.header']
     .map((sel) => document.querySelector<HTMLElement>(sel))
     .filter((el): el is HTMLElement => el !== null);
   const content = document.getElementById('smooth-content');
-  if (!rows.length || !content) return () => {};
+  const wrapper = document.getElementById('smooth-wrapper');
+  if (!rows.length || !content || !wrapper) return () => {};
   const apply = () => {
     const total = rows.reduce((sum, el) => sum + el.offsetHeight, 0);
     const firstChild = content.firstElementChild as HTMLElement | null;
     const firstChildMarginTop = firstChild ? parseFloat(getComputedStyle(firstChild).marginTop) || 0 : 0;
-    content.style.paddingTop = `${Math.max(0, total - firstChildMarginTop)}px`;
+    if (getComputedStyle(wrapper).position === 'fixed') {
+      // '0px' chứ không phải '': brand.css đặt sẵn margin-top âm cho trang có breadcrumb
+      content.style.marginTop = '0px';
+      content.style.paddingTop = `${Math.max(0, total - firstChildMarginTop)}px`;
+    } else {
+      content.style.paddingTop = '';
+      content.style.marginTop = firstChildMarginTop > 0 ? `${-Math.min(total, firstChildMarginTop)}px` : '';
+    }
   };
   apply();
   const ro = new ResizeObserver(apply);
   rows.forEach((el) => ro.observe(el));
+  const mo = new MutationObserver(apply);
+  mo.observe(wrapper, { attributes: true, attributeFilter: ['style', 'class'] });
   window.addEventListener('resize', apply);
   return () => {
     ro.disconnect();
+    mo.disconnect();
     window.removeEventListener('resize', apply);
     content.style.paddingTop = '';
+    content.style.marginTop = '';
   };
 }
 

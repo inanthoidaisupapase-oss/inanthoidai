@@ -785,3 +785,19 @@ h1, h2, h3 {
 .banner-new .rounded-pill .text-primary-new.fw-semibold {
   color: #e61c22;
 }
+
+/* Chống CLS trang con: section.breadcrumb (main.css: margin-top 142px / 160px từ 992px) là
+   phần tử đầu của #smooth-content. Trước khi ScrollSmoother bật, header còn trong luồng nên
+   margin này cộng thẳng dưới header, rồi JS headerOffset() (template-behaviors.ts) kéo về
+   max(header, margin) = header -> trang giật lên ~150px. Margin âm bằng đúng margin
+   breadcrumb (collapse thành 0) đặt sẵn vị trí cuối từ HTML server; chiều cao header luôn
+   lớn hơn margin này (nhỏ nhất ~188px ở 320px). Khi smoother bật, JS đặt margin-top: 0 inline. */
+#smooth-content:has(> .breadcrumb:first-child) {
+  margin-top: -142px;
+}
+
+@media (min-width: 992px) {
+  #smooth-content:has(> .breadcrumb:first-child) {
+    margin-top: -160px;
+  }
+}
