@@ -179,6 +179,7 @@ export default async function PostDetailPage({ params }: { params: Promise<{ slu
                           <li>
                             <a
                               href={site.social.facebook}
+                              aria-label="Facebook In Ấn Thời Đại"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="tw-w-11 tw-h-11 tw-rounded-xl bg-transparent border border-neutral-100 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-text-xl d-flex justify-content-center align-items-center text-neutral-600"
@@ -189,6 +190,7 @@ export default async function PostDetailPage({ params }: { params: Promise<{ slu
                           <li>
                             <a
                               href={site.social.youtube}
+                              aria-label="YouTube In Ấn Thời Đại"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="tw-w-11 tw-h-11 tw-rounded-xl bg-transparent border border-neutral-100 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-text-xl d-flex justify-content-center align-items-center text-neutral-600"
@@ -199,6 +201,7 @@ export default async function PostDetailPage({ params }: { params: Promise<{ slu
                           <li>
                             <a
                               href={site.social.tiktok}
+                              aria-label="TikTok In Ấn Thời Đại"
                               target="_blank"
                               rel="noopener noreferrer"
                               className="tw-w-11 tw-h-11 tw-rounded-xl bg-transparent border border-neutral-100 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-text-xl d-flex justify-content-center align-items-center text-neutral-600"

@@ -48,7 +48,7 @@ export default function ProductIndustries() {
                   </span>
                 </div>
                 <div className="">
-                  <Link href={item.href} className="text-primary-new tw-duration-300 tw-text-2xl group-hover-text-white d-flex hover-scale-108">
+                  <Link href={item.href} aria-label={`Xem sản phẩm ${item.label}`} className="text-primary-new tw-duration-300 tw-text-2xl group-hover-text-white d-flex hover-scale-108">
                     <i className="ph ph-arrow-right"></i>
                   </Link>
                 </div>

@@ -7,7 +7,7 @@ export default function Footer() {
     <>
               
       <footer className="footer-new position-relative z-1 mt-auto">
-          <img src="/assets/images/bg/gradient-bg.png" alt="" className="position-absolute start-0 top-0 w-100 h-100 object-fit-cover z-n1" />
+          <img src="/assets/images/bg/gradient-bg.webp" alt="" className="position-absolute start-0 top-0 w-100 h-100 object-fit-cover z-n1" />
           <img src="/assets/images/shapes/testimonials-new-shape1.png" className="position-absolute tw-end-0 bottom-0 z-n1 d-md-block d-none tw-mb-12 tw-me-11 animation-rotate z-0" alt="" />
       
           <div className="position-absolute tw-start-0 bottom-0 z-n1 d-md-block d-none tw-mb-16 tw-pb-14 tw-ms-15 tw-ps-6 animation-rotate-right z-0">
@@ -123,22 +123,22 @@ export default function Footer() {
                               <div className="tw-mt-8">
                                   <ul className="d-flex align-items-center tw-gap-3 animation-item">
                                       <li>
-                                          <a href="https://www.facebook.com" className="tw-w-8 tw-h-8 rounded-circle border border-white-39 hover-bg-white hover-text-heading tw-text-base d-flex justify-content-center align-items-center text-white">
+                                          <a href="https://www.facebook.com" aria-label="Facebook" className="tw-w-8 tw-h-8 rounded-circle border border-white-39 hover-bg-white hover-text-heading tw-text-base d-flex justify-content-center align-items-center text-white">
                                               <i className="ph-fill ph-facebook-logo"></i>
                                           </a>
                                       </li>
                                       <li>
-                                          <a href="https://www.dribbble.com" className="tw-w-8 tw-h-8 rounded-circle border border-white-39 hover-bg-white hover-text-heading tw-text-base d-flex justify-content-center align-items-center text-white">
+                                          <a href="https://www.dribbble.com" aria-label="Dribbble" className="tw-w-8 tw-h-8 rounded-circle border border-white-39 hover-bg-white hover-text-heading tw-text-base d-flex justify-content-center align-items-center text-white">
                                               <i className="ph-bold ph-dribbble-logo"></i>
                                           </a>
                                       </li>
                                       <li>
-                                          <a href="https://www.instagram.com" className="tw-w-8 tw-h-8 rounded-circle border border-white-39 hover-bg-white hover-text-heading tw-text-base d-flex justify-content-center align-items-center text-white">
+                                          <a href="https://www.instagram.com" aria-label="Instagram" className="tw-w-8 tw-h-8 rounded-circle border border-white-39 hover-bg-white hover-text-heading tw-text-base d-flex justify-content-center align-items-center text-white">
                                               <i className="ph-bold ph-instagram-logo"></i>
                                           </a>
                                       </li>
                                       <li>
-                                          <a href="https://www.twitter.com" className="tw-w-8 tw-h-8 rounded-circle border border-white-39 hover-bg-white hover-text-heading tw-text-base d-flex justify-content-center align-items-center text-white">
+                                          <a href="https://www.twitter.com" aria-label="Twitter" className="tw-w-8 tw-h-8 rounded-circle border border-white-39 hover-bg-white hover-text-heading tw-text-base d-flex justify-content-center align-items-center text-white">
                                               <i className="ph-bold ph-twitter-logo"></i>
                                           </a>
                                       </li>

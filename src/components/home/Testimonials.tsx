@@ -39,7 +39,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="background-img bg-img tw-rounded-3xl overflow-hidden" data-background-image="/assets/images/bg/testimonials-new-bg.png">
+        <div className="background-img bg-img tw-rounded-3xl overflow-hidden" data-background-image="/assets/images/bg/testimonials-new-bg.webp">
           <TestimonialsSlider items={testimonials as Testimonial[]} />
         </div>
       </div>

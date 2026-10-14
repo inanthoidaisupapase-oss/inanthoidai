@@ -71,7 +71,7 @@ export default function Discount() {
               <span className="text-neutral-500 tw-text-lg text-sm-res-14-px fw-normal text-center">Giảm 20%</span>
             </div>
             <p className="text-white fw-normal tw-text-2xl">Tiết kiệm chi phí thiết kế, in ấn và gia công — trọn gói tại một nơi.</p>
-            <a href="javascript:void(0)" className="bg-white rounded-circle tw-w-13 tw-h-13 d-flex justify-content-center align-items-center tw-text-3xl text-primary-new hover-scale-2">
+            <a href="javascript:void(0)" aria-label="Nhận ưu đãi" className="bg-white rounded-circle tw-w-13 tw-h-13 d-flex justify-content-center align-items-center tw-text-3xl text-primary-new hover-scale-2">
               <i className="ph-bold ph-arrow-up-right animate__heartBeat"></i>
             </a>
           </div>

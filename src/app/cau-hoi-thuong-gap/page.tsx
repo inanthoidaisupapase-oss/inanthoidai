@@ -152,8 +152,8 @@ export default function FaqPage() {
                   <div className="position-relative d-block h-100">
                     <div className="clip-animation image-double-animation overflow-hidden position-relative d-block tw-rounded-lg tw-rounded-36-px h-100">
                       {/* TODO ảnh: ảnh văn phòng/xưởng Thời Đại — xem docs/IMAGE-GUIDE.md */}
-                      <img src="/assets/images/thumbs/contact-section-img.png" alt="Văn phòng In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                      <img src="/assets/images/thumbs/contact-section-img.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img src="/assets/images/thumbs/contact-section-img.webp" alt="Văn phòng In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img src="/assets/images/thumbs/contact-section-img.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                     </div>
                   </div>
                 </div>

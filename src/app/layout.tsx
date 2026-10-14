@@ -70,19 +70,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="preconnect" href="https://unpkg.com" />
         <link rel="preload" as="style" href={GOOGLE_FONTS_HREF} />
         <FontStylesheet href={GOOGLE_FONTS_HREF} />
         <noscript>
           <link rel="stylesheet" href={GOOGLE_FONTS_HREF} />
         </noscript>
-        {/* Phosphor Icons (MIT) — chỉ nạp 3 weight mà template thực sự dùng: regular, bold, fill.
-            Icon xuất hiện dày đặc ngay trong header/nav phía trên màn hình đầu tiên nên GIỮ nạp
-            chặn render như cũ (không áp kỹ thuật media=print ở trên) — tránh nháy icon rỗng/tofu
-            lúc mới vào trang, ưu tiên đúng giao diện hơn tốc độ ở phần này. */}
-        <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
-        <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" />
-        <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+        {/* Phosphor Icons (MIT) 2.1.1 — self-host tại /assets/vendor/phosphor (bản npm
+            @phosphor-icons/web@2.1.1, nội dung y hệt bản unpkg trước đây) để bỏ kết nối tới unpkg.com
+            và chuỗi request CSS→font bắc qua origin thứ 3. Chỉ nạp 3 weight template dùng: regular,
+            bold, fill. Icon dày đặc ngay trên màn hình đầu và font-display: block nên VẪN nạp chặn
+            render như cũ + preload 3 file woff2 (cùng origin) để font về song song với CSS. */}
+        <link rel="preload" as="font" type="font/woff2" crossOrigin="" href="/assets/vendor/phosphor/regular/Phosphor.woff2" />
+        <link rel="preload" as="font" type="font/woff2" crossOrigin="" href="/assets/vendor/phosphor/bold/Phosphor-Bold.woff2" />
+        <link rel="preload" as="font" type="font/woff2" crossOrigin="" href="/assets/vendor/phosphor/fill/Phosphor-Fill.woff2" />
+        <link rel="stylesheet" href="/assets/vendor/phosphor/regular/style.css" />
+        <link rel="stylesheet" href="/assets/vendor/phosphor/bold/style.css" />
+        <link rel="stylesheet" href="/assets/vendor/phosphor/fill/style.css" />
       </head>
       <body className="tp-magic-cursor">
         <CartProvider>

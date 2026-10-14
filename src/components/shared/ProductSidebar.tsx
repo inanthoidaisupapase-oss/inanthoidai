@@ -76,6 +76,7 @@ export default function ProductSidebar({
         />
         <button
           type="submit"
+          aria-label="Tìm kiếm"
           className="position-absolute tw-end-0 top-50 translate-middle-y tw-me-4 text-heading hover-text-main-600 tw-text-3xl d-flex"
         >
           <i className="ph ph-magnifying-glass"></i>

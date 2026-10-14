@@ -27,19 +27,19 @@ import { Autoplay } from 'swiper/modules';
  * "Bài viết nổi bật" trong BlogSidebar) để tránh méo/lệch khi lặp ngang.
  */
 const rowOneImages = [
-  '/assets/images/thumbs/shop-img1.png',
-  '/assets/images/thumbs/shop-img2.png',
-  '/assets/images/thumbs/shop-img3.png',
-  '/assets/images/thumbs/shop-img4.png',
-  '/assets/images/thumbs/shop-img5.png',
+  '/assets/images/thumbs/shop-img1.webp',
+  '/assets/images/thumbs/shop-img2.webp',
+  '/assets/images/thumbs/shop-img3.webp',
+  '/assets/images/thumbs/shop-img4.webp',
+  '/assets/images/thumbs/shop-img5.webp',
 ];
 
 const rowTwoImages = [
-  '/assets/images/thumbs/shop-img4.png',
-  '/assets/images/thumbs/shop-img5.png',
-  '/assets/images/thumbs/shop-img6.png',
-  '/assets/images/thumbs/shop-img7.png',
-  '/assets/images/thumbs/shop-img2.png',
+  '/assets/images/thumbs/shop-img4.webp',
+  '/assets/images/thumbs/shop-img5.webp',
+  '/assets/images/thumbs/shop-img6.webp',
+  '/assets/images/thumbs/shop-img7.webp',
+  '/assets/images/thumbs/shop-img2.webp',
 ];
 
 function SubscribeRow({ images, className, reverse }: { images: string[]; className: string; reverse?: boolean }) {

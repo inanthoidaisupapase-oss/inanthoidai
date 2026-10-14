@@ -39,7 +39,7 @@ Trang chủ lấy từ `index.html`.
 - CSS: bootstrap.min.css + aos.css + swiper-bundle.min.css + magnific-popup.css + main.css của template (giữ nguyên)
 - Slider: swiper 12.0.3 (khớp đúng phiên bản template) qua `swiper/react`
 - Animation: AOS + GSAP (ScrollTrigger, SplitText) từ npm
-- Icon: Phosphor Icons (MIT) qua CDN — giống template
+- Icon: Phosphor Icons (MIT) 2.1.1 — self-host ở public/assets/vendor/phosphor (cùng bản với CDN của template, bỏ phụ thuộc unpkg.com)
 - Database: Supabase (PostgreSQL), có fallback seed tĩnh khi thiếu biến môi trường
 - Email: Resend
 - Deploy: Vercel
