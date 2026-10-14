@@ -35,8 +35,8 @@ export default async function TopCategories() {
         Sản phẩm
       </h2>
 
-      <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
-      <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
+      <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" width={641} height={343} alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
+      <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" width={641} height={343} alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
       <img loading="lazy" decoding="async" src="/assets/images/shapes/curve-star-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none tw-mt-17 tw-me-17 animate__wobble__two" />
       <div className="position-absolute z-n1 end-0 bottom-0 tw-pb-15 tw-mb-5 tw-pe-15 tw-me-5 d-lg-block d-none">
         <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img4.png" alt="" className="animation-rotate-right" />

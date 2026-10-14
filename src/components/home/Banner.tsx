@@ -103,7 +103,7 @@ export default function Banner() {
                       <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img6.png" alt="" className="animated-upDown" />
                   </div>
                   <div className="position-absolute z-n1 banner-element-7">
-                      <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img7.png" alt="" className="animation-rotate-right" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img7.webp" alt="" className="animation-rotate-right" />
                   </div>
 
                   {/* 9 ảnh sản phẩm nổi (banner-element-2/3 và 8..14) — ảnh render thật đã

@@ -35,10 +35,10 @@ export default async function GetStarted() {
     <section className="get-started-new come-from-right-item-section overflow-hidden">
       <div className="container max-w-1620-px">
         <div className="tw-rounded-3xl border border-neutral-100 position-relative overflow-hidden z-1 section-bg-gradient-two pt-120">
-          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
-          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
+          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" width={641} height={343} alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
+          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" width={641} height={343} alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
           <img loading="lazy" decoding="async" src="/assets/images/shapes/curve-star-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none tw-mt-17 tw-me-17 animate__wobble__two" />
-          <img loading="lazy" decoding="async" src="/assets/images/shapes/testimonials-new-shape1.png" className="position-absolute tw-end-0 bottom-0 z-n1 d-md-block d-none tw-mb-12 tw-me-11 animation-rotate z-0" alt="" />
+          <img loading="lazy" decoding="async" src="/assets/images/shapes/testimonials-new-shape1.webp" className="position-absolute tw-end-0 bottom-0 z-n1 d-md-block d-none tw-mb-12 tw-me-11 animation-rotate z-0" alt="" />
 
           <div className="position-relative">
             <div className="container">

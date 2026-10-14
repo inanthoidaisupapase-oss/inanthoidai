@@ -6,8 +6,8 @@ export default function About() {
     <>
               
       <section className="about-new py-120 section-bg-gradient-two position-relative overflow-hidden position-relative">
-          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
-          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
+          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" width={641} height={343} alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
+          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" width={641} height={343} alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
       
           <div className="container">
               <div className="row gy-4">
@@ -82,11 +82,11 @@ export default function About() {
                           </div>
                           <div className="tw-pt-9 position-relative">
                               <div className="clip-animation image-double-animation overflow-hidden tw-rounded-xl overflow-x-hidden w-100 h-100 max-w-530-px">
-                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-factory.webp" alt="Toàn cảnh xưởng sản xuất In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-factory.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-factory.webp" srcSet="/assets/images/thumbs/about-factory-820.webp 820w, /assets/images/thumbs/about-factory.webp 1052w" sizes="(max-width: 1440px) 56vw, 1060px" alt="Toàn cảnh xưởng sản xuất In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-factory.webp" srcSet="/assets/images/thumbs/about-factory-820.webp 820w, /assets/images/thumbs/about-factory.webp 1052w" sizes="(max-width: 1440px) 56vw, 1060px" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                               </div>
                               <div className="position-absolute top-0 start-50 translate-middle-x z-1">
-                                  <img loading="lazy" decoding="async" src="/assets/images/shapes/badge.png" alt="Badge Image" className="left-right-animation" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/shapes/badge.webp" alt="Badge Image" className="left-right-animation" />
                               </div>
                           </div>
                           <div className="about-img-two move-on-cursor-hover" data-value="6">

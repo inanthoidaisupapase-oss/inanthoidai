@@ -56,15 +56,15 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/logo/logo-thoi-dai.webp` | 600 × 145 px (nền trong suốt, tỉ lệ ~4,1:1; bản gốc LOGO THOI DAI-01.png 13262×3199 chỉ để lưu trữ) | components/layout/Footer.tsx<br>components/layout/Header.tsx | Ảnh thật tương ứng |
 | `/assets/images/logo/favicon.png` | 64 × 64 px | app/layout.tsx | Favicon — biểu tượng rút gọn của logo |
 | `/assets/images/tin-tuc/logo.png` | 116 × 116 px (nên làm 232 × 232 px, vuông, chừa lề ~10–15% vì khung bo tròn) | components/shared/BlogSidebar.tsx | Logo In Ấn Thời Đại trong widget thương hiệu ở sidebar trang tin tức / chi tiết tin |
-| `/assets/images/logo/logo-xoay-tron.png` | 74 × 80 px | components/layout/Footer.tsx<br>components/shared/TestimonialsSlider.tsx | Ảnh thật tương ứng |
+| `/assets/images/logo/logo-xoay-tron.webp` | 74 × 80 px | components/layout/Footer.tsx<br>components/shared/TestimonialsSlider.tsx | Ảnh thật tương ứng |
 | `/assets/images/logo/logo.png` | 159 × 39 px | components/layout/MobileMenu.tsx | Logo In Ấn Thời Đại — dùng ở menu mobile |
 | `/assets/images/shapes/ (ghép động)` | — | components/shared/WorkingProcess.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
-| `/assets/images/shapes/badge.png` | 376 × 84 px | components/home/About.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
+| `/assets/images/shapes/badge.webp` | 376 × 84 px | components/home/About.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/banner-element-img1.png` | 31 × 33 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/banner-element-img4.png` | 94 × 82 px | components/home/Banner.tsx<br>components/home/TopCategories.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/banner-element-img5.png` | 65 × 61 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/banner-element-img6.png` | 89 × 173 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
-| `/assets/images/shapes/banner-element-img7.png` | 65 × 69 px | components/home/Banner.tsx<br>components/layout/Footer.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
+| `/assets/images/shapes/banner-element-img7.webp` | 65 × 69 px | components/home/Banner.tsx<br>components/layout/Footer.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/boxed-shape.png` | 641 × 343 px | components/home/About.tsx<br>components/home/GetStarted.tsx<br>components/home/TopCategories.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/cursor-shape.png` | 119 × 84 px | app/dich-vu/page.tsx<br>app/gioi-thieu/page.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/curve-star-shape.png` | 83 × 93 px | components/home/Cta.tsx<br>components/home/GetStarted.tsx<br>components/home/TopCategories.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
@@ -72,11 +72,12 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/shapes/products-badge.webp` | 165 × 68 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/rounded-element.png` | 167 × 54 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/rounded-star.png` | 153 × 152 px | app/gioi-thieu/page.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
-| `/assets/images/shapes/testimonials-new-shape1.png` | 82 × 84 px | components/home/Cta.tsx<br>components/home/GetStarted.tsx<br>components/layout/Footer.tsx<br>components/shared/TestimonialsSlider.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
+| `/assets/images/shapes/testimonials-new-shape1.webp` | 82 × 84 px | components/home/Cta.tsx<br>components/home/GetStarted.tsx<br>components/layout/Footer.tsx<br>components/shared/TestimonialsSlider.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/testimonials-new-shape2.png` | 77 × 86 px | components/shared/TestimonialsSlider.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/testimonials-new-shape4.png` | 43 × 40 px | components/shared/TestimonialsSlider.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/thumbs/ (ghép động)` | — | components/home/TopCategories.tsx | Ảnh thật tương ứng |
-| `/assets/images/thumbs/about-factory.webp` | — | components/home/About.tsx | Ảnh thật tương ứng |
+| `/assets/images/thumbs/about-factory.webp` | 1052 × 1170 px | components/home/About.tsx | Ảnh thật tương ứng |
+| `/assets/images/thumbs/about-factory-820.webp` | 820 × 912 px | components/home/About.tsx | Bản thu nhỏ của ảnh trên cho màn desktop ≤ 1440px (srcset) — thay ảnh gốc thì xuất lại bản này cùng nội dung |
 | `/assets/images/thumbs/about-finishing.webp` | — | components/home/About.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/about-flexo.webp` | — | components/home/About.tsx | Ảnh thật tương ứng |
 | `/assets/images/gioi-thieu/xuong-san-xuat.webp` | 1194 × 1317 px | app/gioi-thieu/page.tsx | Ảnh thật tương ứng |

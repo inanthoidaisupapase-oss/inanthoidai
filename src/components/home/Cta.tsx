@@ -17,8 +17,8 @@ export default function Cta() {
               <div className="cta-new-right">
                   <div className="py-120 position-relative tw-px-4">
                       <img loading="lazy" decoding="async" src="/assets/images/shapes/curve-star-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none tw-mt-17 tw-me-17 animate__wobble__two z-0" />
-                      <img loading="lazy" decoding="async" src="/assets/images/shapes/testimonials-new-shape1.png" alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none tw-mt-12 tw-ms-11 animation-rotate z-0" />
-                      <img loading="lazy" decoding="async" src="/assets/images/shapes/testimonials-new-shape1.png" alt="" className="position-absolute tw-end-0 bottom-0 z-n1 d-md-block d-none tw-mb-12 tw-me-11 animation-scalation z-0" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/testimonials-new-shape1.webp" alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none tw-mt-12 tw-ms-11 animation-rotate z-0" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/testimonials-new-shape1.webp" alt="" className="position-absolute tw-end-0 bottom-0 z-n1 d-md-block d-none tw-mb-12 tw-me-11 animation-scalation z-0" />
       
                       <div className="row">
                           <div className="col-xxl-2 col-sm-1"></div>
