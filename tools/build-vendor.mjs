@@ -31,7 +31,10 @@ let out = '/* Printop vendor bundle — sinh tự động bởi tools/build-vend
 for (const f of ORDER) {
   const p = path.join(DIR, f);
   if (!fs.existsSync(p)) throw new Error(`Thiếu file vendor: ${p}`);
-  out += `\n/* ===== ${f} ===== */\n` + fs.readFileSync(p, 'utf8') + '\n;\n';
+  // Bỏ comment sourceMappingURL: các file .map không được copy vào public (vd typed.min.js.map
+  // trả về trang 404 HTML) -> Lighthouse Best Practices báo "valid-source-maps" lỗi JSON.
+  const src = fs.readFileSync(p, 'utf8').replace(/^\/\/# sourceMappingURL=.*$/gm, '');
+  out += `\n/* ===== ${f} ===== */\n` + src + '\n;\n';
 }
 fs.writeFileSync(path.join(DIR, 'vendor.bundle.js'), out);
 console.log(`vendor.bundle.js: ${(out.length / 1024).toFixed(0)} KB từ ${ORDER.length} file`);
