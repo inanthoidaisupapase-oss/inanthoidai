@@ -48,7 +48,7 @@ export default async function BlogSection() {
             <i className="ph-bold ph-caret-left z-1 text-gradient-main tw-duration-300"></i>
           </button>
           <span className="">
-            <img src="/assets/images/icons/big-arrow-left-right.png" alt="" className="big-arrow-left-right-icon" />
+            <img loading="lazy" decoding="async" src="/assets/images/icons/big-arrow-left-right.png" alt="" className="big-arrow-left-right-icon" />
           </span>
           <button type="button" aria-label="Bài sau" className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white blog-new-btn-next">
             <i className="ph-bold ph-caret-right z-1"></i>

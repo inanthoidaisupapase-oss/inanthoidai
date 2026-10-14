@@ -40,8 +40,8 @@ export default async function ServicesPage() {
                   >
                     <div className="clip-animation image-double-animation tw-rounded-20-px overflow-hidden">
                       <div>
-                        <img src={service.imageUrl} alt={service.name} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                        <img src={service.imageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                        <img loading="lazy" decoding="async" src={service.imageUrl} alt={service.name} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                        <img loading="lazy" decoding="async" src={service.imageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                       </div>
                     </div>
                     <div className="position-absolute bottom-0 start-50 translate-middle-x tw-mb-12 min-w-max tw-px-2 z-1">
@@ -86,9 +86,9 @@ export default async function ServicesPage() {
             <div className="col-xl-6 d-xl-block d-none">
               <div className="position-absolute tw-start-45-percent top-50 translate-middle-y">
                 {/* TODO ảnh: ảnh xưởng in / thành phẩm tiêu biểu — xem docs/IMAGE-GUIDE.md */}
-                <img src="/assets/images/thumbs/product-range-img.png" alt="Dịch vụ in ấn và bao bì Thời Đại" />
+                <img loading="lazy" decoding="async" src="/assets/images/thumbs/product-range-img.png" alt="Dịch vụ in ấn và bao bì Thời Đại" />
                 <div className="product-range-image position-absolute z-1">
-                  <img src="/assets/images/shapes/cursor-shape.png" alt="" className="move-on-cursor-hover" data-value="10" />
+                  <img loading="lazy" decoding="async" src="/assets/images/shapes/cursor-shape.png" alt="" className="move-on-cursor-hover" data-value="10" />
                 </div>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default async function ServicesPage() {
             <div className="col-lg-7">
               <div className="pe-xl-5" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300">
                 {/* TODO ảnh: ảnh đội ngũ thiết kế đang dựng mẫu / bản vẽ kỹ thuật dao bế — xem docs/IMAGE-GUIDE.md */}
-                <img src="/assets/images/thumbs/graphics-img.png" alt="Đội ngũ thiết kế In Ấn Thời Đại" />
+                <img loading="lazy" decoding="async" src="/assets/images/thumbs/graphics-img.png" alt="Đội ngũ thiết kế In Ấn Thời Đại" />
               </div>
             </div>
             <div className="col-lg-5">

@@ -95,10 +95,10 @@ export default async function AboutPage() {
             <div className="col-xl-6">
               <div className="me-xl-5 me-xl-4 position-relative">
                 <div className="position-absolute z-1 top-0 start-50 translate-middle-x tw-mt-8 move-on-cursor-hover">
-                  <img src="/assets/images/shapes/design-your-own.png" alt="" />
+                  <img loading="lazy" decoding="async" src="/assets/images/shapes/design-your-own.png" alt="" />
                 </div>
                 <div className="position-absolute z-1 bottom-0 end-0 tw-me-15 tw-pe-5 tw-mb-4">
-                  <img src="/assets/images/shapes/cursor-shape.png" alt="" className="move-on-cursor-hover" data-value="10" />
+                  <img loading="lazy" decoding="async" src="/assets/images/shapes/cursor-shape.png" alt="" className="move-on-cursor-hover" data-value="10" />
                 </div>
 
                 <div className="row gy-4 align-items-center">
@@ -106,14 +106,14 @@ export default async function AboutPage() {
                     <div className="d-flex flex-column tw-gap-6">
                       <div className="clip-animation image-double-animation tw-rounded-20-px overflow-hidden">
                         <div>
-                          <img src="/assets/images/gioi-thieu/xuong-san-xuat.webp" alt="Xưởng sản xuất In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                          <img src="/assets/images/gioi-thieu/xuong-san-xuat.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                          <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/xuong-san-xuat.webp" alt="Xưởng sản xuất In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                          <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/xuong-san-xuat.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                         </div>
                       </div>
                       <div className="clip-animation image-double-animation tw-rounded-20-px overflow-hidden">
                         <div>
-                          <img src="/assets/images/gioi-thieu/may-in-offset.webp" alt="Máy in tại xưởng Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                          <img src="/assets/images/gioi-thieu/may-in-offset.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                          <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/may-in-offset.webp" alt="Máy in tại xưởng Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                          <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/may-in-offset.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                         </div>
                       </div>
                     </div>
@@ -121,8 +121,8 @@ export default async function AboutPage() {
                   <div className="col-6">
                     <div className="clip-animation image-double-animation tw-rounded-20-px overflow-hidden">
                       <div>
-                        <img src="/assets/images/gioi-thieu/thanh-pham-bao-bi.webp" alt="Thành phẩm bao bì giấy Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                        <img src="/assets/images/gioi-thieu/thanh-pham-bao-bi.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                        <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/thanh-pham-bao-bi.webp" alt="Thành phẩm bao bì giấy Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                        <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/thanh-pham-bao-bi.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                       </div>
                     </div>
                   </div>
@@ -166,13 +166,13 @@ export default async function AboutPage() {
                 <div className="tw-my-12 d-flex align-items-center tw-gap-6 justify-content-between flex-sm-nowrap flex-wrap max-w-580-px">
                   <div className="d-flex align-items-center tw-gap-6 animation-item custom-fade-animation" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
                     <span>
-                      <img src="/assets/images/icons/choose-us-icon2.png" alt="" className="text-invert-black tw-w-13 animate__bounce" />
+                      <img loading="lazy" decoding="async" src="/assets/images/icons/choose-us-icon2.png" alt="" className="text-invert-black tw-w-13 animate__bounce" />
                     </span>
                     <span className="text-heading tw-text-lg fw-semibold max-w-180-px">Thiết kế miễn phí cho đơn tại xưởng</span>
                   </div>
                   <div className="d-flex align-items-center tw-gap-6 animation-item custom-fade-animation" data-delay=".8" data-fade-from="bottom" data-ease="bounce">
                     <span>
-                      <img src="/assets/images/icons/choose-us-icon3.png" alt="" className="text-invert-black tw-w-13 animate__bounce" />
+                      <img loading="lazy" decoding="async" src="/assets/images/icons/choose-us-icon3.png" alt="" className="text-invert-black tw-w-13 animate__bounce" />
                     </span>
                     <span className="text-heading tw-text-lg fw-semibold max-w-180-px">Giao hàng đúng tiến độ cam kết</span>
                   </div>
@@ -287,8 +287,8 @@ export default async function AboutPage() {
                   <div className="position-relative d-block h-100">
                     <div className="clip-animation image-double-animation overflow-hidden position-relative d-block tw-rounded-lg tw-rounded-36-px h-100">
                       {/* TODO ảnh: ảnh văn phòng/xưởng Thời Đại — xem docs/IMAGE-GUIDE.md */}
-                      <img src="/assets/images/thumbs/contact-section-img.webp" alt="Văn phòng In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                      <img src="/assets/images/thumbs/contact-section-img.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img loading="lazy" decoding="async" src="/assets/images/thumbs/contact-section-img.webp" alt="Văn phòng In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img loading="lazy" decoding="async" src="/assets/images/thumbs/contact-section-img.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                     </div>
                   </div>
                 </div>
@@ -323,7 +323,7 @@ export default async function AboutPage() {
                     <div className="tw-pt-9 tw-px-36-px tw-pb-14 hover-bg-white tw-duration-200 tw-rounded-top-20-px group group-item hover-shadow-one h-100 animation-item section-bg d-flex flex-column">
                       <div className="max-w-230-px d-flex flex-column h-100">
                         <span className="d-flex">
-                          <img src={`/assets/images/icons/${s.icon}`} alt="" className="text-invert-black group-hover-item-text-invert-main-600 tw-duration-200 animate__bounce" />
+                          <img loading="lazy" decoding="async" src={`/assets/images/icons/${s.icon}`} alt="" className="text-invert-black group-hover-item-text-invert-main-600 tw-duration-200 animate__bounce" />
                         </span>
                         <div className="tw-mt-12 d-flex flex-column flex-grow-1">
                           <h2 className="tw-text-xl tw-leading-155 text-capitalize">{s.title}</h2>
@@ -386,9 +386,9 @@ export default async function AboutPage() {
             </div>
             <div className="col-xl-6 d-xl-block d-none">
               <div className="position-absolute tw-start-45-percent top-50 translate-middle-y">
-                <img src="/assets/images/gioi-thieu/san-pham-noi-bat.webp" alt="Sản phẩm bao bì giấy Thời Đại" className="product-range-thumb" />
+                <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/san-pham-noi-bat.webp" alt="Sản phẩm bao bì giấy Thời Đại" className="product-range-thumb" />
                 <div className="product-range-image position-absolute z-1">
-                  <img src="/assets/images/shapes/cursor-shape.png" alt="" className="move-on-cursor-hover" data-value="10" />
+                  <img loading="lazy" decoding="async" src="/assets/images/shapes/cursor-shape.png" alt="" className="move-on-cursor-hover" data-value="10" />
                 </div>
               </div>
             </div>
@@ -486,10 +486,10 @@ export default async function AboutPage() {
 
                 <div className="overflow-hidden">
                   <div className="tw-mt-9 w-100 min-w-max custom-fade-animation" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
-                    <img src="/assets/images/gioi-thieu/promo-uu-dai-1.webp" alt="" width={423} height={161} className="move-on-cursor-hover" data-value="10" />
+                    <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/promo-uu-dai-1.webp" alt="" width={423} height={161} className="move-on-cursor-hover" data-value="10" />
                   </div>
                   <div className="position-absolute bottom-0 tw-end-0 z-n1 custom-fade-animation" data-delay=".8" data-fade-from="right" data-ease="bounce">
-                    <img src="/assets/images/gioi-thieu/promo-uu-dai-2.webp" alt="" width={289} height={413} />
+                    <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/promo-uu-dai-2.webp" alt="" width={289} height={413} />
                   </div>
                 </div>
 
@@ -498,7 +498,7 @@ export default async function AboutPage() {
                     <div className="area-bg scale-item"></div>
                     <div className="tw-w-160-px tw-h-160-px d-flex align-items-center justify-content-center min-w-max">
                       <div className="position-absolute top-50 start-50 translate-middle w-100 h-100 z-n1">
-                        <img src="/assets/images/shapes/rounded-star.png" alt="" className="animation-rotate-right" />
+                        <img loading="lazy" decoding="async" src="/assets/images/shapes/rounded-star.png" alt="" className="animation-rotate-right" />
                       </div>
                       <div className="text-center scale-text">
                         <h2 className="text-white text-uppercase fw-normal h5">GIẢM</h2>
@@ -520,7 +520,7 @@ export default async function AboutPage() {
                   <h2 className="h3 tw-mt-4 text-reveal">Chất lượng ổn định, tiến độ đúng hẹn, giá xưởng</h2>
                 </div>
                 <div className="tw-mt-9 w-100 min-w-max d-flex justify-content-center custom-fade-animation" data-delay=".99" data-fade-from="bottom" data-ease="bounce">
-                  <img src="/assets/images/gioi-thieu/promo-cam-ket.webp" alt="" width={359} height={249} className="move-on-cursor-hover" data-value="6" />
+                  <img loading="lazy" decoding="async" src="/assets/images/gioi-thieu/promo-cam-ket.webp" alt="" width={359} height={249} className="move-on-cursor-hover" data-value="6" />
                 </div>
 
                 <div className="position-absolute bottom-0 tw-start-0 w-100 tw-mb-15 tw-pb-5 tw-px-40-px d-sm-block d-none">

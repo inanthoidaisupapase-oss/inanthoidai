@@ -27,13 +27,13 @@ export default function BlogSidebar({
           <div className="d-inline-flex justify-content-center">
             <div className="clip-animation image-double-animation overflow-hidden position-relative d-block rounded-circle tw-w-116-px tw-h-116-px">
               {/* Logo In Ấn Thời Đại thay cho ảnh chân dung — không có tác giả cá nhân */}
-              <img
+              <img loading="lazy" decoding="async"
                 src="/assets/images/tin-tuc/logo.png"
                 alt="In Ấn Thời Đại"
                 data-animate="true"
                 className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img"
               />
-              <img src="/assets/images/tin-tuc/logo.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+              <img loading="lazy" decoding="async" src="/assets/images/tin-tuc/logo.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
             </div>
           </div>
           <div className="tw-mt-8">
@@ -95,13 +95,13 @@ export default function BlogSidebar({
                     href={`/tin-tuc/${post.slug}`}
                     className="clip-animation image-double-animation overflow-hidden position-relative d-inline-block tw-rounded-lg tw-w-90-px tw-h-92-px w-auto flex-shrink-0"
                   >
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={post.coverImageUrl}
                       alt={post.title}
                       data-animate="true"
                       className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img"
                     />
-                    <img src={post.coverImageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                    <img loading="lazy" decoding="async" src={post.coverImageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                   </Link>
                   <div className="flex-grow-1">
                     <div className="d-flex align-items-center tw-gap-4">

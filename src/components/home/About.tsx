@@ -6,8 +6,8 @@ export default function About() {
     <>
               
       <section className="about-new py-120 section-bg-gradient-two position-relative overflow-hidden position-relative">
-          <img src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
-          <img src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
+          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
+          <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
       
           <div className="container">
               <div className="row gy-4">
@@ -82,23 +82,23 @@ export default function About() {
                           </div>
                           <div className="tw-pt-9 position-relative">
                               <div className="clip-animation image-double-animation overflow-hidden tw-rounded-xl overflow-x-hidden w-100 h-100 max-w-530-px">
-                                  <img src="/assets/images/thumbs/about-factory.webp" alt="Toàn cảnh xưởng sản xuất In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                                  <img src="/assets/images/thumbs/about-factory.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-factory.webp" alt="Toàn cảnh xưởng sản xuất In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-factory.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                               </div>
                               <div className="position-absolute top-0 start-50 translate-middle-x z-1">
-                                  <img src="/assets/images/shapes/badge.png" alt="Badge Image" className="left-right-animation" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/shapes/badge.png" alt="Badge Image" className="left-right-animation" />
                               </div>
                           </div>
                           <div className="about-img-two move-on-cursor-hover" data-value="6">
                               <div className="clip-animation image-double-animation overflow-hidden tw-rounded-xl overflow-x-hidden w-100 h-100">
-                                  <img src="/assets/images/thumbs/about-flexo.webp" alt="In Flexo thùng carton tại xưởng" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                                  <img src="/assets/images/thumbs/about-flexo.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-flexo.webp" alt="In Flexo thùng carton tại xưởng" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-flexo.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                               </div>
                           </div>
                           <div className="about-img-three move-on-cursor-hover" data-value="20">
                               <div className="clip-animation image-double-animation overflow-hidden tw-rounded-xl overflow-x-hidden w-100 h-100">
-                                  <img src="/assets/images/thumbs/about-finishing.webp" alt="Gia công sau in: gấp dán hộp" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                                  <img src="/assets/images/thumbs/about-finishing.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-finishing.webp" alt="Gia công sau in: gấp dán hộp" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/about-finishing.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                               </div>
                           </div>
                       </div>

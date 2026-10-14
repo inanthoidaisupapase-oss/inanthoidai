@@ -62,8 +62,11 @@ export default function TemplateRuntime() {
       window.ScrollTrigger?.refresh();
     };
     const fontsReady = document.fonts?.ready ?? Promise.resolve();
+    // Ảnh loading="lazy" (dưới màn hình đầu) chỉ tải khi cuộn tới gần — nếu chờ cả
+    // chúng thì Promise này không bao giờ resolve. Chỉ chờ ảnh nạp ngay; ảnh lazy
+    // được xử lý bằng listener onLazyLoad bên dưới.
     const imagesReady = new Promise<void>((resolve) => {
-      const pending = Array.from(document.images).filter((img) => !img.complete);
+      const pending = Array.from(document.images).filter((img) => !img.complete && img.loading !== 'lazy');
       if (pending.length === 0) { resolve(); return; }
       let remaining = pending.length;
       const onSettle = () => { remaining -= 1; if (remaining <= 0) resolve(); };
@@ -74,8 +77,26 @@ export default function TemplateRuntime() {
     });
     Promise.all([fontsReady, imagesReady]).then(refreshAgain);
 
+    // Ảnh lazy tải xong có thể đổi chiều cao section → tính lại vị trí trigger.
+    // Sự kiện load của <img> không nổi bọt nên bắt ở pha capture; gom nhiều ảnh tải
+    // liền nhau thành một lần refresh (debounce) để không ép layout liên tục.
+    let lazyTimer: ReturnType<typeof setTimeout> | undefined;
+    const onLazyLoad = (e: Event) => {
+      const t = e.target;
+      if (!(t instanceof HTMLImageElement) || t.loading !== 'lazy') return;
+      clearTimeout(lazyTimer);
+      lazyTimer = setTimeout(() => {
+        if (cancelled) return;
+        window.AOS?.refresh();
+        window.ScrollTrigger?.refresh();
+      }, 300);
+    };
+    document.addEventListener('load', onLazyLoad, true);
+
     return () => {
       cancelled = true;
+      clearTimeout(lazyTimer);
+      document.removeEventListener('load', onLazyLoad, true);
       cleanupRef.current();
     };
   }, [pathname]);

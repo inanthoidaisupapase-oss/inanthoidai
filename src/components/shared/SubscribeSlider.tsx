@@ -59,7 +59,7 @@ function SubscribeRow({ images, className, reverse }: { images: string[]; classN
           <SwiperSlide key={`${src}-${i}`}>
             <div className="position-relative d-block">
               <div className="tw-rounded-lg overflow-hidden tw-w-90-px tw-h-92-px">
-                <img src={src} alt="Sản phẩm bao bì giấy Thời Đại" className="tw-rounded-md w-100 h-100 object-fit-cover" />
+                <img loading="lazy" decoding="async" src={src} alt="Sản phẩm bao bì giấy Thời Đại" className="tw-rounded-md w-100 h-100 object-fit-cover" />
               </div>
             </div>
           </SwiperSlide>

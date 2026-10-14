@@ -11,8 +11,8 @@ export default function PostCard({ post }: { post: Post }) {
       <div className="tw-rounded-2xl bg-neutral-50 overflow-hidden border border-neutral-100 image-double-animation border-top-0 h-100">
         <Link href={`/tin-tuc/${post.slug}`} className="clip-animation overflow-hidden position-relative d-block">
           {/* TODO ảnh: ảnh bìa bài viết — xem docs/IMAGE-GUIDE.md */}
-          <img src={post.coverImageUrl} alt={post.title} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-          <img src={post.coverImageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+          <img loading="lazy" decoding="async" src={post.coverImageUrl} alt={post.title} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+          <img loading="lazy" decoding="async" src={post.coverImageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
         </Link>
         <div className="tw-pt-7 tw-px-7 tw-pb-8">
           <div className="d-flex align-items-center tw-gap-305 flex-wrap">

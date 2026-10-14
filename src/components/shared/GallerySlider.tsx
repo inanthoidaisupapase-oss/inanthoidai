@@ -43,8 +43,8 @@ export default function GallerySlider({ images }: { images: string[] }) {
               <div className="d-flex align-items-end w-100">
                 <div className="w-100">
                   <Link href="/san-pham" aria-label="Xem sản phẩm" className="clip-animation image-double-animation overflow-hidden position-relative d-block tw-rounded-lg">
-                    <img src={src} alt="" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                    <img src={src} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                    <img loading="lazy" decoding="async" src={src} alt="" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                    <img loading="lazy" decoding="async" src={src} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                   </Link>
                 </div>
               </div>

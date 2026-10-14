@@ -28,7 +28,7 @@ export default function MobileMenu() {
       <div className="mobile-menu__inner">
         <Link href="/" className="mobile-menu__logo">
           {/* TODO ảnh: logo In Ấn Thời Đại — xem docs/IMAGE-GUIDE.md */}
-          <img src="/assets/images/logo/logo.png" alt={site.name} />
+          <img loading="lazy" decoding="async" src="/assets/images/logo/logo.png" alt={site.name} />
         </Link>
 
         <div className="mobile-menu__menu">

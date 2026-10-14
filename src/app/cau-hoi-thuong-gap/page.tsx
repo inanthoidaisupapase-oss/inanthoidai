@@ -106,7 +106,7 @@ export default function FaqPage() {
                     <div className="d-flex align-items-center tw-gap-52-px flex-wrap">
                       <div className="d-flex align-items-center tw-gap-3 animation-item">
                         <span className="tw-w-12 tw-h-12 border border-white d-lg-flex d-none justify-content-center align-items-center text-main-600 rounded-circle flex-shrink-0 flex-grow-1 bg-white">
-                          <img src="/assets/images/icons/icon-phone.png" alt="" className="animate__heartBeat" />
+                          <img loading="lazy" decoding="async" src="/assets/images/icons/icon-phone.png" alt="" className="animate__heartBeat" />
                         </span>
                         <div className="flex-grow-1">
                           <span className="text-neutral-600 tw-text-sm d-block">Gọi ngay</span>
@@ -116,7 +116,7 @@ export default function FaqPage() {
                       </div>
                       <div className="d-flex align-items-center tw-gap-3 animation-item">
                         <span className="tw-w-12 tw-h-12 border border-white d-lg-flex d-none justify-content-center align-items-center text-main-600 rounded-circle flex-shrink-0 flex-grow-1 bg-white">
-                          <img src="/assets/images/icons/icon-envelope.png" alt="" className="animate__heartBeat" />
+                          <img loading="lazy" decoding="async" src="/assets/images/icons/icon-envelope.png" alt="" className="animate__heartBeat" />
                         </span>
                         <div className="flex-grow-1">
                           <span className="text-neutral-600 tw-text-sm d-block">Gửi email</span>
@@ -152,8 +152,8 @@ export default function FaqPage() {
                   <div className="position-relative d-block h-100">
                     <div className="clip-animation image-double-animation overflow-hidden position-relative d-block tw-rounded-lg tw-rounded-36-px h-100">
                       {/* TODO ảnh: ảnh văn phòng/xưởng Thời Đại — xem docs/IMAGE-GUIDE.md */}
-                      <img src="/assets/images/thumbs/contact-section-img.webp" alt="Văn phòng In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                      <img src="/assets/images/thumbs/contact-section-img.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img loading="lazy" decoding="async" src="/assets/images/thumbs/contact-section-img.webp" alt="Văn phòng In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img loading="lazy" decoding="async" src="/assets/images/thumbs/contact-section-img.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                     </div>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function FaqPage() {
                     <div className="tw-pt-9 tw-px-36-px tw-pb-14 hover-bg-white tw-duration-200 tw-rounded-top-20-px group group-item hover-shadow-one h-100 animation-item section-bg d-flex flex-column">
                       <div className="max-w-230-px d-flex flex-column h-100">
                         <span className="d-flex">
-                          <img src={`/assets/images/icons/${s.icon}`} alt="" className="text-invert-black group-hover-item-text-invert-main-600 tw-duration-200 animate__bounce" />
+                          <img loading="lazy" decoding="async" src={`/assets/images/icons/${s.icon}`} alt="" className="text-invert-black group-hover-item-text-invert-main-600 tw-duration-200 animate__bounce" />
                         </span>
                         <div className="tw-mt-12 d-flex flex-column flex-grow-1">
                           <h2 className="tw-text-xl tw-leading-155 text-capitalize">{s.title}</h2>

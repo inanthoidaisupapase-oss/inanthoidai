@@ -72,12 +72,12 @@ export default function WorkingProcess({
               <div className="working-process text-center group group-item position-relative animation-item h-100 d-flex flex-column">
                 {step.arrow && (
                   <div className="position-absolute tw-start-75-percent top-0 tw-mt-10 min-w-max d-xl-block d-none">
-                    <img src={`/assets/images/shapes/${step.arrow}`} alt="" className="left-right-animation" />
+                    <img loading="lazy" decoding="async" src={`/assets/images/shapes/${step.arrow}`} alt="" className="left-right-animation" />
                   </div>
                 )}
                 <div className="tw-w-116-px tw-h-116-px mx-auto">
                   <span className="tw-w-116-px tw-h-116-px bg-neutral-50 d-flex justify-content-center align-items-center rounded-circle tw-duration-300 group-hover-bg-main-two-600">
-                    <img src={`/assets/images/icons/${step.icon}`} alt="" className="group-hover-item-text-invert-white tw-duration-300 animate__heartBeat" />
+                    <img loading="lazy" decoding="async" src={`/assets/images/icons/${step.icon}`} alt="" className="group-hover-item-text-invert-white tw-duration-300 animate__heartBeat" />
                   </span>
                   <span className="bg-main-600 rounded-pill tw-px-4 tw-py-1 text-white tw-text-sm fw-medium translate-y--8-px">{step.step}</span>
                 </div>

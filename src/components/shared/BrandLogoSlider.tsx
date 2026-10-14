@@ -53,7 +53,7 @@ export default function BrandLogoSlider() {
         {loopSlides.map((src, i) => (
           <SwiperSlide key={`${src}-${i}`}>
             <div className="d-flex justify-content-center tw-duration-300">
-              <img src={src} alt="Logo khách hàng doanh nghiệp" />
+              <img loading="lazy" decoding="async" src={src} alt="Logo khách hàng doanh nghiệp" />
             </div>
           </SwiperSlide>
         ))}

@@ -61,7 +61,7 @@ function MemberSlide({ member }: { member: TeamMember }) {
     <div className="team-carousel-member">
       <div className="position-relative overflow-hidden tw-rounded-md tw-mb-5 team-carousel-media">
         {member.photoUrl ? (
-          <img
+          <img loading="lazy" decoding="async"
             src={member.photoUrl}
             alt={member.name}
             className="team-carousel-photo w-100 h-100 object-fit-cover"

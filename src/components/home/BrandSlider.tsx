@@ -26,7 +26,7 @@ function MarqueeRow({ logos, direction }: { logos: string[]; direction: 'left' |
                 className="brand-new-marquee-item animation-item d-flex justify-content-center align-items-center"
                 key={`${copy}-${i}`}
               >
-                <img src={src} alt="Logo khách hàng doanh nghiệp" className="animate__wobble" />
+                <img loading="lazy" decoding="async" src={src} alt="Logo khách hàng doanh nghiệp" className="animate__wobble" />
               </div>
             ))}
           </div>

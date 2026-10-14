@@ -635,8 +635,10 @@ function tp_clipAnimation() {
     for (let i = 0; i < 9; i++) {
       const mask = document.createElement("div");
       mask.className = `mask mask-${i + 1}`;
+      // backgroundImage gán trễ (ScrollTrigger bên dưới) — gán ngay thì 9 mask
+      // của MỌI .clip-animation trên trang tải ảnh từ đầu, vô hiệu loading="lazy"
+      // của <img> (tối ưu PageSpeed).
       Object.assign(mask.style, {
-        backgroundImage: `url(${url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         position: "absolute",
@@ -644,6 +646,20 @@ function tp_clipAnimation() {
       });
       wrapper.appendChild(mask);
     }
+
+    // Gán ảnh nền khi wrapper còn cách mép dưới viewport ~1000px — trước điểm
+    // chạy hiệu ứng ("top 75%") đủ xa để ảnh kịp tải (cùng URL với <img> lazy
+    // nên thường đã có sẵn trong cache).
+    ScrollTrigger.create({
+      trigger: wrapper,
+      start: "top bottom+=1000",
+      once: true,
+      onEnter: () => {
+        wrapper.querySelectorAll(".mask").forEach((m) => {
+          m.style.backgroundImage = `url(${url})`;
+        });
+      },
+    });
   });
 
   // Animate masks

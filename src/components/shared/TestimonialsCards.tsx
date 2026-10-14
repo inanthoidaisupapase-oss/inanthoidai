@@ -66,7 +66,7 @@ export default function TestimonialsCards({ items }: { items: Testimonial[] }) {
             <div className="testimonials-item bg-white tw-rounded-20-px shadow-sm tw-px-6 tw-pt-9 tw-pb-15 tw-duration-300 h-100">
               <span className="d-block tw-w-16 tw-h-16">
                 {/* TODO ảnh: dùng chung ảnh sản phẩm đã giao của đánh giá trang chủ — xem docs/IMAGE-GUIDE.md */}
-                <img src={item.image} alt="" className="tw-w-16 tw-h-16 rounded-circle object-fit-cover" />
+                <img loading="lazy" decoding="async" src={item.image} alt="" className="tw-w-16 tw-h-16 rounded-circle object-fit-cover" />
               </span>
               <div className="tw-mt-4">
                 <h2 className="tw-text-base tw-mb-1 tw-duration-300">{item.name}</h2>

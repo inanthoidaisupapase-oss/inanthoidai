@@ -17,13 +17,13 @@ export default function PostListItem({ post }: { post: Post }) {
           className="clip-animation image-double-animation overflow-hidden position-relative d-block tw-rounded-lg"
         >
           {/* TODO ảnh: ảnh bìa bài viết — xem docs/IMAGE-GUIDE.md */}
-          <img
+          <img loading="lazy" decoding="async"
             src={post.coverImageUrl}
             alt={post.title}
             data-animate="true"
             className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img"
           />
-          <img src={post.coverImageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+          <img loading="lazy" decoding="async" src={post.coverImageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
         </Link>
         <div className="d-flex tw-gap-2 position-absolute start-0 bottom-0 tw-mb-5 tw-ms-5 z-1">
           <span className="bg-white rounded-pill text-body-11 tw-px-4 tw-p-105 tw-text-sm fw-semibold">
@@ -35,7 +35,7 @@ export default function PostListItem({ post }: { post: Post }) {
         <div className="d-flex align-items-center tw-gap-4">
           <div className="d-flex align-items-center tw-gap-2">
             <span className="">
-              <img src="/assets/images/thumbs/meta-img.png" alt="Ảnh đại diện tác giả" />
+              <img loading="lazy" decoding="async" src="/assets/images/thumbs/meta-img.png" alt="Ảnh đại diện tác giả" />
             </span>
             <span className="text-neutral-500 fw-semibold">{post.author}</span>
           </div>

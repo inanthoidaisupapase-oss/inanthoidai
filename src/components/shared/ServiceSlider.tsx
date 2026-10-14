@@ -47,7 +47,7 @@ export default function ServiceSlider({ services }: { services: Service[] }) {
                   <div className="position-relative">
                     <div className="overflow-hidden tw-rounded-xl bg-neutral-50">
                       {/* TODO ảnh: ảnh thật của dịch vụ {service.name} — xem docs/IMAGE-GUIDE.md */}
-                      <img src={service.imageUrl} alt={service.name} className="tw-rounded-xl overflow-hidden position-relative active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-05 h-100 w-100 object-fit-cover" />
+                      <img loading="lazy" decoding="async" src={service.imageUrl} alt={service.name} className="tw-rounded-xl overflow-hidden position-relative active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-05 h-100 w-100 object-fit-cover" />
                     </div>
                     <div className="position-absolute start-50 translate-middle-x bottom-0 tw--mt-45-px">
                       <div className="d-inline-flex bg-white tw-p-5 rounded-circle active-slider-animate-updown tw-duration-600 transition-delay-07 rounded-left-right-shape ">
@@ -83,7 +83,7 @@ export default function ServiceSlider({ services }: { services: Service[] }) {
             </button>
           </div>
           <span className="">
-            <img src="/assets/images/icons/long-arrow-right.png" alt="" />
+            <img loading="lazy" decoding="async" src="/assets/images/icons/long-arrow-right.png" alt="" />
           </span>
         </div>
 
@@ -103,7 +103,7 @@ export default function ServiceSlider({ services }: { services: Service[] }) {
               <SwiperSlide className="overflow-hidden" key={service.slug}>
                 <div className="service-small-image-item tw-rounded-xl overflow-hidden border border-white">
                   {/* Ảnh @2x (618×398) — width/height giữ khung hiển thị 309×199 như placeholder của template */}
-                  <img src={`/assets/images/thumbs/service-${service.slug}-small.webp`} alt={service.name} width={309} height={199} />
+                  <img loading="lazy" decoding="async" src={`/assets/images/thumbs/service-${service.slug}-small.webp`} alt={service.name} width={309} height={199} />
                 </div>
               </SwiperSlide>
             ))}

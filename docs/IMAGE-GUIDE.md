@@ -52,7 +52,7 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/icons/icon-phone.png` | 21 × 21 px | app/cau-hoi-thuong-gap/page.tsx<br>components/layout/Header.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/long-arrow-right.png` | 161 × 15 px | components/shared/ServiceSlider.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/quate-new-icon.png` | 192 × 142 px | components/shared/TestimonialsSlider.tsx | Icon của template — giữ nguyên được |
-| `/assets/images/icons/zalo-icon.webp` | — | components/layout/FloatingContact.tsx | Icon của template — giữ nguyên được |
+| `/assets/images/icons/zalo-icon.webp` | 96 × 96 px (hiển thị 24–48 px) | components/layout/FloatingContact.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/logo/logo-thoi-dai.webp` | 600 × 145 px (nền trong suốt, tỉ lệ ~4,1:1; bản gốc LOGO THOI DAI-01.png 13262×3199 chỉ để lưu trữ) | components/layout/Footer.tsx<br>components/layout/Header.tsx | Ảnh thật tương ứng |
 | `/assets/images/logo/favicon.png` | 64 × 64 px | app/layout.tsx | Favicon — biểu tượng rút gọn của logo |
 | `/assets/images/tin-tuc/logo.png` | 116 × 116 px (nên làm 232 × 232 px, vuông, chừa lề ~10–15% vì khung bo tròn) | components/shared/BlogSidebar.tsx | Logo In Ấn Thời Đại trong widget thương hiệu ở sidebar trang tin tức / chi tiết tin |
@@ -69,7 +69,7 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/shapes/cursor-shape.png` | 119 × 84 px | app/dich-vu/page.tsx<br>app/gioi-thieu/page.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/curve-star-shape.png` | 83 × 93 px | components/home/Cta.tsx<br>components/home/GetStarted.tsx<br>components/home/TopCategories.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/design-your-own.png` | 264 × 190 px | app/gioi-thieu/page.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
-| `/assets/images/shapes/products-badge.png` | 165 × 68 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
+| `/assets/images/shapes/products-badge.webp` | 165 × 68 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/rounded-element.png` | 167 × 54 px | components/home/Banner.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/rounded-star.png` | 153 × 152 px | app/gioi-thieu/page.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
 | `/assets/images/shapes/testimonials-new-shape1.png` | 82 × 84 px | components/home/Cta.tsx<br>components/home/GetStarted.tsx<br>components/layout/Footer.tsx<br>components/shared/TestimonialsSlider.tsx | Hoạ tiết trang trí của template — giữ nguyên được, không cần thay |
@@ -82,7 +82,7 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/gioi-thieu/xuong-san-xuat.webp` | 1194 × 1317 px | app/gioi-thieu/page.tsx | Ảnh thật tương ứng |
 | `/assets/images/gioi-thieu/may-in-offset.webp` | 1194 × 1317 px | app/gioi-thieu/page.tsx | Ảnh thật tương ứng |
 | `/assets/images/gioi-thieu/thanh-pham-bao-bi.webp` | 1071 × 1469 px | app/gioi-thieu/page.tsx | Ảnh thật tương ứng |
-| `/assets/images/thumbs/banner-all-products.webp` | — | components/home/Banner.tsx | Ảnh thật tương ứng |
+| `/assets/images/thumbs/banner-all-products.webp` | 1900 × 584 px (hiển thị tối đa ~1888 px ở màn 1920) | components/home/Banner.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/blog-details-img.png` | 921 × 431 px | lib/data/seed/posts.json | Ảnh bìa bài viết |
 | `/assets/images/thumbs/blog-img1.png` | 404 × 317 px | lib/data/seed/posts.json | Ảnh bìa bài viết |
 | `/assets/images/thumbs/blog-img2.png` | 404 × 317 px | lib/data/seed/posts.json | Ảnh bìa bài viết |
@@ -143,5 +143,6 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/thumbs/testimonials-thanh-ro.webp` | 535 × 497 px | lib/data/seed/testimonials.json<br>components/shared/TestimonialsCards.tsx (avatar tròn 64 × 64 px, trang Giới thiệu) | Ảnh sản phẩm đã giao cho khách, dùng kèm lời đánh giá; ở trang Giới thiệu bị cắt tròn (object-fit cover) nên chủ thể nên nằm giữa khung |
 | `/assets/images/thumbs/testimonials-thi-hien.webp` | 1300 × 1209 px | lib/data/seed/testimonials.json<br>components/shared/TestimonialsCards.tsx (avatar tròn 64 × 64 px, trang Giới thiệu) | Ảnh sản phẩm đã giao cho khách, dùng kèm lời đánh giá; ở trang Giới thiệu bị cắt tròn (object-fit cover) nên chủ thể nên nằm giữa khung |
 | `/assets/images/thumbs/top-categories-packaging.webp` | — | components/home/TopCategories.tsx | Ảnh đại diện nhóm sản phẩm |
+| `/assets/images/thumbs/top-categories-new-img1..6.webp` | 700 × 460 px (img1: 548 × 360 px) | components/home/TopCategories.tsx | Ảnh placeholder của template cho 6 ô danh mục — cần ảnh thật từng danh mục (đã chuyển PNG → WebP, PNG gốc vẫn giữ) |
 
 _Sinh tự động bởi `tools/gen-image-guide.mjs` — chạy lại sau khi thêm ảnh mới._

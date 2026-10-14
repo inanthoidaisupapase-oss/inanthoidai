@@ -40,8 +40,8 @@ export default function BlogSlider({ posts }: { posts: Post[] }) {
                 <div className="position-relative">
                   <Link href={`/tin-tuc/${post.slug}`} className="clip-animation overflow-hidden position-relative d-block">
                     {/* TODO ảnh: ảnh bìa bài viết — xem docs/IMAGE-GUIDE.md */}
-                    <img src={post.coverImageUrl} alt={post.title} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                    <img src={post.coverImageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                    <img loading="lazy" decoding="async" src={post.coverImageUrl} alt={post.title} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                    <img loading="lazy" decoding="async" src={post.coverImageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                   </Link>
                   <div className="bg-white d-inline-flex flex-column position-absolute top-0 tw-end-0 tw-mt-4 tw-me-4 tw-rounded-lg z- overflow-hidden">
                     <span className="h2 text-white bg-primary-new tw-py-2 tw-px-4">{String(d.getDate()).padStart(2, '0')}</span>

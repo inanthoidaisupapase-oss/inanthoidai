@@ -3,14 +3,14 @@ import { getCategories, getProducts } from '@/lib/data';
 
 /**
  * 6 nhóm sản phẩm hiển thị ở trang chủ: 3 danh mục thật có sẵn hàng + 3 nhóm in theo yêu cầu.
- * Cố định 6 vì chỉ có 6 ảnh placeholder top-categories-new-img1..6.png của template — categories.json
+ * Cố định 6 vì chỉ có 6 ảnh placeholder top-categories-new-img1..6.webp của template — categories.json
  * đã có 12 danh mục (9 danh mục sau chưa có sản phẩm/ảnh thật) nên KHÔNG map trực tiếp toàn bộ
  * getCategories() vào đây, chỉ lấy đúng 3 danh mục đang có hàng thật.
  */
 const extraGroups = [
-  { name: 'Túi xách giấy', href: '/san-pham?danh-muc=tui-xach-giay', note: 'In theo yêu cầu', image: 'top-categories-new-img4.png' },
-  { name: 'Tem, nhãn, decal', href: '/san-pham?danh-muc=tem-nhan-decal', note: 'In theo yêu cầu', image: 'top-categories-new-img5.png' },
-  { name: 'Catalogue & brochure', href: '/san-pham?danh-muc=catalogue-brochure', note: 'In theo yêu cầu', image: 'top-categories-new-img6.png' },
+  { name: 'Túi xách giấy', href: '/san-pham?danh-muc=tui-xach-giay', note: 'In theo yêu cầu', image: 'top-categories-new-img4.webp' },
+  { name: 'Tem, nhãn, decal', href: '/san-pham?danh-muc=tem-nhan-decal', note: 'In theo yêu cầu', image: 'top-categories-new-img5.webp' },
+  { name: 'Catalogue & brochure', href: '/san-pham?danh-muc=catalogue-brochure', note: 'In theo yêu cầu', image: 'top-categories-new-img6.webp' },
 ];
 
 export default async function TopCategories() {
@@ -24,7 +24,7 @@ export default async function TopCategories() {
       name: c.name,
       href: `/san-pham?danh-muc=${c.slug}`,
       note: `${products.filter((p) => p.categorySlug === c.slug).length} sản phẩm có sẵn`,
-      image: `top-categories-new-img${i + 1}.png`,
+      image: `top-categories-new-img${i + 1}.webp`,
     })),
     ...extraGroups,
   ];
@@ -35,11 +35,11 @@ export default async function TopCategories() {
         Sản phẩm
       </h2>
 
-      <img src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
-      <img src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
-      <img src="/assets/images/shapes/curve-star-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none tw-mt-17 tw-me-17 animate__wobble__two" />
+      <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-start-0 top-0 z-n1 d-md-block d-none" />
+      <img loading="lazy" decoding="async" src="/assets/images/shapes/boxed-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none" />
+      <img loading="lazy" decoding="async" src="/assets/images/shapes/curve-star-shape.png" alt="" className="position-absolute tw-end-0 top-0 z-n1 d-md-block d-none tw-mt-17 tw-me-17 animate__wobble__two" />
       <div className="position-absolute z-n1 end-0 bottom-0 tw-pb-15 tw-mb-5 tw-pe-15 tw-me-5 d-lg-block d-none">
-        <img src="/assets/images/shapes/banner-element-img4.png" alt="" className="animation-rotate-right" />
+        <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img4.png" alt="" className="animation-rotate-right" />
       </div>
 
       <div className="container">
@@ -79,8 +79,8 @@ export default async function TopCategories() {
                   <div className="tw-rounded-2xl bg-white overflow-hidden border border-neutral-100 tw-p-4 image-double-animation h-100">
                     <Link href={card.href} className="clip-animation overflow-hidden position-relative d-block tw-rounded-xl">
                       {/* Ảnh thật nhóm sản phẩm do người dùng cung cấp — đã thay xong */}
-                      <img src={`/assets/images/thumbs/${card.image}`} alt={card.name} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                      <img src={`/assets/images/thumbs/${card.image}`} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img loading="lazy" decoding="async" src={`/assets/images/thumbs/${card.image}`} alt={card.name} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img loading="lazy" decoding="async" src={`/assets/images/thumbs/${card.image}`} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                     </Link>
                     <div className="tw-mt-4 d-flex align-items-center justify-content-between tw-gap-4 tw-px-2">
                       <div className="">
@@ -105,8 +105,8 @@ export default async function TopCategories() {
             <div className="h-100 position-relative">
               <div className="clip-animation overflow-hidden position-relative d-block tw-rounded-2xl h-100 overflow-hidden">
                 {/* Ảnh poster bao bì do người dùng cung cấp — xem docs/IMAGE-GUIDE.md */}
-                <img src="/assets/images/thumbs/top-categories-packaging.webp" alt="In ấn & thiết kế bao bì — In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                <img src="/assets/images/thumbs/top-categories-packaging.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                <img loading="lazy" decoding="async" src="/assets/images/thumbs/top-categories-packaging.webp" alt="In ấn & thiết kế bao bì — In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                <img loading="lazy" decoding="async" src="/assets/images/thumbs/top-categories-packaging.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                 <div className="top-categories-banner-overlay" aria-hidden="true"></div>
               </div>
               <div className="position-absolute bottom-0 start-0 z-1 tw-ps-40-px tw-pe-4 tw-pb-48-px">

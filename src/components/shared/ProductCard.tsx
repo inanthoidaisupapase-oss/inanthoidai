@@ -20,13 +20,13 @@ export default function ProductCard({ product }: { product: Product }) {
         <Link href={`/san-pham/${product.slug}`} className="position-relative d-block">
           <div className="clip-animation overflow-hidden position-relative d-block tw-rounded-xl">
             {/* TODO ảnh: ảnh thật sản phẩm — xem docs/IMAGE-GUIDE.md */}
-            <img
+            <img loading="lazy" decoding="async"
               src={product.images[0]}
               alt={product.name}
               data-animate="true"
               className="image-double-animation__element w-100 tw-h-340-px object-fit-cover clip-animation-img"
             />
-            <img
+            <img loading="lazy" decoding="async"
               src={product.images[0]}
               alt=""
               className="image-double-animation__element w-100 tw-h-340-px object-fit-cover clip-animation-img"

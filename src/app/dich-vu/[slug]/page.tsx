@@ -38,8 +38,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <div className="container max-w-1100-px">
           <div className="">
             <div className="clip-animation image-double-animation overflow-hidden position-relative d-block tw-rounded-lg">
-              <img src={service.imageUrl} alt={service.name} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-              <img src={service.imageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+              <img loading="lazy" decoding="async" src={service.imageUrl} alt={service.name} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+              <img loading="lazy" decoding="async" src={service.imageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
             </div>
 
             <div className="tw-mt-8">
@@ -55,7 +55,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                     <div className="tw-duration-200 group group-item pb-sm-0 pb-4 animation-item">
                       <div className="max-w-230-px">
                         <span className="d-flex">
-                          <img src={`/assets/images/icons/${f.icon}`} alt="" className="text-invert-black group-hover-item-text-invert-main-600 tw-duration-200 animate__bounce" />
+                          <img loading="lazy" decoding="async" src={`/assets/images/icons/${f.icon}`} alt="" className="text-invert-black group-hover-item-text-invert-main-600 tw-duration-200 animate__bounce" />
                         </span>
                         <div className="tw-mt-12">
                           <h2 className="tw-text-xl tw-leading-155 text-capitalize">{f.title}</h2>
@@ -102,8 +102,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 {detail.illustrations.map((src) => (
                   <div className="col-sm-6" key={src}>
                     <div className="clip-animation image-double-animation overflow-hidden position-relative d-block tw-rounded-20-px">
-                      <img src={src} alt={service.name} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                      <img src={src} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img loading="lazy" decoding="async" src={src} alt={service.name} data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                      <img loading="lazy" decoding="async" src={src} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                     </div>
                   </div>
                 ))}

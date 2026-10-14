@@ -39,7 +39,7 @@ export default function ContactPage() {
             <div className="col-xl-4 col-md-6">
               <div className="h-100 border border-neutral-100 hover-border-neutral-600 tw-duration-300 tw-px-40-px tw-py-11 tw-rounded-20-px d-flex align-items-center tw-gap-5 group group-item animation-item">
                 <span className="tw-w-16 tw-h-16 bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center group-hover-bg-main-two-600 tw-duration-300 flex-shrink-0">
-                  <img src="/assets/images/icons/icon-phone-msg.png" alt="Điện thoại"
+                  <img loading="lazy" decoding="async" src="/assets/images/icons/icon-phone-msg.png" alt="Điện thoại"
                     className="group-hover-item-text-invert-white tw-duration-300 animate__heartBeat" />
                 </span>
                 <div className="">
@@ -53,7 +53,7 @@ export default function ContactPage() {
             <div className="col-xl-4 col-md-6">
               <div className="h-100 border border-neutral-100 hover-border-neutral-600 tw-duration-300 tw-px-40-px tw-py-11 tw-rounded-20-px d-flex align-items-center tw-gap-5 group group-item animation-item">
                 <span className="tw-w-16 tw-h-16 bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center group-hover-bg-main-two-600 tw-duration-300 flex-shrink-0">
-                  <img src="/assets/images/icons/icon-location-circle.png" alt="Địa chỉ"
+                  <img loading="lazy" decoding="async" src="/assets/images/icons/icon-location-circle.png" alt="Địa chỉ"
                     className="group-hover-item-text-invert-white tw-duration-300 animate__heartBeat" />
                 </span>
                 <div className="">
@@ -65,7 +65,7 @@ export default function ContactPage() {
             <div className="col-xl-4 col-md-6">
               <div className="h-100 border border-neutral-100 hover-border-neutral-600 tw-duration-300 tw-px-40-px tw-py-11 tw-rounded-20-px d-flex align-items-center tw-gap-5 group group-item animation-item">
                 <span className="tw-w-16 tw-h-16 bg-neutral-200 rounded-circle d-flex justify-content-center align-items-center group-hover-bg-main-two-600 tw-duration-300 flex-shrink-0">
-                  <img src="/assets/images/icons/icon-envelope-ad.png" alt="Email"
+                  <img loading="lazy" decoding="async" src="/assets/images/icons/icon-envelope-ad.png" alt="Email"
                     className="group-hover-item-text-invert-white tw-duration-300 animate__heartBeat" />
                 </span>
                 <div className="">

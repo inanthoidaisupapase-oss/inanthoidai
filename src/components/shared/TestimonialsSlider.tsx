@@ -46,7 +46,7 @@ export default function TestimonialsSlider({ items }: { items: Testimonial[] }) 
                     <div className="active-slider-animate-updown transition-bounce tw-duration-600 transition-delay-1 h-100">
                       <div className="testimonials-new-img d-flex justify-content-center h-100 w-100">
                         {/* TODO ảnh: ảnh sản phẩm thật đã giao cho khách — xem docs/IMAGE-GUIDE.md */}
-                        <img src={item.image} alt="" className="h-100 object-fit-cover" />
+                        <img loading="lazy" decoding="async" src={item.image} alt="" className="h-100 object-fit-cover" />
                       </div>
                     </div>
                     <div className="d-flex align-items-center justify-content-between tw-gap-4 position-absolute bottom-0 start-0 w-100 tw-mb-4 tw-px-4 z-1 active-slider-animate-updown transition-bounce tw-duration-700 transition-delay-105">
@@ -59,16 +59,16 @@ export default function TestimonialsSlider({ items }: { items: Testimonial[] }) 
 
                   <div className="">
                     <div className="position-absolute testimonials-new-shape1">
-                      <img src="/assets/images/shapes/testimonials-new-shape1.png" alt="" className="animation-scalation" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/testimonials-new-shape1.png" alt="" className="animation-scalation" />
                     </div>
                     <div className="position-absolute testimonials-new-shape2">
-                      <img src="/assets/images/shapes/testimonials-new-shape2.png" alt="" className="animation-scalation" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/testimonials-new-shape2.png" alt="" className="animation-scalation" />
                     </div>
                     <div className="position-absolute d-sm-block d-none testimonials-new-shape3">
-                      <img src="/assets/images/logo/logo-xoay-tron.png" alt="" className="animation-rotate-right" />
+                      <img loading="lazy" decoding="async" src="/assets/images/logo/logo-xoay-tron.png" alt="" className="animation-rotate-right" />
                     </div>
                     <div className="position-absolute d-sm-block d-none testimonials-new-shape4">
-                      <img src="/assets/images/shapes/testimonials-new-shape4.png" alt="" className="animation-rotate-right" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/testimonials-new-shape4.png" alt="" className="animation-rotate-right" />
                     </div>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ export default function TestimonialsSlider({ items }: { items: Testimonial[] }) 
                   </ul>
                   <span className="tw-h-px w-100 bg-neutral-100 d-block tw-mt-10 tw-mb-6"></span>
                   <span className="quate-new-icon position-absolute tw-end-0 bottom-0 tw-me-12 tw-mb-13 opacity-25">
-                    <img src="/assets/images/icons/quate-new-icon.png" alt="" />
+                    <img loading="lazy" decoding="async" src="/assets/images/icons/quate-new-icon.png" alt="" />
                   </span>
                   <div className="d-flex align-items-center tw-gap-4">
                     <button type="button" aria-label="Đánh giá trước" className="btn bg-main-600 gradient-outline-bg-white hover-bg-animation hover-bg-animation-main-600 p-0 tw-w-11 tw-h-11 d-flex justify-content-center align-items-center tw-text-2xl text-white testimonials-new-btn-prev">

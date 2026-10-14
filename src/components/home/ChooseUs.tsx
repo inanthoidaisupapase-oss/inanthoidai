@@ -30,8 +30,8 @@ export default function ChooseUs() {
                       <div className="col-xl-6 col-lg-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                           <div className="position-relative tw-rounded-2xl overflow-hidden d-flex w-100 h-100">
                               <div className="clip-animation image-double-animation overflow-hidden tw-rounded-xl overflow-x-hidden w-100 h-100">
-                                  <img src="/assets/images/thumbs/choose-us-team.webp" alt="Tập thể nhân viên In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                                  <img src="/assets/images/thumbs/choose-us-team.webp" alt="Tập thể nhân viên In Ấn Thời Đại" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/choose-us-team.webp" alt="Tập thể nhân viên In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/choose-us-team.webp" alt="Tập thể nhân viên In Ấn Thời Đại" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                               </div>
                           </div>
                       </div>
@@ -45,7 +45,7 @@ export default function ChooseUs() {
                                           <span className="text-neutral-500 tw-text-lg tw-mt-2">Năm kinh nghiệm</span>
                                       </div>
                                       <div className="rounded-pill overflow-hidden">
-                                          <img src="/assets/images/thumbs/choose-us-factory.webp" alt="Xưởng in offset của In Ấn Thời Đại" width={227} height={98} className="group-hover-item-scale-12 tw-duration-300" />
+                                          <img loading="lazy" decoding="async" src="/assets/images/thumbs/choose-us-factory.webp" alt="Xưởng in offset của In Ấn Thời Đại" width={227} height={98} className="group-hover-item-scale-12 tw-duration-300" />
                                       </div>
                                   </div>
                                   <span className="border-bottom border-neutral-200 tw-h-px w-100"></span>
@@ -55,7 +55,7 @@ export default function ChooseUs() {
                                           <span className="text-neutral-500 tw-text-lg tw-mt-2">Khách hàng tin tưởng</span>
                                       </div>
                                       <div className="rounded-pill overflow-hidden">
-                                          <img src="/assets/images/thumbs/choose-us-boxes.webp" alt="Các mẫu hộp, túi giấy thành phẩm" width={229} height={122} className="group-hover-item-scale-12 tw-duration-300" />
+                                          <img loading="lazy" decoding="async" src="/assets/images/thumbs/choose-us-boxes.webp" alt="Các mẫu hộp, túi giấy thành phẩm" width={229} height={122} className="group-hover-item-scale-12 tw-duration-300" />
                                       </div>
                                   </div>
                               </div>
@@ -71,7 +71,7 @@ export default function ChooseUs() {
                       <div className="tw-pt-10 tw-pb-6 all-info-item animation-item max-w-330-px" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                           <div className="">
                               <span className="bg-white border border-neutral-100 rounded-circle tw-w-74-px tw-h-74-px d-flex justify-content-center align-items-center">
-                                  <img src="/assets/images/icons/choose-us-new-icon1.png" alt="" className="animate__heartBeat" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/icons/choose-us-new-icon1.png" alt="" className="animate__heartBeat" />
                               </span>
                               <h2 className="h4 tw-mt-6 tw-mb-4 text-capitalize text-reveal">Thiết kế đúng quy cách</h2>
                               <p className="text-neutral-500">Dao bế, biên dán, nếp gấp và dung sai được tính trước, để bản in ra đúng như bản duyệt.</p>
@@ -81,7 +81,7 @@ export default function ChooseUs() {
                       <div className="tw-pt-10 tw-pb-6 all-info-item animation-item max-w-330-px" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                           <div className="">
                               <span className="bg-white border border-neutral-100 rounded-circle tw-w-74-px tw-h-74-px d-flex justify-content-center align-items-center">
-                                  <img src="/assets/images/icons/choose-us-new-icon2.png" alt="" className="animate__heartBeat" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/icons/choose-us-new-icon2.png" alt="" className="animate__heartBeat" />
                               </span>
                               <h2 className="h4 tw-mt-6 tw-mb-4 text-capitalize text-reveal">Giá xưởng</h2>
                               <p className="text-neutral-500">In và gia công ngay tại xưởng, báo giá sát chi phí sản xuất thực tế, đặt số lượng càng lớn đơn giá càng tốt.</p>
@@ -91,7 +91,7 @@ export default function ChooseUs() {
                       <div className="tw-pt-10 tw-pb-6 all-info-item animation-item max-w-330-px" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                           <div className="">
                               <span className="bg-white border border-neutral-100 rounded-circle tw-w-74-px tw-h-74-px d-flex justify-content-center align-items-center">
-                                  <img src="/assets/images/icons/choose-us-new-icon3.png" alt="" className="animate__heartBeat" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/icons/choose-us-new-icon3.png" alt="" className="animate__heartBeat" />
                               </span>
                               <h2 className="h4 tw-mt-6 tw-mb-4 text-capitalize text-reveal">Không qua trung gian</h2>
                               <p className="text-neutral-500">Làm việc trực tiếp với người thiết kế và xưởng in, trao đổi nhanh, sửa file kịp thời, nắm rõ tiến độ đơn hàng.</p>

@@ -266,7 +266,7 @@ export default function HeaderSearch() {
                       i === activeIndex ? 'bg-neutral-100' : ''
                     }`}
                   >
-                    <img src={p.image} alt="" className="tw-w-14 tw-h-14 tw-rounded-lg object-fit-cover flex-shrink-0" />
+                    <img loading="lazy" decoding="async" src={p.image} alt="" className="tw-w-14 tw-h-14 tw-rounded-lg object-fit-cover flex-shrink-0" />
                     <span className="flex-grow-1" style={{ minWidth: 0 }}>
                       <span className="d-block text-heading fw-medium line-clamp-1">
                         {highlightMatch(p.name, trimmedKeyword)}

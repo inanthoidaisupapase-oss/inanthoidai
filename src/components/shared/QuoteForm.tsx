@@ -119,7 +119,7 @@ export default function QuoteForm() {
               <ul className="d-flex flex-column tw-gap-4">
                 {items.map((item) => (
                   <li className="d-flex align-items-center tw-gap-4" key={`${item.slug}-${item.packSize}`}>
-                    <img src={item.image} alt="" className="tw-w-16 tw-rounded-lg object-fit-cover flex-shrink-0" />
+                    <img loading="lazy" decoding="async" src={item.image} alt="" className="tw-w-16 tw-rounded-lg object-fit-cover flex-shrink-0" />
                     <div className="flex-grow-1">
                       <span className="text-heading fw-medium d-block">{item.name}</span>
                       <span className="text-neutral-500 tw-text-sm">
