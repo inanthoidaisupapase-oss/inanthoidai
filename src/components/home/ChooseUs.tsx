@@ -30,8 +30,8 @@ export default function ChooseUs() {
                       <div className="col-xl-6 col-lg-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
                           <div className="position-relative tw-rounded-2xl overflow-hidden d-flex w-100 h-100">
                               <div className="clip-animation image-double-animation overflow-hidden tw-rounded-xl overflow-x-hidden w-100 h-100">
-                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/choose-us-team.webp" alt="Tập thể nhân viên In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/choose-us-team.webp" alt="Tập thể nhân viên In Ấn Thời Đại" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/choose-us-team.webp" srcSet="/assets/images/thumbs/choose-us-team-820.webp 820w, /assets/images/thumbs/choose-us-team.webp 1272w" sizes="(max-width: 991px) 113vw, (max-width: 1199px) 55vw, 763px" alt="Tập thể nhân viên In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/choose-us-team.webp" srcSet="/assets/images/thumbs/choose-us-team-820.webp 820w, /assets/images/thumbs/choose-us-team.webp 1272w" sizes="(max-width: 991px) 113vw, (max-width: 1199px) 55vw, 763px" alt="Tập thể nhân viên In Ấn Thời Đại" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                               </div>
                           </div>
                       </div>

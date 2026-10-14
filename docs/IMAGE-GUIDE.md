@@ -102,7 +102,8 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/thumbs/brand-new-img6.png` | 110 × 32 px | components/home/BrandSlider.tsx<br>components/shared/BrandLogoSlider.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/choose-us-boxes.webp` | — | components/home/ChooseUs.tsx | Ảnh thật tương ứng |
 | `/assets/images/thumbs/choose-us-factory.webp` | — | components/home/ChooseUs.tsx | Ảnh thật tương ứng |
-| `/assets/images/thumbs/choose-us-team.webp` | — | components/home/ChooseUs.tsx | Ảnh thật tương ứng |
+| `/assets/images/thumbs/choose-us-team.webp` | 1272 × 720 px | components/home/ChooseUs.tsx | Ảnh thật tương ứng |
+| `/assets/images/thumbs/choose-us-team-820.webp` | 820 × 464 px | components/home/ChooseUs.tsx | Bản thu nhỏ của ảnh trên cho màn ≤ 575px (srcset) — thay ảnh gốc thì xuất lại bản này cùng nội dung |
 | `/assets/images/thumbs/contact-section-img.webp` | 517 × 638 px | app/cau-hoi-thuong-gap/page.tsx<br>app/gioi-thieu/page.tsx | Ảnh nhân viên tư vấn đang hỗ trợ khách hàng tại văn phòng — khối form liên hệ (đã thay bằng ảnh thật, nguồn: về chúng tôi/nhân viên tư vấn.png) |
 | `/assets/images/thumbs/graphics-img.png` | 723 × 659 px | app/dich-vu/page.tsx | Ảnh đội ngũ thiết kế đang dựng mẫu hoặc bản vẽ kỹ thuật dao bế — trang Dịch vụ |
 | `/assets/images/thumbs/home-img1.png` | 1920 × 2571 px | lib/data/seed/categories.json | Ảnh thật tương ứng |

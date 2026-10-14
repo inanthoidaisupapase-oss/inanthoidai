@@ -655,8 +655,11 @@ function tp_clipAnimation() {
       start: "top bottom+=1000",
       once: true,
       onEnter: () => {
+        // currentSrc: ảnh có srcset thì dùng đúng bản trình duyệt đã chọn (tránh tải
+        // thêm bản lớn); lúc này <img> lazy cùng URL đã bắt đầu tải nên currentSrc có giá trị.
+        const src = img.currentSrc || url;
         wrapper.querySelectorAll(".mask").forEach((m) => {
-          m.style.backgroundImage = `url(${url})`;
+          m.style.backgroundImage = `url(${src})`;
         });
       },
     });
