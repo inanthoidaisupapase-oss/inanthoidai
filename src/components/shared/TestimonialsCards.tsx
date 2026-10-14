@@ -22,10 +22,10 @@ import type { Testimonial } from '@/components/shared/TestimonialsSlider';
  * pauseOnMouseEnter: true — bản gốc không có, thêm theo yêu cầu (dừng tự chạy
  * khi rê chuột vào để đọc nội dung).
  *
- * Không dùng ảnh avatar khách hàng: dữ liệu có tên/chức danh/nội dung thật
- * (testimonials.json) nhưng không có ảnh chân dung thật của từng người — gắn
- * ảnh stock của template vào tên người thật sẽ là giả mạo danh tính, nên thay
- * bằng huy hiệu chữ cái đầu tên.
+ * Ảnh tròn ở đầu thẻ dùng lại `item.image` — cùng ảnh sản phẩm đã giao cho
+ * khách mà đánh giá ở trang chủ (TestimonialsSlider) đang hiển thị, lấy chung
+ * từ testimonials.json (theo yêu cầu người dùng). Đây là ảnh sản phẩm chứ
+ * không phải chân dung, nên alt để rỗng.
  *
  * loop=true + lặp lại danh sách 4 đánh giá thật 2 lần (8 thẻ, đủ cho
  * slidesPerView tối đa 5 loop mượt): theo yêu cầu rõ ràng của người dùng —
@@ -64,8 +64,9 @@ export default function TestimonialsCards({ items }: { items: Testimonial[] }) {
         {slides.map((item, i) => (
           <SwiperSlide className="tw-p-3" key={`${item.name}-${i}`}>
             <div className="testimonials-item bg-white tw-rounded-20-px shadow-sm tw-px-6 tw-pt-9 tw-pb-15 tw-duration-300 h-100">
-              <span className="tw-w-16 tw-h-16 rounded-circle bg-main-600 text-white d-flex align-items-center justify-content-center h4 mb-0">
-                {item.name.trim().charAt(0)}
+              <span className="d-block tw-w-16 tw-h-16">
+                {/* TODO ảnh: dùng chung ảnh sản phẩm đã giao của đánh giá trang chủ — xem docs/IMAGE-GUIDE.md */}
+                <img src={item.image} alt="" className="tw-w-16 tw-h-16 rounded-circle object-fit-cover" />
               </span>
               <div className="tw-mt-4">
                 <h2 className="tw-text-base tw-mb-1 tw-duration-300">{item.name}</h2>

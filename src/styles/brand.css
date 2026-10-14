@@ -748,3 +748,14 @@ h1, h2, h3 {
   width: 96px;
   height: 96px;
 }
+
+/* Ảnh sản phẩm nổi bật (trang Giới thiệu): webp cắt nền nên dùng drop-shadow để bóng
+   bám theo hình vật thể (box-shadow sẽ vẽ khung vuông). Bóng đậm hơn bình thường vì
+   nền section là màu tối (--main-two-600). */
+.product-range-thumb {
+  display: block;
+  height: 500px;
+  width: auto;
+  max-width: none;
+  filter: drop-shadow(0 24px 28px rgba(0, 0, 0, 0.55)) drop-shadow(0 6px 8px rgba(0, 0, 0, 0.4));
+}

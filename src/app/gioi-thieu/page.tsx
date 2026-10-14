@@ -106,16 +106,14 @@ export default async function AboutPage() {
                     <div className="d-flex flex-column tw-gap-6">
                       <div className="clip-animation image-double-animation tw-rounded-20-px overflow-hidden">
                         <div>
-                          {/* TODO ảnh: ảnh xưởng sản xuất — xem docs/IMAGE-GUIDE.md */}
-                          <img src="/assets/images/thumbs/about-home-demand-img1.png" alt="Xưởng sản xuất In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                          <img src="/assets/images/thumbs/about-home-demand-img1.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                          <img src="/assets/images/gioi-thieu/xuong-san-xuat.webp" alt="Xưởng sản xuất In Ấn Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                          <img src="/assets/images/gioi-thieu/xuong-san-xuat.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                         </div>
                       </div>
                       <div className="clip-animation image-double-animation tw-rounded-20-px overflow-hidden">
                         <div>
-                          {/* TODO ảnh: ảnh máy in offset/flexo tại xưởng — xem docs/IMAGE-GUIDE.md */}
-                          <img src="/assets/images/thumbs/about-home-demand-img2.png" alt="Máy in tại xưởng Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                          <img src="/assets/images/thumbs/about-home-demand-img2.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                          <img src="/assets/images/gioi-thieu/may-in-offset.webp" alt="Máy in tại xưởng Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                          <img src="/assets/images/gioi-thieu/may-in-offset.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                         </div>
                       </div>
                     </div>
@@ -123,9 +121,8 @@ export default async function AboutPage() {
                   <div className="col-6">
                     <div className="clip-animation image-double-animation tw-rounded-20-px overflow-hidden">
                       <div>
-                        {/* TODO ảnh: ảnh thành phẩm hộp giấy/thùng carton — xem docs/IMAGE-GUIDE.md */}
-                        <img src="/assets/images/thumbs/about-home-demand-img3.png" alt="Thành phẩm bao bì giấy Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
-                        <img src="/assets/images/thumbs/about-home-demand-img3.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                        <img src="/assets/images/gioi-thieu/thanh-pham-bao-bi.webp" alt="Thành phẩm bao bì giấy Thời Đại" data-animate="true" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+                        <img src="/assets/images/gioi-thieu/thanh-pham-bao-bi.webp" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                       </div>
                     </div>
                   </div>
@@ -389,8 +386,7 @@ export default async function AboutPage() {
             </div>
             <div className="col-xl-6 d-xl-block d-none">
               <div className="position-absolute tw-start-45-percent top-50 translate-middle-y">
-                {/* TODO ảnh: ảnh sản phẩm tiêu biểu (hộp giày/hộp nắp gài) — xem docs/IMAGE-GUIDE.md */}
-                <img src="/assets/images/thumbs/product-range-img.png" alt="Sản phẩm bao bì giấy Thời Đại" />
+                <img src="/assets/images/gioi-thieu/san-pham-noi-bat.webp" alt="Sản phẩm bao bì giấy Thời Đại" className="product-range-thumb" />
                 <div className="product-range-image position-absolute z-1">
                   <img src="/assets/images/shapes/cursor-shape.png" alt="" className="move-on-cursor-hover" data-value="10" />
                 </div>
@@ -490,10 +486,10 @@ export default async function AboutPage() {
 
                 <div className="overflow-hidden">
                   <div className="tw-mt-9 w-100 min-w-max custom-fade-animation" data-delay=".6" data-fade-from="bottom" data-ease="bounce">
-                    <img src="/assets/images/thumbs/promo-banner-img1.png" alt="" className="move-on-cursor-hover" data-value="10" />
+                    <img src="/assets/images/gioi-thieu/promo-uu-dai-1.webp" alt="" width={423} height={161} className="move-on-cursor-hover" data-value="10" />
                   </div>
                   <div className="position-absolute bottom-0 tw-end-0 z-n1 custom-fade-animation" data-delay=".8" data-fade-from="right" data-ease="bounce">
-                    <img src="/assets/images/thumbs/promo-banner-img2.png" alt="" />
+                    <img src="/assets/images/gioi-thieu/promo-uu-dai-2.webp" alt="" width={289} height={413} />
                   </div>
                 </div>
 
@@ -506,7 +502,7 @@ export default async function AboutPage() {
                       </div>
                       <div className="text-center scale-text">
                         <h2 className="text-white text-uppercase fw-normal h5">GIẢM</h2>
-                        <h2 className="text-white text-uppercase text-34-px tw-my-1">20%</h2>
+                        <h2 className="text-white text-uppercase text-34-px tw-my-1">10%</h2>
                         <h2 className="text-white text-uppercase fw-normal tw-text-lg">NGAY</h2>
                       </div>
                     </div>
@@ -524,7 +520,7 @@ export default async function AboutPage() {
                   <h2 className="h3 tw-mt-4 text-reveal">Chất lượng ổn định, tiến độ đúng hẹn, giá xưởng</h2>
                 </div>
                 <div className="tw-mt-9 w-100 min-w-max d-flex justify-content-center custom-fade-animation" data-delay=".99" data-fade-from="bottom" data-ease="bounce">
-                  <img src="/assets/images/thumbs/promo-banner-img3.png" alt="" className="move-on-cursor-hover" data-value="6" />
+                  <img src="/assets/images/gioi-thieu/promo-cam-ket.webp" alt="" width={359} height={249} className="move-on-cursor-hover" data-value="6" />
                 </div>
 
                 <div className="position-absolute bottom-0 tw-start-0 w-100 tw-mb-15 tw-pb-5 tw-px-40-px d-sm-block d-none">

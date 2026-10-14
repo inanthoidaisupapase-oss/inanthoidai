@@ -28,12 +28,12 @@ export default function BlogSidebar({
             <div className="clip-animation image-double-animation overflow-hidden position-relative d-block rounded-circle tw-w-116-px tw-h-116-px">
               {/* Logo In Ấn Thời Đại thay cho ảnh chân dung — không có tác giả cá nhân */}
               <img
-                src="/assets/images/logo/favicon.png"
+                src="/assets/images/tin-tuc/logo.png"
                 alt="In Ấn Thời Đại"
                 data-animate="true"
                 className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img"
               />
-              <img src="/assets/images/logo/favicon.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
+              <img src="/assets/images/tin-tuc/logo.png" alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
             </div>
           </div>
           <div className="tw-mt-8">
