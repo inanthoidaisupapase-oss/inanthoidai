@@ -803,3 +803,19 @@ h1, h2, h3 {
     margin-top: -160px;
   }
 }
+
+/* Dòng phụ "Tư vấn & báo giá miễn phí" cạnh Hotline (Header.tsx, .middle-header): .text-body-3
+   của template (#7f7f7f) trên nền trắng chỉ đạt 4,00:1 — dưới WCAG AA 4,5:1 cho chữ 14–16px
+   (Lighthouse "color-contrast"). Sẫm hơn ~4% (#757575 → 4,61:1), CHỈ cho phần tử này. */
+.middle-header .text-body-3 {
+  color: #757575;
+}
+
+/* Mục menu đang chọn trên desktop (main.css: nền var(--main-600) #ed1d23, chữ trắng): chỉ đạt
+   4,37:1 — dưới WCAG AA 4,5:1 cho chữ 16px weight 500 (Lighthouse desktop "color-contrast").
+   Cùng cách xử lý badge ở trên: nền sẫm hơn ~3% (#e61c22 → 4,61:1), CHỈ cho mục menu này. */
+@media (min-width: 992px) {
+  .nav-menu__item.activePage {
+    background-color: #e61c22;
+  }
+}
