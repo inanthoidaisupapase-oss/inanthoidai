@@ -29,7 +29,7 @@ export default function Banner() {
                       </span>{' '}
                       cho thương hiệu Việt{' '}
                       <span className="custom-fade-animation d-lg-inline-flex d-none" data-delay=".7" data-fade-from="bottom" data-ease="bounce">
-                          <img src="/assets/images/shapes/rounded-element.png" alt="" className="move-on-cursor-hover" data-value="1" />
+                          <img loading="lazy" decoding="async" src="/assets/images/shapes/rounded-element.png" alt="" className="move-on-cursor-hover" data-value="1" />
                       </span>
                   </h1>
       
@@ -81,29 +81,29 @@ export default function Banner() {
       
               <div className="d-xxl-block d-none">
                   <div className="position-absolute z-n1 banner-element-1">
-                      <img src="/assets/images/shapes/banner-element-img1.png" alt="" className="animation-rotate-scale" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img1.png" alt="" className="animation-rotate-scale" />
                   </div>
                   <div className="position-absolute z-n1 banner-element-2">
                       <div className="banner-product-float animated-upDown">
-                          <img src="/assets/images/banner-products/catalogue.webp" alt="Catalogue" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                          <img loading="lazy" decoding="async" src="/assets/images/banner-products/catalogue.webp" alt="Catalogue" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-3">
                       <div className="banner-product-float animate__wobble__two">
-                          <img src="/assets/images/banner-products/to-gap.webp" alt="Tờ gấp" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                          <img loading="lazy" decoding="async" src="/assets/images/banner-products/to-gap.webp" alt="Tờ gấp" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-4">
-                      <img src="/assets/images/shapes/banner-element-img4.png" alt="" className="animation-rotate-right" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img4.png" alt="" className="animation-rotate-right" />
                   </div>
                   <div className="position-absolute z-n1 banner-element-5">
-                      <img src="/assets/images/shapes/banner-element-img5.png" alt="" className="animation-scalation" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img5.png" alt="" className="animation-scalation" />
                   </div>
                   <div className="position-absolute z-n1 banner-element-6">
-                      <img src="/assets/images/shapes/banner-element-img6.png" alt="" className="animated-upDown" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img6.png" alt="" className="animated-upDown" />
                   </div>
                   <div className="position-absolute z-n1 banner-element-7">
-                      <img src="/assets/images/shapes/banner-element-img7.png" alt="" className="animation-rotate-right" />
+                      <img loading="lazy" decoding="async" src="/assets/images/shapes/banner-element-img7.png" alt="" className="animation-rotate-right" />
                   </div>
 
                   {/* 9 ảnh sản phẩm nổi (banner-element-2/3 và 8..14) — ảnh render thật đã
@@ -113,38 +113,38 @@ export default function Banner() {
                       brand.css (.banner-product-float). */}
                   <div className="position-absolute z-n1 banner-element-8">
                       <div className="banner-product-float animation-rotate-scale">
-                          <img src="/assets/images/banner-products/hop-giay.webp" alt="Hộp giấy" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                          <img loading="lazy" decoding="async" src="/assets/images/banner-products/hop-giay.webp" alt="Hộp giấy" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-9">
                       <div className="banner-product-float animated-upDown">
-                          <img src="/assets/images/banner-products/tui-xach-giay.webp" alt="Túi xách giấy" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                          <img loading="lazy" decoding="async" src="/assets/images/banner-products/tui-xach-giay.webp" alt="Túi xách giấy" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-10">
                       <div className="banner-product-float animate__wobble__two">
-                          <img src="/assets/images/banner-products/hop-giay-shoe.webp" alt="Hộp giày" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                          <img loading="lazy" decoding="async" src="/assets/images/banner-products/hop-giay-shoe.webp" alt="Hộp giày" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-11">
                       <div className="banner-product-float animation-rotate-right">
-                          <img src="/assets/images/banner-products/thung-carton.webp" alt="Thùng carton" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                          <img loading="lazy" decoding="async" src="/assets/images/banner-products/thung-carton.webp" alt="Thùng carton" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-12">
                       <div className="banner-product-float animation-scalation">
-                          <img src="/assets/images/banner-products/tem-nhan-decal.webp" alt="Tem nhãn decal" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                          <img loading="lazy" decoding="async" src="/assets/images/banner-products/tem-nhan-decal.webp" alt="Tem nhãn decal" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
 
                   <div className="position-absolute z-n1 banner-element-13">
                       <div className="banner-product-float animation-rotate-scale">
-                          <img src="/assets/images/banner-products/danh-thiep.webp" alt="Danh thiếp" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                          <img loading="lazy" decoding="async" src="/assets/images/banner-products/danh-thiep.webp" alt="Danh thiếp" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
                   <div className="position-absolute z-n1 banner-element-14">
                       <div className="banner-product-float animate__wobble__two">
-                          <img src="/assets/images/banner-products/hop-qua-tang.webp" alt="Hộp quà tặng" className="w-100 h-100 object-fit-contain" width={360} height={360} />
+                          <img loading="lazy" decoding="async" src="/assets/images/banner-products/hop-qua-tang.webp" alt="Hộp quà tặng" className="w-100 h-100 object-fit-contain" width={360} height={360} />
                       </div>
                   </div>
               </div>
@@ -153,10 +153,10 @@ export default function Banner() {
                   {/* width/height = kích thước gốc file (3776×1160px, gấp đôi khung 1888×580 cho màn retina) — chỉ cho trình duyệt biết tỉ
                       lệ khung hình để tính layout sớm hơn, w-100/h-100 vẫn quyết định kích thước
                       hiển thị thật như cũ, không đổi giao diện. Đây là ảnh LCP của trang chủ —
-                      fetchPriority="high" khiến React/Next.js 19 tự chèn <link rel="preload"> cho
+                      khiến React/Next.js 19 tự chèn <link rel="preload"> cho
                       đúng ảnh này vào <head> (đã kiểm chứng trong HTML build ra), không cần viết
                       tay thẻ preload riêng (thử ban đầu bị trùng preload — đã bỏ). */}
-                  <img src="/assets/images/thumbs/banner-all-products.webp" alt="Sản phẩm bao bì giấy của In Ấn Thời Đại" className="w-100 h-100 scroll-scale-item" width={1900} height={584} fetchPriority="high" />
+                  <img loading="lazy" decoding="async" src="/assets/images/thumbs/banner-all-products.webp" alt="Sản phẩm bao bì giấy của In Ấn Thời Đại" className="w-100 h-100 scroll-scale-item" width={1900} height={584} fetchPriority="high" />
               </div>
       
           </div>
