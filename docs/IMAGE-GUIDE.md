@@ -53,7 +53,7 @@ và ảnh thật nên chụp/thiết kế thế nào.
 | `/assets/images/icons/long-arrow-right.png` | 161 × 15 px | components/shared/ServiceSlider.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/quate-new-icon.png` | 192 × 142 px | components/shared/TestimonialsSlider.tsx | Icon của template — giữ nguyên được |
 | `/assets/images/icons/zalo-icon.webp` | — | components/layout/FloatingContact.tsx | Icon của template — giữ nguyên được |
-| `/assets/images/logo/LOGO%20THOI%20DAI-01.png` | — | components/layout/Footer.tsx<br>components/layout/Header.tsx | Ảnh thật tương ứng |
+| `/assets/images/logo/logo-thoi-dai.webp` | 600 × 145 px (nền trong suốt, tỉ lệ ~4,1:1; bản gốc LOGO THOI DAI-01.png 13262×3199 chỉ để lưu trữ) | components/layout/Footer.tsx<br>components/layout/Header.tsx | Ảnh thật tương ứng |
 | `/assets/images/logo/favicon.png` | 64 × 64 px | app/layout.tsx | Favicon — biểu tượng rút gọn của logo |
 | `/assets/images/tin-tuc/logo.png` | 116 × 116 px (nên làm 232 × 232 px, vuông, chừa lề ~10–15% vì khung bo tròn) | components/shared/BlogSidebar.tsx | Logo In Ấn Thời Đại trong widget thương hiệu ở sidebar trang tin tức / chi tiết tin |
 | `/assets/images/logo/logo-xoay-tron.png` | 74 × 80 px | components/layout/Footer.tsx<br>components/shared/TestimonialsSlider.tsx | Ảnh thật tương ứng |

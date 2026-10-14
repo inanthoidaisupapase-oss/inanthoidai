@@ -80,7 +80,9 @@ export default function Header() {
               <div className="logo">
                 <Link href="/" className="link">
                   <img
-                    src="/assets/images/logo/LOGO%20THOI%20DAI-01.png"
+                    src="/assets/images/logo/logo-thoi-dai.webp"
+                    width={600}
+                    height={145}
                     alt={site.name}
                     className="max-w-200-px"
                     style={{ width: "200px", height: "auto" }}
