@@ -51,29 +51,25 @@ export const metadata: Metadata = {
   icons: { icon: '/assets/images/logo/favicon.png' },
 };
 
-// Font của template + Be Vietnam Pro làm lớp dự phòng phủ đủ dấu tiếng Việt.
-const GOOGLE_FONTS_HREF =
-  'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Gabarito:wght@400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap';
-
-// Kỹ thuật loadCSS (Filament Group): nạp CSS font với media="print" (không chặn
-// render màn hình) rồi đổi media="all" khi tải xong — không dùng next/font/google
-// (build shell không ra được fonts.googleapis.com, xem CLAUDE.md), chỉ đổi CÁCH
-// nạp cùng 1 URL <link> có sẵn để nó không còn chặn render nữa. `display=swap`
-// trong URL đã có sẵn nên chữ hiện ngay bằng font dự phòng, đổi sang webfont khi
-// tải xong, không FOIT. Việc đổi media thực hiện qua onLoad trong FontStylesheet
-// (client component) — xem comment trong file đó về lý do không làm trực tiếp
-// ở đây bằng thuộc tính onload thuần HTML.
+// Font của template + Be Vietnam Pro làm lớp dự phòng phủ đủ dấu tiếng Việt — TỰ HOST tại
+// /assets/vendor/fonts (file woff2 lấy từ gói npm @fontsource* 5.3.0, cùng bản Google Fonts
+// phục vụ; giấy phép SIL OFL). Bỏ được 2 kết nối fonts.googleapis.com/fonts.gstatic.com.
+// Không dùng next/font/google (build shell không ra được fonts.googleapis.com, xem CLAUDE.md).
+//
+// Vẫn nạp fonts.css theo kỹ thuật loadCSS (Filament Group): media="print" (không chặn render)
+// rồi đổi media="all" khi tải xong — đổi media thực hiện qua onLoad trong FontStylesheet
+// (client component). KHÔNG import thẳng vào bundle CSS: đã thử, @font-face nằm trong CSS
+// chặn render khiến font (~150 KB) tải TRƯỚC first paint, Lighthouse mobile FCP 1,8s -> 2,9s.
+// font-display: swap nên chữ hiện ngay bằng font dự phòng, đổi sang webfont khi tải xong.
+const FONTS_HREF = '/assets/vendor/fonts/fonts.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi" className="home-style-gradient font-size-style-new" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="preload" as="style" href={GOOGLE_FONTS_HREF} />
-        <FontStylesheet href={GOOGLE_FONTS_HREF} />
+        <FontStylesheet href={FONTS_HREF} />
         <noscript>
-          <link rel="stylesheet" href={GOOGLE_FONTS_HREF} />
+          <link rel="stylesheet" href={FONTS_HREF} />
         </noscript>
         {/* Phosphor Icons (MIT) 2.1.1 — self-host tại /assets/vendor/phosphor (bản npm
             @phosphor-icons/web@2.1.1, nội dung y hệt bản unpkg trước đây) để bỏ kết nối tới unpkg.com
