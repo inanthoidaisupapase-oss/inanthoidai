@@ -47,6 +47,7 @@ export default function NewsletterForm({
         <button
           type="submit"
           disabled={pending}
+          aria-label={pending ? 'Đang gửi đăng ký nhận bản tin' : 'Đăng ký nhận bản tin'}
           className="btn bg-main-600 hover-bg-animation hover-bg-animation-main-600 tw-ps-6 tw-pe-405 tw-py-3 flex-shrink-0 position-absolute tw-end-0 top-50 translate-middle-y tw-me-4"
         >
           <span className="btn-icon d-flex z-1">

@@ -26,10 +26,13 @@ export default function VideoPopup({
   url,
   className,
   children,
+  label = 'Xem video giới thiệu trên YouTube',
 }: {
   url: string;
   className?: string;
   children: ReactNode;
+  /** Tên truy cập được cho nút (nút chỉ có icon play nên cần aria-label). */
+  label?: string;
 }) {
   const [phase, setPhase] = useState<'closed' | 'opening' | 'ready' | 'removing'>('closed');
   const videoId = getYouTubeId(url);
@@ -61,7 +64,7 @@ export default function VideoPopup({
 
   if (!videoId) {
     return (
-      <a href={url} target="_blank" rel="noopener noreferrer" className={className}>
+      <a href={url} target="_blank" rel="noopener noreferrer" className={className} aria-label={label}>
         {children}
       </a>
     );
@@ -75,6 +78,7 @@ export default function VideoPopup({
       <a
         href={url}
         className={className}
+        aria-label={label}
         onClick={(e) => {
           e.preventDefault();
           setPhase('opening');
