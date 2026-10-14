@@ -75,10 +75,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             @phosphor-icons/web@2.1.1, nội dung y hệt bản unpkg trước đây) để bỏ kết nối tới unpkg.com
             và chuỗi request CSS→font bắc qua origin thứ 3. Chỉ nạp 3 weight template dùng: regular,
             bold, fill. Icon dày đặc ngay trên màn hình đầu và font-display: block nên VẪN nạp chặn
-            render như cũ + preload 3 file woff2 (cùng origin) để font về song song với CSS. */}
-        <link rel="preload" as="font" type="font/woff2" crossOrigin="" href="/assets/vendor/phosphor/regular/Phosphor.woff2" />
-        <link rel="preload" as="font" type="font/woff2" crossOrigin="" href="/assets/vendor/phosphor/bold/Phosphor-Bold.woff2" />
-        <link rel="preload" as="font" type="font/woff2" crossOrigin="" href="/assets/vendor/phosphor/fill/Phosphor-Fill.woff2" />
+            render như cũ + preload 3 file woff2 (cùng origin) để font về song song với CSS.
+            Preload bản *.subset.woff2 (~7 KB, chỉ các icon site dùng — sinh bởi
+            tools/subset-phosphor.mjs) thay vì bản đầy đủ ~145 KB; bản đầy đủ vẫn khai báo
+            trong style.css làm dự phòng, chỉ tải khi trang có icon ngoài subset. */}
+        <link rel="preload" as="font" type="font/woff2" crossOrigin="" href="/assets/vendor/phosphor/regular/Phosphor.subset.woff2" />
+        <link rel="preload" as="font" type="font/woff2" crossOrigin="" href="/assets/vendor/phosphor/bold/Phosphor-Bold.subset.woff2" />
+        <link rel="preload" as="font" type="font/woff2" crossOrigin="" href="/assets/vendor/phosphor/fill/Phosphor-Fill.subset.woff2" />
         <link rel="stylesheet" href="/assets/vendor/phosphor/regular/style.css" />
         <link rel="stylesheet" href="/assets/vendor/phosphor/bold/style.css" />
         <link rel="stylesheet" href="/assets/vendor/phosphor/fill/style.css" />

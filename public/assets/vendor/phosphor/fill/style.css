@@ -9,7 +9,16 @@
   font-style: normal;
   font-display: block;
 }
-
+/* subset:start — sinh bởi tools/subset-phosphor.mjs, đừng sửa tay */
+@font-face {
+  font-family: "Phosphor-Fill";
+  src: url("./Phosphor-Fill.subset.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+E00C,U+E036,U+E042,U+E058,U+E06C,U+E08E,U+E090,U+E092,U+E0E6,U+E0EE,U+E108,U+E10A,U+E12A,U+E136,U+E138,U+E13A,U+E16C,U+E16E,U+E182,U+E184,U+E19A,U+E1CA,U+E1D2,U+E1DA,U+E20E,U+E216,U+E226,U+E262,U+E276,U+E2AA,U+E2C2,U+E2C8,U+E2D0,U+E2F0,U+E30C,U+E32A,U+E344,U+E34C,U+E390,U+E398,U+E3AA,U+E3AC,U+E3B8,U+E3BA,U+E3D0,U+E3D4,U+E3DC,U+E416,U+E41E,U+E420,U+E464,U+E466,U+E46A,U+E478,U+E4A6,U+E4B4,U+E4BA,U+E4C2,U+E4F6,U+E4FC,U+E584,U+E68E,U+E6A2,U+E760,U+E80C,U+EA7E,U+EAF2;
+}
+/* subset:end */
 .ph-fill {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "Phosphor-Fill" !important;
