@@ -21,11 +21,14 @@ const steps = [
 
 export default async function GetStarted() {
   const products = await getProducts();
-  // 5 dải ảnh chạy ngang, mỗi dải lấy ảnh đại diện của các sản phẩm thật
+  // 5 dải ảnh chạy ngang, mỗi dải lấy ảnh đại diện của các sản phẩm thật. Mỗi dải chỉ
+  // PER_ROW sản phẩm (khung chỉ thấy 2-3 ảnh cùng lúc, Swiper loop tự lặp lại): trước đây
+  // mỗi dải chứa toàn bộ danh mục (61 sp x 5 dải = 915 node, ~1/4 DOM trang chủ — Lighthouse
+  // "DOM quá lớn"). Dải sau bắt đầu ngay sau dải trước nên 5 dải vẫn phủ gần hết danh mục.
+  const PER_ROW = 12;
+  const items = products.map((p) => ({ src: p.images[0], alt: p.name, href: `/san-pham/${p.slug}` }));
   const rows = Array.from({ length: 5 }, (_, r) =>
-    products.map((p) => ({ src: p.images[0], alt: p.name, href: `/san-pham/${p.slug}` }))
-      .slice(r % 3)
-      .concat(products.slice(0, r % 3).map((p) => ({ src: p.images[0], alt: p.name, href: `/san-pham/${p.slug}` }))),
+    Array.from({ length: Math.min(PER_ROW, items.length) }, (_, i) => items[(r * PER_ROW + i) % items.length]),
   );
 
   return (
