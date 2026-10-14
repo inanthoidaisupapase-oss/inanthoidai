@@ -15,6 +15,7 @@ import '@/styles/swiper-bundle.min.css';
 import '@/styles/magnific-popup.css';
 import '@/styles/main.css';
 import '@/styles/brand.css';
+import '@/styles/fonts-critical.css';
 
 import { site } from '@/lib/site';
 import Header from '@/components/layout/Header';
@@ -25,7 +26,6 @@ import Preloader from '@/components/layout/Preloader';
 import ScrollToTop from '@/components/layout/ScrollToTop';
 import FloatingContact from '@/components/layout/FloatingContact';
 import TemplateRuntime from '@/components/layout/TemplateRuntime';
-import FontStylesheet from '@/components/layout/FontStylesheet';
 import { CartProvider } from '@/lib/cart/CartContext';
 
 export const metadata: Metadata = {
@@ -56,18 +56,36 @@ export const metadata: Metadata = {
 // phục vụ; giấy phép SIL OFL). Bỏ được 2 kết nối fonts.googleapis.com/fonts.gstatic.com.
 // Không dùng next/font/google (build shell không ra được fonts.googleapis.com, xem CLAUDE.md).
 //
-// Vẫn nạp fonts.css theo kỹ thuật loadCSS (Filament Group): media="print" (không chặn render)
-// rồi đổi media="all" khi tải xong — đổi media thực hiện qua onLoad trong FontStylesheet
-// (client component). KHÔNG import thẳng vào bundle CSS: đã thử, @font-face nằm trong CSS
-// chặn render khiến font (~150 KB) tải TRƯỚC first paint, Lighthouse mobile FCP 1,8s -> 2,9s.
-// font-display: swap nên chữ hiện ngay bằng font dự phòng, đổi sang webfont khi tải xong.
+// Cách nạp (đã đo bằng Lighthouse mobile + desktop, xem commit "Desktop bước 4"):
+// - 5 face kiểu thường của 2 font chính (DM Sans, Plus Jakarta Sans; latin/latin-ext/vietnamese)
+//   khai báo trong src/styles/fonts-critical.css (CSS nạp chặn render) + preload 2 file latin
+//   (CRITICAL_FONTS): chữ hiện đúng font từ lần vẽ đầu, không đổi font sau khi hero đã hiện
+//   (trước đây gây layout shift CLS 0,016-0,03 trên desktop).
+// - Các face còn lại (italic, Gabarito, Be Vietnam Pro, cyrillic) trong fonts.css, nạp không chặn
+//   render theo kỹ thuật loadCSS: media="print" rồi đổi "all" bằng script inline ngay sau <link>
+//   (FONTS_SWAP_JS) — chạy lúc parse HTML, không chờ React hydrate. React không chạy chuỗi
+//   onload="..." nên dùng <script> riêng; link có suppressHydrationWarning vì thuộc tính media bị
+//   script đổi có chủ đích trước khi hydrate.
+// - KHÔNG đưa toàn bộ fonts.css vào CSS chặn render: đã thử, FCP mobile 1,8s -> 2,9s.
+// font-display: swap nên chữ không bao giờ bị ẩn chờ font.
 const FONTS_HREF = '/assets/vendor/fonts/fonts.css';
+// Preload 2 file latin của web font chính (@font-face nằm trong src/styles/fonts-critical.css).
+// Đã đo (Lighthouse, 3 lần/phương án): preload thêm latin-ext/vietnamese làm TBT desktop tăng
+// ~210 -> ~300 ms (font ưu tiên cao chen băng thông lúc hydrate); không preload gì thì đổi font
+// muộn -> layout shift. 2 file latin là điểm cân bằng tốt nhất.
+const CRITICAL_FONTS = ['plus-jakarta-sans-latin-wght-normal.woff2', 'dm-sans-latin-opsz-normal.woff2'];
+const FONTS_SWAP_JS =
+  "(function(l){if(!l)return;var a=function(){l.media='all'};if(l.sheet)a();else l.addEventListener('load',a)})(document.getElementById('webfonts-css'))";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="vi" className="home-style-gradient font-size-style-new" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <FontStylesheet href={FONTS_HREF} />
+        {CRITICAL_FONTS.map((f) => (
+          <link key={f} rel="preload" as="font" type="font/woff2" crossOrigin="" href={`/assets/vendor/fonts/${f}`} />
+        ))}
+        <link id="webfonts-css" rel="stylesheet" href={FONTS_HREF} media="print" suppressHydrationWarning />
+        <script dangerouslySetInnerHTML={{ __html: FONTS_SWAP_JS }} />
         <noscript>
           <link rel="stylesheet" href={FONTS_HREF} />
         </noscript>
