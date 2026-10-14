@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Script from 'next/script';
 import { initTemplateBehaviors } from '@/lib/template-behaviors';
+import { VENDOR_VERSION } from '@/lib/vendor-version';
 
 declare global {
   interface Window {
@@ -23,6 +24,7 @@ declare global {
 export default function TemplateRuntime() {
   const pathname = usePathname();
   const cleanupRef = useRef<() => void>(() => {});
+  const [libsReady, setLibsReady] = useState(false);
 
   useEffect(() => {
     // custom-gsap.js bọc #smooth-wrapper/#smooth-content bằng ScrollSmoother.create() —
@@ -101,23 +103,49 @@ export default function TemplateRuntime() {
     };
   }, [pathname]);
 
-  return (
-    <Script
-      src="/assets/js/vendor.bundle.js"
-      strategy="afterInteractive"
-      onReady={() => {
-        window.AOS?.init({ once: false });
-        // vendor.bundle.js (chứa Typed.js, tp_scrollBg...) nạp "afterInteractive" nên
-        // luôn tải xong SAU effect ở trên khi vào trang lần đầu — typedText() trong
-        // initTemplateBehaviors() lúc đó chưa thấy window.Typed nên bỏ qua
-        // vĩnh viễn. Khởi tạo lại một lần ở đây để chạy đúng khi script sẵn sàng.
+  // Khởi tạo lần đầu sau khi custom-gsap.js chạy xong. Mỗi bước chạy trong một tác vụ riêng
+  // (setTimeout 0) thay vì dồn chung một tác vụ với việc thực thi script: trên máy chậm, gộp
+  // lại thành tác vụ ~700 ms chặn main thread — Lighthouse tính vào Total Blocking Time.
+  const onTemplateReady = () => {
+    const steps = [
+      () => window.AOS?.init({ once: false }),
+      // vendor JS nạp "afterInteractive" nên luôn tải xong SAU effect ở trên khi vào trang lần
+      // đầu — typedText() trong initTemplateBehaviors() lúc đó chưa thấy window.Typed nên bỏ
+      // qua vĩnh viễn. Khởi tạo lại một lần ở đây để chạy đúng khi script sẵn sàng.
+      () => {
         cleanupRef.current();
         cleanupRef.current = initTemplateBehaviors();
-        // Cùng lý do: lần đầu vào trang, effect ở trên chạy tp_scrollBg?.() khi
-        // window.tp_scrollBg chưa tồn tại nên bị bỏ qua — gọi lại ở đây.
-        window.tp_scrollBg?.();
-        window.tp_clipAnimation?.();
-      }}
-    />
+      },
+      // Cùng lý do: lần đầu vào trang, effect ở trên chạy tp_scrollBg?.() khi
+      // window.tp_scrollBg chưa tồn tại nên bị bỏ qua — gọi lại ở đây.
+      () => window.tp_scrollBg?.(),
+      () => window.tp_clipAnimation?.(),
+    ];
+    const run = (i: number) => {
+      if (i >= steps.length) return;
+      steps[i]();
+      setTimeout(() => run(i + 1), 0);
+    };
+    setTimeout(() => run(0), 0);
+  };
+
+  // 2 file nạp tuần tự: thư viện (jQuery, GSAP, AOS, Typed) rồi mới tới custom-gsap.js (khởi
+  // tạo hiệu ứng, cần thư viện có sẵn) — mỗi file thực thi trong tác vụ riêng. ?v= là hash nội
+  // dung (tools/build-vendor.mjs) để cache immutable của /assets/js không giữ bản cũ.
+  return (
+    <>
+      <Script
+        src={`/assets/js/vendor.bundle.js?v=${VENDOR_VERSION.vendor}`}
+        strategy="afterInteractive"
+        onReady={() => setLibsReady(true)}
+      />
+      {libsReady && (
+        <Script
+          src={`/assets/js/custom-gsap.js?v=${VENDOR_VERSION.template}`}
+          strategy="afterInteractive"
+          onReady={onTemplateReady}
+        />
+      )}
+    </>
   );
 }

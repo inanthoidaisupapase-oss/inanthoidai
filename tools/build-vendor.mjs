@@ -17,15 +17,19 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 
 const DIR = 'public/assets/js';
+// Chỉ gồm THƯ VIỆN. custom-gsap.js (khởi tạo hiệu ứng của template) nạp thành file riêng,
+// SAU bundle này (TemplateRuntime.tsx): mỗi file chạy trong một tác vụ riêng của trình duyệt
+// thay vì một tác vụ dài ~700 ms trên máy chậm -> giảm Total Blocking Time (PageSpeed).
 const ORDER = [
   'jquery-3.7.1.min.js',
   'gsap-plugin.js',
   'aos.js',
   'typed.min.js',
-  'custom-gsap.js',
 ];
+const TEMPLATE_INIT = 'custom-gsap.js';
 
 let out = '/* Printop vendor bundle — sinh tự động bởi tools/build-vendor.mjs. Đừng sửa tay. */\n';
 for (const f of ORDER) {
@@ -38,3 +42,16 @@ for (const f of ORDER) {
 }
 fs.writeFileSync(path.join(DIR, 'vendor.bundle.js'), out);
 console.log(`vendor.bundle.js: ${(out.length / 1024).toFixed(0)} KB từ ${ORDER.length} file`);
+
+// Phiên bản theo nội dung (hash) gắn vào URL ?v=... : vercel.json đặt /assets/js/* là
+// immutable 1 năm, tên file không đổi nên thiếu ?v= thì trình duyệt giữ bản cũ sau deploy.
+const hash = (buf) => crypto.createHash('sha256').update(buf).digest('hex').slice(0, 10);
+const version = {
+  vendor: hash(out),
+  template: hash(fs.readFileSync(path.join(DIR, TEMPLATE_INIT))),
+};
+fs.writeFileSync(
+  'src/lib/vendor-version.ts',
+  `// Sinh tự động bởi tools/build-vendor.mjs (prebuild/predev). Đừng sửa tay.\n` +
+    `export const VENDOR_VERSION = ${JSON.stringify(version)} as const;\n`,
+);

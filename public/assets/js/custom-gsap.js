@@ -383,14 +383,13 @@ if ($(".split-reveal").length) {
 // **************************** Text Reveal js Start ****************************
 function tp_scrollBg($wrap) {
   $wrap = $wrap || jQuery("body");
-  $wrap.find(".text-reveal").each(function () {
+  var split = function (el) {
     // App Router gọi lại tp_scrollBg() ở mỗi lần route đổi (xem TemplateRuntime.tsx);
     // guard này tránh SplitText tách lại chữ đã tách (double-split) nếu hàm bị gọi
     // 2 lần cho cùng 1 phần tử còn gắn trong DOM.
-    if (this.dataset.tpSplit === "true") return;
-    this.dataset.tpSplit = "true";
-    var $el = jQuery(this);
-    var tpSplit = new SplitText($el[0], { type: "words, chars" });
+    if (el.dataset.tpSplit === "true") return;
+    el.dataset.tpSplit = "true";
+    var tpSplit = new SplitText(el, { type: "words, chars" });
     jQuery(tpSplit.words).children().first().addClass("tp-first-char");
     gsap.fromTo(
       tpSplit.chars,
@@ -405,7 +404,7 @@ function tp_scrollBg($wrap) {
         x: 0,
         stagger: 0.1,
         scrollTrigger: {
-          trigger: $el[0],
+          trigger: el,
           toggleActions: "play pause reverse pause",
           start: "top 70%",
           end: "top 40%",
@@ -413,6 +412,30 @@ function tp_scrollBg($wrap) {
         },
       },
     );
+  };
+  var els = $wrap.find(".text-reveal").toArray().filter(function (el) {
+    return el.dataset.tpSplit !== "true";
+  });
+  // Tối ưu PageSpeed (TBT): tách chữ ~450 ký tự + tạo 14 ScrollTrigger ngay lúc tải tốn
+  // ~240 ms CPU (máy chậm). Chỉ tách khi tiêu đề còn cách viewport 400px — trạng thái đầu
+  // (opacity 0.2) vẫn được đặt TRƯỚC khi tiêu đề lộ ra nên hiệu ứng nhìn thấy không đổi;
+  // vị trí trigger tính tại thời điểm tạo nên tiêu đề đã cuộn qua vẫn ở đúng trạng thái.
+  if (!("IntersectionObserver" in window)) {
+    els.forEach(split);
+    return;
+  }
+  var io = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        split(en.target);
+      });
+    },
+    { rootMargin: "400px 0px 400px 0px" },
+  );
+  els.forEach(function (el) {
+    io.observe(el);
   });
 }
 window.addEventListener("DOMContentLoaded", function () {

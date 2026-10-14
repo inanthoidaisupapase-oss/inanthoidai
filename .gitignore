@@ -43,3 +43,6 @@ next-env.d.ts
 
 # vendor bundle sinh tự động bởi tools/build-vendor.mjs
 public/assets/js/vendor.bundle.js
+
+# phiên bản (hash) vendor JS, sinh tự động bởi tools/build-vendor.mjs
+src/lib/vendor-version.ts
