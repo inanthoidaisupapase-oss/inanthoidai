@@ -9,7 +9,11 @@
  * magnific-popup.min.js (plugin jQuery .magnificPopup() không còn được gọi ở
  * đâu — VideoPopup.tsx là component React tự viết, chỉ tái dùng class CSS
  * mfp-bg/mfp-wrap/... của magnific-popup.css, không cần JS plugin gốc; xoá
- * khỏi bundle giảm ~40KB JS phải parse/execute trên MỌI trang).
+ * khỏi bundle giảm ~40KB JS phải parse/execute trên MỌI trang),
+ * boostrap.bundle.min.js (không còn data-bs-* hay lời gọi bootstrap.* nào —
+ * tab/accordion/dropdown/offcanvas đều đã là component React; 80KB),
+ * jquery.marquee.min.js (không có lời gọi .marquee() nào — marquee logo chạy
+ * bằng CSS animation, xem brand.css; 9KB).
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,9 +22,7 @@ const DIR = 'public/assets/js';
 const ORDER = [
   'jquery-3.7.1.min.js',
   'gsap-plugin.js',
-  'boostrap.bundle.min.js',
   'aos.js',
-  'jquery.marquee.min.js',
   'typed.min.js',
   'custom-gsap.js',
 ];
