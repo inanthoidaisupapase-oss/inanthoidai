@@ -762,12 +762,18 @@ h1, h2, h3 {
 
 /* Preloader trên mobile: chữ "IN ẤN THỜI ĐẠI" 100px của template quá to, lại bị bóp
    còn 50% bề ngang (do left: 50% + position: absolute) nên "THỜI" bị gãy thành "THỜ"/"I".
-   width: min-content ép mỗi từ một hàng và không gãy giữa từ; căn giữa theo cả hai chiều. */
+   Mỗi từ là một block (.preloader__word) nên luôn đúng 4 hàng: IN / ẤN / THỜI / ĐẠI,
+   căn giữa; width: min-content để khung không bị bóp theo left: 50%. */
 @media (max-width: 767px) {
   .preloader__text {
     width: min-content;
     font-size: 64px;
     line-height: 1.15;
     text-align: center;
+  }
+
+  .preloader__word {
+    display: block;
+    white-space: nowrap;
   }
 }

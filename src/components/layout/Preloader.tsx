@@ -23,7 +23,10 @@ export default function Preloader() {
   return (
     <div className="preloader">
       <div className="preloader__text text-white animated-title text-hover-animation-scale">
-        IN ẤN THỜI ĐẠI
+        <span className="preloader__word">IN</span>{' '}
+        <span className="preloader__word">ẤN</span>{' '}
+        <span className="preloader__word">THỜI</span>{' '}
+        <span className="preloader__word">ĐẠI</span>
       </div>
       <div className="preloader__overlay">
         {Array.from({ length: 20 }, (_, i) => (
