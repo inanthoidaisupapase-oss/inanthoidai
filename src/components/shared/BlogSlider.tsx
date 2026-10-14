@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import type { Post } from '@/types/content';
+import { dateParts } from '@/lib/format';
 
 /**
  * Slider tin tức trang chủ.
@@ -27,7 +28,7 @@ export default function BlogSlider({ posts }: { posts: Post[] }) {
       breakpoints={{ 0: { slidesPerView: 1 }, 768: { slidesPerView: 1 }, 992: { slidesPerView: 2 }, 1200: { slidesPerView: 3 } }}
     >
       {posts.map((post, i) => {
-        const d = new Date(post.publishedAt);
+        const d = dateParts(post.publishedAt);
         return (
           <SwiperSlide key={post.slug} data-speed={i % 2 === 0 ? '1.14' : undefined}>
             <div className="" data-aos="fade-up" data-aos-duration="800" data-aos-delay={200 + (i % 3) * 200}>
@@ -44,8 +45,8 @@ export default function BlogSlider({ posts }: { posts: Post[] }) {
                     <img loading="lazy" decoding="async" src={post.coverImageUrl} alt="" className="image-double-animation__element w-100 h-100 object-fit-cover clip-animation-img" />
                   </Link>
                   <div className="bg-white d-inline-flex flex-column position-absolute top-0 tw-end-0 tw-mt-4 tw-me-4 tw-rounded-lg z- overflow-hidden">
-                    <span className="h2 text-white bg-primary-new tw-py-2 tw-px-4">{String(d.getDate()).padStart(2, '0')}</span>
-                    <span className="text-heading tw-py-2 tw-px-4">Th{d.getMonth() + 1}, {String(d.getFullYear()).slice(2)}</span>
+                    <span className="h2 text-white bg-primary-new tw-py-2 tw-px-4">{String(d.day).padStart(2, '0')}</span>
+                    <span className="text-heading tw-py-2 tw-px-4">Th{d.month}, {String(d.year).slice(2)}</span>
                   </div>
                 </div>
                 <div className="tw-pt-7 tw-px-7 tw-pb-8">
