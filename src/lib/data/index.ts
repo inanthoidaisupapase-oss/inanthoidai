@@ -27,6 +27,22 @@ const toCamel = <T,>(row: Row): T => {
 };
 
 /**
+ * Lỗi mạng (DNS không phân giải, project Supabase bị tạm dừng/xoá, mất mạng) không phải
+ * bug code — chỉ cảnh báo MỘT lần mỗi tiến trình thay vì console.error cho từng bảng ở mọi
+ * request (dev overlay của Next bắt console.error nên trang nào cũng hiện 4–5 lỗi đỏ).
+ */
+let warnedUnreachable = false;
+const isNetworkError = (msg: string | undefined) => !!msg && /fetch failed|ENOTFOUND|ECONNREFUSED|ETIMEDOUT/i.test(msg);
+function warnUnreachable(detail: string | undefined) {
+  if (warnedUnreachable) return;
+  warnedUnreachable = true;
+  console.warn(
+    `[data] Không kết nối được Supabase (${detail}) — đang dùng dữ liệu seed tĩnh. ` +
+      'Kiểm tra NEXT_PUBLIC_SUPABASE_URL trong .env.local và trạng thái project trên dashboard Supabase.',
+  );
+}
+
+/**
  * Đọc một bảng từ Supabase; nếu chưa cấu hình Supabase hoặc truy vấn lỗi thì
  * rơi về dữ liệu seed. Lỗi được ghi log nhưng không làm sập trang — trang giới
  * thiệu vẫn phải hiển thị được kể cả khi database tạm thời không truy cập được.
@@ -38,11 +54,16 @@ async function fromTable<T>(table: string, fallback: T[], orderBy?: string): Pro
     const query = sb.from(table).select('*');
     const { data, error } = orderBy ? await query.order(orderBy) : await query;
     if (error || !data) {
-      console.error(`[data] Không đọc được bảng ${table}:`, error?.message);
+      if (isNetworkError(error?.message)) warnUnreachable(error?.message);
+      else console.error(`[data] Không đọc được bảng ${table}:`, error?.message);
       return fallback;
     }
     return (data as Row[]).map((r) => toCamel<T>(r));
   } catch (err) {
+    if (isNetworkError(String(err))) {
+      warnUnreachable(String(err));
+      return fallback;
+    }
     console.error(`[data] Lỗi kết nối Supabase khi đọc ${table}:`, err);
     return fallback;
   }
